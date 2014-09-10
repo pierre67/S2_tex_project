@@ -1,0 +1,341 @@
+\startcomponent c_90_serviceplan_s2_100-da
+\product prd_ba_s2_100-da
+
+
+\chapter[sec:schedule]{Vedligeholdelsesplan}
+
+\startregister[index][wartplan]{Vedligeholdelsesplan+Køretøj}
+
+
+\section{Generelt}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck \enskip Kvalifikation {\definedfont[SansBoldItalic] Tjek} \enskip}
+Kontrol, der kan\index{Kvalifikation+Vedligeholdelsespersonale} udføres af køretøjets driftspersonale uden fremmed hjælp. En grundlæggende viden om motorkøretøjers teknik er dog en forudsætning.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro \enskip Kvalifikation {\definedfont[SansBoldItalic] Servicearbejde} \enskip}
+Regelmæssigt servicearbejde, der skal udføres i forbindelse med vedligeholdelsen. Vedligeholdelsen skal udføres på et autoriseret værksted af en fagmand med det påkrævede værktøj.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial \enskip Kvalifikation {\definedfont[SansBoldItalic] Specialarbejde} \enskip}
+Særligt\index{Specialarbejde} vedligeholdelsesarbejde, der kun må udføres af en person, der har gennemført en specifik uddannelse, der er anerkendt af \BoschungNote-kundeservice.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual \enskip Type {\definedfont[SansBoldItalic] Visuel kontrol} \enskip}
+Kontrolpunkt\index{Visuel kontrol}, der skal udføres ved hjælp af en visuel kontrol.
+Den ansvarlige person for vedligeholdelse skal informeres om konstaterede fejl eller skader.
+\stoptextrule
+}
+
+Under alt vedligeholdelsesarbejde skelnes der mellem tre kvalifikationsniveauer (krav til personalet og udstyret) og fire vedligeholdelsestyper (arbejdets art).
+
+\startTwoPar
+{\em Kvalifikationsniveauer:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:check}} Tjek \par
+\symDescr{\textSymb{maint:pro}} Servicearbejde \par
+\symDescr{\textSymb{maint:special}} Specialarbejde \par
+\stop
+\TwoPar
+{\em Vedligeholdelsestyper:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:visual}} Visuel kontrol \par
+\symDescr{\textSymb{maint:function}} Funktionskontrol \par
+\symDescr{\textSymb{maint:level}} Kontrol af påfyldningsniveau \par
+\symDescr{\textSymb{maint:exchange}} Udskiftning af driftsmidler \par
+\symDescr{\textSymb{maint:generic}} Andet arbejde \par
+\stop
+\stopTwoPar
+
+\handItem{Se forklaringerne i margenen.}
+
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtfunction \enskip Type {\definedfont[SansBoldItalic] Funktionskontrol} \enskip}
+Kontroller, ud over\index{Kontrol+Funktion} en visuel kontrol, \eG\ funktionskontrol af bremsen, kontrol af komponenternes tilstand, manuel kontrol af fastspænding.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtlevel \enskip Type {\definedfont[SansBoldItalic] Kontrol af påfyldningsniveau} \enskip}
+Kontrollen\index{Kontrol+Påfyldningsniveau} af driftsmidlernes påfyldningsniveau omfatter en kontrol af~– visuel kontrol eller med målepind~– og evt. påfyldning med det pågældende driftsmiddel. {\em Dette omfatter også centralsmøringen.} Læs afsnittet \about[sec:liqquantities], hvor De finder oplysninger om driftsmidlernes kvalitet og mængde.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtexchange \enskip Type {\definedfont[SansBoldItalic] Udskiftning af driftsmidler} \enskip}
+Omfatter\index{Driftsmidler+Udskiftning} udskiftning af driftsmidlet og den efterfølgende kontrol af påfyldningsniveauet. De finder oplysninger om kvaliteten og mængden på \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+\starttextrule{\Pmtgeneric \enskip Type {\definedfont[SansBoldItalic] Andet arbejde} \enskip}Forskelligt vedligeholdelsesarbejde, der skal udføres fagligt korrekt i overensstemmelse med anvisningerne.
+\stoptextrule
+}%
+
+\blank[big]
+%% TODO; en
+\starttextbackground[FC]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+Overhold sikkerhedsreglerne og reglerne om miljøbeskyttelse, når kontrol- og vedligeholdelsespunkterne udføres. \BosFull{Boschung} afviser ethvert ansvar for personskader eller materielle skader forårsaget af, at disse bestemmelser ikke overholdes.
+\stopPictPar
+\stoptextbackground
+\page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Køretøjets vedligeholdelsesplan}
+
+Vedligeholdelsen\index{Kontrol, periodisk} af køretøjet består af vedligeholdelsesarbejde, der skal udføres regelmæssigt, af periodiske kontroller (tjek) og et serviceeftersyn, der skal udføres én gang.\footnote{Alle timeangivelser skal forstås som driftstimer}:
+
+\starttextbackground[FC]
+\starttabulate [|w(26mm)B|w(19mm)B|p({\dimexpr\textwidth-(45mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Vedligeholdelsesarbejde Én gang \NR
+\NC\NC 50\,h\NC Første service efter 50\,h \NC \NR
+\NC\NC 600\,h\NC Normal vedligeholdelse hver 600\,h/12 måneder \NC \NR
+\NC\NC 1200\,h\NC Normal vedligeholdelse hver 1200\,h / 2 år\NC \NR
+\NC\NC 2400\,h \NC Normal vedligeholdelse hver 2400\,h / 4 år\NC \NR
+\NC\NC 4800\,h \NC Normal vedligeholdelse hver 4800\,h / 8 år\NC \NR
+\NC \Pmtcheck\enskip Tjekliste\NC Dagligt \NC I hele arbejdssæsonen \NC \NR
+\NC\NC Ugentligt\NC I hele arbejdssæsonen\NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Følgende vedligeholdelsesplan relaterer til basiskøretøjet. Se også vedligeholdelsesplanen til aggregaterne (\eG\ fejemaskine, smudsbeholder) fra \at{side}[sec:schedaggr].
+
+Hvis der er dobbelte oplysninger om vedligeholdelsesintervallet (\eG\ \quotation{Hver 600\,h~/ 12~måneder}) har det tidspunkt, der kommer først, prioritet.
+
+Arbejdet i de enkelte vedligeholdelsesplaner~– bortset fra den service, der skal udføres én gang efter 50~timer~– skal udføres kumulativt: Hver 1200~driftstimer skal en 600 timers service udføres {\em og} en 1200 timers service, osv.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Daglig kontrol}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art\eTD \bTD Daglig kontrol\eTD \bTD \Tcheck \eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Rengør køretøjet\eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning]\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Kontroller køretøjet for eventuelle skader\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Kontroller for lækager\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller dieselmotorens motoroliestand (med målepind!)\eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller dieselmotorens kølevæskestand\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller hydraulikvæskestanden (skueglas på tanken)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller brændstofniveauet\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller sprinklervæskestanden\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funktionskontrol af kontrollamper og belysning af instrumentbræt og kontrolpanel \eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funktionskontrol af håndbremsen\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funktionskontrol af lys og signaludstyr\eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting]\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+\subsection[table:scheduleweekly]{Ugentlige kontroller}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Ugentlig kontrol \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Kontroller dæktrykket (lufttryk, se hjulets typeskilt i førerhuset)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller luftfilterpatronen og rengør evt.\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør alle smøresteder (chassis, knækstyring) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection [sec:50h]{Service efter 50\,h~– én gang}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art\eTD \bTD Service efter 50\,h~– én gang\eTD \bTD Q.\eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Kontroller dieselmotorens kølevæskestand\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Rengør luftfilterpatronen; udskift evt.\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller stramningen af dieselmotorens kilerem og stram den evt.\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udskift hydraulikolie-retur- og indsugningsfilter\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller hydraulikvæskestanden (skueglas på tanken)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Centralsmøring (ekstraudstyr): Kontroller smøremiddelbeholdning- og konsistens\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør alle smøresteder (chassis, knækstyring)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller sprinklervæskens påfyldningsniveau\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller førerhusets fastgørelser\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller motorens fastgørelser på chassiset\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller pumpernes fastgørelser på motoren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller kombikølerens fastgørelser\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller akslernes fastgørelser\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller\index{Tilspændingsmoment+Hjul}, at hjulene sidder godt fast (tilspændingsmoment: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller dæktrykket (lufttryk, se hjulets typeskilt i førerhuset)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller/juster håndbremsestangens vandring\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller batteriets tilstand; rengør poler/klemmer\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller, at lygterne er indstillet i overensstemmelse med færdselsreglerne, indstil evt.\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør magnetventilernes spolekerner med kobberfedt\eTD \bTD \Tgen \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udlæs (Vpad og motorstyreanordning) hændelsesloggen; afhjælp evt. årsagen til fejlene\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection {Service hver 600\,h / 12 måneder}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art\eTD \bTD Service hver 600\,h / 12 måneder\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Olieskift dieselmotor\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilDraining]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udskift motoroliefilter\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udskift brændstoffilter\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:fuelFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller, at motoren og komponenterne i motorrummet er tætte\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller, at udstødningen er tæt og sidder fast\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller stramningen af dieselmotorens kilerem og dens tilstand og stram eller udskift den evt.\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller dieselmotorens kølevæskestand\eTD \bTD \Tcheck\eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udskift luftfilterpatronen\eTD \bTD \Tcheck\eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udskift hydraulikolie-retur- og indsugningsfilter\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller hydraulikvæsketankens påfyldningsniveau\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Centralsmøring (ekstraudstyr): Kontroller smøremiddelbeholdning- og konsistens\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør alle smøresteder (chassis, knækstyring)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller sprinklervæskens påfyldningsniveau\eTD \bTD \Tcheck\eTD \bTD \inP[sec:liquids]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller førerhusets fastgørelser\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller motorens fastgørelser på chassiset\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller pumpernes fastgørelser på motoren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller kombikølerens fastgørelser\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller akslernes fastgørelser\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller/juster håndbremsestangens vandring\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller/rengør bremsetromler og -bakker; rengør bremsemekanismen\eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller\index{Tilspændingsmoment+Hjul}, at hjulene sidder godt fast (tilspændingsmoment: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller dæktrykket (lufttryk, se hjulets typeskift i førerhuset)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller batteriets tilstand; rengør poler/klemmer\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller, at lygterne er indstillet i overensstemmelse med færdselsreglerne, indstil evt.\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør magnetventilernes spolekerner med kobberfedt\eTD \bTD \Tgen \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+%%Note: Chapter has been removed
+%\bTR \bTD \Tgen \eTD \bTD Kontroller rustbeskyttelsen, evt. skal den forbedres/udskiftes\eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udlæs (Vpad og motorstyreanordning) hændelsesloggen; afhjælp evt. årsagen til fejlene\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Service hver 1200\,h / 2 år}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art\eTD \bTD Service hver 1200\,h / 2 år\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Udskift hydraulikolie (tank)\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udskift kølemiddel (R134a) i klimaanlægget\eTD \bTD \Tspecial \eTD \bTD \emptY\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Service hver 2400\,h / 4 år}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Art\eTD \bTD Service hver 2400\,h / 4 år\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Udskift dieselmotorens tandrem \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Service hver 4800\,h / 8 år}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Art\eTD \bTD Service hver 4800\,h / 8 år\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Kontroller hydraulik-slangeledningerne, udskift evt.\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Udskift vandpumpen (samtidigt med tandremmen) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Vedligeholdelse af aggregater}
+
+Vedligeholdelsen\startregister[index][wartplanAgg]{Vedligeholdelsesplan+Aggregater} af aggregaterne omfatter vedligeholdelsesarbejde, der skal udføres regelmæssigt\index{Periodisk kontrol} og ugentlige kontroller:
+
+\starttextbackground[FC]
+\starttabulate [|w(26mm)B|w(19mm)B|p({\dimexpr\textwidth-(45mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Vedligeholdelsesarbejde Én gang \NR
+\NC\NC 50\,h\NC Første service efter 50\,h \NC \NR
+\NC\NC 600\,h\NC Normal vedligeholdelse hver 600\,h/12 måneder \NC \NR
+\NC \Pmtcheck\enskip Tjekliste\NC Dagligt \NC I hele arbejdssæsonen \NC \NR
+\NC\NC Ugentligt\NC I hele arbejdssæsonen\NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Følgende vedligeholdelsesplan relaterer til standardaggregater, som \sdeux\ normalt er udstyret med. For specielle aggregater, der ikke er beskrevet i denne betjeningsvejledning, skal vedligeholdelsesplanen for det pågældende aggregat overholdes.
+
+
+\subsection[table:scheduledaily]{Daglig kontrol}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art\eTD \bTD Daglig kontrol\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Rengør smudsbeholder og genbrugsanordning \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Rengør sugemund og sugekanal \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection[table:scheduledaily]{Ugentlige kontroller}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type \eTD \bTD Ugentlig kontrol \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Kontroller den lineære kosts og frontkostens (ekstraudstyr) slitage \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller sugemundens lem og gummi \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør alle smøresteder (smudsbeholder, koste, sugemund) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Service efter 50\,h~– én gang}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD
+Art \eTD \bTD Service efter 50\,h~– én gang \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Kontroller kostenes fastgørelser \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Indstil sugemundens lem og gummi \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Service hver 600\,h/12 måneder}
+
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Service hver 600\,h/12 måneder \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Kontroller kostenes fastgørelser \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Indstil sugemundens lem og gummi \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplanAgg]
+\stop
+
+
+\stopcomponent
+% vim: fdm=indent
+

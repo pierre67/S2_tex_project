@@ -1,0 +1,346 @@
+\startcomponent c_90_serviceplan_s2_095-en
+\product prd_ba_s2_095-en
+
+
+
+\chapter[sec:schedule]{Maintenance schedule}
+
+\startregister[index][wartplan]{Maintenance schedule+Vehicle}
+
+\section{General}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck \enskip Qualification: {\definedfont[SansBoldItalic] Check} \enskip}
+A check that\index{Qualification+Maintenance personnel} vehicle operators can carry out independently without support from a third party. However, personnel must have a basic understanding of automotive technology.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro \enskip Qualification: {\definedfont[SansBoldItalic] Service work} \enskip}Work that is to be undertaken as part of regular maintenance activities. Maintenance work must be carried out by specialist personnel at an approved workshop equipped with the necessary tools.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial \enskip Qualification:{\definedfont[SansBoldItalic] Special work} \enskip}
+Special\index{Special work} maintenance work that may only be carried out by personnel who have completed specific training recognized by \BoschungNote\ Customer Services.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual \enskip Type: {\definedfont[SansBoldItalic] Visual check} \enskip}
+An\index{Visual check} item that is to be checked by means of a visual inspection.
+The person responsible for maintenance must be notified of any faults or damage that is identified.
+\stoptextrule
+}
+
+All maintenance work can be classified according to three qualification levels (requirements for personnel and equipment) and four maintenance types (nature of work).
+
+\startTwoPar
+{\em Qualification levels:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:check}} Check\par
+\symDescr{\textSymb{maint:pro}} Service work\par
+\symDescr{\textSymb{maint:special}} Special maintenance work\par
+\stop
+\TwoPar
+{\em Maintenance types:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:visual}} Visual check\par
+\symDescr{\textSymb{maint:function}} Functional check\par
+\symDescr{\textSymb{maint:level}} Fill||level check \par
+\symDescr{\textSymb{maint:exchange}} Operating fluid change \par
+\symDescr{\textSymb{maint:generic}} Other activities \par
+\stop
+\stopTwoPar
+
+\handItem{See the explanations in the margins.}
+
+
+\placeNote[][service_picto]{}{%
+\noteF
+%% TODO: check head line breaks
+\starttextrule{\Pmtfunction \enskip Type: {\definedfont[SansBoldItalic] Functional check} \enskip}
+Checks that\index{Check+Functional} go further than a visual check, \eG\ checking that the brakes work, checking the condition of components, manually checking that a component is secure.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtlevel \enskip Type: {\definedfont[SansBoldItalic] Fill||level check} \enskip}
+A\index{Check+Fill level} fill||level check involves checking the fill level of an operating fluid~– by sight or with a dipstick~– and topping it up if necessary. {\em This includes the central lubrication system.} Read the section on \about[sec:liqquantities], where you will find information on the quality and quantity of operating fluids.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtexchange \enskip Type: {\definedfont[SansBoldItalic] Operating fluid change} \enskip}
+This includes\index{Operating fluids+Change} changing the relevant operating fluid and checking the fill level afterwards. Information on the quality and quantity of operating fluid can be found on \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+\starttextrule{\Pmtgeneric \enskip Type: {\definedfont[SansBoldItalic] Other activities} \enskip}
+Various maintenance work that is to be carried out in line with the relevant directions.
+\stoptextrule
+}%
+
+\blank[big]
+\starttextbackground[CB]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+When conducting checks and maintenance work, please observe safety instructions and environmental protection regulations. \BosFull{boschung} bears no liability whatsoever for any damage, loss or injury resulting from non||observance of these instructions and/or regulations.
+\stopPictPar
+\stoptextbackground
+\page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Vehicle maintenance schedule}
+
+Vehicle\index{Check+Periodic} maintenance incorporates maintenance work that is to be carried out on a regular basis, periodic checks and a one||time service\footnote{All specifications in hours refer to operating hours}:
+
+\starttextbackground[FC]
+\starttabulate [|w(38mm)B|w(10mm)B|p({\dimexpr\textwidth-(56mm+3em)\relax})|]
+\NC \Pmtpro\enskip Maintenance work \NC 50\,h \NC First service after 50\,h\NC \NR
+\NC \NC 600\,h \NC Regular maintenance every 600\,h~/ 12~months\NC \NR
+\NC \NC 1200\,h \NC Regular maintenance every 1200\,h~/ 2~years\NC \NR
+\NC \NC 2400\,h \NC Regular maintenance every 2400\,h~/ 4~years\NC \NR
+\NC \NC 4800\,h \NC Regular maintenance every 4800\,h~/ 8~years\NC \NR
+\NC \Pmtcheck\enskip Checklist \NC Daily \NC Checks during the working season \NC \NR
+\NC \NC Weekly \NC Checks during the working season \NC \NR
+\stoptabulate
+\stoptextbackground
+% \blank [big]
+
+The following maintenance schedule relates to the basic vehicle. Please also observe the maintenance schedule for the assemblies (\eG\ sweeper, dirt hopper) starting on \at{p.}[sec:schedaggr].
+
+Where two options are given for a maintenance interval (\eG\ \quotation{every 600\,h~/ 12~months}), the earliest takes precedence.
+
+The work in the individual maintenance schedules~– except for the one||time service after 50~hours~– is cumulative: Every 1200~operating hours, both the 600||hour {\em and} the 1200||hour maintenance work has to be carried out; every 2400~operating hours, the 600||hour, the 1200||hour {\em and} the 2400||hour maintenance work has to be carried out, etc.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Daily check}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Daily check\eTD \bTD \Tcheck \eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Clean vehicle \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Check vehicle for damage \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Check for leaks \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check engine oil fill level of diesel engine (use dipstick!) \eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check coolant fill level of diesel engine \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check hydraulic fluid fill level (level indicator on tank) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check fuel fill level \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check windshield wash fill level \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Functional check of indicator lights and lighting on instrument panel and control panel \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Functional check of parking brake \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Functional check of lighting and signal systems \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection[table:scheduleweekly]{Weekly check}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type \eTD \bTD Weekly check \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Check tire pressure (see wheel specification plate in vehicle for tire pressure)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check air filter cartridge, clean if necessary \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricate all lubrication points (chassis, articulated steering) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection [sec:50h]{Maintenance after 50\,h~– one||time}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Maintenance after 50\,h~– one||time\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Check coolant fill level of diesel engine \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Clean air filter cartridge, replace if necessary \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check V-belt of diesel engine, replace if necessary \eTD \bTD \Tpro \eTD \bTD \inP[sSec:vw:belt] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Replace hydraulic oil return|/|intake filter \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check hydraulic fluid fill level (level indicator on tank) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Central lubrication system (optional): Check fill level and consistency of lubricant \eTD \bTD \Tpro \eTD \bTD \inP[main:graissageCentral] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricate all lubrication points (chassis, articulated steering) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check windshield wash fill level \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check driver’s cabin fixing points \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check engine fixing points on chassis \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check pump fixing points on engine \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check radiator fixing points \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check fixing points on axles \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check wheel\index{Tightening torque+Wheels} fixings are tight (tightening torque 180\,Nm) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check tire pressure (see wheel specification plate in vehicle for tire pressure) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check|/|adjust travel of parking brake lever \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check battery condition; clean terminals \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check and if necessary adjust headlight settings in line with traffic regulations \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricate coil cores of solenoid valves with copper grease \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Read out alarm memory (Vpad and engine control unit), rectify causes of faults if necessary \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+%% TODO @Andrew: please translate
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Maintenance every 600\,h / 12 months}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Maintenance every 600\,h / 12 months\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Change engine oil \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:oilDraining] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Replace engine oil filter \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:oilFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Replace fuel filter \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:fuelFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check leak||tightness of engine and components in engine compartment \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check leak||tightness and fixings of exhaust system \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check V-belt of diesel engine; replace if necessary \eTD \bTD \Tpro \eTD \bTD \inP[sSec:vw:belt] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check coolant fill level of diesel engine \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Replace air filter cartridge \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Replace hydraulic oil return|/|intake filter \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check hydraulic tank fill level \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Central lubrication system (optional): Check fill level and consistency of lubricant \eTD \bTD \Tpro \eTD \bTD \inP[main:graissageCentral] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricate all lubrication points (chassis, articulated steering) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Check fill level of windshield wash \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liquids] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check driver’s cabin fixing points \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check engine fixing points on chassis \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check pump fixing points on engine \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check radiator fixing points \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check fixing points on axles \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check|/|adjust travel of parking brake lever \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check condition of brake drums and brake shoes; clean brake mechanism \eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check wheel\index{Tightening torque+Wheels} fixings are tight (tightening torque 180\,Nm) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Check tire pressure (see wheel specification plate in vehicle for tire pressure) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check battery condition; clean terminals \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check and if necessary adjust headlight settings in line with traffic regulations \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricate coil cores of solenoid valves with copper grease \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid] \eTD \eTR
+%%NOTE: Chapter has been removed
+%\bTR \bTD \Tgen \eTD \bTD Check corrosion inhibitor, top up/renew if necessary \eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Read out alarm memory (Vpad and engine control unit), rectify causes of faults if necessary \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Maintenance every 1200\,h / 2~years}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Maintenance every 1200\,h / 2~years\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Change hydraulic oil (tank) \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Replace A/C system refrigerant (R134a) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Maintenance every 2400\,h / 4~years}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Maintenance every 2400\,h / 4~years\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Replace toothed belt for camshaft drive \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Maintenance every 4800\,h / 8~years}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Maintenance every 4800\,h / 8~years\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Check|/|replace hydraulic lines \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Replace water pump (at same time as toothed belt) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Maintenance for assemblies}
+
+The maintenance\startregister[index][wartplanAgg]{Maintenance schedule+Assemblies} for the assemblies comprises regular maintenance work\index{Periodic check} and daily|/|weekly checks:
+
+\starttextbackground[FC]
+\starttabulate [|w(40mm)B|w(20mm)B|p({\dimexpr\textwidth-(60mm+3em)\relax})|]
+\NC \Pmtpro\enskip Maintenance work\NC 50\,h\NC First service after 50\,h\NC \NR
+\NC\NC 600\,h\NC Regular maintenance every 600\,h / 12~months\NC \NR
+\NC \Pmtcheck\enskip Checklist\NC Daily \NC Checks during the regular working season \NC \NR
+\NC \NC Weekly \NC Checks during the regular working season \NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+The following maintenance schedule relates to the standard assemblies that are usually fitted to the \sdeux. In the case of special assemblies that are not described in this User Manual, please refer to the maintenance schedule for the specific assembly.
+
+
+\subsection[table:scheduledaily]{Daily check}
+
+\start
+% \setupTABLE [r] [2] [style=\ss \bf,
+% backgroundcolor=white,height={\dimexpr(\lineheight+5pt)},
+% % background={color,headerRuleWhite}
+% ]
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Daily check\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Clean dirt hopper and recycling system \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Clean suction mouth and suction duct \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+
+\subsection[table:scheduledaily]{Weekly check}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type \eTD \bTD Weekly check \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tgen \eTD \bTD Check wear on linear brooms and front broom (optional equipment) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Check flap and rubber parts of suction mouth \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Lubricate all lubrication points (dirt hopper, brooms, suction mouth) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection {Maintenance after 50\,h~– one||time}
+
+\start
+% \setupTABLE [r] [2] [style=\ss \bf,
+% backgroundcolor=white,height={\dimexpr(\lineheight+5pt)},
+% % background={color,headerRuleWhite}
+% ]
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Maintenance after 50\,h~– one||time\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tfun \eTD \bTD Check broom fixings \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Adjust flap and rubber parts of suction mouth \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+\subsection {Maintenance every 600\,h / 12 months}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Maintenance every 600\,h / 12 months\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tfun \eTD \bTD Check broom fixings \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Adjust flap and rubber parts of suction mouth \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+	\bTR \bTD \Tchg \eTD \bTD Change high pressure water pump (optional equipment) \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplanAgg]
+
+\stop
+
+\stopcomponent

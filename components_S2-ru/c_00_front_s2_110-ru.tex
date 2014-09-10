@@ -1,0 +1,75 @@
+\startcomponent c_00_front_s2_110-ru
+\product prd_ba_s2_110-ru
+
+%\setups [FRENCH,pagestyle:frontmatter]
+
+\startboschungmakeup
+\setups[pagestyle:title]
+\startalignment[middle]
+
+\midaligned{\externalfigure[innentitel]}
+\blank[1*big]
+
+\definefont[AffiliationFont][Sans sa.55]
+\defineornament
+[SomeAffiliation]
+[rotation=,corner={right,bottom},location={left,bottom},
+voffset=-3pt,alternative=b,frame=off]
+[style=AffiliationFont,offset=6pt]
+
+{\bkd Руководство по эксплуатации\godown [9pt]}
+
+\placefigure[none]{}
+{\SomeAffiliation
+{\BAversionRU; \BAdateRU}
+{\bfc\BosFull {Sdeux}}}
+
+\blank[2*big]
+
+{\tfx\BosFull{Boschung}/PBV; Техническая редакция, Матран, Швейцария}
+
+\stopalignment
+
+\stopboschungmakeup
+%
+\startboschungmakeup
+
+\setupwhitespace [medium]
+
+\setups[pagestyle:marginless]
+
+{\sla Выходные данные}
+\blank [medium]
+
+В данном руководстве описаны принципы надлежащего использования машины \sdeux. Внимательно прочитайте его перед первым вводом машины \sdeux\ в эксплуатацию, чтобы ознакомиться с элементами управления и их функциями. Использовать машину можно только в тех целях, для которых она была предназначена (надлежащее использование).
+Любое другое использование считается не соответствующим назначению. Компания \Boschung\ не несет ответственности за ущерб, возникший в результате использования не по назначению. В таких случаях всю ответственность несет исключительно пользователь. Использование по назначению также подразумевает соблюдение инструкций и сроков техобслуживания.\par
+
+Данный документ представляет собой перевод оригинального руководства.
+Ваша машина может в некоторых случаях отличаться от приведенных здесь иллюстраций.
+\blank [medium]
+
+
+\starttextbackground[CB]
+С любыми вопросами и предложениями по этому руководству следует обращаться в техническую редакцию по адресу:
+
+\md
+{\Caps Marcel Boschung AG}\crlf
+Rédaction technique\crlf
+Route des Muëses 2\crlf
+CH-1753 Matran
+
+{\tt doc.mechanical@boschung.com}
+\stoptextbackground
+\blank[medium]
+
+\copyright\ \CopyrightyearRU\ Marcel Boschung AG Matran, \BAversionRU
+
+Язык оригинала данного руководства: фр. (французский) и нем. (немецкий). Все другие языковые версии данного руководства по эксплуатации являются переводами оригинала руководства.
+
+Все права защищены. Запрещаются перепечатка, перевод и размножение (в том числе частичные) без письменного разрешения \BosFull{Boschung}.
+
+
+\stopboschungmakeup
+% \setups{pagestyle:normal}
+\stopcomponent
+

@@ -1,0 +1,358 @@
+\startcomponent c_40_control_s2_120-sv
+\product prd_ba_s2_120-sv
+
+
+\startchapter [title={Bedienelemente des Fahrzeugs},
+							reference={chap:ctrl}]
+
+\setups[pagestyle:marginless]
+
+\placefig[here][fig:ctrl:cab:front]{Bedienelemente}
+{\externalfigure[ctrl:cab:front]}
+
+\startcolumns [n=3]
+\startLongleg
+	\item Lenksäule (\in{§}[sec:steeringColumn])
+	\item Einstellung Lenksäule
+	\item Fahr- und Bremspedal
+	\item Bordcomputer \Vpad~SN (\inP[sec:vpad])
+	\item Deckenkonsole (\inP[sec:ctrl:aux])
+	\item Radio|/|MP3
+\stopLongleg
+
+
+\subsubsubject{Optionale Ausstattung}
+
+\startLongleg [continue]
+	\item Rückfahrmonitor
+\stopLongleg
+\stopcolumns
+
+\startsection [title={Die Lenksäule},
+							reference={sec:steeringColumn}]
+
+\subsection{Einstellen der Lenksäule}
+
+\textDescrHead{Neigung des Lenkrads} Drücken Sie das Pedal~\Ltwo und stellen Sie gleichzeitig die Neigung der Lenksäule ein. Lassen Sie das Pedal los, um den Mechanismus der Lenksäule wieder zu verriegeln.
+
+\page[yes]
+\setups [pagestyle:normal]
+
+
+\subsection{Beleuchtungs- und Signaleinrichtungen}
+
+\placefig [margin] [fig:column:left] {Multifunktionshebel und Drehschalter}
+{\externalfigure[ctrl:column:left]}
+
+\placefig [margin] [fig:column:right] {Fahrstufenwahlhebel}
+{\externalfigure[ctrl:column:right]}
+
+
+\subsubsubject{Drehschalter}
+
+\startitemize[width=1.7em]
+\sym{\textSymb{com_lowlight}} Abblendlicht (drehen~\TorqueR).
+\startitemize
+\sym{1} Standlicht
+\sym{2} Abblendlicht
+\stopitemize
+\stopitemize
+
+
+\subsubsubject{Multifunktionshebel}
+
+\startitemize[width=1.7em]
+\sym{\textSymb{com_lowlight}} {[}Nicht belegt{]}
+\sym{\textSymb{com_light}} Lichthupe (Hebel kurz nach oben drücken)
+\sym{\textSymb{com_blink}} Fahrtrichtungsanzeiger (Hebel nach vorne|/|hinten)
+\sym{\textSymb{com_claxonArrow}} Hupe (Knopf außen am Hebel drücken)
+\sym{\textSymb{com_wipper}} Scheibenwischer
+\startitemize
+\sym{J} Intervallschaltung
+\sym{O} Aus
+\sym{I} 1.\,Geschwindigkeitsstufe
+\sym{II} 2.\,Geschwindigkeitsstufe
+\stopitemize
+\sym{\textSymb{com_washerArrow}} Scheibenwaschanlage (auf den Kranz am Ende des Hebels drücken).
+\stopitemize
+
+
+\subsubsubject{Fahrstufenwahlhebel}
+
+Die Funktionen des Fahrstufenwahlhebels sind detailliert beschrieben im Kapitel~\about[chap:using], ab~\atpage[sec:using:start].
+
+\stopsection
+
+\page [yes]
+
+
+\startsection [title={Weitere Funktionen},
+							reference={sec:ctrl:add}]
+
+
+\subsection[sec:ctrl:aux]{Deckenkonsole}
+
+{\sl Die\index{Deckenkonsole} Deckenkonsole befindet sich vorne an der Decke des Führerhauses auf der Fahrerseite.}
+\placefig [margin] [fig:console:aux] {Deckenkonsole}
+{\externalfigure[ctrl:console:aux]}
+
+
+\placefig [margin] [fig:console:climat] {Heizung und Klimaanlage}
+{\externalfigure[ctrl:console:climat]}
+
+
+\startitemize [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_retrochauffant}} Außenspiegelheizung
+\sym{\textBigSymb{temoin_hazard}} Warnblinkanlage
+\sym{\textBigSymb{temoin_eclairage_L}} Arbeitsscheinwerfer
+\stopitemize
+
+
+\subsubsubject{Optionale Ausstattung}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_buse}} Hochdruckwasserpumpe für Wasserpistole \crlf {\sl siehe \atpage[sec:using:water:spray]}
+\sym{\textBigSymb{temoin_aspiration_manuelle}} Turbine für Handsaugschlauch \crlf {\sl siehe \atpage[sec:using:suction:hose]}
+\stopLeg
+
+
+\subsection[sec:ctrl:climat]{Heizung und Klimaanlage}
+
+{\sl Diese Konsole\index{Heizungskonsole} befindet sich an der Rückwand des Führerhauses, zwischen den Sitzen.}
+
+\startitemize [unpacked][width=23mm]
+\sym{\bf 0\quad I\quad II\quad III} Gebläse||Drehschalter
+\sym{\externalfigure[tirette_chauffage][height=1em]} Temperatur||Schieberegler
+\stopitemize
+
+
+\subsubsubject{Optionale Ausstattung}
+
+\startitemize [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_climat_bk}} Klimaanlage
+\stopitemize
+
+\page [yes]
+
+\setups [pagestyle:bigmargin]
+
+
+\subsection[sec:ctrl:central]{Mittelkonsole}
+
+{\sl Die\index{Mittelkonsole} Mittelkonsole befindet sich zwischen den Sitzen.}
+
+\placefig [margin] [fig:console:central] {Mittelkonsole}
+{\externalfigure[ctrl:console:central]}
+
+
+\subsubsubject{Befeuchtung der Besen}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_busebalais}} Niederdruckwasserpumpe\index{Wasserpumpe} für das Befeuchtungssystem\index{Wasserpumpe+Befeuchtung} der Besen. (Position~1: \aW{Automatisch}; Position~2: \aW{Permanent})
+\stopLeg
+
+
+\subsubsubject{Kippen des Schmutzbehälters}
+
+\setupinmargin[right][style=normal]
+\inright{%
+\startitemize
+\sym{\textSymb{mand_readtheoperatingmanual}} Beachten Sie bitte die Anweisungen zum Gebrauch der Feststellbremse auf \atpage[sec:using:stop].
+\stopitemize}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_kipp2}} Kippen des Schmutzbehälters.
+Um\index{Schmutzbehälter+Kippen} den Schmutzbehälter kippen zu können, muss die Feststellbremse aktiviert sein
+und der Fahrstufenwahlhebel auf Neutral stehen.
+\stopLeg
+
+
+\subsubsubject{Not||Aus}
+
+\starttextbackground [FC]
+\startPictPar
+\externalfigure[Emergency_Stop][Pict]
+\PictPar
+In einem Notfall\index{Not||Aus} können Sie alle Saug- und Kehrgeräte, sowie den Fahrantrieb, durch einen Druck auf den Not||Aus||Schalter abschalten.
+\stopPictPar
+\stoptextbackground
+
+
+\subsection[sec:foot:switch]{Fußschalter}
+
+\placefig [margin] [fig:foot:switch] {Fußschalter}
+{\vskip 60pt
+\externalfigure[work:foot:switch]}
+
+Mithilfe\index{Fußschalter} dieses Schalters am Fuß der Lenksäule (\inF[fig:foot:switch]) können Sie schnell und einfach die Besen absenken, wenn es erforderlich ist (\eG\ am Gipfel einer Steigung, Auffahrt auf Bürgersteig).
+
+\stopsection
+\page[yes]
+\setups [pagestyle:marginless]
+
+
+\startsection[title={Multifunktionskonsole},
+							reference={ctrl:console:middle}]
+
+\startlocalfootnotes
+
+\startfigtext[left]{Multifunktionskonsole}
+{\externalfigure[overview:joy:large]}
+
+
+\subsubsubject{Joysticks}
+
+\textDescrHead{Ohne Frontbesen (oder Frontbesen deaktiviert):}
+Die Joysticks steuern unabhängig voneinender jeweils einen Besen: Heben|/|senken~(\textSymb{joystick_aa}) oder links|/|rechts~(\textSymb{joystick_gd}). Der linke Joystick steuert den linken Besen, der rechte Joystick den rechten Besen.\footnote{Um bei einem Fahrzeug, welches mit Frontbesen ausgestattet ist (Option), die Position der Seitenbesen ändern zu können, muss der Frontbesen deaktiviert werden (Taste~\textSymb{joy_key_frontbrush_act}).}
+
+\textDescrHead{Mit Frontbesen:}
+Mit dem linken Joystick können Sie den Frontbesen heben|/|senken (\textSymb{joystick_aa}) und nach links|/|rechts bewegen (\textSymb{joystick_gd}). Mit dem rechten Joystick neigen Sie den Besen auf seiner Längs-~(\textSymb{joystick_aa}) und Querachse~(\textSymb{joystick_gd}).
+
+\placelocalfootnotes %[height=\textheight]
+\stopfigtext
+\stoplocalfootnotes
+\vfill
+
+
+\subsubsubject{Seitliche Tasten}
+
+\startcolumns
+
+\startPictList
+\VPcltr
+\PictList
+Tempomat: Erhöhen der eingestellten Geschwindigkeit
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPclbr
+\PictList
+Tempomat: Verringern der eingestellten Geschwindigkeit
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrtr
+\PictList
+Saugmund heben
+\stopPictList
+
+\startPictList
+\VPcrbr
+\PictList
+Saugmund senken
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrtf
+\PictList
+Grobschmutzklappe öffnen (vorne am Saugmund)
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrbf
+\PictList
+Grobschmutzklappe schließen
+\stopPictList
+
+\stopcolumns
+
+
+\subsubsubject{Symboltasten}
+
+\startcolumns
+
+\startSymVpad
+\externalfigure[joy:stop]
+\SymVpad
+\textDescrHead{Stopp} Aktiviertes Gerät anhalten:
+
+1\:× drücken: 3.\,Besen deaktivieren\crlf
+2\:× drücken: Alles deaktivieren
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:tempomat]
+\SymVpad
+\textDescrHead{Tempomat} Tempomaten auf die momentane Geschwindigkeit einstellen und aktivieren. Zum Deaktivieren Taste~\textSymb{joy:tempomat} erneut betätigen, oder bremsen. Beschleunigen|/|verlangsamen Sie mit den seitlichen Tasten.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:minus]
+\SymVpad
+\textDescrHead{Besengeschwindigkeit} Rotationsgeschwindigkeit des Seitenbesen oder des Frontbesens verringern.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:plus]
+\SymVpad
+\textDescrHead{Besengeschwindigkeit} Rotationsgeschwindigkeit des Seitenbesen oder des Frontbesens erhöhen.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:eng:minus]
+\SymVpad
+\textDescrHead{Motordrehzahl} Drehzahl des Dieselmotors verringern.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:eng:plus]
+\SymVpad
+\textDescrHead{Motordrehzahl} Drehzahl des Dieselmotors erhöhen.
+\stopSymVpad
+\columnbreak
+
+\startSymVpad
+\externalfigure[joy:suc]
+\SymVpad
+\textDescrHead{Absaugung} Saugsystem aktivieren: Saugmund wird gesenkt,
+Turbine und Recycling||Wasserpumpe werden eingeschaltet.\note [recyclingwaterpump] \crlf
+Stopptaste~\textSymb{joy:stop} drücken, um das System zu deaktivieren.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:sucbrs]
+\SymVpad
+\textDescrHead{Kehren|/|Saugen}  Saug-|/|Kehrsystem aktivieren: Saugmund wird gesenkt, Seitenbesen werden gesenkt und positioniert, Turbine, Besen und Recycling||Wasserpumpe werden eingeschaltet.\note [recyclingwaterpump] \crlf
+Stopptaste~\textSymb{joy:stop} drücken, um das System zu deaktivieren.
+\stopSymVpad
+
+\footnotetext[recyclingwaterpump]{Frischwasserpumpe wird ebenfalls eingeschaltet, wenn der Schalter~\textBigSymb{temoin_busebalais} auf \aW{Automatisch} steht (siehe \in [sec:ctrl:central] auf \atpage [sec:ctrl:central]).}
+\startSymVpad
+\externalfigure[joy:ftbrs:act]
+\SymVpad
+\textDescrHead{Frontbesen aktiviert} Frontbesen aktivieren|/|deaktivieren.
+%% NOTE @Andrew: Singular
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:right]
+\SymVpad
+\textDescrHead{Frontbesen links} Drehrichtung für Arbeiten mit dem Frontbesen auf der linken Seite
+(Drehrichtung: Uhrzeigersinn).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:left]
+\SymVpad
+\textDescrHead{Frontbesen rechts} Drehrichtung für Arbeiten mit dem Frontbesen auf der rechten Seite
+(Drehrichtung: Gegenuhrzeigersinn).
+\stopSymVpad
+
+\stopcolumns
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+

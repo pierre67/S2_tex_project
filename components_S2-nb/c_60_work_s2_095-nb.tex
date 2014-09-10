@@ -1,0 +1,273 @@
+% coding: utf-8
+\startcomponent c_60_work_s2_095-nb
+
+
+\startchapter [title={S2 i hverdagen},
+reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Igangsetting}
+
+\startsection [title={Igangkjøring},
+reference={sec:using:start}]
+
+
+\startSteps
+\item Sørg for at vanlig kontroll og vedlikehold er blitt utført forskriftsmessig.
+\item Start motoren med tenningsnøkkelen: Slå på tenningen, fortsett å vri nøkkelen med urviseren og hold den, helt til motoren starter (kun mulig hvis kjøretrinnvalgspaken står på nøytral).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Kjøretrinnvalgspak}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Valgspak i stilling \aW{foroverkjøring}}
+{\externalfigure [work:select:rDrive]}{Valgspak i stilling \aW{bakoverkjøring}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Vri bryteren til kjøretrinnvalgspaken, for å aktivere et kjøretrinn i \aW{kjøre}modusen:
+\startitemize [R]
+\item Første trinn
+\item Andre trinn (automatikkdrift; starter automatisk i første trinn)
+\stopitemize
+
+eller trykk på knappen på utsiden av spaken, for å aktivere/deaktivere \aW{arbeids}modusen.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+I arbeidsmodusen er kun det første kjøretrinnet tilgjengelig og motoren turner med 1300\,min\high{\textminus 1}.
+
+Motorturtallet styres ved hjelp av tastene~\textSymb{joy_key_engine_increase} og~\textSymb{joy_key_engine_decrease} multifunksjonspanelet.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Trykk kjøretrinnvalgspaken oppover og forover (foroverkjøring) eller oppober og bakover (bakoverkjøring). Se bildene oppe.
+\item Løsne parkeringsbremsen før du begynner å akselerere.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Løsne parkeringsbremsen komplett!} Posisjonen til parkeringsbremsespaken overvåkes av en elektronisk sensor: Hvis parkeringsbremsen ikke er fullstendig løsnet, er kjørehastigheten begrenset på 5\,km/h.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Trykk langsomt gasspedalen, for å sette kjøretøyet i bevegelse.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Sugekanalluke}
+
+Sugesystemet oppretter en luftstrøm enten fra sugeenheten eller håndsugeslangen (valgfritt) til smussbeholderen.
+
+En luke (\inF[fig:suctionClap], \atpage[fig:suctionClap]) som betjenes for hånd, tillater at luftstrømmen kan kobles om mellom sugeenheten og håndsugeslangen.
+
+\placefig [here] [fig:suctionClap] {Sugekanalluke}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Sugekanal åpen}
+{\externalfigure [work:suctionClap:closed]}{Sugekanal lukket}
+\stopcombination}
+
+I normal drift~– ved arbeider med sugeenheten~– må sugekanalen være åpen (omkoblingsspaken peker oppover).
+
+For å kunne bruke håndsugeslangen, må sugekanalen være lukket (omkoblingsspaken peker nedover). På denne måten ledes luftstrømmen gjennom håndsugeslangen.
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Stansing},
+reference={sec:using:stop}]
+
+\index{Driftsstans}
+
+\startSteps
+\item Aktiver parkeringsbremsen (spaken mellom setene) og sett kjøretrinnvalgspaken i posisjonen \aW{Nøytral}.
+\item Utfør de nødvendige kontrollarbeidene~– daglige og evt. ukentlige kontroller~– som beskrevet på \atpage[table:scheduledaily].
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+
+\startsection [title={Feie og suge},
+reference={sec:using:work}]
+
+\startSteps
+\item Utfør\index{Feie} igangkjøringen som beskrevet i\in{§}[sec:using:start], \atpage[sec:using:start].
+\item Aktiver\index{Suge} \aW{arbeids}modusen (knapp på utsiden av kjøretrinnvalgspaken).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Trykk på tasten~\textSymb{joy_key_suction_brush}, for å slå på turbinen og kosten.
+
+{\md Variant:} {\lt Trykk på tasten~\textSymb{joy_key_suction}, for å kun arbeide med sugeenheten.}
+
+\item Still inn omdreiningshastigheten til kostene ved hjelp av tastene~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} på multifunksjonspanelet.
+
+\item Sett kostene ved hjelp av de enkelte joystickene slik i posisjon, at den optimale arbeidsbredden blir nådd.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Posisjonering av kostene}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Kost utover/innover}
+{\externalfigure [work:brush:left:raise]}{Kost opp/ned}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Fukting av kostene og sugekanalen}
+
+Betjen\index{Feie+fukting} bryteren~\textSymb{temoin_busebalais} mellom setene:
+
+{\md Posisjon 1:} Vannpumpen går automatisk, så lenge kostene er aktivert.
+
+{\md Posisjon 2:} Vannpumpen går permanent. (Nyttig \eG\ for innstillingsarbeider.)
+
+
+\subsubsubject{Grovsmuss}
+
+\startSteps [continue]
+\item Dersom det er fare for at større smussobjekter (\eG\ PET-flasker) kan blokkere sugeenheten, må du åpne\index{Grovsmussluke} grovsmussluken ved hjelp av tastene på siden av multifunksjonspanelet eller~– hvis det ikke rekker~– løft\index{Sugeenhet+grovsmuss} sugeenheten temporært.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Håndtering av grovsmuss}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Åpne grovsmussluken}
+{\externalfigure [work:suction:raise]}{Løft sugeenheten temporært}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Tømming av smussbeholderen},
+reference={sec:using:container}]
+
+\startSteps
+\item Kjør\index{Smussbeholder+tømme} kjøretøyet til et sted som egner seg for tømming. Pass på at de gjeldende miljøvernbestemmelsene overholdes.
+\item Aktiver parkeringsbremsen. (Nødvendig for frigivelse av vippe-beholder-bryteren).
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Lås opp og åpne lukkeren til smussbeholderen.
+\item Betjen bryteren~\textSymb{temoin_kipp2} (midtre panel, mellom setene), for å vippe opp smussbeholderen.
+\item Når beholderen er tom, må du vaske den innvendig med en vannstråle. For dette kan du bruke den integrerte vannpistolen (valgfritt utstyr).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Håndtering av smussbeholderen}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Låsing av lukkeren}
+{\externalfigure [container:safety:unlocked]}{Sikringsstang}
+{\externalfigure [container:safety:locked]}{Sikringsstang låst}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Kontroller/rengjør tetningene og kontaktfatene til tetningene til beholderen, resirkuleringssystemet og sugekanalen.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Betjen bryteren~\textSymb{temoin_kipp2}, for å senke smussbeholderen (Fjern evt. først sikringsstengene fra hydraulikksylindrene).
+\item Lås lukkeren til smussbeholderen.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Håndsugeslange},
+reference={sec:using:suction:hose}]
+
+\sdeux\ kan valgfritt\index{Håndsugeslange} utstyres med en håndsugeslange. Denne er festet på lukkeren til smussbeholderen; betjeningen er enkel.
+
+{\sla Forutsetninger:}
+
+Smussbeholderen er fullstendig senket; \sdeux\ befinner seg i \aW{arbeids}modusen. (Se \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Håndsugeslange}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Trykk tasten~\textSymb{temoin_aspiration_manuelle} til takpanelet, for å aktivere sugesystemet.
+\item Trekk fast parkeringsbremsen, før du forlater førerhuset.
+\item Lukk sugekanalen med luken til sugekanalen. (Se \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Trekk håndsugeslangen på munnstykket ut av holderen og begynn med arbeidet.
+\item Etter at arbeidet er fullført må du igjen trykke tasten~\textSymb{temoin_aspiration_manuelle}, for å slå av sugesystemet.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Høytrykkvannpistol},
+reference={sec:using:water:spray}]
+
+\sdeux\ kan valgfritt\index{Vannpistol} utstyres med en høytrykkvannpistol. Vannpistolen er festet i den bakre vedlikeholdsluken på høyre side og er forbundet med en 10-meter-slangekrok~– på motsatt side av kjøretøyet.
+
+Gå frem som følgende, for å bruke vannpistolen:
+
+{\sla Forutsetninger:}
+
+Det er tilstrekkelig vann i ferskvannstanken; \sdeux\ befinner seg i \aW{arbeids}modusen. (Se \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Høytrykkvannpistol}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Trykk tasten~\textSymb{temoin_buse} til takpanelet, for å aktivere høytrykkvannpumpen.
+\item Trekk fast parkeringsbremsen, før du forlater førerhuset.
+\item Åpne den bakre vedlikeholdsluken på høyre side og ta ut vannpistolen.
+\item Vikle av så mye slange du behøver og begynn med arbeidet.
+\item Etter at arbeidet er fullført må du igjen trykke tasten~\textSymb{temoin_buse}, for å slå av høytrykkvannpumpen.
+\item Trekk kort på slangen, for å løsne blokkeringen og vikle opp slangen.
+\item Fest vannpistolen igjen i holderen og lukk vedlikeholdsluken.
+\stopSteps
+
+\stopsection
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent
+

@@ -1,0 +1,359 @@
+\startcomponent c_40_control_s2_095-en
+\product prd_ba_s2_095-en
+
+
+\startchapter [title={Vehicle controls},
+reference={chap:ctrl}]
+
+\setups[pagestyle:marginless]
+
+\placefig[here][fig:ctrl:cab:front]{Operating controls}
+{\externalfigure[ctrl:cab:front]}
+
+\startcolumns [n=3]
+%% TODO: en: check column breaks
+\startLongleg
+ \item Steering column (\in{Section}[sec:steeringColumn])
+ \item Steering column adjustment
+ \item Gas and brake pedals
+ \item On||board computer \Vpad\ SN (details \inP[sec:vpad])
+ \item Overhead console\crlf (details \inP[sec:ctrl:aux])
+ \item Radio|/|MP3
+\stopLongleg
+
+
+\subsubsubject{Optional accessories}
+
+\startLongleg [continue]
+ \item Reversing monitor
+\stopLongleg
+\stopcolumns
+
+\startsection [title={The steering column},
+reference={sec:steeringColumn}]
+
+\subsection{Adjusting the steering column}
+
+
+\textDescrHead{Steering wheel tilt} Hold down the pedal (\Ltwo ) and adjust the tilt on the steering column. Release the pedal to lock the steering column mechanism in place.
+
+\page[yes]
+\setups [pagestyle:normal]
+
+
+\subsection{Lights and signals}
+
+\placefig [margin] [fig:column:left] {Multifunction lever and turn switch}
+{\externalfigure[ctrl:column:left]}
+
+\placefig [margin] [fig:column:right] {Gearshift}
+{\externalfigure[ctrl:column:right]}
+
+
+\subsubsubject{Turn switch}
+
+\startitemize[width=1.7em]
+\sym{\textSymb{com_lowlight}} Low||beam headlight (turn~\TorqueR).
+\startitemize
+\sym{1} Parking lights
+\sym{2} Low||beam headlight
+\stopitemize
+\stopitemize
+
+
+\subsubsubject{Multifunction lever}
+
+\startitemize[width=1.7em]
+\sym{\textSymb{com_lowlight}} {[}Unassigned{]}
+\sym{\textSymb{com_light}} Headlight flash (push the lever briefly up)
+\sym{\textSymb{com_blink}} Turn signals (lever forward|/|back)
+\sym{\textSymb{com_claxonArrow}} Horn (push button on end of lever)
+\sym{\textSymb{com_wipper}} Windshield wiper
+\startitemize
+\sym{J} Intermittent
+\sym{O} Off
+\sym{I} 1st\,speed
+\sym{II} 2nd\,speed
+\stopitemize
+\sym{\textSymb{com_washerArrow}} Windshield washer system (press in the collar on the end of the lever).
+\stopitemize
+
+
+\subsubsubject{Gearshift}
+
+The functions of the gearshift are described in detail in \about[chap:using], from~\atpage[sec:using:start].
+
+\stopsection
+
+\page [yes]
+
+
+\startsection [title={Additional functions},
+reference={sec:ctrl:add}]
+
+
+\subsection[sec:ctrl:aux]{Overhead console}
+
+{\sl The\index{Overhead console} overhead console is located above and in front of the driver.}
+\placefig [margin] [fig:console:aux] {Overhead console}
+{\externalfigure[ctrl:console:aux]}
+
+
+\placefig [margin] [fig:console:climat] {Heating and air||conditioning system}
+{\externalfigure[ctrl:console:climat]}
+
+
+\startitemize [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_retrochauffant}} External mirror heating
+\sym{\textBigSymb{temoin_hazard}} Hazard warning lights
+\sym{\textBigSymb{temoin_eclairage_L}} Working lights
+\stopitemize
+
+%% TODO: check line break
+\subsubsubject{Optional accessories}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_buse}} High||pressure water pump for water gun \crlf {\sl See \atpage[sec:using:water:spray]}
+\sym{\textBigSymb{temoin_aspiration_manuelle}} Turbine for manual suction hose \crlf {\sl See \atpage[sec:using:suction:hose]}
+\stopLeg
+
+
+\subsection[sec:ctrl:climat]{Heating and air||conditioning system}
+
+{\sl This console\index{Heating console} is located on the back wall of the driver’s cabin, between the seats.}
+
+\startitemize [unpacked][width=23mm]
+\sym{\bf 0\quad I\quad II\quad III} Blower turn switch
+\sym{\externalfigure[tirette_chauffage][height=1em]} Temperature slider switch
+\stopitemize
+
+
+\subsubsubject{Optional accessories}
+
+\startitemize [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_climat_bk}} Air||conditioning system
+\stopitemize
+
+\page [yes]
+
+\setups [pagestyle:bigmargin]
+
+
+\subsection[sec:ctrl:central]{Center console}
+
+{\sl The\index{Center console} center console is located between the seats.}
+
+\placefig [margin] [fig:console:central] {Center console}
+{\externalfigure[ctrl:console:central]}
+
+
+\subsubsubject{Dampening the brooms}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_busebalais}} Low||pressure water pump\index{Water pump} for the dampening system\index{Water pump+Dampening} that serves the brooms. (Position~1: \aW{Automatic}; Position~2: \aW{Permanent})
+\stopLeg
+
+
+\subsubsubject{Tipping the dirt hopper}
+
+\setupinmargin[right][style=normal]
+\inright{%
+\startitemize
+\sym{\textSymb{mand_readtheoperatingmanual}} Please observe the directions for using the parking brake on \atpage[sec:using:stop].
+\stopitemize}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_kipp2}} Tipping the dirt hopper.
+
+The parking brake must be applied and the gearshift put in neutral before the\index{Dirt hopper+Tipping} dirt hopper can be tipped.
+\stopLeg
+
+
+\subsubsubject{Emergency shut||down}
+
+\starttextbackground [FC]
+\startPictPar
+\externalfigure[Emergency_Stop][Pict]
+\PictPar
+In an emergency shut||down,\index{Emergency shut||down} you can stop the vehicle and deactivate all suction and sweeping systems by pressing the emergency shut||down button.
+\stopPictPar
+\stoptextbackground
+
+
+\subsection[sec:foot:switch]{Foot switch}
+
+\placefig [margin] [fig:foot:switch] {Foot switch}
+{\vskip 60pt
+\externalfigure[work:foot:switch]}
+
+Use\index{Foot switch} this convenient switch at the bottom of the steering column (\inF[fig:foot:switch]) to quickly lower the brooms when necessary, (\eG\ at the top of an incline, when driving up onto a sidewalk).
+
+\stopsection
+\page[yes]
+\setups [pagestyle:marginless]
+
+
+\startsection[title={Multifunction console},
+reference={ctrl:console:middle}]
+
+\startlocalfootnotes
+
+\startfigtext[left]{Multifunction console}
+{\externalfigure[overview:joy:large]}
+
+
+\subsubsubject{Joysticks}
+
+\textDescrHead{Without front broom (or with front broom deactivated):}
+The two joysticks each control one broom independently: Raise|/|lower~(\textSymb{joystick_aa}) or left|/|right~(\textSymb{joystick_gd}). The left joystick controls the left broom, the right joystick the right broom.\footnote{When the vehicle is fitted with a front broom (optional equipment), the front broom must be deactivated before the side brooms can be repositioned (\textSymb{joy_key_frontbrush_act} button).}
+
+\textDescrHead{With front broom:}
+The left joystick is used to raise|/|lower the front broom (\textSymb{joystick_aa}) and move it left|/|right (\textSymb{joystick_gd}). The right joystick is used to incline the broom forward and back~(\textSymb{joystick_aa}) and side to side~(\textSymb{joystick_gd}).
+
+\placelocalfootnotes %[height=\textheight]
+\stopfigtext
+\stoplocalfootnotes
+\vfill
+
+
+\subsubsubject{Side buttons}
+
+\startcolumns
+
+\startPictList
+\VPcltr
+\PictList
+Cruise control: Increase the set speed
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPclbr
+\PictList
+Cruise control: Reduce the set speed
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrtr
+\PictList
+Raise suction mouth
+\stopPictList
+
+\startPictList
+\VPcrbr
+\PictList
+Lower suction mouth
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrtf
+\PictList
+Open large waste flap (on front of suction mouth)
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrbf
+\PictList
+Close large waste flap
+\stopPictList
+
+\stopcolumns
+
+
+\subsubsubject{Icon buttons}
+
+\startcolumns
+
+\startSymVpad
+\externalfigure[joy:stop]
+\SymVpad
+\textDescrHead{Stop} Deactivate active assembly:
+
+Press once to deactivate 3rd\,broom\crlf
+Press twice to deactivate everything
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:tempomat]
+\SymVpad
+\textDescrHead{Cruise control} Set cruise control to current speed and activate. To deactivate cruise control, press the \textSymb{joy:tempomat}~button again or brake. Use the side buttons to increase|/|decrease the speed.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:minus]
+\SymVpad
+\textDescrHead{Broom speed} Reduce the rotary speed of the side brooms or front broom.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:plus]
+\SymVpad
+\textDescrHead{Broom speed} Increase the rotary speed of the side brooms or front broom.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:eng:minus]
+\SymVpad
+\textDescrHead{Engine speed}Reduce the speed of the diesel engine.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:eng:plus]
+\SymVpad
+\textDescrHead{Engine speed}Increase the speed of the diesel engine.
+\stopSymVpad
+\columnbreak
+
+\startSymVpad
+\externalfigure[joy:suc]
+\SymVpad
+\textDescrHead{Vacuum} Activate the suction system: Suction mouth is lowered, turbine and recycling water pump are activated.\note [recyclingwaterpump]
+Press the stop button~\textSymb{joy:stop} to deactivate the system.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:sucbrs]
+\SymVpad
+\textDescrHead{Vacuum sweeping}\emspace Activate the vacuum sweeper system: Suction mouth is lowered, side brooms are lowered and positioned, turbine, brooms and recycling water pump are activated.\note [recyclingwaterpump]
+Press the stop button~\textSymb{joy:stop} to deactivate the system.
+\stopSymVpad
+
+\footnotetext[recyclingwaterpump]{The freshwater pump is also activated when the \textBigSymb{temoin_busebalais}~switch is set to \aW{automatic} (see \in [sec:ctrl:central], \atpage [sec:ctrl:central]).}
+
+\startSymVpad
+\externalfigure[joy:ftbrs:act]
+\SymVpad
+\textDescrHead{Activate front broom} Activate|/|deactivate the front broom.
+%% NOTE @Andrew: Singular
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:right]
+\SymVpad
+\textDescrHead{Front broom, left} Direction of rotation when working with the front broom on the left side (direction of rotation: Clockwise).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:left]
+\SymVpad
+\textDescrHead{Front broom, right} Direction of rotation when working with the front broom on the right side (direction of rotation: Counterclockwise).
+\stopSymVpad
+
+\stopcolumns
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,641 @@
+\startcomponent c_45_vpad_s2_120-de
+\product prd_ba_s2_120-de
+
+\startchapter[title={Bordcomputer (Vpad)},
+							reference={sec:vpad}]
+
+\setups[pagestyle:marginless]
+
+
+\startsection[title={Beschreibung des Vpad},
+							reference={vpad:description}]
+
+\startfigtext [left] {Das Vpad SN im Führerstand}
+{\externalfigure[vpad:inside:view]}
+\textDescrHead{Innovativ, intelligent … } Das \Vpad\ wurde zur Steuerung von
+Aggregaten aus dem Kommunalbereich konzipiert, deren Technologie immer komplexer
+geworden ist und die eine Fülle verschiedenster Funktionen zur Verfügung
+stellen.
+Mit dem \Vpad\ hat der Bediener ein System an der Hand, das sich nicht darauf
+beschränkt, in Echtzeit Informationen~– visuell oder akustisch~– über sämtliche
+Arbeits- und Maschinenvorgänge zu liefern.
+Was das \Vpad\ vor allem auszeichnet und wo es neue Maßstäbe setzt, ist die
+intuitive Benutzerführung, Bedienerergonomie und Befehlslogik.
+
+Dank seiner Funktionsvielfalt kann das \Vpad\ überaus flexibel genutzt werden,
+und wird dadurch zu viel mehr als einer bloßen elektronischen Steuereinheit.
+\stopfigtext
+
+\textDescrHead{… universell} Kompatibilität und Flexibilität standen bei der
+Entwicklung des \Vpad\ im Focus:
+Als modulare Steuereinheit lässt es sich individuell an lokale Gegebenheiten und
+Ausstattungsvarianten anpassen, und durch seine zahlreichen elektronischen
+Schnittstellen und Wege der Datenübertragung~– bis hin zum WLAN~– stehen alle
+Möglichkeiten offen.
+Das \Vpad\ arbeitet mit modernster Elektronik mit 32-bit||Technologie und
+Echtzeit||Betriebssystem.
+\vfill
+
+
+\startfigtext[left]{Multifunktionskonsole}
+{\externalfigure[console:topview]}
+\textDescrHead{… und modular} Durch seine Modularität verfügt des \Vpad\ über
+einen enormen Vorteil:
+So kann die in der \sdeux\ serienmäßig zum Einsatz kommende Version~SN schrittweise
+durch weitere Komponenten, wie beispielsweise ein Modem oder eine Konsole (siehe
+Abbildung), jederzeit erweitert werden.
+Die Modularität beschränkt sich nicht auf die Hardware, auch softwareseitig ist
+das System in hohem Maße erweiterbar und an sich ändernde Bedürfnisse anpassbar.
+
+Die Multifunktionskonsole der \sdeux\ ist eine hochentwickelte Schnittstelle
+zwischen Bediener und Maschine. Das gesamte Kehr-|/|Saugsystem lässt sich über diese Konsole steuern.
+\stopfigtext
+
+\page [yes]
+
+
+\subsection[vpad:home]{Hauptbildschirm}
+
+%% Note: outcommented by PB
+% \placefig[left][fig:vpad:engineData]{Accueil mode transport}
+% {\scale[sx=1.5,sy=1.5]
+% {\setups[VpadFramedFigureHome]
+% \VpadScreenConfig{
+% \VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}
+% \framed{\null}}
+% }
+
+
+\start
+
+\setupcombinations[width=\textwidth]
+
+\placefig [here][fig:vpad:engineData]{Hauptbildschirm}
+{\startcombination [2*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Fahr}modus}
+{\setups[VpadFramedFigureWork]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Arbeits}modus}
+\stopcombination}
+
+\stop
+
+\blank [1*big]
+
+Der Hauptbildschirm des \Vpad\ umfasst alle
+nötigen Elemente zur Überwachung sämtlicher Funktionen der \sdeux.
+
+Im oberen Bereich befinden sich die Kontrollanzeigen.
+
+Der mittlere Bereich zeigt in Echtzeit u.\,a. folgende Daten an:
+Geschwindigkeit, Drehzahl und Temperatur des Motors, Kraftstofffüllstand, Füllstand des Recyclingwassers etc.
+
+Der Modus \aW{Fahren} wird durch einen Hasen~\textSymb{transport_mode} symbolisiert, der Modus \aW{Arbeit} durch eine Schildkröte~\textSymb{working_mode}.
+
+Die Menüleiste am unteren Rand zeigt die verfügbaren Menüs an: Drücken Sie in die Mitte des berührungsempfindlichen Bildschirms (Touchscreens), um zusätzliche Menüs anzuzeigen.
+
+\page [yes]
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+\startcolumns
+
+\startSymVpad
+\externalfigure[vpadTEnginOilPressure][height=1.7\lH]
+\SymVpad
+\textDescrHead{Motoröldruck}(rot) Motoröldruck zu gering. Stellen Sie den Motor
+unverzüglich ab.
+
++\:Fehlermeldung \# 604
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningBattery][height=1.7\lH]
+\SymVpad
+\textDescrHead{Batterieladung}(rot) Batterieladestrom zu gering. Verständigen Sie die Werkstatt.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningEngine1][height=1.7\lH]
+\SymVpad
+\textDescrHead{Motordiagnose}(gelb) Fehler in der Motorsteuerung. Verständigen Sie die Werkstatt.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Werkstatt aufsuchen}(gelb) (gelb) Reguläre Fahrzeugwartung ist fällig
+oder es ist ein Motorfehler vorhanden. Falls es ein sporadischer Motorfehler ist,
+erlöscht die Lampe nach 5 Motorstarts.
+
++\:Fehlermeldungen \# 650 bis \# 653, oder \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBrakeError][height=1.7\lH]
+\SymVpad
+\textDescrHead{Bremssystem}(rot) Fehler im Bremssystem. Verständigen Sie die Werkstatt.
+
++\:Fehlermeldung \# 902
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakePark][height=1.7\lH]
+\SymVpad
+\textDescrHead{Feststellbremse}(rot) Feststellbremse des Fahrzeugs ist
+aktiviert.
+
++\:Fehlermeldung \# 905
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTEngineHeating][height=1.7\lH]
+\SymVpad
+\textDescrHead{Vorglühanlage}(gelb) Motor wird vorgeglüht.
+
+Eine blinkende Lampe zeigt an, dass ein Fehler im Ereignisspeicher registriert wurde.
+\stopSymVpad
+
+\columnbreak
+
+\startSymVpad
+\externalfigure[vpadTFuelReserve][height=1.7\lH]
+\SymVpad
+\textDescrHead{Kraftstofffüllstand}(gelb) Kraftstofffüllstand ist sehr niedrig
+(Reserve).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBlink][height=1.7\lH]
+\SymVpad
+\textDescrHead{Warnblinkanlage}(grün) Warnblinkanlage ist aktiviert.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTLowBeam][height=1.7\lH]
+\SymVpad
+\textDescrHead{Standlicht}(grün) Standlicht ist eingeschaltet.
+\stopSymVpad
+
+\startSymVpad
+\HL\NC \externalfigure[vpadSyWaterTemp][height=1.7\lH]
+\SymVpad
+\textDescrHead{Temperatur}(rot) Temperatur der Hydraulikflüssigkeit oder des Motors zu hoch. Verständigen Sie die Werkstatt.
+
++\:Fehlermeldung \# 700 oder \# 610
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningFilter][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filter zugesetzt}(rot) Der kombinierte Hydraulikfilter oder der Luftfilter ist zugesetzt.
+
++\:Fehlermeldung \# 702 oder \# 851
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTSpray][height=1.7\lH]
+\SymVpad
+\textDescrHead{Wasserpistole}(gelb) Hochdruckwasserpumpe für die Wasserpistole ist aktiviert.
+
+Schalter \textSymb{temoin_buse} in der Deckenkonsole.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTClear][height=1.7\lH]
+\SymVpad
+\textDescrHead{Fehlermeldung}(rot) Eine Fehlermeldung befindet sich im Speicher des \Vpad. Drücken Sie die Taste~\textSymb{vpadClear}, um alle registrierten Nachrichten anzuzeigen. Verständigen Sie die Werkstatt.
+\stopSymVpad
+
+\stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
+\page [yes]
+
+
+\section{Vpad-Menüs}
+
+\start
+
+\setupTABLE [background=color,
+			frame=off,
+			option=stretch,textwidth=\makeupwidth]
+
+\setupTABLE [r] [each] [style=sans, background=color, bottomframe=on, framecolor=TableWhite, rulethickness=1.5pt]
+\setupTABLE [r] [first][backgroundcolor=TableDark, style=sansbold]
+\setupTABLE [r] [odd]  [backgroundcolor=TableMiddle]
+\setupTABLE [r] [even] [backgroundcolor=TableLight]
+\bTABLE [split=repeat]
+\bTABLEhead
+\bTR\bTD Menü \eTD\bTD Bezeichnung\index{Vpad+Anzeige} \eTD\bTD Funktion \eTD\eTR
+\eTABLEhead
+
+\bTABLEbody
+\bTR\bTD \externalfigure [v:symbole:clear] \eTD\bTD Fehlermeldung(en) \eTD\bTD Die im Vpad verzeichneten Fehlermeldungen anzeigen und quittieren (bestätigen). \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:beacon]\externalfigure [v:symbole:beacon:black]} \eTD\bTD Rundumkennleuchte \eTD\bTD Rundumkennleuchte ein|/|aus \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:engine] \eTD\bTD Echzeitdaten \eTD\bTD Echtzeitbetriebsdaten von Motor und Hydraulik anzeigen\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:oneTwoThree] \eTD\bTD Zähler \eTD\bTD Anzeige der Betriebsstundenzähler: Tageszähler, Saisonzähler, Gesamtzähler\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:serviceInfo] \eTD\bTD Wartungsintervall \eTD\bTD Zeigt das Datum sowie die verbleibenden Betriebsstunden bis zur nächsten Wartung oder bis zum nächsten großen Service an \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:trash] \eTD\bTD Zähler \eTD\bTD Zähler zurücksetzen oder Serviceintervall zurücksetzen \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:sunglasses] \eTD\bTD Bildschirmmodus \eTD\bTD Art der Bildschirmbeleuchtung umschalten zwischen \aW{Tag} und \aW{Nacht} \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:color] \eTD\bTD Helligkeit|/|Kontrast \eTD\bTD Einstellungen für Helligkeit und Kontrast des Bildschirms \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:select] \eTD\bTD Auswahl \eTD\bTD Auswählen des markierten Eintrags oder quittieren einer Fehlermeldung \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Bestätigung \eTD\bTD Bestätigen der Auswahl \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Auf|/|Ab, \\Pfeile \eTD\bTD Markierung nach oben|/|unten verschieben oder ausgewählten Wert erhöhen|/|verringern \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Rückfahrwarnton \eTD\bTD Akustisches Rückfahrwarnsignal aktivieren|/|deaktivieren \eTD\eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+
+\subsubsubject{Weitere Anzeigen auf dem Vpad}
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+\startcolumns
+
+\startSymVpad
+\externalfigure[sym:vpad:water]
+\SymVpad
+\textDescrHead{Füllstand Frischwasser} Füllstand des Frischwassers nicht ausreichend (max. 190\,l; hinter dem Führerhaus).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater:yellow]
+\SymVpad
+\textDescrHead{Füllstand Recyclingwasser}(gelb) Füllstand des Recyclingwassers unterhalb des Wärmetauschers. Es erfolgt keine Kühlung der Hydraulikflüssigkeit und keine Anwärmung des Befeuchtungssystems des Saugkanals.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater]
+\SymVpad
+\textDescrHead{Füllstand Recyclingwasser}(rot) Füllstand des Recyclingwassers nicht ausreichend (max. 140\,l; unter dem Schmutzbehälter).
+\stopSymVpad
+
+\stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\page [yes]
+
+\startsection[title={Einstellen der Bildschirmhelligkeit},
+              reference={sec:vpad:brightness}]
+
+Der Bildschirm des \Vpad\ kann in zwei vorkonfigurierten Helligkeitsstufen
+betrieben werden: Modus \aW{Tag}~– \textSymb{vpadSunglasses}, normale
+Helligkeit~– und Modus \aW{Nacht}~– \textSymb{vpadMoon}, reduzierte Helligkeit.
+Mit der Taste \textSymb{vpadColor} können Sie auf verschiedene
+Parameter zugreifen.
+
+Um die vorkonfigurierten Helligkeitsstufen abzuändern, gehen Sie so vor:
+
+\startSteps
+\item Drücken Sie auf die Mitte des berührungsempfindlichen Bildschirms (Touchscreen), um durch die Menüleiste am unteren Bildschirmrand zu scrollen.
+\item Drücken Sie auf das Symbol \textSymb{vpadSunglasses} bzw.
+\textSymb{vpadMoon}, um den Modus auszuwählen, den Sie abändern möchten.
+\item Drücken Sie \textSymb{vpadColor}, um die Parameter anzuzeigen.
+\item Markieren Sie mithilfe der
+Pfeilsymbole~\textSymb{vpadUp}\textSymb{vpadDown} den Parameter, den Sie ändern
+möchten, und wählen Sie ihn mit~\textSymb{vpadSelect} aus.
+\item Ändern Sie den Wert mithilfe der Symbole
+\textSymb{vpadMinus}\textSymb{vpadPlus}. Vorsicht, reduzieren Sie die Helligkeit
+nicht so stark (\VpadOp{162} -255), dass Sie nichts mehr auf dem Bildschirm
+erkennen können!
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadGPS}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\null}}{Drücken Sie mittig auf den Touchscreen}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadOp{162}\hfill 15 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Auswählen mit \textSymb{vpadSelect}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadNull}}}%
+\framed[backgroundscreen=.9]{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD \VpadOp{162}\hfill -80 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Wert ändern mit \textSymb{vpadMinus}\textSymb{vpadPlus}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Bestätigen Sie den Wert mit \textSymb{vpadReturn}.
+\item Drücken Sie nochmals das Symbol \textSymb{vpadReturn}, um zum
+Hauptbildschirm zurückzugelangen.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Betriebsstunden- und Kilometerzähler},
+							reference={vpad:compteurs}]
+
+Die Software des \Vpad\ verfügt über drei verschiedene Messperioden~– \aW{Tag},
+\aW{Saison}, \aW{Gesamt}~–, in denen verschiedene Zähler laufen können, wie
+\aW{Zurückgelegte Strecke}, \aW{Betriebsstunden} (Motor oder Bürste),
+\aW{Arbeitszeit} (pro Fahrer).
+
+Um die Zähler abzulesen oder sie zurückzusetzen, gehen Sie so vor:
+
+\startSteps
+\item Drücken Sie auf die Mitte des Touchscreens, um
+durch die Menüleiste zu scrollen.
+\item Drücken Sie auf das Symbol \textSymb{vpadOneTwoThree}, um den Tageszähler
+anzuzeigen.
+\item Mithilfe der Zurück-|/|Vor||Symbole~\textSymb{vpadBW}\textSymb{vpadFW}
+können Sie zum Gesamt- oder Saisonzähler wechseln.
+\item Drücken Sie \textSymb{vpadTrash}, um den angezeigten Zähler
+zurückzusetzen.
+\item In einem Dialogfenster werden Sie aufgefordert, das Zurücksetzen zu
+bestätigen.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{120} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 87.4\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 62.0\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 240.2\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 901.9\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,1\,l/h \eTD\eTR
+\eTABLE}}{Drücken Sie das Symbol~\textSymb{vpadOneTwoThree}, anschließend~\textSymb{vpadBW} oder~\textSymb{vpadFW}}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadBW}{vpadFW}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 522.0\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 662.8\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 1605.5\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 2608.4\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,0\,l/h \eTD\eTR
+\eTABLE}}{Setzen Sie den Zähler mit \textSymb{vpadTrash} zurück}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadTrash}{vpadNull}{vpadNull}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{136} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{137} \eTD\eTR
+\eTABLE}}{Bestätigen Sie mit \textSymb{vpadTrash}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Geben Sie, wenn nötig, das Passwort ein, und bestätigen Sie dann das Zurücksetzen mithilfe des Symbols \textSymb{vpadTrash}.
+\item Drücken Sie das Symbol \textSymb{vpadReturn}, um zum Hauptbildschirm zurückzugelangen.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+\startsection[title={Wartungsintervalle},
+							reference={vpad:maintenance}]
+
+Der Wartungsplan der \sdeux\ kennt zwei Grundarten der Wartung: die reguläre Wartung und den großen Service (durch eine mit dem \boschung||Kundendienst vereinbarte Fachwerkstatt).
+
+Um die Zähler abzulesen oder zurückzusetzen, gehen Sie so vor:
+\startSteps
+\item Drücken Sie auf die Mitte des Touchscreens, um
+durch die Menüleiste zu scrollen.
+\item Drücken Sie das Symbol \textSymb{vpadServiceInfo}, um die
+Wartungsintervalle anzuzeigen.
+\item Wechseln Sie mithilfe der
+Pfeilsymbole~\textSymb{vpadUp}\textSymb{vpadDown} zum gewünschten Intervall.
+\item Drücken Sie das Symbol~\textSymb{vpadTrash}, um ein Intervall
+zurückzusetzen. Geben Sie das Passwort mithilfe
+von~\textSymb{vpadPlus}\textSymb{vpadMinus} ein und bestätigen Sie
+mit~\textSymb{vpadSelect}).
+\item In einem Dialogfenster werden Sie aufgefordert, das Zurücksetzen zu
+bestätigen.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadNull}{vpadNull}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD[nc=2] \VpadOp{190} \eTD\eTR
+\bTR\bTD \VpadOp{191}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{192}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR
+\bTR\bTD \VpadOp{193}\eTD\bTD \VpadOp{195}\hfill 2400\,h \eTD\eTR
+\eTABLE}}{Drücken Sie das Symbol~\textSymb{vpadTrash}, um ein Intervall
+zurückzusetzen}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD \hfill 2014-03-31 \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{002}\hfill 0000 \eTD\eTR
+\eTABLE}}{Geben Sie das Passwort ein (Zahlencode)}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD[backgroundcolor=black,color=TableWhite] \VpadOp{041}\eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{042} \eTD\eTR
+\bTR\bTD \VpadOp{043} \eTD\eTR
+\eTABLE}}{Wählen Sie aus und bestätigen Sie mit~\textSymb{vpadSelect}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Bestätigen Sie das Zurücksetzen mithilfe des Symbols~\textSymb{vpadSelect}.
+\item Drücken Sie das Symbol \textSymb{vpadReturn}, um zum Hauptbildschirm zurückzugelangen.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Fehlermanagement über das Vpad},
+							reference={vpad:error}]
+
+
+Das \Vpad\ zeigt Fehler an\index{Vpad+Fehlermeldungen}, welche von den elektronischen Steuersystemen diagnostiziert und vom  CAN||Bus übermittelt wurden.
+Wenn ein minderschwerer Fehler registriert wird, leuchtet des Symbol~\textSymb{VpadTClear} (rot).
+Wenn es sich um einen Fehler hoher Priorität handelt, leuchtet des Symbol~\textSymb{VpadTClear} und zusätzlich ertönt ein Alarmton.
+Um den Alarm zu beenden, muss die Fehlermeldung
+quittiert (als \aW{zur Kenntnis genommen} bestätigt) werden.
+
+Um Fehlermeldungen zu lesen und zu quittieren, gehen Sie so vor:
+
+\startSteps
+\item Drücken Sie das Symbol~\textSymb{vpadClear} auf dem Bildschirm des \Vpad.
+\item Drücken Sie das Symbol~\textSymb{vpadClear}, um die ausgewählte Meldung zu quittieren.
+\item Neben der quittierten Meldung erscheint nun ein \aW{\#}||Symbol, welches
+die Meldung als \aW{zur Kenntnis genommen} kennzeichnet, und die Markierung
+springt zur nächsten Meldung (soweit vorhanden).
+\item Nachdem alle Meldungen quittiert wurden, kehrt die Anzeige zum
+Hauptbildschirm zurück.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851a} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Anzeige der Meldungen}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Quittieren Sie mit~\textSymb{vpadClear}}
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadBeam}{vpadEngine}}}%
+\framed{\null}}{Zurück zum Hauptbildschirm}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Um die Meldungen erneut anzuzeigen, drücken Sie das Symbol~\textSymb{vpadClear}. Fehlermeldungen werden erst dann vom \Vpad\
+gelöscht, wenn die Ursache des Problems beseitigt wurde.
+\stopSteps
+
+
+\subsection{Die häufigsten Fehlermeldungen (Mit Störungssuche)}
+
+\subsubsubject{\VpadEr{604}} % {\#\ 604	Pression huile moteur basse}
+
++ \textSymb{vpadTEnginOilPressure}~– Schalten Sie den Motor unverzüglich aus. Überprüfen Sie den Ölstand, verständigen Sie die Werkstatt.
+
+
+\subsubsubject{\VpadEr{609}} % {\#\ 609	Température eau refroidissement moteur haute}
+
++ \textSymb{vpadSyWaterTemp}~– Brechen Sie Ihre Arbeit ab. Lassen Sie den Motor ohne Last weiterlaufen und beobachten Sie die Temperaturentwicklung:
+
+Wenn die Temperatur sinkt, überprüfen Sie die Füllstände von Kühlflüssigkeit, Motoröl und Hydraulikflüssigkeit sowie den Zustand des Kühlers.
+Wenn die Füllstände und der Kühler in Ordnung sind, fahren Sie zur weiteren Fehlerdiagnose vorsichtig in die Werkstatt.
+
+\subsubsubject{\VpadEr{610}} % {\#\ 610	Température eau refroidissement moteur trop haute}
+
++ \textSymb{vpadSyWaterTemp}~– Brechen Sie Ihre Arbeit ab. Überprüfen Sie die Füllstände von Kühlflüssigkeit und Motoröl, verständigen Sie unverzüglich die Werkstatt.
+
+
+\subsubsubject{\VpadEr{650}} % {\#\ 650	Se rendre à un garage}
+
++ \textSymb{vpadWarningService}~– Verständigen Sie umgehend Ihre Werkstatt.
+% \VpadEr{651} % {\#\ 651	Moteur en mode urgence}
+
+
+\subsubsubject{\VpadEr{652}} % {\#\ 652	Inspection véhicule}
+% \VpadEr{653} % {\#\ 653	Grand service moteur}
+
++ \textSymb{vpadWarningService}~– Die nächste reguläre Wartung ist fällig. Konsultieren Sie den Wartungsplan und machen Sie einen Termin mit Ihrer Werkstatt aus.
+
+
+\subsubsubject{\VpadEr{700}} % {\#\ 700	Température d'huile hydraulique}
+
++ \textSymb{vpadSyWaterTemp}~– Brechen Sie Ihre Arbeit ab. Lassen Sie den Motor ohne Last weiterlaufen und beobachten Sie die Temperaturentwicklung:
+
+Wenn die Temperatur sinkt, überprüfen Sie die Füllstände von Kühlflüssigkeit, Motoröl und Hydraulikflüssigkeit sowie den Zustand des Kühlers.
+Wenn die Füllstände und der Kühler in Ordnung sind, fahren Sie zur weiteren Fehlerdiagnose vorsichtig in die Werkstatt.
+
+
+\subsubsubject{\VpadEr{702}} % {\#\ 702	Filtre d'huile hydraulique}
+
++ \textSymb{vpadWarningFilter}~– Der Hydraulik||Rücklauf- und|/|oder Ansaugfilter ist zugesetzt. Ersetzen Sie umgehend das Filterelement.
+% \VpadEr{703} % {\#\ 703	Vidange d'huile hydraulique}
+
+
+\subsubsubject{\VpadEr{800}} % {\#\ 800	Interrupteur d'urgence actionné}
+
++ \textSymb{vpadTClear}~– Sie haben den Not||Aus||Schalter betätigt. Schalten Sie die Zündung aus und starten Sie den Motor neu, um die Meldung zu löschen.
+
+
+\subsubsubject{\VpadEr{801}} % {\#\ 905	Frein à main actionné}
+
+Der Schmutzbehälter ist angehoben oder nicht komplett gesenkt. Die Geschwindigkeit des Fahrzeugs ist auf 5\,km/h begrenzt, solange der Schmutzbehälter nicht gesenkt ist.
+
+\subsubsubject{\VpadEr{851}} % {\#\ 851	Filtre à air}
+
++ \textSymb{vpadWarningFilter}~– Der Luftfilter ist zugesetzt. Ersetzen Sie umgehend das Filterelement.
+
+
+\subsubsubject{\VpadEr{902}} % {\#\ 902	Pression de freinage}
+
++ \textSymb{vpadTBrakeError}~– Der Bremsdruck ist nicht ausreichend. Brechen Sie Ihre Arbeit ab und verständigen Sie umgehend die Werkstatt.
+% \VpadEr{904} % {\#\ 904	Interrupteur de direction d'avancement}
+
+
+\subsubsubject{\VpadEr{905}} % {\#\ 905	Frein à main actionné}
+
++ \textSymb{vpadTBrakePark}~– Die Feststellbremse ist nicht vollständig gelöst. Die Geschwindigkeit des Fahrzeugs ist auf 5\,km/h begrenzt, solange die Feststellbremse nicht gelöst ist.
+
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+
+
+

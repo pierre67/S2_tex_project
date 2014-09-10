@@ -1,0 +1,337 @@
+
+\startcomponent c_90_serviceplan_s2_095-es
+
+
+\chapter[sec:schedule]{Plan de mantenimiento}
+
+\startregister[index][wartplan]{Plan de mantenimiento+Vehículo}
+
+
+\section{Aspectos generales}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck \enskip Cualificación {\definedfont[SansBoldItalic] Chequeo} \enskip}
+Control que\index{cualificación+personal de mantenimiento} puede ser realizado por el personal operario del vehículo sin asistencia externa. Sin embargo, son necesarios conocimientos básicos en técnica de vehículos de motor.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro \enskip Cualificación {\definedfont[SansBoldItalic] Tarea de servicio} \enskip}
+Tarea de mantenimiento regular que debe realizarse durante la puesta a punto. El mantenimiento debe realizarse en un taller autorizado por un técnico especialista y con la herramienta necesaria.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial \enskip Cualificación {\definedfont[SansBoldItalic] Tarea especial} \enskip}
+Tarea de mantenimiento\index{tarea especial} especial que solo puede ser llevada a cabo por una persona que haya realizado una formación reconocida por el Servicio de Atención al Cliente de \BoschungNote.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual \enskip Tipo {\definedfont[SansBoldItalic] Control visual} \enskip}
+Punto de control\index{control visual} a realizar mediante control visual. Las anomalías o los daños determinados deberán ser comunicados a la persona encargada del mantenimiento.
+\stoptextrule
+}
+
+Las tareas de mantenimiento se diferencian en tres niveles de cualificación (requisitos para el personal y el equipamiento) y cuatro tipos de mantenimiento (tipo de la tarea).
+
+\startTwoPar
+{\em Niveles de cualificación:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:check}} Chequeo \par
+\symDescr{\textSymb{maint:pro}} Tarea de servicio \par
+\symDescr{\textSymb{maint:special}} Tarea especial \par
+\stop
+\TwoPar
+{\em Tipos de mantenimiento:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:visual}} Control visual \par
+\symDescr{\textSymb{maint:function}} Control de funcionamiento \par
+\symDescr{\textSymb{maint:level}} Control del nivel de llenado \par
+\symDescr{\textSymb{maint:exchange}} Cambio de sustancias industriales \par
+\symDescr{\textSymb{maint:generic}} Otras tareas \par
+\stop
+\stopTwoPar
+
+\handItem{Ver las explicaciones en las columnas del margen.}
+
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtfunction \enskip Tipo {\definedfont[SansBoldItalic] Control de funcionamiento} \enskip}
+Controles que\index{controles+funcionamiento} van más allá de un control visual: \eG\ control de funcionamiento de los frenos, control del estado de componentes, control manual del correcto asiento.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtlevel \enskip Tipo {\definedfont[SansBoldItalic] Control del nivel de llenado} \enskip}
+El\index{control+nivel de llenado} control del nivel de llenado de sustancias industriales comprende el control, mediante inspección visual o con la varilla de medición, así como, en su caso, el rellenado de la sustancia industrial correspondiente. {\em El engrase centralizado está también incluido aquí.} Lea al respecto el apartado \about[sec:liqquantities] donde encontrará informaciones sobre la calidad y la cantidad de las sustancias industriales.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtexchange \enskip Tipo {\definedfont[SansBoldItalic] Cambio de sustancias industriales} \enskip}
+Aquí se incluye\index{sustancias industriales+cambio} el cambio de la sustancia industrial, así como el control del nivel de llenado posterior. Encontrará información sobre la calidad y la cantidad de las sustancias industriales en \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+\starttextrule{\Pmtgeneric \enskip Tipo {\definedfont[SansBoldItalic] Otras tareas} \enskip}
+Diferentes tareas de mantenimiento conforme a las indicaciones necesarias.
+\stoptextrule
+}%
+
+\blank[big]
+\starttextbackground[CB]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+Al llevar a cabo los puntos de control y mantenimiento, tenga en cuenta las disposiciones de seguridad y medioambientales. \BosFull{Boschung} declina cualquier responsabilidad por daños a personas o daños materiales que resulten de la inobservancia de estas disposiciones.
+\stopPictPar
+\stoptextbackground
+\page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Plan de mantenimiento del vehículo}
+
+El\index{control, periódico} mantenimiento del vehículo comprende mantenimientos regulares, controles periódicos (chequeos), así como un servicio único\footnote{Todas las horas indicadas se entienden como horas de servicio}:
+
+\starttextbackground[FC]
+\starttabulate [|w(34mm)B|w(16mm)B|p({\dimexpr\textwidth-(50mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Mantenimiento \NC 50\,h\NC Primer servicio tras 50\,h\NC \NR
+\NC\NC 600\,h\NC Mantenimiento regular cada 600\,h / 12 meses\NC \NR
+\NC\NC 1200\,h\NC Mantenimiento regular cada 1200\,h / 2 años\NC \NR
+\NC\NC 2400\,h \NC Mantenimiento regular cada 2400\,h / 4 años\NC \NR
+\NC\NC 4800\,h \NC Mantenimiento regular cada 4800\,h / 8 años\NC \NR
+\NC \Pmtcheck\enskip Lista de control\NC A diario \NC Durante toda la temporada de trabajo \NC \NR
+\NC\NC Semanal\NC Durante toda la temporada de trabajo\NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+El siguiente plan de mantenimiento se refiere al vehículo base. Tenga también en cuenta el plan de mantenimiento de los equipos incorporados (\eG\ barredora, depósito de material barrido) a partir de la \at{página}[sec:schedaggr].
+
+Cuando hay dos indicaciones sobre el intervalo de mantenimiento (\eG\ \quotation{Cada 600\,h~/ 12~meses}) el momento que se alcance primero tendrá prioridad.
+
+La tareas de los planes de mantenimiento individuales, a excepción del mantenimiento único después de 50~horas, deben realizarse de forma acumulada: Cada 1200~horas de servicio debe realizarse el mantenimiento de las 600 horas {\em y} el mantenimiento de las 1200 horas; etc.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Control diario}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tipo\eTD \bTD Control diario\eTD \bTD \Tcheck \eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Limpiar vehículo\eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning]\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Comprobar si el vehículo presenta daños\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Controlar si existen fugas\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Comprobar el nivel de aceite del motor diésel (¡con varilla de medición!)\eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Comprobar el nivel de líquido refrigerante del motor diésel\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Comprobar el nivel del líquido hidráulico (mirilla en el depósito)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Comprobar el nivel de combustible\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Comprobar el nivel de líquido limpiaparabrisas\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Control de funcionamiento de los testigos de control y de las luces del panel de instrumentos y del panel de control \eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Control de funcionamiento del freno de estacionamiento\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Control de funcionamiento de los dispositivos de luces y de señalización\eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting]\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+\subsection[table:scheduleweekly]{Control semanal}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tipo \eTD \bTD Control semanal \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Comprobar la presión de los neumáticos (consultar la presión en la placa de características de la rueda dentro en la cabina)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar y limpiar en caso necesario el cartucho del filtro de aire\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricar todos los puntos de lubricación (chasis, dirección articulada) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection [sec:50h]{Mantenimiento tras 50\,h~– único}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tipo\eTD \bTD Mantenimiento tras 50\,h~– único\eTD \bTD C.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Comprobar el nivel de líquido refrigerante del motor diésel\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Limpiar el cartucho del filtro de aire, reemplazar en caso necesario\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar la tensión de la correa trapezoidal del motor diésel, reemplazar en caso necesario\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Reemplazar el filtro de retorno del aceite hidráulico y el filtro de aspiración\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Comprobar el nivel del líquido hidráulico (mirilla en el depósito)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Sistema de engrase centralizado (opción): Comprobar la reserva y la consistencia del lubricante\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricar todos los puntos de lubricación (chasis, dirección articulada) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Revisar el nivel de llenado del líquido limpiaparabrisas\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones de la cabina\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones del motor en el chasis\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones de las bombas en el motor\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones del radiador combinado\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones de los ejes\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar\index{par de apriete+ruedas} el correcto asiento de las ruedas (par de apriete: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Comprobar la presión de los neumáticos (consultar la presión en la placa de características de la rueda dentro en la cabina)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar/reajustar la palanca del freno de estacionamiento\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar el estado de la batería; limpiar los polos/bornes\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar el ajuste de los faros conforme a las normas de circulación, ajustar en caso necesario\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Engrasar los núcleos de las bobinas de las válvulas magnéticas con grasa de cobre \eTD \bTD \Tgen \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Leer la memoria de eventos (Vpad y unidad de control del motor), eliminar las causas de los errores en caso necesario\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection {Mantenimiento cada 600\,h / 12 meses}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tipo\eTD \bTD Mantenimiento cada 600\,h / 12 meses\eTD \bTD C.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Cambio de aceite del motor diésel\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilDraining]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Reemplazar el filtro de aceite del motor\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Reemplazar el filtro de combustible\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:fuelFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar la estanqueidad del motor y de los componentes en el área del motor\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar la estanqueidad y la fijación del tubo de escape\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar el estado y la tensión de la correa trapezoidal del motor diésel, reajustar o reemplazar en caso necesario\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Comprobar el nivel de líquido refrigerante del motor diésel\eTD \bTD \Tcheck\eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Reemplazar el cartucho del filtro de aire\eTD \bTD \Tcheck\eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Reemplazar el filtro de retorno del aceite hidráulico y el filtro de aspiración\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Revisar el nivel de llenado del depósito de líquido hidráulico\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Sistema de engrase centralizado (opción): Comprobar la reserva y la consistencia del lubricante\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricar todos los puntos de lubricación (chasis, dirección articulada) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Revisar el nivel de llenado del líquido limpiaparabrisas\eTD \bTD \Tcheck\eTD \bTD \inP[sec:liquids]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones de la cabina\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones del motor en el chasis\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones de las bombas en el motor\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones del radiador combinado\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones de los ejes\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar/reajustar la palanca del freno de estacionamiento\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar/limpiar los tambores de freno; limpiar el mecanismo de frenado\eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Revisar\index{par de apriete+ruedas} el correcto asiento de las ruedas (par de apriete: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Comprobar la presión de los neumáticos (consultar la presión en la placa de características de la rueda dentro en la cabina)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar el estado de la batería; limpiar los polos/bornes\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar el ajuste de los faros conforme a las normas de circulación, ajustar en caso necesario\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Engrasar los núcleos de las bobinas de las válvulas magnéticas con grasa de cobre \eTD \bTD \Tgen \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+% \bTR \bTD \Tgen \eTD \bTD Revisar la protección anticorrosión, mejorar/reemplazar en caso necesario\eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Leer la memoria de eventos (Vpad y unidad de control del motor), eliminar las causas de los errores en caso necesario\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Mantenimiento cada 1200\,h / 2 años}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tipo\eTD \bTD Mantenimiento cada 1200\,h / 2 años\eTD \bTD C.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Cambiar el aceite hidráulico (depósito)\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Reemplazar el refrigerante (R134a) del aire acondicionado\eTD \bTD \Tspecial \eTD \bTD \emptY\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Mantenimiento cada 2400\,h / 4 años}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Tipo\eTD \bTD Mantenimiento cada 2400\,h / 4 años\eTD \bTD C.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Reemplazar la correa dentada del motor diésel \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Mantenimiento cada 4800\,h / 8 años}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Tipo\eTD \bTD Mantenimiento cada 4800\,h / 8 años\eTD \bTD C.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Reemplazar los conductos hidráulicos de tubo flexible, reemplazar en caso necesario\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Reemplazar la bomba de agua (simultáneamente con la correa dentada) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Mantenimiento de los equipos incorporados}
+
+El mantenimiento\startregister[index][wartplanAgg]{plan de mantenimiento+equipos incorporados} de los equipos incorporados comprende los trabajos de mantenimiento regulares\index{control periódico} así como los controles diarios y semanales:
+
+\starttextbackground[FC]
+\starttabulate [|w(34mm)B|w(16mm)B|p({\dimexpr\textwidth-(50mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Mantenimiento \NC 50\,h\NC Primer servicio tras 50\,h\NC \NR
+\NC\NC 600\,h\NC Mantenimiento regular cada 600\,h / 12 meses\NC \NR
+\NC \Pmtcheck\enskip Lista de control\NC A diario \NC Durante toda la temporada de trabajo \NC \NR
+\NC\NC Semanal\NC Durante toda la temporada de trabajo\NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+El siguiente plan de mantenimiento hace referencia a los equipos estándar incorporados con los que la \sdeux\ está normalmente equipada. Para los equipos incorporados especiales, que no están descritos en este manual de instrucciones, debe tenerse en cuenta el plan de mantenimiento del equipo incorporado correspondiente.
+
+
+\subsection[table:scheduledaily]{Control diario}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tipo\eTD \bTD Control diario\eTD \bTD C.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Limpiar el depósito de material barrido y el dispositivo de reciclado \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Limpiar la boca de aspiración y el canal de aspiración \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection[table:scheduledaily]{Control semanal}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tipo \eTD \bTD Control semanal \eTD \bTD C. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Revisar el desgaste del cepillo lineales y del cepillo delantero (opción) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Revisar la válvula y la goma de la boca de aspiración \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lubricar todos los puntos de lubricación (depósito de material barrido, cepillos, boca de aspiración) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Mantenimiento tras 50\,h~– único}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD
+Art \eTD \bTD Mantenimiento tras 50\,h~– único \eTD \bTD C. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones de los cepillos \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Ajustar la válvula y la goma de la boca de aspiración \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Mantenimiento cada 600\,h/12 meses}
+
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tipo \eTD \bTD Mantenimiento cada 600\,h/12 meses \eTD \bTD C. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Revisar las fijaciones de los cepillos \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Ajustar la válvula y la goma de la boca de aspiración \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplanAgg]
+\stop
+
+
+\stopcomponent
+% vim: fdm=indent
+

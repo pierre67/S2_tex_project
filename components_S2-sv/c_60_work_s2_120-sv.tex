@@ -1,0 +1,272 @@
+\startcomponent c_60_work_s2_120-sv
+\product prd_ba_s2_120-sv
+
+
+\startchapter [title={Die S2 im Alltag},
+							reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Inbetriebnahme}
+
+\startsection [title={Inbetriebnahme},
+							reference={sec:using:start}]
+
+
+\startSteps
+\item Stellen Sie sicher, dass die regulären Kontrollen und Wartungen vorschriftsmäßig durchgeführt wurden.
+\item Starten Sie mithilfe des Zündschlüssels den Motor: Zündung einschalten, dann Schlüssel im Uhrzeigersinn weiterdrehen und halten, bis der Motor startet (nur möglich wenn Fahrstufenwahlhebel auf Neutral).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Fahrstufenwahlhebel}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Wahlhebel in Stellung \aW{Vorwärtsfahrt}}
+{\externalfigure [work:select:rDrive]}{Wahlhebel in Stellung \aW{Rückwärtsfahrt}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Drehen Sie den Schalter des Fahrstufenwahlhebels, um im \aW{Fahr}modus eine Fahrstufe einzulegen:
+\startitemize [R]
+\item Erste Stufe
+\item Zweite Stufe (Automatikbetrieb; startet automatisch in erster Stufe)
+\stopitemize
+
+oder drücken Sie auf den Knopf außen am Hebel, um den \aW{Arbeits}modus zu aktivieren|/|deaktivieren.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+Im Arbeitsmodus steht nur die erste Fahrstufe zur Verfügung und der Motor dreht mit 1300\,min\high{\textminus 1}.
+
+Steuern Sie die Motordrehzahl mithilfe der Tasten~\textSymb{joy_key_engine_increase} und~\textSymb{joy_key_engine_decrease} der Multifunktionskonsole.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Drücken Sie den Fahrstufenwahlhebel nach oben und nach vorne (Vorwärtsfahrt) bzw. nach oben und nach hinten (Rückwärtsfahrt). Siehe Abbildungen oben.
+\item Lösen Sie vor dem Beschleunigen die Feststellbremse.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Lösen Sie die Feststellbremse vollständig!} Die Position des Feststellbremshebels wird von einem elektronischen Sensor überwacht: Wenn die Feststellbremse nicht vollständig gelöst ist, ist die Fahrgeschwindigkeit auf 5\,km/h begrenzt.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Drücken Sie langsam das Fahrpedal, um das Fahrzeug in Bewegung zu versetzen.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Saugkanalklappe}
+
+Das Saugsystem erzeugt einen Luftstrom entweder vom Saugmund oder vom Handsaugschlauch (Option) zum Schmutzbehälter.
+
+Eine von Hand zu betätigende Klappe (\inF[fig:suctionClap], \atpage[fig:suctionClap]) erlaubt es, den Luftstrom zwischen Saugmund und Handsaugschlauch umzuschalten.
+
+\placefig [here] [fig:suctionClap] {Saugkanalklappe}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Saugkanal geöffnet}
+{\externalfigure [work:suctionClap:closed]}{Saugkanal geschlossen}
+\stopcombination}
+
+Im Normalbetrieb~– Arbeiten mit dem Saugmund~– muss der Saugkanal geöffnet sein (Umschalthebel zeigt nach oben).
+
+Um den Handsaugschlauch einsetzen zu können, muss der Saugkanal geschlossen sein (Umschalthebel zeigt nach unten). Auf diese Weise wird der Luftstrom  durch den Handsaugschlauch geleitet.
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Außerbetriebnahme},
+							reference={sec:using:stop}]
+
+\index{Außerbetriebnahme}
+
+\startSteps
+\item Aktivieren Sie die Feststellbremse (Hebel zwischen den Sitzen) und legen Sie den Fahrstufenwahlhebel auf \aW{Neutral}.
+\item Führen Sie die erforderlichen Kontrollarbeiten~– tägliche und ggf. wöchentliche Kontrollen~– durch wie auf \atpage[table:scheduledaily] beschrieben.
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+
+\startsection [title={Kehren und Saugen},
+							reference={sec:using:work}]
+
+\startSteps
+\item Führen Sie die\index{Kehren} Inbetriebnahme des Fahrzeugs durch wie in  \in{§}[sec:using:start], \atpage[sec:using:start] beschrieben.
+\item Aktivieren Sie\index{Saugen} den \aW{Arbeits}modus (Knopf außen am Fahrstufenwahlhebel).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Drücken Sie die Taste~\textSymb{joy_key_suction_brush}, um Turbine und Besen einzuschalten.
+
+{\md Variante:} {\lt Drücken Sie die Taste~\textSymb{joy_key_suction}, um nur mit dem Saugmund zu arbeiten.}
+
+\item Stellen Sie Umdrehungsgeschwindigkeit der Besen mithilfe der Tasten~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} der Multifunktionskonsole ein.
+
+\item Bringen Sie die Besen mithilfe des jeweiligen Joysticks so in Position, dass Sie die optimale Arbeitsbreite erreichen.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Positionieren der Besen}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Besen nach außen|/|innen}
+{\externalfigure [work:brush:left:raise]}{Besen auf|/|ab}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Befeuchtung von Besen und Saugkanal}
+
+Betätigen\index{Kehren+Befeuchtung} Sie den Schalter~\textSymb{temoin_busebalais} zwischen den Sitzen:
+
+{\md Position 1:} Wasserpumpe läuft automatisch, solange die Besen aktiviert sind.
+
+{\md Position 2:} Wasserpumpe läuft permanent. (Nützlich \eG\ für Einstellarbeiten.)
+
+
+\subsubsubject{Grobschmutz}
+
+\startSteps [continue]
+\item Wenn die Gefahr besteht, dass größere Schmutzobjekte (\eG\ PET||Flaschen) den Saugmund blockieren, öffnen\index{Grobschmutzklappe} Sie die Grobschmutzklappe mittels der seitlichen Tasten der Multifunktionskonsole oder~– wenn das nicht ausreicht~– heben Sie\index{Saugmund+Grobschmutz} den Saugmund vorübergehend an.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Umgehen mit Grobschmutz}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Grobschmutzklappe öffnen}
+{\externalfigure [work:suction:raise]}{Saugmund vorübergehend anheben}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Entleeren des Schmutzbehälters},
+							reference={sec:using:container}]
+
+\startSteps
+\item Fahren\index{Schmutzbehälter+Entleeren} Sie das Fahrzeug an einen zum Entleeren geeigneten Platz. Achten Sie darauf, dass die geltenden Umweltschutzbestimmungen eingehalten werden.
+\item Aktivieren Sie die Feststellbremse und legen Sie den Fahrstufenwahlhebel auf \aW{Neutral}. (Erforderlich zur Freigabe des Behälter||Kippen||Schalters).
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Entriegeln und öffnen Sie die Verschlussklappe des Schmutzbehälters.
+\item Betätigen Sie den Schalter~\textSymb{temoin_kipp2} (Mittelkonsole, zwischen den Sitzen), um den Schmutzbehälter aufzukippen.
+\item Wenn der Behälter entleert ist, waschen Sie das Innere mit einem Wasserstrahl. Sie können hierzu die integrierte Wasserpistole (optionale Ausstattung) verwenden.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Handhabung des Schmutzbehälters}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Verriegelung der Verschlussklappe}
+{\externalfigure [container:safety:unlocked]}{Sicherungsstrebe}
+{\externalfigure [container:safety:locked]}{Sicherungsstrebe verriegelt}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Überprüfen|/|reinigen Sie die Dichtungen und die Auflageflächen der Dichtungen des Behälters, des Recyclingsystems und des Saugkanals.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Betätigen Sie den Schalter~\textSymb{temoin_kipp2}, um den Schmutzbehälter abzulassen. (Entfernen Sie ggf. vorher die Sicherungsstreben von den Hydraulikzylindern.)
+\item Verriegeln Sie die Verschlussklappe des Schmutzbehälters.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Handsaugschlauch},
+							reference={sec:using:suction:hose}]
+
+Die \sdeux\ kann optional\index{Handsaugschlauch} mit einem Handsaugschlauch ausgerüstet werden. Dieser ist auf der Verschlussklappe des Schmutzbehälters fixiert; seine Bedienung ist unkompliziert.
+
+{\sla Voraussetzungen:}
+
+Der Schmutzbehälter ist vollständig abgesenkt; die \sdeux\ befindet sich im \aW{Arbeits}modus. (Siehe \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Handsaugschlauch}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Drücken Sie die Taste~\textSymb{temoin_aspiration_manuelle} der Deckenkonsole, um das Saugsystem zu aktivieren.
+\item Ziehen Sie die Feststellbremse fest an, bevor Sie das Führerhaus verlassen.
+\item Schließen Sie den Saugkanal mit der Saugkanalklappe. (Siehe \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Ziehen Sie den Handsaugschlauch am Mundstück aus seiner Halterung und beginnen Sie die Arbeit.
+\item Nach Beendigung der Arbeit betätigen Sie erneut die Taste~\textSymb{temoin_aspiration_manuelle}, um das Saugsystem auszuschalten.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Hochdruckwasserpistole},
+							reference={sec:using:water:spray}]
+
+Die \sdeux\ kann optional\index{Wasserpistole} mit einer Hochdruckwasserpistole ausgerüstet werden. Die Wasserpistole ist in der hinteren rechten Wartungstür befestigt und mit einer 10-Meter||Schlauchhaspel~– auf der gegenüberliegenden Fahrzeugseite~– verbunden.
+
+Gehen Sie so vor, um die Wasserpistole einzusetzen:
+
+{\sla Voraussetzungen:}
+
+Im Frischwassertank befindet sich ausreichend Wasser; die \sdeux\ befindet sich im \aW{Arbeits}modus. (Siehe \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Hochdruckwasserpistole}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Drücken Sie die Taste~\textSymb{temoin_buse} der Deckenkonsole, um die Hochdruckwasserpumpe zu aktivieren.
+\item Ziehen Sie die Feststellbremse fest an, bevor Sie das Führerhaus verlassen.
+\item Öffnen Sie die hintere rechte Wartungstür und nehmen Sie die Wasserpistole heraus.
+\item Rollen Sie so viel Schlauch ab wie nötig und beginnen Sie Ihre Arbeit.
+\item Nach Beendigung der Arbeit betätigen Sie erneut die Taste~\textSymb{temoin_buse}, um die Hochdruckwasserpumpe auszuschalten.
+\item Ziehen Sie kurz am Schlauch, um die Blockierung zu lösen und den Schlauch aufzurollen.
+\item Befestigen Sie die Wasserpistole wieder in ihrer Halterung und schließen Sie die Wartungstür.
+\stopSteps
+
+\stopsection
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent

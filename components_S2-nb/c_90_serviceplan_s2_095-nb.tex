@@ -1,0 +1,338 @@
+% coding: utf-8
+
+\startcomponent c_90_serviceplan_s2_095-nb
+
+
+\chapter[sec:schedule]{Vedlikeholdsplan}
+
+\startregister[index][wartplan]{Vedlikeholdsplan+Kjøretøy}
+
+
+\section{Generelt}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck \enskip Kvalifikasjon {\definedfont[SansBoldItalic] Sjekk} \enskip}
+Kontroll, som kan utføres av\index{Kvalifikasjon+vedlikeholdspersonell} driftspersonellet til kjøretøyet uten ekstern hjelp. Imidlertid er grunnleggende kunnskaper innen motorkjøretøyteknikk forutsetningen.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro \enskip Kvalifikasjon {\definedfont[SansBoldItalic] servicearbeid} \enskip}
+Vanlig vedlikeholdsarbeid, som må gjennomføres ved vedlikehold. Vedlikeholdet må gjennomføres i et autorisert verksted av fagpersonell med nødvendig verktøy.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial \enskip Kvalifikasjon {\definedfont[SansBoldItalic] spesialarbeid} \enskip}
+Spesielt\index{Spesialarbeid} vedlikeholdsarbeid, som kun må utføres av en person, som har gjennomgått en spesifikk opplæring som er godkjent av \BoschungNote-kundeservicen.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual \enskip Type {\definedfont[SansBoldItalic] visuell kontroll} \enskip}
+Kontrollpunkt som skal gjennomføres ved hjelp av\index{Visuell kontroll} visuell kontroll. Konstaterte feil eller skader må rapporteres til personen som er a for vedlikeholdet.
+\stoptextrule
+}
+
+Ved alle vedlikeholdsarbeider skilles det mellom tre kvalifikasjonstrinn (krav til personellet og utrustningen) og fire forskjellige vedlikeholdstyper (type arbeid).
+
+\startTwoPar
+{\em Kvalifikasjonstrinn:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:check}} Sjekk \par
+\symDescr{\textSymb{maint:pro}} Servicearbeid \par
+\symDescr{\textSymb{maint:special}} Spesialarbeid \par
+\stop
+\TwoPar
+{\em Vedlikeholdstyper:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:visual}} Visuell kontroll \par
+\symDescr{\textSymb{maint:function}} Funksjonskontroll \par
+\symDescr{\textSymb{maint:level}} Fyllenivåkontroll \par
+\symDescr{\textSymb{maint:exchange}} Drivstoffutveksling \par
+\symDescr{\textSymb{maint:generic}} Øvrige arbeider \par
+\stop
+\stopTwoPar
+
+\handItem{Se forklaringen på kantene.}
+
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtfunction \enskip Type {\definedfont[SansBoldItalic] funksjonskontroll} \enskip}
+Kontroller, som\index{Kontroll+funksjon} går utover en visuell kontroll, \eG\ funksjonskontroll av bremsen, tilstandskontroll av komponenter, manuell kontroll for godt feste.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtlevel \enskip Type {\definedfont[SansBoldItalic] fyllenivåkontroll} \enskip}
+\index{Kontroll+fyllenivå} Fyllenivåkontrollen til et element omfatter kontrollen~– per visuell kontroll eller med peilepinnen~– og evt. fylle på med tilsvarende driftsstoff. {\em Hertil teller også sentralsmøringen.} Les i avsnitt \about[sec:liqquantities], hvor du finner informasjoner om kvaliteten og mengde driftsstoffer.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtexchange \enskip Type {\definedfont[SansBoldItalic] drivstoffutveksling} \enskip}
+Dertil\index{Driftsstoffer+utveksling} tilhører skifte av driftsstoffet samt den påfølgende fyllenivåkontrollen. Informasjoner om kvalitet og mengde driftsstoffer finner du \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+\starttextrule{\Pmtgeneric \enskip Type {\definedfont[SansBoldItalic] Øvrige arbeider} \enskip}
+Forskjellige, vedlikeholdsarbeider som skal utføres faglig korrekt tilsvarende instruksene.
+\stoptextrule
+}%
+
+\blank[big]
+\starttextbackground[CB]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+Følg sikkerhets- og miljøvernbestemmelsene ved utførelse av kontroll- og vedlikholdspunkt. \BosFull{boschung} tilbakeviser ethvert ansvar for person- og materialskader, som oppstår grunnet ignorering av disse bestemmelsene.
+\stopPictPar
+\stoptextbackground
+\page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vedlikeholdsplan til kjøretøyet}
+
+\index{Kontroll, periodisk} kjøretøyvedlikehold består av vedlikehold som må utføres regelmessig, periodiske kontroller (sjekk) samt én enkelt utførelse av service\footnote{Alle timeangivelser gjelder som driftstimer}:
+
+\starttextbackground[FC]
+\starttabulate [|w(40mm)B|w(16mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Vedlikeholdsarbeider \NC 50\,h\NC Første service etter 50\,h\NC \NR
+\NC\NC 600\,h\NC Standard vedlikehold hver 600.\,h/12 måneder\NC \NR
+\NC\NC 1200\,h\NC Standard vedlikehold hver 1200.\,h/2 år\NC \NR
+\NC\NC 2400\,h \NC Standard vedlikehold hver 2400.\,h/4 år\NC \NR
+\NC\NC 4800\,h \NC Standard vedlikehold hver 4800.\,h/8 år\NC \NR
+\NC \Pmtcheck\enskip Sjekkliste\NC daglig \NC I løpet av hele arbeidsperioden \NC \NR
+\NC\NC Ukentlig\NC I løpet av hele arbeidsperioden\NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Følgende vedlikeholdsplan beror på basiskjøretøyet. Vær også oppmerksom på vedlikeholdsplanen til aggregater (\eG\ feiemaskin, smussbeholder) fra og med \at{side}[sec:schedaggr].
+
+Ved dobbelte angivelser til vedlikeholdsintervallen (\eG\ \quotation{Hver 600.\,h~/12~måneder}) har det første tidspunktet som inntreffer prioritet.
+
+Arbeidene til de enkelte vedlikeholdsplanene~– utenom engangs vedlikeholdet etter 50~timer~– skal utføres kumulativt: Hver 1200.~driftstimer skal 600-timers-vedlikeholdet {\em og} 1200-timers-vedlikeholdet gjennomføres; hver 2400.~driftstimer skal 600-timers-, 1200-timers {\em og} 2400-timers-vedlikehold gjennomføres; osv.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Daglig kontroll}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Daglig kontroll\eTD \bTD \Tcheck \eTD \bTD ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Rengjør kjøretøyet\eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning]\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Kontroller kjøretøyet for eventuelle skader\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Kontroll for lekkasjer\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller motoroljenivået til dieselmotoren (med peilepinne!)\eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller kjølevæskenivået til dieselmotoren\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller hydraulikkvæskenivået (seglass på tanken)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller drivstoffnivået\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller vindusvisker væskenivået\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funksjonskontroll av kontrollampene og belysningen til instrumentpanelet og kontrollpanelet \eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funksjonskontroll til parkeringsbremsen\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funksjonskontroll til belysnings- og signalinnretningene\eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting]\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+\subsection[table:scheduleweekly]{Ukentlig kontroll}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type \eTD \bTD Ukentlig kontroll \eTD \bTD \Tcheck \eTD \bTD ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Kontroller dekktrykket (trykk se hjul-typeskilt i førerhuset)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller luftfilterpatronen og evt. rengjøre\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør alle smørepunktene (chassis, leddstyring) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection [sec:50h]{Vedlikehold etter 50\,h~– enkelt}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Vedlikehold etter 50\,h~– enkelt\eTD \bTD Q.\eTD \bTD ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Kontroller kjølevæskenivået til dieselmotoren\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Rengjør luftfilterpatronen; evt. skifte ut\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller spenningen til kileribberemmen til dieselmotoren, evt. etterstramme\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Skift ut hydraulikkolje-retur- og sugefilter\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller hydraulikkvæskenivået (seglass på tanken)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Sentralsmøreanlegg (valgfritt): Kontroller smøremiddelreserve og -konsistens\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør alle smørepunktene (understell, leddstyring)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller fyllenivået til vindusviskervæsken\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til førerhuset\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til motorene på chassisen\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til pumpene på motoren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til kombikjøleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroll feste til akslene\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller hjulene\index{Trekkmoment+hjul} for godt feste (Trekkmoment: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller dekktrykket (trykk se hjul-typeskilt i førerhuset)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller/etterjuster strekningen til parkeringsbremsespaken\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller tilstanden til batteriet; rengjør poler/klemmer\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller og evt. still inn innstillingen til lyskasterne iht. trafikkreglene\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør inn spolekjerner til magnetventilene med kobberfett\eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lese ut hendelsesminnet (Vpad og motorstyreenhet); evt. utbedre årsaker til feil\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection {Vedlikehold hver 600.\,h/12 måneder}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Vedlikehold hver 600.\,h/12 måneder\eTD \bTD Q.\eTD \bTD ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Oljeskift dieselmotor\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilDraining]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Skift ut motoroljefilter\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Skift ut drivstoffilter\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:fuelFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller tettheten til motoren og komponentene i motorrommet\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller tetthet og feste til eksosanlegget\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller tilstanden og spenningen til kileribberemmen til dieselmotoren, evt. etterstramme\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller kjølevæskenivået til dieselmotoren\eTD \bTD \Tcheck\eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Skifte ut luftfilterpatronen\eTD \bTD \Tcheck\eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Skift ut hydraulikkolje-retur- og sugefilter\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller fyllenivået til hydraulikkvæsketanken\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Sentralsmøreanlegg (valgfritt): Kontroller smøremiddelreserve og -konsistens\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør alle smørepunktene (understell, leddstyring)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontroller fyllenivået til vindusviskervæsken\eTD \bTD \Tcheck\eTD \bTD \inP[sec:liquids]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til førerhuset\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til motorene på chassisen\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til pumpene på motoren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til kombikjøleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroll feste til akslene\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller/etterjuster strekningen til parkeringsbremsespaken\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller/rengjør bremsetromlene og -skoene; rengjør bremsemekanismen\eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller hjulene\index{Trekkmoment+hjul} for godt feste (Trekkmoment: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroller dekktrykket (trykk se hjul-typeskilt i førerhuset)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller tilstanden til batteriet; rengjør poler/klemmer\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller og evt. still inn innstillingen til lyskasterne iht. trafikkreglene\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør inn spolekjerner til magnetventilene med kobberfett\eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid]\eTD \eTR
+% \bTR \bTD \Tgen \eTD \bTD Kontroller rustbeskyttelsen, evt. utbedre/fornye\eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Lese ut hendelsesminnet (Vpad og motorstyreenhet); evt. utbedre årsaker til feil\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Vedlikehold hver 1200.\,h/2 år}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Vedlikehold hver 1200.\,h/2 år\eTD \bTD Q.\eTD \bTD ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Skift hydraulikkolje (tank)\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Skift ut kuldemiddel (R134a) til klimaanlegget\eTD \bTD \Tspecial \eTD \bTD \emptY\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Vedlikehold hver 2400.\,h/4 år}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Vedlikehold hver 2400.\,h/4 år\eTD \bTD Q.\eTD \bTD ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Skift ut tannremmen til dieselmotoren \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Vedlikehold hver 4800.\,h/8 år}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Vedlikehold hver 4800.\,h/8 år\eTD \bTD Q.\eTD \bTD ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Kontroller hydraulikk-slangeledninger, evt. skifte ut\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Skift ut vannpumpen (samtidig med tannremmen) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Vedlikehold av aggregatene}
+
+Vedlikeholdet\startregister[index][wartplanAgg]{Vedlikeholdsplan+aggregater} av aggregatene omfatter regelmessige vedlikeholdsarbeider\index{Periodisk kontroll} samt daglige og ukentlige kontroller:
+
+\starttextbackground[FC]
+\starttabulate [|w(40mm)B|w(16mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Vedlikeholdsarbeider \NC 50\,h\NC Første service etter 50\,h\NC \NR
+\NC\NC 600\,h\NC Standard vedlikehold hver 600.\,h/12 måneder\NC \NR
+\NC \Pmtcheck\enskip Sjekkliste\NC daglig \NC I løpet av hele arbeidsperioden \NC \NR
+\NC\NC Ukentlig\NC I løpet av hele arbeidsperioden\NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Følgende vedlikeholdsplan beror på standardaggregater, som vanligvis er utstyrt på \sdeux\. For spesielle aggregater, som ikke beskrives i denne bruksanvisningen, må en følge vedlikeholdsskjemaet til de enkelte aggregatene.
+
+
+\subsection[table:scheduledaily]{Daglig kontroll}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type\eTD \bTD Daglig kontroll\eTD \bTD Q.\eTD \bTD ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Rengjør smussbeholderen og resirkuleringsanordningen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Rengjør sugeenheten og sugekanalen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection[table:scheduledaily]{Ukentlig kontroll}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type \eTD \bTD Ukentlig kontroll \eTD \bTD Q. \eTD \bTD ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Kontroller slitasjen til lineær- og frontkostene (valgfritt) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontroller luken og gummier til sugeenheten \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smør alle smørepunktene (smussbeholder, kost, sugeenhet) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Vedlikehold etter 50\,h~– enkelt}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD
+Art \eTD \bTD Vedlikehold etter 50\,h~– enkelt \eTD \bTD Q. \eTD \bTD ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til kosten \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Still inn luken og gummier til sugeenheten \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Vedlikehold hver 600.\,h/12 måneder}
+
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type \eTD \bTD Vedlikehold hver 600.\,h/12 måneder \eTD \bTD Q. \eTD \bTD ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Kontroller feste til kosten \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Still inn luken og gummier til sugeenheten \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplanAgg]
+\stop
+
+
+\stopcomponent
+% vim: fdm=indent
+

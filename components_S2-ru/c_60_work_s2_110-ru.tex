@@ -1,0 +1,275 @@
+\startcomponent c_60_work_s2_110-ru
+\product prd_ba_s2_110-ru
+
+\startchapter [title={Машина S2 в повседневной жизни},
+reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Ввод в эксплуатацию}
+
+\startsection [title={Ввод в эксплуатацию},
+reference={sec:using:start}]
+
+
+\startSteps
+\item Убедитесь, что регулярные проверки и обслуживание были проведены надлежащим образом.
+\item Включите двигатель ключом зажигания: Включите зажигание, затем поверните ключ дальше по часовой стрелке и удерживайте, пока двигатель не запустится (это возможно только, если рычаг переключения передач находится в нейтральном положении).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Рычаг переключения передач}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Рычаг в положении \aW{Движение вперед}}
+{\externalfigure [work:select:rDrive]}{Рычаг в положении \aW{Движение назад}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Поверните переключатель рычага, чтобы в режиме \aW{движения} выбрать передачу:
+\startitemize [R]
+\item Первая передача
+\item Вторая передача (автоматический режим; автоматический запуск на первой передаче)
+\stopitemize
+
+Или нажмите на наружную кнопку на рычаге, чтобы активировать или деактивировать \aW{рабочий} режим.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+В рабочем режиме доступна только первая передача, частота вращения двигателя 1300\,мин\high{\textminus 1}.
+
+Частотой вращения двигателя можно управлять кнопками~\textSymb{joy_key_engine_increase} и~\textSymb{joy_key_engine_decrease} многофункциональной консоли.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Переместите рычаг переключения передач вверх и вперед (для движения вперед) или вверх и назад (для движения назад). См. иллюстрацию вверху.
+\item Перед ускорением отпустите стояночный тормоз.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Освободите стояночный тормоз полностью!} Положение рычага стояночного тормоза контролируется электронным датчиком: Если стояночный тормоз освобожден не полностью, скорость движения ограничена 5\,км/ч.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Медленно нажмите на педаль акселератора, чтобы начать движение.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Заслонка канала всасывания}
+
+Система всасывания создает поток воздуха от патрубка всасывания или ручного шланга (опция) к бункеру для грязи.
+
+С помощью управляемой вручную заслонки (\inF[fig:suctionClap], \atpage[fig:suctionClap]) воздушный поток можно переключать между патрубком всасывания и ручным шлангом.
+
+В обычном режим~– при работе с патрубком~– канал всасывания должен быть открыт (рычаг переключения направлен вверх).
+
+Чтобы можно было использовать шланг, канал всасывания следует закрыть (рычаг переключения направлен вниз). Поток воздуха будет направляться по шлангу.
+
+\testpage [8]
+
+\placefig [here] [fig:suctionClap] {Заслонка канала всасывания}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Канал всасывания открыт}
+{\externalfigure [work:suctionClap:closed]}{Канал всасывания закрыт}
+\stopcombination}
+
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Прекращение эксплуатации},
+reference={sec:using:stop}]
+
+\index{Прекращение эксплуатации}
+
+\startSteps
+\item Поставьте машину на ручной тормоз (рычагом между сиденьями) и приведите рычаг переключения передач в \aW{нейтральное} положение.
+\item Проведите необходимые проверки~– ежедневные и при необходимости еженедельные~– в соответствии с описанием в разделе \atpage[table:scheduledaily].
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+
+\startsection [title={Уборка и всасывание},
+reference={sec:using:work}]
+
+\startSteps
+\item Проведите\index{Уборка} ввод машины в эксплуатацию в соответствии с описанием в \in{§}[sec:using:start], \atpage[sec:using:start].
+\item Активируйте\index{Всасывание} \aW{рабочий}режим (кнопка на внешней стороне рычага переключения передач).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Нажмите кнопку~\textSymb{joy_key_suction_brush}, чтобы включить турбину и щетки.
+
+{\md Вариант:} {\lt Нажмите кнопку~\textSymb{joy_key_suction}, чтобы работать только с патрубком всасывания.}
+
+\item Настройте скорость вращения щеток кнопками~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} на многофункциональной консоли.
+
+\item С помощью соответствующих джойстиков приведите щетки в такое положение, чтобы получить оптимальную рабочую ширину.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Позиционирование щеток}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Перемещение щеток наружу/внутрь}
+{\externalfigure [work:brush:left:raise]}{Перемещение щеток вверх/вниз}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Смачивание щеток и канала всасывания}
+
+Нажмите\index{Уборка+Смачивание} переключатель~\textSymb{temoin_busebalais} между сиденьями:
+
+{\md Положение 1:} Водяной насос работает автоматически, пока щетки активированы.
+
+{\md Положение 2:} Водяной насос работает постоянно. (Полезно \eG\ для работ по настройке.)
+
+
+\subsubsubject{Крупный мусор}
+
+\startSteps [continue]
+\item Если существует опасность, что крупные объекты (\eG\ бутылки из ПЭТ) заблокируют патрубок всасывания, откройте\index{Заслонка для крупного мусора} заслонку для крупного мусора боковыми кнопками на многофункциональной консоли или~– если этого недостаточно~– поднимите\index{Патрубок всасывания+Крупный мусор} патрубок на некоторое время.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Действия с крупным мусором}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Открытие заслонки для крупного мусора}
+{\externalfigure [work:suction:raise]}{Временный подъем патрубка всасывания}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Опорожнение грязевого резервуара},
+reference={sec:using:container}]
+
+\startSteps
+\item Отведите\index{Бункер для грязи+Опорожнение} машину в подходящее место для опорожнения бункера. Соблюдайте действующие правила охраны окружающей среды.
+\item Включите стояночный тормоз. (Это необходимо для разблокирования переключателя опрокидывания бункера.)
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Разблокируйте и откройте заслонку грязевого бункера.
+\item Чтобы опрокинуть бункер, нажмите переключатель~\textSymb{temoin_kipp2} (средняя консоль, между сиденьями).
+\item После опорожнения вымойте бункер изнутри струей воды. Для этого можно использовать водяной пистолет (дополнительное оснащение).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Обращение с грязевым бункером}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Блокировка заслонки}
+{\externalfigure [container:safety:unlocked]}{Защитная подпорка}
+{\externalfigure [container:safety:locked]}{Защитная подпорка заблокирована}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Проверьте и очистите уплотнения и поверхности прилегания уплотнений бункера, системы регенерации и канала всасывания.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Нажмите переключатель~\textSymb{temoin_kipp2}, чтобы опустить бункер. (Предварительно уберите защитные распорки с гидравлических цилиндров.)
+\item Заблокируйте заслонку грязевого бункера.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Ручной всасывающий шланг},
+reference={sec:using:suction:hose}]
+
+Машина \sdeux\ может быть дополнительно\index{Ручной всасывающий шланг} оснащена ручным всасывающим шлангом. Он зафиксирован на заслонке бункера; использовать его несложно.
+
+{\sla Необходимые условия:}
+
+Бункер для грязи полностью опущен; \sdeux\ находится в \aW{рабочем} режиме. (См. \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Ручной всасывающий шланг}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Нажмите кнопку~\textSymb{temoin_aspiration_manuelle} на потолочной консоли, чтобы активировать систему всасывания.
+\item Прежде чем выйти из кабины, надежно поставьте машину на ручной тормоз.
+\item Закройте канал всасывания заслонкой. (См. \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Вытащите шланг из крепления за насадку и приступайте к работе.
+\item По окончании работы снова нажмите кнопку~\textSymb{temoin_aspiration_manuelle}, чтобы выключить систему всасывания.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Водяной пистолет высокого давления},
+reference={sec:using:water:spray}]
+
+Машина \sdeux\ может быть дополнительно\index{Водяной пистолет} оснащена водяным пистолетом. Водяной пистолет закреплен на задней правой дверцей для техобслуживания и соединен с барабаном со шлангом длиной 10 м~, закрепленным на противоположной стороне машины~.
+
+Чтобы использовать водяной пистолет, сделайте следующее:
+
+{\sla Необходимые условия:}
+
+В баке чистой воды есть достаточно воды; \sdeux\ находится в \aW{рабочем}режиме. (См. \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Водяной пистолет высокого давления}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Нажмите кнопку~\textSymb{temoin_buse} на потолочной консоли, чтобы активировать водяной пистолет.
+\item Прежде чем выйти из кабины, надежно поставьте машину на ручной тормоз.
+\item Откройте заднюю правую дверцу для техобслуживания и выньте пистолет.
+\item Размотайте шланг на нужную длину и начинайте работу.
+\item По окончании работы снова нажмите кнопку~\textSymb{temoin_buse}, чтобы выключить водяной пистолет.
+\item Чтобы открыть блокиратор и смотать шланг, коротко потяните за него.
+\item Закрепите пистолет в держателе и закройте дверцу для техобслуживания.
+\stopSteps
+
+\stopsection
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent
+

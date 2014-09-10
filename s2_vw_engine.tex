@@ -1,0 +1,330 @@
+\startsection [title={Contrôle quotidien},
+							reference={sec:main:daily},
+							]
+
+
+Vérifiez le niveau d’huile du moteur avec la jauge à huile (portillon de service arrière droit}.
+
+
+Travaux supplémentaires:
+
+Purgez le filtre d’alimentation en carburant.
+
+
+\stopsection
+
+\startsection [title={Service régulier toutes les 600\,h},
+							reference={sec:main:600},
+							]
+
+
+Diagnostic embarqué: 
+
+– Interrogez la mémoire de défauts de tous les systèmes de surveillance du moteur.
+– Effectuez une inspection visuelle des fuites et dommages éventuels dans le compartiment moteur.
+
+
+
+Système de graissage:
+– Vidangez|/|remplir l’huile du moteur
+– Remplacez le filtre à huile
+
+Système de refroidissement:
+– Contrôlez le niveau du liquide de refroidissement
+– Contrôlez le point de congélation du liquide de refroidissement à l’aide d’un réfractomètre (-25\,°C)
+
+Courroie poly-V:
+– Contrôlez l’état et la tension de la courroie, remplacer si nécessaire
+
+Périphérique:
+– Contrôlez|/|nettoyez le radiateur de refroidissement
+– Contrôlez l’état et le fonctionnement du système de ventilation (enclenchement|/|déclenchement)
+– Remplacez le filtre à air
+– Contrôlez|/|réparez l’étanchéité et la fixation du système d’admission d’air
+– Contrôlez|/|réparez l’étanchéité et la fixation du système d’échappement
+– Contrôlez|/|réparez la fixation des éléments périphériques du moteur (faisceaux de câbles, conduites, etc.)
+
+Travaux supplémentaires
+
+Alimentation en carburant:
+– Remplacez le filtre d’alimentation en carburant
+
+Filtre antiparticule:
+– Régénérez le filtre antiparticule
+
+%%%%%%%%%%%%
+
+
+\stopsection
+
+\startsection [title={Service régulier toutes les 2400\,h},
+							reference={sec:main:2400},
+							]
+
+
+Travaux supplémentaires
+
+Distribution:
+– Remplacez la courroie de distribution
+
+%%%%%%%%%%%%
+
+
+\stopsection
+
+\startsection [title={Service régulier toutes les 4000\,h},
+							reference={sec:main:4000},
+							]
+
+
+Travaux supplémentaires
+
+Refroidissement:
+– Remplacez la pompe à eau (en même temps que le remplacement de la courroie de distribution)
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\startsection [title={Entretien du moteur diesel},
+							reference={sec:workshop:vw},
+							]
+
+
+\subsection [sSec:vw:diagTool]{Système de diagnostique embarqué}
+
+L’unité de commande du moteur~– J623~– est équipé d’une mémoire de défauts.
+Les défauts détectés sur un élément surveillé sont enregistrés dans la mémoire de défauts,
+notifiés et classés par type.
+
+Les défauts sont évalués, puis triés et
+enregistrés dans la mémoire jusqu’à ce qu’ils soient effacés.
+
+Les défauts sporadiques sont affichés avec le suffixe \quote{SP}.
+Les défauts sporadiques peuvent être causés par un mauvais contact ou
+un débranchement temporaire d’un câble électrique.
+Si un défaut ne se reproduit plus durant 50 démarrages, il est supprimé
+de la mémoire de défauts.
+
+Si un défaut détecté peu influencer le fonctionnement du moteur,
+la lampe témoin de diagnostic du moteur~– K29~– et|/|ou la lampe témoin du système
+de dépollution des gaz d’échappement s’allume\,(nt).
+
+Le contenu de la mémoire de défauts peut être lu avec l’outil de diagnostic, de test
+et d’information système~– VAS 5051/B~–.
+
+Après avoir réparé un ou plusieurs défauts, il faut effacer la
+mémoire de défauts.
+
+\subsubsection[sSec:vw:diagTool:connect]{Branchez le système de diagnostic}
+
+\starttextbackground [FC]
+\startPictPar
+\PMgeneric
+\PictPar
+Vous trouverez les instructions détaillées à propos du système de
+diagnostic~– VAS 5051/B~– dans le manuel fourni avec l’appareil.
+
+Il est également possible d’utiliser un appareil alternatif, par ex. DiagRA.
+\stopPictPar
+\stoptextbackground
+
+\page [yes]
+
+
+\subsubsubsubject{Prérequis}
+
+\startitemize
+\item Les fusibles doivent être en ordre
+\item La tension de la batterie doit être supérieure à 11,5\,V
+\item Tous les consommateurs électriques doivent être désactivés
+\item Le branchement à la masse doit être en ordre
+\stopitemize
+
+
+\subsubsubsubject{Procédure}
+
+\startSteps
+\item Branchez la prise de diagnostic de l’appareil~– VAS 5051/B~– à l’interface de diagnostic du véhicule.
+\item Mettez le contact ou, selon la fonction recherchée, démarrez le moteur.
+\stopSteps
+
+\subsubsubsubject{Sélection du mode opératoire}
+
+\startSteps [continue]
+\item Pressez le bouton \quote{Vehicle self-diagnosis} à l’écran.
+\stopSteps
+
+
+\subsubsubsubject{Sélection du mode système}
+
+\startSteps [continue]
+\item Pressez le bouton \quote{01-Engine electronics} à l’écran.
+\stopSteps
+
+L’écran affiche le code et l’identification de l’unité de commande du moteur.
+
+Le cas échéant, vérifiez le code de l’unité de commande du moteur.
+
+
+\subsubsubsubject{Sélection de la fonction de diagnostic}
+
+Toutes les fonctions de diagnostic valables sont affichées à l’écran.
+
+\startSteps [continue]
+\item Pressez le bouton pour la fonction désirée à l’écran.
+\stopSteps
+
+
+
+\subsection [sSec:vw:faultMemory]{Mémoire de défauts}
+
+
+\subsubsection{Lecture de la mémoire de défauts}
+
+\subsubsubject{Procédure d’interrogation de la mémoire de défauts}
+
+\startSteps
+\item Mettez le moteur en marche, régime de ralenti.
+\item Branchez le système de diagnostique (voir \in{section}[sSec:vw:diagTool:connect])
+et sélectionnez \quote{engine control unit}.
+\item Sélectionnez la fonction de diagnostic \quote{004-Contents of fault memory}.
+\item Sélectionnez la fonction de diagnostic \quote{004.01-Read fault memory}.
+\stopSteps
+
+{\sla Uniquement si le moteur ne démarre pas:}
+
+\startitemize [2]
+\item Mettez le contact (contacteur à clé).
+\item Si aucun défaut n’est enregistré dans l’unité de commande du moteur,
+l’écran affiche \quote{0 fault detected}.
+\item Si un ou plusieurs défauts sont enregistrés dans l’unité de commande du moteur,
+ils sont affichés successivement à l’écran.
+\item Quittez la fonction de diagnostic.
+\item Coupez le contact.
+\item Réparez chaque défaut potentiel en vous aidant de la table des défauts (voir documentation d’atelier),
+effacez la mémoire de défauts.
+\stopitemize
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+Si un ou plusieurs défauts ne peuvent pas être effacés, faites appel au service après||vente \boschung.
+\stopPictPar
+\stoptextbackground
+
+
+\subsubsubject{Défauts statiques}
+
+En cas de présence d’un ou plusieurs défauts statiques dans la mémoire de défauts,
+nous recommandons d’effectuer les réparations nécessaires, en accord avec le client,
+en vous aidant du guide de recherche de défauts.
+
+
+
+\subsubsubject{Défauts sporadiques}
+
+Dans le cas où seuls des défauts sporadiques sont présents dans la mémoire de défauts,
+et qu’aucun dysfonctionnement en relation avec le système électronique n’a été signalé par le client,
+effacez la mémoire de défauts.
+
+\startSteps [continue]
+\item Pressez à nouveau sur \quote{continue} \inframed{>} pour poursuivre le test.
+\item Pour quitter le guide de recherche de défauts, pressez sur \quote{skip}, puis \quote{close}.
+\stopSteps
+
+Maintenant toutes la mémoire de défauts est à nouveau interrogée.
+
+Un message est maintenant affiché pour confirmer que tous les défauts sporadiques ont été effacés.
+Le protocole de diagnostic est automatiquement envoyé {\em online}.
+
+Le test du système électronique du moteur est complet.
+
+
+\subsubsection{Effacement de la mémoire de défauts}
+
+
+\subsubsubject{Procédure d’effacement de la mémoire de défauts}
+
+{\sla Prérequis:}
+
+\startitemize [2]
+\item Les réparations nécessaires doivent avoir été effectuées.
+\stopitemize
+
+{\sla Procédure:}
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+Lorsque les défauts ont été corrigés, la mémoire de défauts doit être à nouveau interrogée
+et ensuite effacée selon la procédure ci||dessous.
+\stopPictPar
+\stoptextbackground
+
+
+\startSteps
+\item Mettez le moteur en marche, régime de ralenti.
+\item Branchez le système de diagnostique (voir \in{section}[sSec:vw:diagTool:connect])
+et sélectionnez \quote{engine control unit}.
+\item Sélectionnez la fonction de diagnostic \quote{004-Contents of fault memory}.
+\item Sélectionnez la fonction de diagnostic \quote{004.10-Erase fault memory}.
+\stopSteps
+
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+Si un défaut ne peut pas être effacé, cela signifie que la faute n’est pas corrigée.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Quittez la fonction de diagnostic.
+\item Coupez le contact.
+\stopSteps
+
+
+\subsection [sSec:vw:lub] {Graissage du moteur diesel}
+
+\subsubsection [ssSec:vw:oilLevel] {Vérification du niveau d’huile du moteur}
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+Le niveau d’huile du moteur doit impérativement rester en||dessous de la marque {\CAP max.} de la jauge à huile.
+Un niveau d’huile trop élevé risque d’endommager le convertisseur catalytique.
+\stopPictPar
+\stoptextbackground
+
+\startSteps
+\item Arrêtez le moteur et laissez||le au repos environ trois minutes.
+\item Retirez la jauge à huile de son orifice
+et essuyez||la proprement; introduisez||la à nouveau complètement.
+\item Retirez||la à nouveau et observez le niveau d’huile comme suit:
+\startitemize [A]
+\item Niveau maximum, aucun remplissage nécessaire.
+\item Niveau correct, un ajout jusqu’à atteindre la marque A est autorisé.
+\item Le niveau est insuffisant, un remplissage est nécessaire jusqu’à atteindre
+au moins la zone B.
+\stopitemize
+\item Si le niveau est au||dessous de la marque C, il est nécessaire de remplir
+jusqu’à atteindre la marque A.
+\stopSteps
+
+
+
+
+
+\stopsection
+

@@ -1,0 +1,273 @@
+
+\startcomponent c_60_work_s2_095-es
+
+
+\startchapter [title={La S2 en el día a día},
+reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Puesta en marcha}
+
+\startsection [title={Puesta en marcha},
+reference={sec:using:start}]
+
+
+\startSteps
+\item Asegúrese de que los controles y mantenimientos regulares se realizan debidamente.
+\item Arranque el motor con la llave de encendido: Conectar la ignición, después seguir girando la llave en el sentido de las agujas del reloj y mantener hasta que el motor arranque (solo es posible cuando la palanca de marchas está en el punto neutro).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Palanca de marchas}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Palanca de selección en posición \aW{Avance}}
+{\externalfigure [work:select:rDrive]}{Palanca de selección en posición \aW{Marcha atrás}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Gire el interruptor de la palanca de marchas para meter una marcha en el modo de \aW{desplazamiento}:
+\startitemize [R]
+\item Primer nivel
+\item Segundo nivel (servicio automático; se inicia automáticamente en el primer nivel)
+\stopitemize
+
+o presione el botón exterior en la palanca para activar/desactivar el modo de \aW{trabajo}.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+En el modo de trabajo está solo disponible la primera marcha y el motor gira a 1300\,min\high{\textminus 1}.
+
+Regule la velocidad del motor con las teclas~\textSymb{joy_key_engine_increase} y~\textSymb{joy_key_engine_decrease} de la consola multifuncional.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Presione la palanca de marchas hacia arriba y adelante (avance) o hacia arriba y hacia atrás (marcha atrás). Ver imágenes arriba.
+\item Antes de acelerar quite el freno de estacionamiento.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md ¡Quite completamente el freno de estacionamiento!} Un sensor electrónico supervisa la posición del freno de estacionamiento: Si no se ha quitado el freno de estacionamiento completamente, la velocidad de marcha está limitada a 5\,km/h.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Pise lentamente el acelerador para mover el vehículo.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Válvula del canal de aspiración}
+
+El sistema de aspiración crea una corriente de aire, bien desde la boca de aspiración o desde la manguera manual de aspiración (opción) hacia el depósito de material barrido.
+
+Una válvula de accionamiento manual (\inF[fig:suctionClap], \atpage[fig:suctionClap]) permite cambiar la corriente de aire entre la boca de aspiración y la manguera manual de aspiración.
+
+\placefig [here] [fig:suctionClap] {Válvula del canal de aspiración}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Canal de aspiración abierto}
+{\externalfigure [work:suctionClap:closed]}{Canal de aspiración cerrado}
+\stopcombination}
+
+Durante el servicio normal, trabajo con la boca de aspiración, el canal de aspiración deberá estar abierto (la palanca de inversión está hacia arriba).
+
+Para poder emplear la manguera manual de aspiración, el canal de aspiración deberá estar cerrado (la palanca de inversión muestra hacia abajo). De esta forma se lleva la corriente de aire a través de la manguera manual de aspiración.
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Puerta fuera de servicio},
+reference={sec:using:stop}]
+
+\index{puesta fuera de servicio}
+
+\startSteps
+\item Ponga el freno de estacionamiento (palanca entre los asientos) y coloque la palanca de marchas en la posición \aW{neutra}.
+\item Realice los trabajos de control necesarios, controles diarios y, en caso necesario, semanales, como se describe en \atpage[table:scheduledaily].
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+
+\startsection [title={Barrer y aspirar},
+reference={sec:using:work}]
+
+\startSteps
+\item Lleve a cabo la\index{barrer} puesta en marcha del vehículo como se indica en el \in{§}[sec:using:start], \atpage[sec:using:start].
+\item Active\index{aspirar} el modo de \aW{trabajo} (botón exterior en la palanca de marchas).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Pulse la tecla~\textSymb{joy_key_suction_brush} para conectar la turbina y el cepillo.
+
+{\md Variante:} {\lt Pulse la tecla~\textSymb{joy_key_suction} para trabajar solo con la boca de aspiración.}
+
+\item Regule la velocidad de giro del cepillo con las teclas~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} de la consola multifuncional.
+
+\item Con ayuda del joystick correspondiente coloque los cepillos en posición para que alcancen el ancho de trabajo óptimo.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Posicionamiento de los cepillos}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Cepillos hacia fuera/dentro}
+{\externalfigure [work:brush:left:raise]}{Cepillos arriba/abajo}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Humedecer los cepillos y el canal de aspiración}
+
+Accione\index{barrer+humedecer} el interruptor~\textSymb{temoin_busebalais} entre los asientos:
+
+{\md Posición 1:} La bomba de agua marcha de forma automática mientras los cepillos estén activados.
+
+{\md Posición 2:} La bomba de agua marcha de forma permanente. (Práctico \eG\ para trabajos de ajuste.)
+
+
+\subsubsubject{Suciedad gruesa}
+
+\startSteps [continue]
+\item Si existe el riesgo de que objetos más grandes (\eG\ botellas PET) bloqueen la boca de aspiración, abra\index{tapa de suciedad gruesa} la tapa de suciedad gruesa mediante las teclas laterales de la consola multifuncional o, si esto no es suficiente, eleve temporalmente\index{boca de aspiración+suciedad gruesa} la boca de aspiración.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Trabajar con suciedad gruesa}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Abrir la tapa de suciedad gruesa}
+{\externalfigure [work:suction:raise]}{Elevar temporalmente la boca de aspiración}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Vaciado del depósito de material barrido},
+reference={sec:using:container}]
+
+\startSteps
+\item Mueva\index{depósito de material barrido+vaciar} el vehículo a un lugar adecuado para el vaciado. Cumpla las disposiciones medioambientales vigentes.
+\item Ponga el freno de estacionamiento. (Necesario para activar el interruptor de volcado del depósito.)
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Enclave y abra la tapa de cierre del depósito de material barrido.
+\item Accione el interruptor~\textSymb{temoin_kipp2} (consola central, entre los asientos) para volcar el depósito de material barrido.
+\item Cuando se haya vaciado el depósito, limpie el interior con un chorro de agua. Para ello puede emplear la pistola de agua integrada (equipamiento opcional).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Manipulación del depósito de material barrido}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Enclavamiento de la tapa de cierre}
+{\externalfigure [container:safety:unlocked]}{Puntal de seguridad}
+{\externalfigure [container:safety:locked]}{Puntal de seguridad enclavado}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Compruebe/limpie las juntas y las superficies de apoyo de las juntas del depósito, del sistema de reciclado y del canal de aspiración.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Accione el interruptor~\textSymb{temoin_kipp2} para bajar el depósito de material barrido. (En caso necesario retire antes los puntales de seguridad de los cilindros hidráulicos.)
+\item Enclave la tapa de cierre del depósito de material barrido.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Manguera manual de aspiración},
+reference={sec:using:suction:hose}]
+
+La \sdeux\ puede estar equipada opcionalmente\index{manguera manual de aspiración} con una manguera manual de aspiración. Esta está fijada en la tapa de cierre del depósito de material barrido y su manejo es sencillo.
+
+{\sla Requisitos previos:}
+
+El depósito de material barrido se ha bajado completamente; la \sdeux\ está en el modo \aW{de trabajo}. (Ver \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Manguera manual de aspiración}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Pulse la tecla~\textSymb{temoin_aspiration_manuelle} de la consola del techo para activar el sistema de aspiración.
+\item Ponga el freno de estacionamiento antes de abandonar la cabina.
+\item Cierre el canal de aspiración con la tapa del canal de aspiración. (Ver \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Saque del soporte la manguera manual de aspiración por la boca y comience el trabajo.
+\item Después de finalizar el trabajo, vuelva a presionar la tecla~\textSymb{temoin_aspiration_manuelle} para desconectar el sistema de aspiración.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Pistola de agua de alta presión},
+reference={sec:using:water:spray}]
+
+La \sdeux\ puede estar equipada opcionalmente\index{pistola de agua} con una pistola de agua de alta presión. La pistola de agua está fijada en la puerta de mantenimiento trasera derecha y unida por un rodillo de manguera de 10 metros, en el lado opuesto del vehículo.
+
+Proceda de la siguiente manera para emplear la pistola de agua:
+
+{\sla Requisitos previos:}
+
+En el depósito de agua limpia hay suficiente agua; la \sdeux\ está en el modo \aW{de trabajo}. (Ver \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Pistola de agua de alta presión}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Pulse la tecla~\textSymb{temoin_buse} de la consola del techo para activar la bomba de agua de alta presión.
+\item Ponga el freno de estacionamiento antes de abandonar la cabina.
+\item Abra la puerta de mantenimiento trasera derecha y extraiga la pistola de agua.
+\item Desenrolle la manguera necesaria y comience el trabajo.
+\item Después de finalizar el trabajo, vuelva a presionar la tecla~\textSymb{temoin_buse} para desconectar la bomba de agua de alta presión.
+\item Tire brevemente de la manguera para aflojar el bloqueo y enrollar la manguera.
+\item Vuelva a fijar la pistola de agua en su soporte y cierre la puerta de mantenimiento.
+\stopSteps
+
+\stopsection
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent
+

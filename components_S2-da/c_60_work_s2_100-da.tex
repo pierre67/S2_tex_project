@@ -1,0 +1,271 @@
+\startcomponent c_60_work_s2_100-da
+\product prd_ba_s2_100-da
+
+
+\startchapter [title={S2 i hverdagen},
+reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Ibrugtagning}
+
+\startsection [title={Ibrugtagning},
+reference={sec:using:start}]
+
+
+\startSteps
+\item Kontroller, at de regelmæssige kontroller og vedligeholdelser er udført forskriftsmæssigt.
+\item Start motoren med tændingsnøglen: Slå tændingen til, fortsæt med at dreje nøglen med uret og stop, indtil motoren starter (kun muligt, hvis gearvælgeren er på Neutral).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Gearvælger}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Gearvælger i stillingen \aW{Fremadkørsel}}
+{\externalfigure [work:select:rDrive]}{Gearvælger i stillingen \aW{Bakgear}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Drej gearvælgerens kontakt for at sætte i et gear i \aW{Køre}modus:
+\startitemize [R]
+\item Første gear
+\item Andet gear (automatisk drift; starter automatisk i første gear) \stopitemize, eller tryk på knappen yderst på gearvælgeren for at aktivere/deaktivere \aW{Arbejds}modus.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+I Arbejdsmodus er kun første gear til rådighed og motoren drejer med 1300\,min\high{\textminus 1}.
+
+De kan styre motorens omdrejningstal med tasterne~\textSymb{joy_key_engine_increase} og~\textSymb{joy_key_engine_decrease} på multifunktionskonsollen.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Tryk gearvælgeren opad og fremad (fremadkørsel), eller opad og bagud (bakgear). Se billederne ovenfor.
+\item Løsn håndbremsen, før De starter med at køre.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Løsn håndbremsen helt!} Håndbremsestangens position overvåges af en elektronisk sensor: Hvis håndbremsen ikke er helt løsnet, er køretøjets hastighed begrænset til 5\,km/h.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Tryk langsomt på speederen for at sætte køretøjet i bevægelse.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Sugekanallem}
+
+Sugesystemet genererer en luftstrøm, enten fra sugemunden eller fra håndsugeslangen (ekstraudstyr) til smudsbeholderen.
+
+En lem, der skal åbnes og lukkes med hånden (\inF[fig:suctionClap], \atpage[fig:suctionClap]) giver mulighed for at skifte luftstrømmen mellem sugemunden og håndsugeslangen.
+
+\placefig [here] [fig:suctionClap] {Sugekanallem}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Sugekanal åbnet}
+{\externalfigure [work:suctionClap:closed]}{Sugekanal lukket}
+\stopcombination}
+
+I normal drift~– arbejde med sugemunden~– skal sugekanalen være åbnet (skiftestangen peger opad).
+
+For at kunne anvende håndsugeslangen, skal sugekanalen være lukket (skiftestangen peger nedad). På denne måde ledes luftstrømmen gennem håndsugeslangen.
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Udtagning af drift},
+reference={sec:using:stop}]
+
+\index{Udtagning af drift}
+
+\startSteps
+\item Træk håndbremsen (stangen mellem sæderne) og sæt gearvælgeren på \aW{Neutral}.
+\item Udfør det påkrævede kontrolarbejde~– daglige og evt. ugentlige kontroller~– som beskrevet på \atpage[table:scheduledaily].
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+\page [yes]
+
+\startsection [title={Fejning og sugning},
+reference={sec:using:work}]
+
+\startSteps
+\item Gennemfør\index{Fejning} ibrugtagningen af køretøjet, som beskrevet i \in{§}[sec:using:start], \atpage[sec:using:start].
+\item Aktiver\index{Sugning} \aW{Arbejds}modus (knap på gearvælgeren).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Tryk på tasten~\textSymb{joy_key_suction_brush} for at starte turbinen og kostene.
+
+{\md Variant:} {\lt Tryk på tasten~\textSymb{joy_key_suction} for kun at arbejde med sugemunden.}
+
+\item Indstil kostenes omdrejningshastighed ved hjælp af tasterne~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} på multifunktionskonsollen.
+
+\item Bring kostene i position med det pågældende joystick således, at de har en optimal arbejdsbredde.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Anbringelse af kostene}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Koste udad/indad}
+{\externalfigure [work:brush:left:raise]}{Koste op/ned}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Befugtning af koste og sugekanal}
+
+Tryk på\index{Fejning+Befugtning} kontakten~\textSymb{temoin_busebalais} mellem sæderne:
+
+{\md Position 1:} Vandpumpen kører automatisk, så længe kostene er aktiveret.
+
+{\md Position 2:} Vandpumpen kører permanent. (Nyttigt til \eG\ indstillingsarbejde.)
+
+
+\subsubsubject{Groft snavs}
+
+\startSteps [continue]
+\item Hvis der er risiko for, at større stykker affald (\eG\ PET-flasker) blokerer sugemunden, kan De åbne\index{Lem for groft snavs} lemmen for groft snavs med tasterne i siden på multifunktionskonsollen, eller~– hvis det ikke er nok~– kan De løfte\index{Sugemund+Groft snavs} sugemunden midlertidigt.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Håndtering af groft snavs}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Åbn lemmen for groft snavs}
+{\externalfigure [work:suction:raise]}{Løft sugemunden midlertidigt}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Tømning af smudsbeholderen},
+reference={sec:using:container}]
+
+\startSteps
+\item Kør\index{Smudsbeholder+Tømning} køretøjet til en egnet plads for at tømme det. Sørg for, at de gældende regler om miljøbeskyttelse overholdes.
+\item Træk håndbremsen. (Nødvendigt til aktivering af kontakten til at tippe beholderen).
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Lås smudsbeholderens dæksel op og åbn det.
+\item Tryk på kontakten~\textSymb{temoin_kipp2} (midterkonsol, mellem sæderne) for at tippe smudsbeholderen op.
+\item Vask beholderen inden i med en vandstråle, når beholderen er tømt. De kan anvende den integrerede vandpistol (valgfrit udstyr).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Håndtering af smudsbeholderen}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Låsning af dækslet}
+{\externalfigure [container:safety:unlocked]}{Sikkerhedsstiver}
+{\externalfigure [container:safety:locked]}{Sikkerhedsstiver låst}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Kontroller/rengør beholderens, genbrugssystemets og sugekanalens pakninger og pakningernes kontaktflader.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Tryk på kontakten~\textSymb{temoin_kipp2} for at sænke smudsbeholderen. (Fjern evt. først sikkerhedsstiverne fra hydraulikcylinderne).
+\item Lås smudsbeholderens dæksel.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Håndsugeslange},
+reference={sec:using:suction:hose}]
+
+\sdeux\ kan efter ønske\index{Håndsugeslange} udstyres med en håndsugeslange. Den er spændt fast på smudsbeholderens dæksel og er nem at betjene.
+
+{\sla Forudsætninger:}
+
+Smudsbeholderen er sænket helt; \sdeux\ er i \aW{Arbejds}modus. (Se \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Håndsugeslange}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Tryk på tasten~\textSymb{temoin_aspiration_manuelle} på loftskonsollen for at aktivere sugesystemet.
+\item Træk håndbremsen, før De forlader førerhuset.
+\item Luk sugekanalen med sugekanallemmen. (Se \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Træk håndsugeslangen ud af dens holder i mundstykket og påbegynd arbejdet.
+\item Tryk på tasten~\textSymb{temoin_aspiration_manuelle} igen, når arbejdet er afsluttet, for at slukke sugesystemet.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Højtryksvandpistol},
+reference={sec:using:water:spray}]
+
+\sdeux\ kan efter ønske\index{Vandpistol} udstyres med en højtryksvandpistol. Vandpistolen er fastgjort i servicedøren bagerst til højre og er forbundet med en 10 meter slangerulle~– på den modsatte side af køretøjet.
+
+Sådan anvender de vandpistolen:
+
+{\sla Forudsætninger:}
+
+Der er nok vand i ferskvandstanken; \sdeux\ er i \aW{Arbejds}modus. (Se \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Højtryksvandpistol}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Tryk på tasten~\textSymb{temoin_buse} på loftskonsollen for at aktivere højtryksvandpumpen.
+\item Træk håndbremsen, før De forlader førerhuset.
+\item Åbn servicedøren bagerst til højre og tag vandpistolen ud.
+\item Rul så meget slange af, som nødvendigt og påbegynd arbejdet.
+\item Tryk på tasten~\textSymb{temoin_buse} igen, når arbejdet er afsluttet, for at slukke højtryksvandpumpen.
+\item Træk kort i slangen for at løsne blokeringen og rulle slangen op.
+\item Sæt vandpistolen fast igen i dens holder og luk servicedøren.
+\stopSteps
+
+\stopsection
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent
+

@@ -1,0 +1,141 @@
+\enabledirectives [system.synctex]
+
+\startproduct prd_ba_s2_110-ru
+
+\enablemode[%
+screen,
+% print,
+myriadpro,
+font:scaled:95,
+]
+
+
+\project prj_ba_s2
+
+\version [final]
+\setups [RUSSIAN,VpRUSSIAN]
+
+%===============================================================================
+%===============================================================================
+
+% Copy this block back into environment
+
+
+%% End environment block
+%===============================================================================
+%===============================================================================
+
+\definesynonyms [ProductAbbreviation][ProductAbbreviations][\ProdFull]
+\setupsynonyms [ProductAbbreviation][next=\autoinsertnextspace]
+
+\ProductAbbreviation [ProductId] {Urban-Sweeper~S2} {Urban-Sweeper~S2}
+\ProductAbbreviation [PRoductId] {Urban-Sweeper~S2} {Urban-Sweeper~S2}
+% The second one for the genitive form
+
+\startmode[screen]
+
+\setupexternalfigures[directory={%
+../../pictures/S2/img_localisation_co,
+../../pictures/S2/img_std_co,
+../../pictures/S2/img_vpad_co,
+../../pictures/pictographs_co,
+../../pictures/S2/fuses,
+}]
+
+\setupinteraction
+[state=start,
+style=,
+color=LinkColor,
+openaction={firstpage,UseOutlines},
+menu=on,
+display=TwoColumn,
+title={инструкция по эксплуатации S2},
+author={Пьер Бова(Техническая редакция Boschung Матран)},,
+subtitle={С планом техобслуживания},
+keyword={S2, инструкция по эксплуатации, План техобслуживания, Руководство, Инструкция}
+ ]
+\stopmode
+\startmode[print]
+
+\setupexternalfigures[directory={%
+../../pictures/S2/img_localisation,
+../../pictures/S2/img_std,
+../../pictures/S2/img_vpad,
+../../pictures/pictographs,
+../../pictures/S2/fuses,
+}]
+
+\setupinteraction
+[state=stop,
+style=,
+color=LinkColor,
+openaction={firstpage,UseOutlines},
+menu=on,
+display=TwoColumn,
+title={инструкция по эксплуатации S2},
+author={Пьер Бова(Техническая редакция Boschung Матран)},,
+subtitle={С планом техобслуживания},
+keyword={S2, инструкция по эксплуатации, План техобслуживания, Руководство, Инструкция}
+]
+\stopmode
+\setupinteractionscreen [option=bookmark]
+\placebookmarks [part,chapter,section] [chapter,section]
+
+%%%%%%mkiv settings%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\TextSymHeight {2.0ex}
+
+\startfrontmatter
+ % \setuppagenumbering [conversion=romannumerals]
+ \component c_00_front_s2_110-ru
+ \marking[header]{Содержание}
+\completecontent
+
+\stopfrontmatter
+
+\startbodymatter
+\define\LASTchapter{10}
+% \showframe
+\component c_10_safety_s2_110-ru
+\component c_20_prescriptions_s2_110-ru
+\component c_30_overview_s2_110-ru
+\component c_40_control_s2_110-ru
+\component c_45_vpad_s2_110-ru
+\component c_60_work_s2_110-ru
+\component c_80_maintenance_s2_110-ru
+\component c_90_serviceplan_s2_110-ru
+
+%\page[yes,empty,right]
+\stopbodymatter
+
+\startbackmatter
+\definelayer [bg:toc] [state=stop]
+\marking[header]{Указатель}
+\IndexHead{Указатель}
+{\switchtobodyfont[small]\placeindex [n=3]}
+\page[yes,right]
+\marking[header]{Перечень иллюстраций}
+\startcolumns[n=3]
+\setupselector[caption][n=2]
+\IndexHead{Перечень иллюстраций}
+\placelist[fig]
+\stopcolumns
+\page[yes]
+
+\setuppagenumbering[state=stop]
+ \component c_99_back_s2_110-ru
+\stopbackmatter
+
+\seeindex{Сервис}{Техническое обслуживание}
+\seeindex{Содержание в исправности}{Техническое обслуживание}
+\seeindex{Регулятор скорости}{Темпомат}
+\seeindex{Главный выключатель}{Разъединитель батареи}
+\seeindex{Шасси}{Ходовая часть}
+\seeindex{Ходовая часть}{Шасси}
+\seeindex{Нижний переключатель}{Педаль}
+
+\pagebreak[yes,blank,right]
+% \showlayout
+\stopproduct
+
+

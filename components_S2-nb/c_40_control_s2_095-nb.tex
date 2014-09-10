@@ -1,0 +1,356 @@
+% coding: utf-8
+
+\startcomponent c_40_control_s2_095-nb
+
+
+\startchapter [title={Betjeningselementer til kjøretøyet},
+reference={chap:ctrl}]
+
+\setups[pagestyle:marginless]
+
+\placefig[here][fig:ctrl:cab:front]{Betjeningselementer}
+{\externalfigure[ctrl:cab:front]}
+
+\startcolumns [n=3]
+\startLongleg
+\item Rattsøyle (\in{§}[sec:steeringColumn])
+\item Innstilling rattsøyle
+\item Gass- og bremsepedal
+\item Kjøredatamaskin \Vpad~SN (\inP[sec:vpad])
+\item Takpanel (\inP[sec:ctrl:aux])
+\stopLongleg
+
+
+\subsubsubject{Valgfritt utstyr}
+
+\startLongleg [continue]
+\item Ryggemonitor
+\item Radio/MP3
+\stopLongleg
+\stopcolumns
+
+\startsection [title={Rattsøylen},
+reference={sec:steeringColumn}]
+
+\subsection{Innstilling av rattsøylen}
+
+\textDescrHead{Vinkel til rattet} Trykk på pedalen~\Ltwo og still samtidig inn vinkelen til rattsøylen. Slipp pedalen, for at mekanismen til rattsøylen igjen blir låst.
+
+\page[yes]
+\setups [pagestyle:normal]
+
+
+\subsection{Belysnings- og signalinnretninger}
+
+\placefig [margin] [fig:column:left] {Multifunksjonsspak og dreiebryter}
+{\externalfigure[ctrl:column:left]}
+
+\placefig [margin] [fig:column:right] {Kjøretrinnvalgspak}
+{\externalfigure[ctrl:column:right]}
+
+
+\subsubsubject{Dreiebryter}
+
+\startitemize[width=1.7em]
+\sym{\textSymb{com_lowlight}} Nærlys (dreie~\TorqueR)
+\startitemize
+\sym{1} Parkeringslys
+\sym{2} Nærlys
+\stopitemize
+\stopitemize
+
+
+\subsubsubject{Multifunksjonsspak}
+
+\startitemize[width=1.7em]
+\sym{\textSymb{com_lowlight}} {[}Ikke tilordnet{]}
+\sym{\textSymb{com_light}} Lyshorn (trykk spaken kort oppover)
+\sym{\textSymb{com_blink}} Kjøreretningsindikator (spak forover/bakover)
+\sym{\textSymb{com_claxonArrow}} Horn (trykk knapp utvendig på spaken)
+\sym{\textSymb{com_wipper}} Vindusvisker
+\startitemize
+\sym{J} Intervallkobling
+\sym{O} Av
+\sym{I} 1.\,Hastighetstrinn
+\sym{II} 2.\,Hastighetstrinn
+\stopitemize
+\sym{\textSymb{com_washerArrow}} Vindusspyleranlegg (trykk på kransen på enden av spaken).
+\stopitemize
+
+
+\subsubsubject{Kjøretrinnvalgspak}
+
+Funksjonene til kjøretrinnvalgspaken er detaljert beskrevet i kapittel~\about[chap:using], f.o.m.~\atpage[sec:using:start].
+
+\stopsection
+
+\page [yes]
+
+
+\startsection [title={Øvrige funksjoner},
+reference={sec:ctrl:add}]
+
+
+\subsection[sec:ctrl:aux]{Takpanel}
+
+{\sl \index{Takpanelet } Takpanelet befinner seg foran i taket til førerhuset på førersiden.}
+\placefig [margin] [fig:console:aux] {Takpanel}
+{\externalfigure[ctrl:console:aux]}
+
+
+\placefig [margin] [fig:console:climat] {Oppvarming og klimaanlegg}
+{\externalfigure[ctrl:console:climat]}
+
+
+\startitemize [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_retrochauffant}} Sidespeiloppvarming
+\sym{\textBigSymb{temoin_hazard}} Varselblinklys
+\sym{\textBigSymb{temoin_eclairage_L}} Arbeidslyskaster
+\stopitemize
+
+
+\subsubsubject{Valgfritt utstyr}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_buse}} Høytrykksvannpumpe for vannpistol \crlf {\sl se \atpage[sec:using:water:spray]}
+\sym{\textBigSymb{temoin_aspiration_manuelle}} Turbin for håndsugeslange \crlf {\sl se \atpage[sec:using:suction:hose]}
+\stopLeg
+
+
+\subsection[sec:ctrl:climat]{Oppvarming og klimaanlegg}
+
+{\sl Dette panelet\index{Panel for oppvarming} befinner seg på bakveggen til førerhuset, mellom setene.}
+
+\startitemize [unpacked][width=23mm]
+\sym{\bf 0\quad I\quad II\quad III} Vifte-dreiebryter
+\sym{\externalfigure[tirette_chauffage][height=1em]} Temperatur-skyveregulator
+\stopitemize
+
+
+\subsubsubject{Valgfritt utstyr}
+
+\startitemize [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_climat_bk}} Klimaanlegg
+\stopitemize
+
+\page [yes]
+
+\setups [pagestyle:bigmargin]
+
+
+\subsection[sec:ctrl:central]{Midtre panel}
+
+{\sl Det\index{midtre panelet} Midtre panelet befinner seg mellom setene.}
+
+\placefig [margin] [fig:console:central] {Midtre panel}
+{\externalfigure[ctrl:console:central]}
+
+
+\subsubsubject{Fukting av kostene}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_busebalais}} Lavtrykksvannpumpe\index{Vannpumpe} for befuktningssystemet\index{Vannpumpe+Befuktning} av kostene. (Posisjon~1: \aW{Automatisk}; posisjon~2: \aW{Permanent})
+\stopLeg
+
+
+\subsubsubject{Vipping av smussbeholderen}
+
+\setupinmargin[right][style=normal]
+\inright{%
+\startitemize
+\sym{\textSymb{mand_readtheoperatingmanual}} Følg anvisningene for bruk av parkeringsbremsen på \atpage[sec:using:stop].
+\stopitemize}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_kipp2}} Vipping av smussbeholderen. For å vippe\index{smussbeholderen+} for å kunne vippe smussbeholderen, må parkeringsbremsen være aktivert og kjøretrinnvalgspaken stå i nøytral stilling.
+\stopLeg
+
+
+\subsubsubject{Nødstopp}
+
+\starttextbackground [FC]
+\startPictPar
+\externalfigure[Emergency_Stop][Pict]
+\PictPar
+I et nødstilfelle\index{Nødstopp} kan du koble ut alle suge- og feieapparater ved å trykke på nødstopp-bryteren.
+\stopPictPar
+\stoptextbackground
+
+
+\subsection[sec:foot:switch]{Fotbryter}
+
+\placefig [margin] [fig:foot:switch] {Fotbryter}
+{\vskip 60pt
+\externalfigure[work:foot:switch]}
+
+Ved hjelp av\index{Fotbryter} denne bryteren på sokkelen til rattsøylen (\inF[fig:foot:switch]) kan du raskt og enkelt senke kostene, når det er nødvendig (\eG\ på toppen av en stigning, kjøring opp på fortau).
+
+\stopsection
+\page[yes]
+\setups [pagestyle:marginless]
+
+
+\startsection[title={Multifunktionskonsole},
+reference={ctrl:console:middle}]
+
+\startlocalfootnotes
+
+\startfigtext[left]{Multifunksjonspanel}
+{\externalfigure[overview:joy:large]}
+
+
+\subsubsubject{Joysticker}
+
+\textDescrHead{Uten frontkost (eller frontkost deaktivert):}
+Joystickene styrer uavhengig av hverandre hver en kost: Heve/senke~(\textSymb{joystick_aa}) eller venstre/høyre~(\textSymb{joystick_gd}). Venstre joystick styrer venstre kost, høyre joystick styrer høyre kost.\footnote{For å kunne endre posisjonen til sidekostene på et kjøretøy som er utstyrt med frontkost (ekstrautstyr), må frontkosten være deaktiveres (tast~\textSymb{joy_key_frontbrush_act}).}
+
+\textDescrHead{Med frontkost:}
+Med venstre joystick kan du heve/senke frontkosten (\textSymb{joystick_aa}) og bevege den til venstre/høyre (\textSymb{joystick_gd}). Med høyre joystick kan du vippe kosten på sin langsgående~(\textSymb{joystick_aa}) og tverrgående akse~(\textSymb{joystick_gd}).
+
+\placelocalfootnotes %[height=\textheight]
+\stopfigtext
+\stoplocalfootnotes
+\vfill
+
+
+\subsubsubject{Sidetaster}
+
+\startcolumns
+
+\startPictList
+\VPcltr
+\PictList
+Fartsholder: Øke den innstilte hastigheten
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPclbr
+\PictList
+Fartsholder: Redusere den innstilte hastigheten
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrtr
+\PictList
+Heve sugeenheten
+\stopPictList
+
+\startPictList
+\VPcrbr
+\PictList
+Senke sugeenheten
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrtf
+\PictList
+Åpne grovsmussluken (foran på sugeenheten)
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrbf
+\PictList
+Stenge grovsmussluken
+\stopPictList
+
+\stopcolumns
+
+
+\subsubsubject{Symboltaster}
+
+\startcolumns
+
+\startSymVpad
+\externalfigure[joy:stop]
+\SymVpad
+\textDescrHead{Stopp} Stoppe aktivert apparat:
+
+1\:× trykkes: 3.\,Deaktivere kosten\crlf
+2\:× trykkes: Deaktivere alt
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:tempomat]
+\SymVpad
+\textDescrHead{Fartsholder} Innstille fartsholdere på den nåværende hastigheten og aktivere. For å deaktivere, trykk tasten~\textSymb{joy:tempomat} på nytt, eller brems. Bruk sidetastene til å akselerere/saktne.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:minus]
+\SymVpad
+\textDescrHead{Kosthastighet} Redusere rotasjonshastigheten til sidekosten eller frontkosten.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:plus]
+\SymVpad
+\textDescrHead{Kosthastighet} Øke rotasjonshastigheten til sidekosten eller frontkosten.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:eng:minus]
+\SymVpad
+\textDescrHead{Motorturtall} Redusere turtallet til dieselmotoren.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:eng:plus]
+\SymVpad
+\textDescrHead{Motorturtall} Øke turtallet til dieselmotoren.
+\stopSymVpad
+\columnbreak
+
+\startSymVpad
+\externalfigure[joy:suc]
+\SymVpad
+\textDescrHead{Oppsuging} Aktivere sugesystem: Sugeenhet senkes, turbin og resirkuleringsvannpumpe kobles inn.\note [recyclingwaterpump] \crlf
+Trykk stopptasten~\textSymb{joy:stop}, for å deaktivere systemet.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:sucbrs]
+\SymVpad
+\textDescrHead{Feie/Suge}Aktivere suge-/feiesystem: Sugeenhet senkes, sidekoster senkes og posisjoneres, turbin, koster og resirkuleringsvannpumpe kobles inn.\note [recyclingwaterpump] \crlf
+Trykk stopptasten~\textSymb{joy:stop}, for å deaktivere systemet.
+\stopSymVpad
+
+\footnotetext[recyclingwaterpump]{Ferskvannspumpe kobles også inn, når bryteren~\textBigSymb{temoin_busebalais} står på \aW{Automatisk} (se \in [sec:ctrl:central] på \atpage [sec:ctrl:central]).}
+\startSymVpad
+\externalfigure[joy:ftbrs:act]
+\SymVpad
+\textDescrHead{Frontkost aktivert} Aktivere/deaktivere frontkost.
+%% NOTE @Andrew: Singular
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:right]
+\SymVpad
+\textDescrHead{Frontkost venstre} Dreieretning for arbeid med frontkosten på venstre side (dreieretning: med urviseren).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:left]
+\SymVpad
+\textDescrHead{Frontkost høyre} Dreieretning for arbeid med frontkosten på høyre side (dreieretning: mot urviseren).
+\stopSymVpad
+
+\stopcolumns
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+
+
+

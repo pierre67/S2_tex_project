@@ -1,0 +1,274 @@
+\startcomponent c_60_work_s2_110-nl
+\product prd_ba_s2_110-nl
+
+\startchapter [title={De S2 in het alledaagse leven},
+reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Inbedrijfstelling}
+
+\startsection [title={Inbedrijfstelling},
+reference={sec:using:start}]
+
+
+\startSteps
+\item Garandeer dat de reguliere controles en onderhoud volgens de voorschriften werden uitgevoerd.
+\item Start de motor met de contactsleutel: ontsteking inschakelen, dan sleutel met de klop mee verder draaien en vasthouden, tot de motor start (alleen mogelijk indien de keuzehendel voor het rijniveau op Neutraal staat).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Keuzehendel voor het rijniveau}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Keuzehendel in stand \aW{Vooruit}}
+{\externalfigure [work:select:rDrive]}{Keuzehendel in stand \aW{Achteruit}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Draai de schakelaar van de keuzehendel voor het rijniveau om in de \aW{rij}modus in een rijniveau te schakelen:
+\startitemize [R]
+\item Eerste niveau
+\item Tweede niveau (automatisch bedrijf; start automatisch in eerste niveau)
+\stopitemize
+
+of druk op de knop buiten aan de hendel om de \aW{werk}modus te activeren/deactiveren.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+In de werkmodus staat alleen het eerste rijniveau ter beschikking en de motor draait met 1300\,min\high{\textminus 1}.
+
+Regel het motortoerental met behulp van de toetsen~\textSymb{joy_key_engine_increase} en~\textSymb{joy_key_engine_decrease} van de multifunctionele console.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Druk de keuzehendel voor het rijniveau naar boven en naar voor (vooruit) resp. naar boven en naar achter (achteruit). Zie bovenstaande afbeeldingen.
+\item Ontspan alvorens te versnellen te vastzetrem.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Ontspan de vastzetrem volledig!} De positie van de hendel van de vastzetrem wordt bewaakt door een elektronische sensor: wanneer de vastzetrem niet volledig is ontspannen, dan is de rijsnelheid begrensd op 5\,km/h.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Druk langzaam op het gaspedaal om het voertuig in beweging te zetten.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Zuigkanaalklep}
+
+Het zuigsysteem genereert een luchtstroom ofwel van de zuigmond of van de handzuigslang (optie) naar de vuilcontainer.
+
+Een met de hand te bedienen klep (\inF[fig:suctionClap], \atpage[fig:suctionClap]) maakt het mogelijk om de luchtstroom om te schakelen tussen zuigmond en handzuigslang.
+
+\placefig [here] [fig:suctionClap] {Zuigkanaalklep}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Zuigkanaal geopend}
+{\externalfigure [work:suctionClap:closed]}{Zuigkanaal gesloten}
+\stopcombination}
+
+In het normale bedrijf~– werken met de zuigmond~– moet het zuigkanaal geopend zijn (omschakelhendel wijst naar boven).
+
+Om de handzuigslang te kunnen inzetten moet het zuigkanaal gesloten zijn (omschakelhendel wijst naar beneden). Op deze manier wordt de luchtstroom door de handzuigslang geleid.
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Buitenbedrijfstelling},
+reference={sec:using:stop}]
+
+\index{Buitenbedrijfstelling}
+
+\startSteps
+\item Activeer de vastzetrem (hendel tussen de stoelen) en breng de keuzehendel voor het rijniveau in positie \aW{Neutraal}.
+\item Voer de vereiste controlewerkzaamheden~– dagelijkse en evt. wekelijkse controles~– uit zoals beschreven op \atpage[table:scheduledaily].
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+
+\startsection [title={Vegen en zuigen},
+reference={sec:using:work}]
+
+\startSteps
+\item Voer de\index{Vegen} inbedrijfstelling van het voertuig uit zoals beschreven in\in{§}[sec:using:start], \atpage[sec:using:start].
+\item Activeer\index{Zuigen} de \aW{werk}modus (knop buiten aan de keuzehendel voor het rijniveau).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Druk op de toets~\textSymb{joy_key_suction_brush} om turbine en bezems in te schakelen.
+
+{\md Variant:} {\lt Druk op de toets~\textSymb{joy_key_suction} om alleen met de zuigmond te werken.}
+
+\item Stel de draaisnelheid van de bezems in met behulp van de toetsen~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} van de multifunctionele console.
+
+\item Breng de bezems met behulp van de bijhorende joystick zo in positie, dat u de optimale werkbreedte bereikt.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Positioneren van de bezems}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Bezem naar buiten/binnen}
+{\externalfigure [work:brush:left:raise]}{Bezem omhoog/omlaag}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Bevochtiging van bezem en zuigkanaal}
+
+Activeer\index{Vegen+Bevochtiging} de schakelaar~\textSymb{temoin_busebalais} tussen de stoelen:
+
+{\md Positie 1:} Waterpomp loopt automatisch, zolang de bezems geactiveerd zijn.
+
+{\md Positie 2:} Waterpomp loopt permanent. (Nuttig \eG\ voor instelwerkzaamheden.)
+
+
+\subsubsubject{Grof vuil}
+
+\startSteps [continue]
+\item Wanneer het gevaar bestaat dat grotere objecten (\eG\ PET-flessen) de zuigmond blokkeren, dan opent\index{Klep voor grof vuil} u de klep voor grof vuil met de zijdelingse toetsen van de multifunctionele console of~– indien dat niet volstaat~– tilt u\index{Zuigmond+Grof vuil} de zuigmond tijdelijk op.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Omgaan met grof vuil}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Klep voor grof vuil openen}
+{\externalfigure [work:suction:raise]}{Zuigmond tijdelijk optillen}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Vuilcontainer leegmaken},
+reference={sec:using:container}]
+
+\startSteps
+\item Rijd\index{Vuilcontainer+Leegmaken} het voertuig naar een geschikte plaats om de vuilcontainer leeg te maken. Let erop dat de geldende voorschriften ter bescherming van het milieu worden nageleefd.
+\item Activeer de vastzetrem en breng de keuzehendel voor het rijniveau in positie \aW{Neutraal}. (Vereist voor de vrijgave van de schakelaar om de container te kantelen).
+\stopSteps
+
+\adaptlayout [height=+5mm]
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Ontgrendel en open de afsluitklep van de vuilcontainer.
+\item Activeer de schakelaar~\textSymb{temoin_kipp2} (middenconsole, tussen de stoelen) om de vuilcontainer omhoog te kantelen.
+\item Wanneer de container is leeggemaakt, dan wast u het inwendige met een waterstraal. Hiervoor kunt u het geïntegreerde waterpistool (optionele uitrusting) gebruiken.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Hantering van de vuilcontainer}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Vergrendeling van de afsluitklep}
+{\externalfigure [container:safety:unlocked]}{Veiligheidsbalk}
+{\externalfigure [container:safety:locked]}{Veiligheidsbalk vergrendeld}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Controleer/reinig de afdichtingen en de draagvlakken van de afdichtingen van de container, van het recyclingsysteem en van het zuigkanaal.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Activeer de schakelaar~\textSymb{temoin_kipp2} om de vuilcontainer neer te laten. (Verwijder evt. eerst de veiligheidsbalk van de hydraulische cilinders.)
+\item Vergrendel de afsluitklep van de vuilcontainer.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Handzuigslang},
+reference={sec:using:suction:hose}]
+
+De \sdeux\ kan optioneel\index{Handzuigslang} met een handzuigslang worden uitgerust. Deze is gefixeerd op de afsluitklep van de vuilcontainer; de bediening ervan is ongecompliceerd.
+
+{\sla Voorwaarden:}
+
+De vuilcontainer is volledig neergelaten; de \sdeux\ bevindt zich in de \aW{werk}modus. (Zie \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Handzuigslang}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Druk op de toets~\textSymb{temoin_aspiration_manuelle} van de plafondconsole om het zuigsysteem te activeren.
+\item Trek de vastzetrem stevig aan, voordat u de bestuurderscabine verlaat.
+\item Sluit het zuigkanaal met de klep. (Zie \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Trek de handzuigslang aan het mondstuk uit zijn houder en begin met het werk.
+\item Na beëindiging van het werk activeert u opnieuw de toets~\textSymb{temoin_aspiration_manuelle} om het zuigsysteem uit te schakelen.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Hogedrukwaterpistool},
+reference={sec:using:water:spray}]
+
+De \sdeux\ kan optioneel\index{Waterpistool} met een hogedrukwaterpistool worden uitgerust. Het waterpistool is bevestigd in de rechter onderhoudsdeur achteraan en verbonden met een 10 meter lange slanghaspel~ aan de andere kant van het voertuig~.
+
+Ga als volgt te werk om het waterpistool in te zetten:
+
+{\sla Voorwaarden:}
+
+In de verswatertank zit voldoende water; de \sdeux\ bevindt zich in de \aW{werk}modus. (Zie \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Hogedrukwaterpistool}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Druk op de toets~\textSymb{temoin_buse} van de plafondconsole om de hogedrukwaterpomp te activeren.
+\item Trek de vastzetrem stevig aan, voordat u de bestuurderscabine verlaat.
+\item Open de rechter onderhoudsdeur achteraan en neem het waterpistool eruit.
+\item Rol zo veel slang af als nodig en begin met uw werk.
+\item Na beëindiging van het werk activeert u opnieuw de toets~\textSymb{temoin_buse} om de hogedrukwaterpomp uit te schakelen.
+\item Trek kort aan de slang om de blokkering los te maken en de slang op te rollen.
+\item Bevestig het waterpistool weer in zijn houder en sluit de onderhoudsdeur.
+\stopSteps
+
+\stopsection
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent
+

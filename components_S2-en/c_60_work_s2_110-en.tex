@@ -1,0 +1,275 @@
+\startcomponent c_60_work_s2_095-en
+\product prd_ba_s2_095-en
+
+
+\startchapter [title={The S2 in day||to||day use},
+reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Starting up}
+
+\startsection [title={Starting up},
+reference={sec:using:start}]
+
+
+\startSteps
+\item Ensure that the standard checks and maintenance work have been carried out in line with directions.
+\item Use the ignition key to start the engine: Switch on the ignition then continue to turn the key in a clockwise direction and hold it in that position until the engine starts.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Gearshift}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Gearshift set to \aW{forward}}
+{\externalfigure [work:select:rDrive]}{Gearshift set to \aW{reverse}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item When in \aW{driving} mode, turn the gearshift to select a gear:
+\startitemize [R]
+\item First gear (automatically selected on starting the engine)
+\item Second gear
+\stopitemize
+
+Or press in the button on the end of the lever to activate/deactivate \aW{working} mode.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+Only first gear is available when in working mode, and the engine runs at 1300\,rpm.
+
+Use the \textSymb{joy_key_engine_increase} and \textSymb{joy_key_engine_decrease}~buttons on the multifunction console to control engine speed.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Push the gearshift up and forward (driving forward) or up and back (reverse). See figures above.
+\item Release the parking brake before accelerating.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Release the parking brake fully!} An electronic sensor monitors the position of the parking brake lever: If the parking brake has not been fully released, the vehicle’s speed is restricted to 5\,km/h (approx. 3 mph).
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Slowly depress the gas pedal to get the vehicle moving.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Suction duct flap}
+
+The suction system generates an airflow from the suction mouth or manual suction hose (optional accessory) to the dirt hopper.
+
+A hand||operated flap (\inF[fig:suctionClap], \atpage[fig:suctionClap]) is used to switch the airflow between the suction mouth and manual suction hose.
+
+\placefig [here] [fig:suctionClap] {Suction duct flap}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Suction duct open}
+{\externalfigure [work:suctionClap:closed]}{Suction duct closed}
+\stopcombination}
+
+When operating as normal~– working with the suction mouth~– the suction duct has to be open (switching lever up).
+
+The suction duct must be closed (switching lever down) in order to use the manual suction hose. This redirects the airflow through the manual suction hose.
+%% End new text
+
+\stopsection
+
+
+
+\startsection [title={Shutting down},
+reference={sec:using:stop}]
+
+\index{Shutting down}
+
+\startSteps
+\item Apply the parking brake (lever between seats) and move the gearshift to the \aW{neutral} position.
+\item Carry out the requisite checks~– daily and, if necessary, weekly checks~– as described on \atpage[table:scheduledaily] .
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+\page [yes]
+\startsection [title={Deploying the sweeping and/or vacuum systems},
+reference={sec:using:work}]
+
+\startSteps
+\item Start up the vehicle\index{Sweeping} as described in \in{Section}[sec:using:start], \atpage[sec:using:start].
+\item Activate\index{Vacuum} \aW{working} mode (button on the end of the gearshift).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Press the \textSymb{joy_key_suction_brush}~button to switch on the turbine and brooms.
+
+{\md Variant:} {\lt Press the \textSymb{joy_key_suction}~button to work with the suction mouth only.}
+
+\item Use the \textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease}~buttons on the multifunction console to set the rotary speed of the brooms.
+
+\item Use the relevant joystick to position each broom to achieve the optimum working width.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Positioning the brooms}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Moving brooms in/out}
+{\externalfigure [work:brush:left:raise]}{Moving brooms up/down}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{The dampening system for brooms and suction duct}
+
+Actuate\index{Sweeping+Dampening system} the \textSymb{temoin_busebalais}~switch between the seats:
+
+{\md Position 1:} The water pump runs automatically as long as the brooms are active.
+
+{\md Position 2:} The water pump runs continuously (useful \eG\ when making adjustments).
+
+
+\subsubsubject{Large items of waste}
+
+\startSteps [continue]
+\item If there is a risk that larger items of waste (\eG\ PET bottles) could block the suction mouth, open\index{Large waste flap} the large waste flap using the buttons on the side of the multifunction console or~– if that is insufficient~– lift the\index{Suction mouth+Large items of waste} suction mouth temporarily.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Dealing with large items of waste}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Opening the large waste flap}
+{\externalfigure [work:suction:raise]}{Temporarily lifting the suction mouth}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Emptying the dirt hopper},
+reference={sec:using:container}]
+
+\startSteps
+\item Drive\index{Dirt hopper+Emptying} the vehicle to a location suitable for emptying the dirt hopper. Ensure the applicable environmental protection regulations are observed.
+\item Apply the parking brake (necessary to release the hopper tipping switch).
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Unlock and open the hatch on the dirt hopper.
+\item Actuate the \textSymb{temoin_kipp2}~switch (center console, between the seats) to tip the dirt hopper.
+\item Once the hopper has been emptied, wash the inside of it with a jet of water. You can use the integrated water gun to do this (optional equipment).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Working with the dirt hopper}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Unlocking the hatch}
+{\externalfigure [container:safety:unlocked]}{Safety prop}
+{\externalfigure [container:safety:locked]}{Safety prop locked in place}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Check/clean the seals and contact areas of the seals on the hopper, recycling system and suction duct.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Actuate the \textSymb{temoin_kipp2}~switch to lower the dirt hopper (only after removing the safety props from the hydraulic cylinders).
+\item Lock the hopper hatch.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Manual suction hose},
+reference={sec:using:suction:hose}]
+
+The \sdeux\ can be fitted with an optional\index{Manual suction hose} manual suction hose. It is mounted on the dirt hopper hatch and is easy to operate.
+
+{\sla Requirements:}
+
+The dirt hopper must be fully lowered; the \sdeux\ must be in \aW{working} mode (see \in{Section}[sec:using:start], \atpage[sec:using:start]).
+
+\startfigtext[left][fig:using:suction:hose]{Manual suction hose}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Press the \textSymb{temoin_aspiration_manuelle}~switch on the overhead console to activate the suction system.
+\item Apply the parking brake fully before leaving the driver’s cabin.
+\item Use the suction duct flap to close the suction duct (see \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap]).
+\item Holding the mouthpiece, pull the manual suction hose out of its mount and commence clearing work.
+\item Once your work is complete, press the \textSymb{temoin_aspiration_manuelle}~switch again to deactivate the suction system.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={High||pressure water gun},
+reference={sec:using:water:spray}]
+
+The \sdeux\ can be fitted with an optional\index{water gun} high||pressure water gun. The water gun is mounted on the rear, right||hand maintenance hatch and is connected to a 10||meter hose reel on the opposite side of the vehicle.
+
+Follow the steps below to use the water gun:
+
+{\sla Requirements:}
+
+The freshwater tank must contain sufficient water; the \sdeux\ must be in \aW{working} mode (see \in{Section}[sec:using:start], \atpage[sec:using:start]).
+
+\placefig[margin][fig:using:water:spray]{High||pressure water gun}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+
+\item Press the \textSymb{temoin_buse}~switch on the overhead console to activate the high||pressure water pump.
+\item Apply the parking brake fully before leaving the driver’s cabin.
+\item Open the rear, right||hand maintenance hatch and remove the water gun.
+\item Unroll as much of the hose as you need and commence clearing work.
+\item Once your work is complete, press the \textSymb{temoin_buse}~switch again to deactivate the high||pressure water pump.
+\item Pull on the hose briefly to release the locking mechanism and reel the hose back in.
+\item Replace the water gun on its mount and close the maintenance hatch.
+\stopSteps
+
+\stopsection
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent
+

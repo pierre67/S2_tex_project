@@ -1,0 +1,589 @@
+\startcomponent c_45_vpad_s2_110-ru
+\product prd_ba_s2_110-ru
+
+\startchapter[title={Бортовой компьютер (Vpad)},
+reference={sec:vpad}]
+
+\setups[pagestyle:marginless]
+
+
+\startsection[title={Описание Vpad},
+reference={vpad:description}]
+
+\startfigtext [left] {Vpad SN в кабине водителя}
+{\externalfigure[vpad:inside:view]}
+\textDescrHead{Инновации, интеллект … } Система \Vpad\ была разработана для управления агрегатами коммунальной техники, которые становятся все сложней и приобретают самые разные функции.
+Система \Vpad\ не только предоставляет оператору в реальном времени информацию~– как визуальную, так и акустическую~– обо всех рабочих процессах и состоянии машины.
+Главное отличие и преимущество \Vpad\ заключается, в первую очередь, в интуитивном пользовательском интерфейсе, эргономичности управления и логике команд.
+
+Благодаря разнообразию функций система \Vpad\ отличается высокой универсальностью и значительно превосходит обычные электронные блоки управления.
+\stopfigtext
+
+\textDescrHead{… универсальность} При разработке \Vpad\ основное внимание уделялось совместимости и универсальности:
+Благодаря модуль конструкции систему можно адаптировать к условиям на месте и вариантам оснащения машины, а многочисленные электронные интерфейсы и каналы передачи данных~– вплоть до WLAN~– открывают все возможности.
+Система \Vpad\ оснащена самой современной электроникой с 32-битной технологией и операционной системой в реальном времени.
+\vfill
+
+
+\startfigtext[left]{Многофункциональная консоль}
+{\externalfigure[console:topview]}
+\textDescrHead{… и модульная структура} Благодаря модульной структуре система \Vpad\ обладает огромным преимуществом:
+Например, серийно устанавливаемую на машины \sdeux\ версию~SN можно в любое время поэтапно дополнять другими компонентами, например, модемом или консолью (см иллюстрацию).
+Возможности расширения не ограничиваются аппаратным обеспечением: ПО можно также в значительной степени расширять и адаптировать к меняющимся потребностям.
+
+Многофункциональная консоль \sdeux\ представляет собой высококачественный интерфейс между пользователем и машиной. С этой консоли можно управлять всей системой уборки и всасывания.
+\stopfigtext
+
+\page [yes]
+
+
+\subsection[vpad:home]{Главный экран}
+
+%% Note: outcommented by PB
+% \placefig[left][fig:vpad:engineData]{Accueil mode transport}
+% {\scale[sx=1.5,sy=1.5]
+% {\setups[VpadFramedFigureHome]
+% \VpadScreenConfig{
+% \VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}
+% \framed{\null}}
+% }
+
+
+\start
+
+\setupcombinations[width=\textwidth]
+
+\placefig [here][fig:vpad:engineData]{Главный экран}
+{\startcombination [2*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Режим движения}}
+{\setups[VpadFramedFigureWork]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Рабочий} режим}
+\stopcombination}
+
+\stop
+
+\blank [1*big]
+
+На главном экране \Vpad\ находятся все элементы, необходимые для контроля всех функций \sdeux.
+
+В верхней части расположены контрольные индикаторы.
+
+В средней части в реальном времени отображаются, в том\,числе, следующие данные:
+скорость, частота вращения и температура двигателя, уровень топлива, уровень воды в системе регенерации и т.п.
+
+Режим \aW{движения} обозначается изображением зайца~\textSymb{transport_mode}, \aW{рабочий} режим – изображением черепахи~\textSymb{working_mode}.
+
+В нижней строке показаны доступные меню: Чтобы просмотреть дополнительные меню, нажмите на центр сенсорного экрана.
+
+\page [yes]
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+% \define[1]\textDescrHead{{\bf#1\fourperemspace}}
+\startcolumns
+
+\startSymVpad
+\externalfigure[vpadTEnginOilPressure][height=1.7\lH]
+\SymVpad
+\textDescrHead{Давление моторного масла}(красный) Недостаточное давление моторного масла. Немедленно выключите двигатель.
+
++\:Сообщение об ошибке \# 604
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningBattery][height=1.7\lH]
+\SymVpad
+\textDescrHead{Заряд батареи}(красный) Недостаточный заряд батареи. Свяжитесь с мастерской.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningEngine1][height=1.7\lH]
+\SymVpad
+\textDescrHead{Диагностика двигателя}(желтый) Ошибка в системе управления двигателем. Свяжитесь с мастерской.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Свяжитесь с мастерской}(желтый) Наступил срок регулярного обслуживания машины. См. план технического обслуживания.
+
++\:Сообщения об ошибках \# 650 – \# 653 или \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBrakeError][height=1.7\lH]
+\SymVpad
+\textDescrHead{Тормозная система}(красный) Ошибка в тормозной системе. Свяжитесь с мастерской.
+
++\:Сообщение об ошибке \# 902
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakePark][height=1.7\lH]
+\SymVpad
+\textDescrHead{Стояночный тормоз}(красный) Стояночный тормоз машины активирован.
+
++\:Сообщение об ошибке \# 905
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTEngineHeating][height=1.7\lH]
+\SymVpad
+\textDescrHead{Предпусковой разогрев}(желтый) Двигатель прогревается.
+
+Мигающая лампочка показывает, что в памяти событий зарегистрирована ошибка.
+\stopSymVpad
+
+\columnbreak
+
+\startSymVpad
+\externalfigure[vpadTFuelReserve][height=1.7\lH]
+\SymVpad
+\textDescrHead{Уровень топлива}(желтый) Очень низкий уровень топлива (резерв).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBlink][height=1.7\lH]
+\SymVpad
+\textDescrHead{Система световой сигнализации}(зеленый) Система световой сигнализации активирована.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTLowBeam][height=1.7\lH]
+\SymVpad
+\textDescrHead{Стояночный свет}(зеленый) Стояночный свет включен.
+\stopSymVpad
+
+\startSymVpad
+\HL\NC \externalfigure[vpadSyWaterTemp][height=1.7\lH]
+\SymVpad
+\textDescrHead{Температура}(красный) Недопустимо высокая температура гидравлической жидкости или двигателя. Свяжитесь с мастерской.
+
++\:Сообщение об ошибке \# 700 или \# 610
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningFilter][height=1.7\lH]
+\SymVpad
+\textDescrHead{Фильтр засорен}(красный) Засорен комбинированный фильтр гидравлики или воздушный фильтр.
+
++\:Сообщение об ошибке \# 702 или \# 851
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTSpray][height=1.7\lH]
+\SymVpad
+\textDescrHead{Водяной пистолет}(желтый) Активирован насос высокого давления для пистолета.
+
+Переключатель \textSymb{temoin_buse} на потолочной консоли.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTClear][height=1.7\lH]
+\SymVpad
+\textDescrHead{Сообщение об ошибке}(красный) Сообщение об ошибке в памяти \Vpad. Нажмите кнопку~\textSymb{vpadClear}, чтобы просмотреть все сохраненные сообщения. Свяжитесь с мастерской.
+\stopSymVpad
+
+\stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
+\page [yes]
+
+
+\section{Меню Vpad}
+
+\start
+
+\setupTABLE [background=color,
+frame=off,
+option=stretch,textwidth=\makeupwidth]
+
+\setupTABLE [r] [each] [style=sans, background=color, bottomframe=on, framecolor=TableWhite, rulethickness=1.5pt]
+\setupTABLE [r] [first][backgroundcolor=TableDark, style=sansbold]
+\setupTABLE [r] [odd][backgroundcolor=TableMiddle]
+\setupTABLE [r] [even] [backgroundcolor=TableLight]
+\bTABLE [split=repeat]
+\bTABLEhead
+\bTR\bTD Меню \eTD\bTD Название\index{Vpad+Отображение} \eTD\bTD Функция \eTD\eTR
+\eTABLEhead
+
+\bTABLEbody
+\bTR\bTD \externalfigure [v:symbole:clear] \eTD\bTD Сообщение(я) об ошибке \eTD\bTD Показать и подтвердить сохраненные в Vpad сообщения об ошибках. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:beacon]\externalfigure [v:symbole:beacon:black]} \eTD\bTD Проблесковый маячок \eTD\bTD Включение и выключение маячка \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:engine] \eTD\bTD Данные в реальном времени \eTD\bTD Показать рабочие данные двигателя и гидравлики в реальном времени\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:oneTwoThree] \eTD\bTD Счетчики \eTD\bTD Отображение счетчиков рабочих часов: суточный счетчик, сезонный счетчик, общий счетчик\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:serviceInfo] \eTD\bTD Периодичность обслуживания \eTD\bTD Дата и часы работы, оставшиеся до следующего обслуживания или крупного сервиса \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:trash] \eTD\bTD Счетчик \eTD\bTD Обнулить счетчик или сервисный интервал \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:sunglasses] \eTD\bTD Режим экрана \eTD\bTD Переключение подсветки экрана между \aW{дневным} и \aW{ночным} режимом \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:color] \eTD\bTD Яркость/контрастность \eTD\bTD Настройка яркости и контрастности экрана \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:select] \eTD\bTD Выбор \eTD\bTD Выбор отмеченного элемента или подтверждение сообщения об ошибке \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Подтверждение \eTD\bTD Подтверждение выбора \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Вверх/вниз \\Pfeile \eTD\bTD Перемещение отметки вверх или вниз либо увеличение/уменьшение выбранного значения \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Сигнал заднего хода \eTD\bTD Активация/деактивация акустического сигнала заднего хода \eTD\eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+
+\subsubsubject{Другие индикаторы Vpad}
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+\startcolumns
+
+\startSymVpad
+\externalfigure[sym:vpad:water]
+\SymVpad
+\textDescrHead{Уровень чистой воды} Недостаточный уровень чистой воды (макс. 190\,л; за кабиной).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater:yellow]
+\SymVpad
+\textDescrHead{Уровень воды системы регенерации}(желтый) Уровень воды в системе регенерации ниже теплообменника. Гидравлическая жидкость не охлаждается, система увлажнения канала всасывания не нагревается.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater]
+\SymVpad
+\textDescrHead{Уровень воды системы регенерации}(красный) Недостаточный уровень воды (макс. 140\,л; ниже бункера для отходов).
+\stopSymVpad
+
+\stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\page [yes]
+
+\startsection[title={Настройка яркости экрана},
+reference={sec:vpad:brightness}]
+
+У экрана \Vpad\ есть два предварительно заданных режима подсветки: Режим \aW{День}~– \textSymb{vpadSunglasses}, обычная яркость~– и режим \aW{Ночь}~– \textSymb{vpadMoon}, сниженная яркость.
+Кнопка \textSymb{vpadColor} предназначена для доступа к различным параметрам.
+
+Чтобы изменить предварительно заданные режимы подсветки, сделайте следующее:
+
+\startSteps
+\item Нажмите на центр сенсорного экрана, чтобы прокрутить строку меню в нижней части окна.
+\item Нажмите на символ \textSymb{vpadSunglasses} или
+\textSymb{vpadMoon}, чтобы выбрать режим, который хотите изменить.
+\item Нажмите на \textSymb{vpadColor} для отображения параметров.
+\item С помощью стрелок~\textSymb{vpadUp}\textSymb{vpadDown} отметьте параметр, который хотите изменить, и выберите его нажатием~\textSymb{vpadSelect}.
+\item Измените значение с помощью символов\textSymb{vpadMinus}\textSymb{vpadPlus}. Осторожно: не снижайте яркость слишком сильно (\VpadOp{162} -255), в противном случае вы не увидите на экране ничего!
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadGPS}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\null}}{Нажмите на центр сенсорного экрана}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadOp{162}\hfill 15 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Для выбора нажмите \textSymb{vpadSelect}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadNull}}}%
+\framed[backgroundscreen=.9]{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD \VpadOp{162}\hfill -80 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Чтобы изменить значение, нажмите \textSymb{vpadMinus}\textSymb{vpadPlus}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Чтобы подтвердить значение, нажмите \textSymb{vpadReturn}.
+\item Еще раз нажмите символ \textSymb{vpadReturn}, чтобы вернуться в главное окно.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Счетчики часов работы и километража},
+reference={vpad:compteurs}]
+
+В данной программе \Vpad\ есть три периода измерения~– \aW{День}, \aW{Сезон}, \aW{Общий}~, – в которых могут работать различные счетчики, например \aW{пройденного пути}, \aW{рабочих часов} (двигателя или щетки), \aW{рабочего времени} (каждого водителя).
+
+Для просмотра или обнуления этих счетчиков сделайте следующее:
+
+\startSteps
+\item Нажмите на центр сенсорного экрана, чтобы прокрутить строку меню в нижней части окна.
+\item Нажмите на символ \textSymb{vpadOneTwoThree}, чтобы открыть счетчик дней.
+\item С помощью символов "вперед" и "назад"~\textSymb{vpadBW}\textSymb{vpadFW} можно перейти к общему или сезонному счетчику.
+\item Нажмите на \textSymb{vpadTrash}, для обнуления отображаемого счетчика.
+\item Откроется диалоговое окно с просьбой подтвердить обнуление.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{120} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 87,4\,ч \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 62,0\,ч \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 240,2\,км \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 901,9\,км \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,1\,л/ч \eTD\eTR
+\eTABLE}}{Нажмите на символ~\textSymb{vpadOneTwoThree}, затем~\textSymb{vpadBW} или~\textSymb{vpadFW}}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadBW}{vpadFW}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 522,0\,ч \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 662,8\,ч \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 1605,5\,км \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 2608,4\,км \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,0\,л/ч \eTD\eTR
+\eTABLE}}{Чтобы обнулить счетчик, нажмите \textSymb{vpadTrash}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadTrash}{vpadNull}{vpadNull}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{136} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{137} \eTD\eTR
+\eTABLE}}{Для подтверждения нажмите \textSymb{vpadTrash}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item При необходимости введите пароль и для подтверждения обнуления нажмите символ \textSymb{vpadTrash}.
+\item Нажмите символ \textSymb{vpadReturn}, чтобы вернуться в главное окно.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+\startsection[title={Интервалы обслуживания},
+reference={vpad:maintenance}]
+
+В плане техобслуживания \sdeux\ есть два основных вида работ: регулярное обслуживание и крупный сервис (выполняемый квалифицированной мастерской, согласованной с гарантийной службой \boschung.
+
+Для просмотра или обнуления счетчиков сделайте следующее:
+\startSteps
+\item Нажмите на центр сенсорного экрана, чтобы прокрутить строку меню в нижней части окна.
+\item Нажмите на символ \textSymb{vpadServiceInfo}, чтобы открыть периодичность обслуживания.
+\item С помощью стрелок~\textSymb{vpadUp}\textSymb{vpadDown} перейдите к нужному интервалу.
+\item Нажмите на символ ~\textSymb{vpadTrash}, чтобы обнулить интервал. Введите пароль с помощью~\textSymb{vpadPlus}\textSymb{vpadMinus} и для подтверждения нажмите~\textSymb{vpadSelect}).
+\item Откроется диалоговое окно с просьбой подтвердить обнуление.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadNull}{vpadNull}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD[nc=2] \VpadOp{190} \eTD\eTR
+\bTR\bTD \VpadOp{191}\eTD\bTD \VpadOp{195}\hfill 600\,ч \eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{192}\eTD\bTD \VpadOp{195}\hfill 600\,ч \eTD\eTR
+\bTR\bTD \VpadOp{193}\eTD\bTD \VpadOp{195}\hfill 2400\,ч \eTD\eTR
+\eTABLE}}{Нажмите на символ~\textSymb{vpadTrash}, чтобы обнулить интервал}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD \hfill 2014-03-31 \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{002}\hfill 0000 \eTD\eTR
+\eTABLE}}{Введите пароль (числовой код)}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD[backgroundcolor=black,color=TableWhite] \VpadOp{041}\eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{042} \eTD\eTR
+\bTR\bTD \VpadOp{043} \eTD\eTR
+\eTABLE}}{Сделайте выбор и для подтверждения нажмите~\textSymb{vpadSelect}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Чтобы подтвердить обнуление, нажмите~\textSymb{vpadSelect}.
+\item Нажмите символ \textSymb{vpadReturn}, чтобы вернуться в главное окно.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Обработка ошибок с помощью Vpad},
+reference={vpad:error}]
+
+
+Система \Vpad\ отображает ошибки\index{Vpad+Сообщения об ошибках}, обнаруженные электронными системами управления и переданные по шине CAN.
+При обнаружении ошибки средней тяжести загорается символ~\textSymb{VpadTClear} (красный).
+При обнаружении приоритетной ошибки загорается символ~\textSymb{VpadTClear}, и раздается звуковой сигнал.
+Чтобы отключить его, нужно подтвердить сообщение (подтвердить, что \aW{оно принято к сведению}).
+
+Чтобы прочитать и подтвердить сообщения об ошибках, сделайте следующее:
+
+\startSteps
+\item Нажмите на символ~\textSymb{vpadClear} на экране \Vpad.
+\item Нажмите на символ~\textSymb{vpadClear}, чтобы подтвердить выбранное сообщение.
+\item Рядом с подтвержденным сообщением появится символ \aW{\#}, означающий, что сообщение \aW{принято к сведению}, отметка перейдет к следующему сообщению (если оно есть).
+\item После подтверждения всех сообщений откроется главное окно.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851a} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Отображение сообщений}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Для подтверждения нажмите~\textSymb{vpadClear}}
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadBeam}{vpadEngine}}}%
+\framed{\null}}{Возврат к главному окну}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Чтобы снова просмотреть сообщения, нажмите на символ~\textSymb{vpadClear}. Сообщения об ошибке удаляются из системы \Vpad\ только после устранения причины проблемы.
+\stopSteps
+
+
+\subsection{Наиболее часто встречающиеся сообщения (с инструкцией по поиску причины)}
+
+\subsubsubject{\VpadEr{604}} % {\#\ 604 Pression huile moteur basse}
+
++ \textSymb{vpadTEnginOilPressure}~– Немедленно выключите двигатель. Проверьте уровень масла, свяжитесь с мастерской.
+
+
+\subsubsubject{\VpadEr{609}} % {\#\ 609 Température eau refroidissement moteur haute}
+
++ \textSymb{vpadSyWaterTemp}~– Прекратите работу. Оставьте двигатель включенным без нагрузки и наблюдайте за изменениями температуры.
+
+Если температура понизится, проверьте уровни охлаждающей жидкости, моторного масла и гидравлической жидкости, а также состояние охладителя.
+Если уровни жидкостей и охладитель в порядке, продолжите поиск неисправностей в мастерской. Соблюдайте осторожность.
+
+\subsubsubject{\VpadEr{610}} % {\#\ 610 Température eau refroidissement moteur trop haute}
+
++ \textSymb{vpadSyWaterTemp}~– Прекратите работу. Проверьте уровни охлаждающей жидкости и моторного масла, свяжитесь с мастерской.
+
+
+\subsubsubject{\VpadEr{650}} % {\#\ 650 Se rendre à un garage}
+
++ \textSymb{vpadWarningService}~– Немедленно свяжитесь с мастерской.
+% \VpadEr{651} % {\#\ 651 Moteur en mode urgence}
+
+
+\subsubsubject{\VpadEr{652}} % {\#\ 652 Inspection véhicule}
+% \VpadEr{653} % {\#\ 653 Grand service moteur}
+
++ \textSymb{vpadWarningService}~– Наступил срок следующего регулярного обслуживания. Проверьте план обслуживания и договоритесь с мастерской.
+
+
+\subsubsubject{\VpadEr{700}} % {\#\ 700 Température d'huile hydraulique}
+
++ \textSymb{vpadSyWaterTemp}~– Прекратите работу. Оставьте двигатель включенным без нагрузки и наблюдайте за изменениями температуры.
+
+Если температура понизится, проверьте уровни охлаждающей жидкости, моторного масла и гидравлической жидкости, а также состояние охладителя.
+Если уровни жидкостей и охладитель в порядке, продолжите поиск неисправностей в мастерской. Соблюдайте осторожность.
+
+
+\subsubsubject{\VpadEr{702}} % {\#\ 702 Filtre d'huile hydraulique}
+
++ \textSymb{vpadWarningFilter}~– Фильтр в обратной гидравлической линии или всасывающий фильтр засорился. Немедленно замените фильтрующий элемент.
+% \VpadEr{703} % {\#\ 703 Vidange d'huile hydraulique}
+
+
+\subsubsubject{\VpadEr{800}} % {\#\ 800 Interrupteur d'urgence actionné}
+
++ \textSymb{vpadTClear}~– Вы нажали аварийный выключатель. Выключите зажигание и снова запустите двигатель, чтобы удалить сообщение.
+
+
+\subsubsubject{\VpadEr{801}} % {\#\ 905 Frein à main actionné}
+
+Бункер для грязи поднят или не полностью опущен. Если бункер не опущен, скорость машины ограничена 5\,км/ч.
+
+\subsubsubject{\VpadEr{851}} % {\#\ 851 Filtre à air}
+
++ \textSymb{vpadWarningFilter}~– Засорился воздушный фильтр. Немедленно замените фильтрующий элемент.
+
+
+\subsubsubject{\VpadEr{902}} % {\#\ 902 Pression de freinage}
+
++ \textSymb{vpadTBrakeError}~– Недостаточное давление в тормозной системе. Прекратите работу и сразу свяжитесь с мастерской.
+% \VpadEr{904} % {\#\ 904 Interrupteur de direction d'avancement}
+
+
+\subsubsubject{\VpadEr{905}} % {\#\ 905 Frein à main actionné}
+
++ \textSymb{vpadTBrakePark}~– Стояночный тормоз открыт не до конца. Если стояночный тормоз открыт не до конца, скорость машины ограничена 5\,км/ч.
+
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+
+
+
+

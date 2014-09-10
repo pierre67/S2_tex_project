@@ -1,0 +1,353 @@
+\startcomponent c_90_serviceplan_s2_110-ru
+\product prd_ba_s2_110-ru
+
+
+\chapter[sec:schedule]{План техобслуживания}
+
+\startregister[index][wartplan]{План техобслуживания+Машина}
+
+
+\section{Общие замечания}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck\enskip Контроль\enskip}
+Контроль, который может проводиться\index{Квалификация+Персонал техобслуживания} производственным персоналом транспортного средства без посторонней помощи. В любом случае, требуются базовые знания об автомобилях.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro\enskip Сервисные работы\enskip}
+Регулярные работы по обслуживанию, которые должны проводиться в рамках ухода. Техобслуживание должно проводиться квалифицированным персоналом авторизованной мастерской с использованием требуемых инструментов.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial\enskip Специальные работы\enskip}
+Специальные\index{Специальные работы} Специальные работы по обслуживанию, которые могут выполняться лишь работником, прошедшим специальное, признаваемое гарантийной службой \BoschungNote.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual\enskip Визуальный осмотр\enskip}
+Проверка\index{Визуальный контроль} путем визуального контроля. О выявленных неисправностях и повреждениях следует сообщать сотруднику, ответственному за техобслуживание.
+\stoptextrule
+}
+
+При всех работах по техобслуживанию следует различать три уровня квалификации (требования к персоналу и оснащению) и четыре типа техобслуживания (вида работ).
+
+\startTwoPar
+{\em Уровни квалификации:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:check}} Контроль \par
+\symDescr{\textSymb{maint:pro}} Сервисные работы \par
+\symDescr{\textSymb{maint:special}} Специальные работы \par
+\stop
+\TwoPar
+{\em Типы техобслуживания:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:visual}} Визуальный контроль \par
+\symDescr{\textSymb{maint:function}} Контроль функционирования \par
+\symDescr{\textSymb{maint:level}} Контроль уровня наполнения \par
+\symDescr{\textSymb{maint:exchange}} Замена рабочих материалов \par
+\symDescr{\textSymb{maint:generic}} Прочие работы \par
+\stop
+\stopTwoPar
+
+\handItem{См. пояснения в крайних столбцах.}
+
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtfunction\enskip Контроль функционирования\enskip}
+Проверки, которые\index{Контроль+Функция} выходят за рамки осмотра, \eG\ функциональный контроль тормозов, проверка состояния узлов, ручной контроль креплений.
+\stoptextrule \blank[big]
+
+\starttextrule{\Pmtlevel\enskip Контроль уровня наполнения\enskip}
+Контроль\index{Контроль+Уровень наполнения} уровня наполнения включает проверку~– визуально или с помощью щупа~– и, при необходимости, наполнение соответствующей рабочей жидкостью. {\em К этому относится и система централизованной смазки.} Прочитайте также раздел \about[sec:liqquantities], где вы можете найти данные по качеству и количеству используемых рабочих материалов.
+\stoptextrule \blank[big]
+
+\starttextrule{\Pmtexchange\enskip Замена рабочей среды\enskip}
+Это\index{Рабочие материалы+Замена} включает замену рабочего материала и контроль уровня наполнения. Данные по качеству и количеству рабочих материалов можно найти в \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+
+\starttextrule{\Pmtgeneric\enskip Прочие работы\enskip}
+Различные работы по техобслуживанию, выполняемые надлежащим образом в соответствии с инструкцией.
+\stoptextrule
+}%
+
+\blank[big]
+\starttextbackground[CB]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+При выполнении любых операций контроля и техобслуживания следует соблюдать правила техники безопасности и охраны окружающей среды. \BosFull{boschung} не несет никакой ответственности за травмы и материальный ущерб, возникшие вследствие несоблюдения этих предписаний.
+\stopPictPar
+\stoptextbackground
+\page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{План технического обслуживания машины}
+
+Обслуживание\index{Контроль, периодический} машины состоит из регулярных работ по техобслуживанию, периодических проверок (контроля), а также разового сервиса\footnote{Все указанные данные в часах следует понимать, как рабочие часы}:
+
+\start
+
+\stdfontcond
+
+\starttextbackground[FC]
+\starttabulate [|w(6mm)|w(26mm)B|w(18mm)B|p({\dimexpr\textwidth-(50mm+3.5em)\relax})|]
+\NC \Pmtpro\NC Работы по \NC 50\,ч\NC первое сервисное обслуживание через 50\,ч\NC \NR
+\NC\NC техобслуживанию\NC 600\,ч\NC Регулярное обслуживание через каждые 600\,ч / 12 месяцев\NC \NR
+\NC\NC\NC 1200\,ч\NC Регулярное обслуживание через каждые 1200\,ч / 2 года\NC \NR
+\NC\NC\NC 2400\,ч \NC Регулярное обслуживание через каждые 2400\,ч / 4 года\NC \NR
+\NC\NC\NC 4800\,ч \NC Регулярное обслуживание через каждые 4800\,ч / 8 года\NC \NR
+\NC \Pmtcheck\NC Список проверок\NC Ежедневно \NC В течение всего сезона работ \NC \NR
+\NC\NC\NC Еженедельно\NC В течение всего сезона работ\NC\NR
+
+\stoptabulate
+\stoptextbackground
+
+\stop
+
+\blank [big]
+
+Нижеследующий план техобслуживания относится к базовому транспортному средству.
+Соблюдайте также план техобслуживания агрегатов (\eG\ уборочной машины, бункера) со \at{страницы}[sec:schedaggr].
+
+При двойном указании периодичности обслуживания (\eG\ \quotation{каждые 600\,ч~/ 12~месяцев})
+приоритет имеет срок, наступающий раньше.
+
+Отдельные планы техобслуживания~– за исключением разового обслуживание после 50~часов~–
+должны выполняться нарастающим итогом: Через каждые 1200~рабочих часов должно проводиться
+600-часовое обслуживание {\em и} 1200-часовое обслуживание и т.д.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Ежедневный контроль}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Вид\eTD \bTD Ежедневный контроль\eTD \bTD \Tcheck \eTD \bTD Ссылка\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Очистить транспортное средство\eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning]\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Проверить транспортное средство на предмет возможных повреждений\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Проверить на наличие течей\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень масла в дизельном двигателе (щупом!)\eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень охлаждающей жидкости в дизельном двигателе\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень гидравлической жидкости (смотровое стекло на бачке)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень топлива\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень жидкости в стеклоомывателе\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить работоспособность индикаторов и освещения приборной панели и панели с органами контроля \eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить работоспособность стояночного тормоза\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Функциональный контроль оборудования освещения и сигнализации\eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting]\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+\subsection[table:scheduleweekly]{Еженедельный контроль}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Вид \eTD \bTD Еженедельный контроль \eTD \bTD \Tcheck \eTD \bTD Ссылка \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Проверить давление в шинах (см. на заводской табличке колес транспортного средства)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить патрон воздушного фильтра и, при необходимости, очистить\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Нанести смазку во всех точках (шасси, шарнирное сочленение) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection [sec:50h]{Обслуживание через 50\,ч~– один раз}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Вид\eTD \bTD Обслуживание после 50\,ч~– один раз\eTD \bTD Q.\eTD \bTD Ссылка\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень охлаждающей жидкости в дизельном двигателе\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Очистить патрон воздушного фильтра (при необходимости, заменить\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить натяжение поликлинового ремня дизельного двигателя, при необходимости подтянуть\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Заменить фильтр в обратной магистрали гидросистемы и всасывающий фильтр\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень гидравлической жидкости (смотровое стекло на бачке)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Система централизованной смазки (опция): Проверить запас и консистенцию смазки\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Нанести смазку во всех точках (шасси, шарнирное сочленение)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень жидкости для омывания стекол\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепления кабины водителя\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепеж двигателя на шасси\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепеж насосов на двигателе\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепления комбинированного охладителя\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепеж осей\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить колеса\index{Момент затяжки+Колеса} на предмет прочной посадки (момент затяжки: 180\,Нм)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить давление в шинах (см. на заводской табличке колес транспортного средства)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить/отрегулировать ход рычага стояночного тормоза\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить состояние батареи; очистить полюса/клеммы\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить настройку фар согласно ПДД, отрегулировать при необходимости\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Смазать сердечники катушек магнитных клапанов медной смазкой\eTD \bTD \Tspecial \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Просмотреть память событий (Vpad и блока управления двигателем); при необходимости – устранить причины ошибок\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection {Обслуживание через 600\,ч / 12 месяцев}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Вид\eTD \bTD Обслуживание через каждые 600\,ч / 12 месяцев\eTD \bTD Q.\eTD \bTD Ссылка\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Заменить масло в дизельном двигателе\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilDraining]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Заменить масляный фильтр двигателя\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Заменить топливный фильтр\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:fuelFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить герметичность двигателя и компонентов в моторном отсеке\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить герметичность и крепление выхлопной системы\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить состояние и натяжение поликлинового ремня дизельного двигателя, при необходимости – подтянуть или заменить\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень охлаждающей жидкости в дизельном двигателе\eTD \bTD \Tcheck\eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Заменить патрон воздушного фильтра\eTD \bTD \Tcheck\eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Заменить фильтр в обратной магистрали гидросистемы и всасывающий фильтр\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень гидравлической жидкости в баке\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Система централизованной смазки (опция): Проверить запас и консистенцию смазки\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Нанести смазку во всех точках (шасси, шарнирное сочленение)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Проверить уровень жидкости для омывания стекол\eTD \bTD \Tcheck\eTD \bTD \inP[sec:liquids]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепления кабины водителя\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепеж двигателя на шасси\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепеж насосов на двигателе\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепления комбинированного охладителя\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить крепеж осей\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить/отрегулировать ход рычага стояночного тормоза\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить/очистить тормозные барабаны и колодки; очистить тормозной механизм\eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить колеса\index{Момент затяжки+Колеса} на предмет прочной посадки (момент затяжки: 180\,Нм)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Проверить давление в шинах (см. на заводской табличке колес транспортного средства)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить состояние батареи; очистить полюса/клеммы\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить настройку фар согласно ПДД, отрегулировать при необходимости\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Смазать сердечники катушек магнитных клапанов медной смазкой\eTD \bTD \Tspecial \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить антикоррозионную защиту, при необходимости – исправить/заменить\eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Просмотреть память событий (Vpad и блока управления двигателем); при необходимости – устранить причины ошибок\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Обслуживание через каждые 1200\,ч / 2 года}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Вид\eTD \bTD Обслуживание через каждые 1200\,ч / 2 года\eTD \bTD Q.\eTD \bTD Ссылка\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Заменить гидравлическое масло (в баке)\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Заменить хладагент (R134a) кондиционера\eTD \bTD \Tspecial \eTD \bTD \emptY\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Обслуживание через каждые 2400\,ч / 4 года}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Вид\eTD \bTD Обслуживание через каждые 2400\,ч / 4 года\eTD \bTD Q.\eTD \bTD Ссылка\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Заменить зубчатый ремень дизельного двигателя \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Обслуживание через каждые 4800\,ч / 8 года}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Вид\eTD \bTD Обслуживание через каждые 4800\,ч / 8 года\eTD \bTD Q.\eTD \bTD Ссылка\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Проверить гидравлические шланги, при необходимости – заменить\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Заменить водяной насос (одновременно с зубчатым ремнем) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Обслуживание агрегатов}
+
+Обслуживание\startregister[index][wartplanAgg]{План техобслуживания+Агрегаты} агрегатов включает регулярные работы по техобслуживанию\index{Периодический контроль} а также ежедневные и еженедельные проверки:
+
+\starttextbackground[FC]
+\starttabulate [|w(6mm)|w(31mm)B|w(22mm)B|p({\dimexpr\textwidth-(59mm+3.5em)\relax})|]
+\NC \Pmtpro\NC Работы по \NC 50\,ч\NC первое сервисное обслуживание через 50\,ч\NC \NR
+\NC\NC техобслуживанию\NC 600\,ч\NC Регулярное обслуживание через каждые 600\,ч / 12 месяцев\NC \NR
+\NC \Pmtcheck\NC Список проверок\NC Ежедневно \NC В течение всего сезона работ \NC \NR
+\NC\NC\NC Еженедельно\NC В течение всего сезона работ\NC\NR
+\stoptabulate
+
+\stoptextbackground
+\blank [big]
+
+Нижеследующий план техобслуживания относится к стандартным агрегатам, которыми обычно оснащается \sdeux\. Для специальных агрегатов, которые не описаны в данном руководстве, следует соблюдать план техобслуживания соответствующего агрегата.
+
+
+\subsection[table:scheduledaily]{Ежедневный контроль}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Вид\eTD \bTD Ежедневный контроль\eTD \bTD Q.\eTD \bTD Ссылка\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Очистить бункер и систему регенерации \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Очистить патрубок и канал всасывания \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection[table:scheduledaily]{Еженедельный контроль}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Тип \eTD \bTD Еженедельный контроль \eTD \bTD Q. \eTD \bTD Ссылка \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Проверить износ линейной и передней щеток (опция) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Проверить заслонку и резиновую кромку патрубка всасывания \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Нанести смазку во всех точках (бункер, щетки, патрубок всасывания) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Обслуживание через 50\,ч~– один раз}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD
+Art \eTD \bTD Обслуживание после 50\,ч~– разовое \eTD \bTD Q. \eTD \bTD Ссылка \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Проверить крепеж щеток \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Отрегулировать заслонку и резиновую кромку патрубка всасывания \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Обслуживание через 600\,ч/12 месяцев}
+
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Вид \eTD \bTD Обслуживание через 600\,ч/12 месяцев\eTD \bTD Q. \eTD \bTD Ссылка \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Проверить крепеж щеток \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Отрегулировать заслонку и резиновую кромку патрубка всасывания \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplanAgg]
+\stop
+
+
+\stopcomponent
+% vim: fdm=indent
+

@@ -1,0 +1,1631 @@
+\startenvironment env_vpad_s2-ex
+
+\definefontsynonym [Myriad] [name:MyriadPro-Regular]
+\definefontsynonym [MyriadCondensed] [name:MyriadPro-SemiCn] % -Cond
+\definefontsynonym [MyriadSemiBold] [name:MyriadPro-Semibold]
+\definefontsynonym [ArialUnicode] [name:ArialUnicodeMS]
+\definefontsynonym [DejaVu] [name:DejaVuSansMono]
+% \definefont [Vpadfont] [ArialUnicode at 5.8pt]
+% \definefont [VpadHeadfont] [ArialUnicode at 8pt]
+\definefont [Vpadfont] [MyriadCondensed at 6.2pt]
+\definefont [VpadHeadfont] [MyriadSemiBold at 8pt]
+\definefont [Joystickfont] [DejaVu at 9.5pt]
+\definefont [JoyTextfont] [DejaVu sa 1]
+\definefont [JoystickTarget] [DejaVu at 13.3pt]
+
+\definesynonyms[JoyPlow][JoyPlows][\JoyP]
+\definesynonyms[JoyBroom][JoyBrooms][\JoyB]
+
+\definesynonyms[VpadOperating][VpadOperatings][\VpadOp]
+\definesynonyms[VpadConfig][VpadConfigs][\VpadCf]
+\definesynonyms[VpadError][VpadErrors][\VpadEr]
+
+\setupsynonyms[VpadError,VpadConfig,VpadOperating,JoyPlow,JoyBroom][
+					next=\autoinsertnextspace,
+					]
+
+\startsetups [VpRUSSIAN]
+% \JoyBroom{001} {Верс.}
+% \JoyBroom{002} {Джойстик}
+% \JoyBroom{003} {Управление}
+% \JoyBroom{004} {Заблокировано!}
+% \JoyBroom{005} {Джойстик 3}
+% \JoyBroom{006} {Активен!}
+% \JoyBroom{007} {Нулевая позиция}
+% \JoyBroom{008} {выравнивать?}
+% \JoyBroom{009} {выравнивать активно!}
+% \JoyBroom{010} {Число оборотов крас.}
+% \JoyBroom{011} {выравнивать начал.!}
+% \JoyBroom{012} {нулевое значение}
+% \JoyBroom{013} {принять?}
+% \JoyBroom{014} {двойной}
+% \JoyBroom{015} {установка нуля}
+% \JoyBroom{016} {контроль}
+% \JoyBroom{017} {картина чистки}
+% \JoyBroom{018} {щетка}
+% \JoyBroom{019} {повернуть вправо}
+% \JoyBroom{020} {повернуть влево}
+% \JoyBroom{021} {выравнивание}
+% \JoyBroom{022} {закончено}
+% \JoyBroom{023} {IO-модуль}
+% \JoyBroom{024} {от Diag}
+% \JoyBroom{025} {щетка простая}
+% \JoyBroom{026} {не активен}
+% \JoyBroom{027} {начальн.}
+% \JoyBroom{028} {скорость > 0}
+% \JoyBroom{029} {в раб. состоянии}
+% \JoyBroom{030} {форсунки опустить}
+% \JoyBroom{031} {повернуть}
+% \JoyBroom{032} {без предохранителя}
+% \JoyBroom{033} {с предохранителем}
+% \JoyBroom{034} {выключить}
+% \JoyBroom{035} {яркость}
+% \JoyBroom{036} {варианты}
+% \JoyBroom{037} {защита от опрокидывания}
+% \JoyBroom{038} {конец меню?}
+% \JoyBroom{039} {защитный кожух}
+% \JoyBroom{040} {сокращенный}
+% \JoyBroom{041} {опустить}
+% \JoyBroom{042} {сдувочные форсунки}
+% \JoyBroom{043} {поднять/опустить}
+% \JoyBroom{044} {капот}
+% \JoyBroom{045} {к/ на}
+% \JoyBroom{046} {заблокировать}
+% \JoyBroom{047} {J2 капот}
+% \JoyBroom{048} {открыть крышку}
+% \JoyBroom{049} {готов}
+% \JoyBroom{050} {поднять всасывающее сопло}
+% \JoyBroom{051} {поднять всасывающий рукав}
+% \JoyBroom{052} {всасывающий рукав вверху}
+% \JoyBroom{053} {заблокировать на}
+% \JoyBroom{054} {крышку поднять}
+% \JoyBroom{055} {крышку открыть}
+% \JoyBroom{056} {крышку закрыть}
+% \JoyBroom{057} {заблокировать к}
+% \JoyBroom{058} {ошибка вход}
+% \JoyBroom{059} {всасывающий рукав опустить}
+% \JoyBroom{060} {всасывающий рукав внизу}
+% \JoyBroom{061} {щетка в середине}
+% \JoyBroom{062} {повернуть?}
+% \JoyBroom{063} {повернут!}
+% \JoyBroom{064} {центр ОК!}
+% \JoyBroom{065} {тест воды}
+% \JoyBroom{066} {заднее всасывающее устройство}
+% \JoyBroom{067} {всасывающую тележку опустить}
+% \JoyBroom{068} {задний всасывающий рукав}
+% \JoyBroom{069} {не вверху!}
+% \JoyBroom{070} {передняя щетка}
+% \JoyBroom{071} {простая щетка}
+% \JoyBroom{072} {щетка слева}
+% \JoyBroom{073} {щетка справа}
+% \JoyBroom{074} {обе щетки}
+% \JoyBroom{075} {всасывающую решетку открыть}
+% \JoyBroom{076} {щетку повернуть}
+% \JoyBroom{077} {всасывание закончить}
+% \JoyBroom{078} {End le}
+% \JoyBroom{079} {End ri}
+% \JoyBroom{080} {Retr.}
+% \JoyBroom{081} {Set middle}
+% \JoyBroom{082} {Error}
+% \JoyBroom{083} {No error}
+% \JoyBroom{084} {Com.IOModule}
+% \JoyBroom{085} {Broom Posit.}
+% \JoyBroom{086} {No water}
+% \JoyBroom{087} {Joystick3}
+% \JoyBroom{088} {Angle Sens.}
+% \JoyBroom{089} {IO Module}
+% \JoyBroom{090} {Mod. type}
+% \JoyBroom{091} {Not det.}
+% \JoyBroom{092} {Suspens.mode}
+% \JoyBroom{093} {Not def.}
+% \JoyBroom{094} {Manual}
+% \JoyBroom{095} {Automatic}
+% \JoyBroom{096} {Intake Flap}
+% \JoyBroom{097} {Broom pivot}
+% \JoyBroom{098} {on}
+% \JoyBroom{099} {off}
+% \JoyBroom{100} {Broom lift}
+% 
+% \JoyPlow{001} {выкл.}
+% \JoyPlow{002} {вкл.}
+% \JoyPlow{003} {v-вкл.}
+% \JoyPlow{004} {И}
+% \JoyPlow{005} {ИЛИ}
+% \JoyPlow{006} {сниж. давления}
+% \JoyPlow{007} {блокирование}
+% \JoyPlow{008} {гидравлика}
+% \JoyPlow{009} {отвал клин.}
+% \JoyPlow{010} {щетка}
+% \JoyPlow{011} {вариант}
+% \JoyPlow{012} {ГK Выкл.}
+% \JoyPlow{013} {ГK плавающ. поз.}
+% \JoyPlow{014} {ГK разгруз. отвал}
+% \JoyPlow{015} {ГK блокировать}
+% \JoyPlow{016} {ГK блокировать}
+% \JoyPlow{017} {Идет баланс.}
+% \JoyPlow{018} {Старт баланс.}
+% \JoyPlow{019} {яркость}
+% \JoyPlow{020} {макс. ток}
+% \JoyPlow{021} {VPad соед.}
+% \JoyPlow{022} {раб.часы}
+% \JoyPlow{023} {Имп./10 м}
+% \JoyPlow{024} {стандарт}
+% \JoyPlow{025} {мастер}
+% \JoyPlow{026} {подчиненный}
+% \JoyPlow{027} {конец меню?}
+% \JoyPlow{028} {бех подъема}
+% \JoyPlow{029} {с подъемом}
+% \JoyPlow{030} {поворот пр. лем.}
+% \JoyPlow{031} {поворот л. лем.}
+% \JoyPlow{032} {дни-км}
+% \JoyPlow{033} {общее-км}
+% \JoyPlow{034} {дни-ч}
+% \JoyPlow{035} {общее-ч}
+% \JoyPlow{036} {удалить-дни}
+% \JoyPlow{037} {ошибка прибора}
+% \JoyPlow{038} {Неправ. команда}
+% \JoyPlow{039} {блокирование}
+% \JoyPlow{040} {Меню пов. лем.}
+% \JoyPlow{041} {\red Mount/dism.}
+% \JoyPlow{042} {джойстик выкл.}
+% \JoyPlow{043} {удалить-дни ok}
+% \JoyPlow{044} {передн.}
+% \JoyPlow{045} {дополн.}
+% \JoyPlow{046} {боков.}
+% \JoyPlow{047} {перед. отвал сброс нагрузки}
+% \JoyPlow{048} {перед.отвал плав. положение}
+% \JoyPlow{049} {датчик цифр.вход 1перед. отвал}
+% \JoyPlow{050} {расшир. лемех}
+% \JoyPlow{051} {бок.отвал сброс нагрузки}
+% \JoyPlow{052} {бок. отвал плав. положение}
+% \JoyPlow{053} {датч. цифр. вход бок. отвал}
+% \JoyPlow{054} {нет}
+% \JoyPlow{055} {джойстик}
+% \JoyPlow{056} {I/O-модуль M}
+% \JoyPlow{057} {I/O-модуль S}
+% \JoyPlow{058} {нет}
+% \JoyPlow{059} {прервать}
+% \JoyPlow{060} {кор. замык.}
+% \JoyPlow{061} {максим. ток}
+% \JoyPlow{062} {нем.}
+% \JoyPlow{063} {Откр. Закр.}
+% \JoyPlow{064} {Отвал л/пр.}
+% \JoyPlow{065} {готов}
+% \JoyPlow{066} {Склад. пов. лем.}
+% \JoyPlow{067} {Автом. склад.}
+% \JoyPlow{068} {Регистр. информ.}
+% \JoyPlow{069} {Спец. датч. RP}
+% \JoyPlow{070} {Балансир. ур 1}
+% \JoyPlow{071} {Балансир. ур 2}
+% \JoyPlow{072} {Балансировка}
+% \JoyPlow{073} {блокиров. вкл.}
+% \JoyPlow{074} {поворот вкл.}
+% \JoyPlow{075} {поворот акт.}
+% \JoyPlow{076} {поворот выкл.}
+% \JoyPlow{077} {блокиров. выкл.}
+% \JoyPlow{078} {\red Stop and go}
+% \JoyPlow{079} {\red Water}
+% \JoyPlow{080} {\red Pump}
+% \JoyPlow{081} {\red Mount/dism.}
+% \JoyPlow{082} {\red Min rel.}
+% \JoyPlow{083} {\red Max rel.}
+% \JoyPlow{084} {ошибка на входе}
+% \JoyPlow{085} {ошибка на входе}
+%
+\JoyBroom{001} {Vers.}
+\JoyBroom{002} {Joystick}
+\JoyBroom{003} {Operation}
+\JoyBroom{004} {locked!}
+\JoyBroom{005} {Joystick3}
+\JoyBroom{006} {is active!}
+\JoyBroom{007} {Zero pos.}
+\JoyBroom{008} {Trim?}
+\JoyBroom{009} {Trim active!}
+\JoyBroom{010} {Reduce rpm}
+\JoyBroom{011} {Trim start!}
+\JoyBroom{012} {Save}
+\JoyBroom{013} {zero values?}
+\JoyBroom{014} {double}
+\JoyBroom{015} {Zero trim}
+\JoyBroom{016} {Control}
+\JoyBroom{017} {Sweep image}
+\JoyBroom{018} {Broom}
+\JoyBroom{019} {pivot right}
+\JoyBroom{020} {pivot left}
+\JoyBroom{021} {Trimming}
+\JoyBroom{022} {ended}
+\JoyBroom{023} {I/O module}
+\JoyBroom{024} {from diagn.}
+\JoyBroom{025} {fold broom}
+\JoyBroom{026} {not active}
+\JoyBroom{027} {start?}
+\JoyBroom{028} {speed > 0}
+\JoyBroom{029} {in work pos}
+\JoyBroom{030} {lower nozzl.}
+\JoyBroom{031} {pivot}
+\JoyBroom{032} {not locked}
+\JoyBroom{033} {locked}
+\JoyBroom{034} {switch off}
+\JoyBroom{035} {Brightness}
+\JoyBroom{036} {Variant}
+\JoyBroom{037} {Tilt lock}
+\JoyBroom{038} {Menu end?}
+\JoyBroom{039} {Broom cover?}
+\JoyBroom{040} {Reduced}
+\JoyBroom{041} {lowering}
+\JoyBroom{042} {Nozzles}
+\JoyBroom{043} {lift/lower}
+\JoyBroom{044} {Eng. cowling}
+\JoyBroom{045} {close / open}
+\JoyBroom{046} {secure}
+\JoyBroom{047} {J2 eng.cow}
+\JoyBroom{048} {open cover}
+\JoyBroom{049} {ready}
+\JoyBroom{050} {Raise s-head}
+\JoyBroom{051} {Raise s-arm}
+\JoyBroom{052} {S-arm raised}
+\JoyBroom{053} {Open lock}
+\JoyBroom{054} {Raise cover}
+\JoyBroom{055} {Cover open}
+\JoyBroom{056} {Cover closed}
+\JoyBroom{057} {locked!}
+\JoyBroom{058} {Error input}
+\JoyBroom{059} {Lower s-arm}
+\JoyBroom{060} {S-arm lower.}
+\JoyBroom{061} {Broom centr.}
+\JoyBroom{062} {pivot?}
+\JoyBroom{063} {pivoting!}
+\JoyBroom{064} {Center OK}
+\JoyBroom{065} {Water test}
+\JoyBroom{066} {Rear suct.}
+\JoyBroom{067} {Lower s-head}
+\JoyBroom{068} {Rear s-arm}
+\JoyBroom{069} {not raised !}
+\JoyBroom{070} {Br speed}
+\JoyBroom{071} {Retr. brush!}
+\JoyBroom{072} {Left brush}
+\JoyBroom{073} {Right brush}
+\JoyBroom{074} {Both brushes}
+\JoyBroom{075} {SuctionGrid}
+\JoyBroom{076} {Pivot broom}
+\JoyBroom{077} {S-arm end}
+\JoyBroom{078} {End le}
+\JoyBroom{079} {End ri}
+\JoyBroom{080} {Retr.}
+\JoyBroom{081} {Set middle}
+\JoyBroom{082} {Error}
+\JoyBroom{083} {No error}
+\JoyBroom{084} {Com.IOModule}
+\JoyBroom{085} {Broom Posit.}
+\JoyBroom{086} {No water}
+\JoyBroom{087} {Joystick3}
+\JoyBroom{088} {Angle Sens.}
+\JoyBroom{089} {IO Module}
+\JoyBroom{090} {Mod. type}
+\JoyBroom{091} {Not det.}
+\JoyBroom{092} {Suspens.mode}
+\JoyBroom{093} {Not def.}
+\JoyBroom{094} {Manual}
+\JoyBroom{095} {Automatic}
+\JoyBroom{096} {Intake Flap}
+\JoyBroom{097} {Broom pivot}
+\JoyBroom{098} {on}
+\JoyBroom{099} {off}
+\JoyBroom{100} {Broom lift}
+
+\JoyPlow{001} {Off}
+\JoyPlow{002} {On}
+\JoyPlow{003} {v On}
+\JoyPlow{004} {AND}
+\JoyPlow{005} {OR}
+\JoyPlow{006} {PressStop}
+\JoyPlow{007} {Secure}
+\JoyPlow{008} {Hydraulics}
+\JoyPlow{009} {V plow}
+\JoyPlow{010} {Broom}
+\JoyPlow{011} {Variant}
+\JoyPlow{012} {JB Off}
+\JoyPlow{013} {JB Float pos}
+\JoyPlow{014} {JB Relief}
+\JoyPlow{015} {JB Lock}
+\JoyPlow{016} {JB Lock}
+\JoyPlow{017} {Tare running}
+\JoyPlow{018} {Tare start}
+\JoyPlow{019} {Brightness}
+\JoyPlow{020} {Max curr}
+\JoyPlow{021} {Vpad connect}
+\JoyPlow{022} {Work hrs}
+\JoyPlow{023} {Imp./10m}
+\JoyPlow{024} {Standard}
+\JoyPlow{025} {Master}
+\JoyPlow{026} {Slave}
+\JoyPlow{027} {Menu end?}
+\JoyPlow{028} {Without lift}
+\JoyPlow{029} {With lift}
+\JoyPlow{030} {Move wing R}
+\JoyPlow{031} {Move wing L}
+\JoyPlow{032} {Daily km}
+\JoyPlow{033} {Total km}
+\JoyPlow{034} {Daily hrs}
+\JoyPlow{035} {Total hrs}
+\JoyPlow{036} {Erase day}
+\JoyPlow{037} {System error}
+\JoyPlow{038} {Comm. error}
+\JoyPlow{039} {Securing}
+\JoyPlow{040} {Pl sec menu}
+\JoyPlow{041} {Mount/dism.}
+\JoyPlow{042} {Joystick off}
+\JoyPlow{043} {Erase day OK}
+\JoyPlow{044} {Front}
+\JoyPlow{045} {Ext.}
+\JoyPlow{046} {Side}
+\JoyPlow{047} {F rel}
+\JoyPlow{048} {F flo}
+\JoyPlow{049} {F sns}
+\JoyPlow{050} {Ext.}
+\JoyPlow{051} {S rel}
+\JoyPlow{052} {S flo}
+\JoyPlow{053} {S sns}
+\JoyPlow{054} {None}
+\JoyPlow{055} {Joystick}
+\JoyPlow{056} {I/O module M}
+\JoyPlow{057} {I/O module S}
+\JoyPlow{058} {None}
+\JoyPlow{059} {Interrupt.}
+\JoyPlow{060} {Short circ.}
+\JoyPlow{061} {Overcurrent}
+\JoyPlow{062} {German}
+\JoyPlow{063} {Open Close}
+\JoyPlow{064} {Plow l/r}
+\JoyPlow{065} {Ready}
+\JoyPlow{066} {Fold section}
+\JoyPlow{067} {Auto fold}
+\JoyPlow{068} {Data record}
+\JoyPlow{069} {SpecProgRP}
+\JoyPlow{070} {Tare level 1}
+\JoyPlow{071} {Tare level 2}
+\JoyPlow{072} {Tare}
+\JoyPlow{073} {Unlock}
+\JoyPlow{074} {Folding in}
+\JoyPlow{075} {Plow folded}
+\JoyPlow{076} {Folding out}
+\JoyPlow{077} {Lock}
+\JoyPlow{078} {Stop and go}
+\JoyPlow{079} {Water}
+\JoyPlow{080} {Pump}
+\JoyPlow{081} {Mount/dism.}
+\JoyPlow{082} {Min rel.}
+\JoyPlow{083} {Max rel.}
+\JoyPlow{084} {Lock error}
+\JoyPlow{085} {Fold error}
+
+\VpadOperating{001} {Все приводы отключены!}
+\VpadOperating{002} {Ввести пароль}
+\VpadOperating{003} {Пожалуйста деактивируйте клавишу деблокирования}
+\VpadOperating{004} {Внимание:щетка для летней уборки должна быть в среднем положении}
+\VpadOperating{005} {Внимание: всасывающие тележки для уборки зимой должны быть демонтированы}
+\VpadOperating{006} {Водяной пистолет включен}
+\VpadOperating{012} {Действительные данные}
+\VpadOperating{013} {Недействительные данные}
+\VpadOperating{014} {Выровнять}
+\VpadOperating{015} {Ждать}
+\VpadOperating{017} {Отменить}
+\VpadOperating{018} {Статус}
+\VpadOperating{019} {Активный}
+\VpadOperating{020} {Выкл.}
+\VpadOperating{026} {Пожалуйста ждите, запрос обрабатывается.}
+\VpadOperating{027} {Фаза прогрева:включите передачу}
+\VpadOperating{028} {Остановить меню}
+\VpadOperating{030} {Нет доступа}
+\VpadOperating{031} {Данные успешно сохранены}
+\VpadOperating{032} {Данные успешно восстановлены}
+\VpadOperating{033} {Ошибка копирования}
+\VpadOperating{034} {Все счетчики удалены}
+\VpadOperating{035} {Процесс удаления прерван}
+\VpadOperating{036} {Внимание, счетчики будут заменены!}
+\VpadOperating{037} {Внимание, счетчики будут удалены!}
+\VpadOperating{038} {Внимание, конфигурация будет заменена!}
+\VpadOperating{039} {Внимание, загружается стандартная конфигурация!}
+\VpadOperating{050} {Не достаточно памяти}
+\VpadOperating{051} {Файл пуст}
+\VpadOperating{052} {Файл не найден}
+\VpadOperating{053} {Процесс остановлен}
+\VpadOperating{070} {Двигатель}
+\VpadOperating{071} {Щетка}
+\VpadOperating{072} {Турбина}
+\VpadOperating{110} {Позиция GPS}
+\VpadOperating{111} {Получатель статус}
+\VpadOperating{112} {Долгота}
+\VpadOperating{113} {Широта}
+\VpadOperating{114} {Геоидальная долгота}
+\VpadOperating{115} {Количество спутников}
+\VpadOperating{116} {UTC дата/время}
+\VpadOperating{120} {Ежедневный счетчик}
+\VpadOperating{121} {Счетчик сезонов}
+\VpadOperating{122} {Общий счетчик}
+\VpadOperating{124} {Путь}
+\VpadOperating{125} {Старт}
+\VpadOperating{135} {Внимание, ежедневные счетчики удалены}
+\VpadOperating{136} {Внимание, счетчики сезонов удалены}
+\VpadOperating{137} {Подтвердите клавишей УДАЛИТЬ}
+\VpadOperating{140} {Выбор водителя}
+\VpadOperating{141} {Водитель}
+\VpadOperating{160} {Установки дисплея}
+\VpadOperating{161} {Контраст}
+\VpadOperating{162} {Яркость}
+\VpadOperating{163} {Освещение при активации}
+\VpadOperating{164} {Освещение при поиске}
+\VpadOperating{165} {Громкость}
+\VpadOperating{200} {Статус}
+\VpadOperating{201} {Давление (атм)}
+\VpadOperating{202} {Число оборотов (об/мин)}
+\VpadOperating{210} {Диагностика щетки}
+\VpadOperating{211} {Заданное значение (\percent )}
+\VpadOperating{212} {Положение насоса}
+\VpadOperating{220} {Диагностика турбины}
+\VpadOperating{221} {Заданное значение впереди (\percent )}
+\VpadOperating{222} {Заданное значение сзади (\percent )}
+\VpadOperating{223} {Число оборотов впереди (об/мин)}
+\VpadOperating{224} {Число оборотов сзади (об/мин)}
+\VpadOperating{230} {Диагностика угла}
+\VpadOperating{231} {Нулевое положение справа}
+\VpadOperating{232} {Нулевое положение слева}
+\VpadOperating{233} {Измеряемое значение справа}
+\VpadOperating{234} {Измеряемое значение слева}
+\VpadOperating{235} {Давление щетки (атм)}
+\VpadOperating{236} {Угол поворота}
+\VpadOperating{240} {Диагностика двигателя}
+\VpadOperating{241} {Заданное число оборотов (об/мин)}
+\VpadOperating{242} {Крутящий момент (Нм)}
+\VpadOperating{243} {Скорость}
+\VpadOperating{1000} {Сервисные установки}
+\VpadOperating{1001} {Общие установки}
+\VpadOperating{1005} {Выравнивание температуры}
+\VpadOperating{1006} {Установить часы}
+\VpadOperating{1007} {Диагностика}
+\VpadOperating{1008} {Программное обеспечение}
+\VpadOperating{1020} {PT1000 внутр. (-30,5°C)}
+\VpadOperating{1021} {PT1000 внутр.  (+40,5°C)}
+\VpadOperating{1030} {Аппаратура}
+\VpadOperating{1031} {CAN \&\& I2C}
+\VpadOperating{1032} {Цифровые выходы}
+\VpadOperating{1034} {Цифровые входы}
+\VpadOperating{1035} {Аналоговые входы}
+\VpadOperating{1040} {Vpad}
+\VpadOperating{1041} {Клавиатура}
+\VpadOperating{1042} {Джойстик отвал}
+\VpadOperating{1043} {Главный джойстик отвал}
+\VpadOperating{1044} {Подчиненный джойстик отвал}
+\VpadOperating{1045} {Джойстик щетка}
+\VpadOperating{1046} {Главный джойстик щетка}
+\VpadOperating{1047} {Доп. джойстик щетка}
+\VpadOperating{1049} {MC6}
+\VpadOperating{1050} {HAWE}
+\VpadOperating{1052} {Операционная система}
+\VpadOperating{1060} {Версия аппаратуры}
+\VpadOperating{1061} {Система  ID}
+\VpadOperating{1062} {Версия МС6}
+\VpadOperating{1070} {Vpad -> клавиатура}
+\VpadOperating{1071} {Клавиатура -> Vpad}
+\VpadOperating{1080} {Внутр. температура}
+\VpadOperating{1090} {IO отвал}
+\VpadOperating{1110} {Заводской номер}
+\VpadOperating{1111} {Резервирование данных}
+\VpadOperating{1112} {Восстановить конфигурацию}
+\VpadOperating{1113} {Установить счетчик}
+\VpadOperating{1114} {Обновить программу}
+\VpadOperating{1115} {Установить язык}
+\VpadOperating{1116} {Загрузить станд.конфигурацию}
+\VpadOperating{1117} {Калибровать сенсорный экран}
+\VpadOperating{1118} {Печатать конфигурацию}
+\VpadOperating{1119} {Выйти из программы}
+\VpadOperating{1131} {Загрузить внутр. резервный файл конфигурации}
+\VpadOperating{1132} {Импорт конфигурации}
+\VpadOperating{1133} {Импорт счетчика}
+\VpadOperating{1134} {Удалить все счетчики}
+\VpadOperating{1135} {Загрузить заводские настройки}
+\VpadOperating{1140} {Создать внутр. резервный файл конфигурации}
+\VpadOperating{1143} {Сохранить заводские настройки}
+\VpadOperating{1145} {Резервирование системы на карте памяти}
+\VpadOperating{1150} {Годовой код}
+\VpadOperating{1151} {Номер}
+\VpadOperating{1160} {День}
+\VpadOperating{1161} {Месяц}
+\VpadOperating{1162} {Год}
+\VpadOperating{1163} {Час}
+\VpadOperating{1164} {Минута}
+\VpadOperating{1165} {Секунда}
+\VpadOperating{1170} {К файлу}
+\VpadOperating{1171} {Полный}
+\VpadOperating{5000} {Эта карта памяти не поддерживается!}
+\VpadOperating{5011} {Внимание, карта памяти переполнена!}
+\VpadOperating{5012} {Внимание, карта памяти почти заполнена.}
+
+\VpadConfig{001} {Общие настройки}
+\VpadConfig{010} {Панель управления}
+\VpadConfig{011} {Основные настройки}
+\VpadConfig{012} {Язык}
+\VpadConfig{013} {Время сброса клавиш управления, с}
+\VpadConfig{014} {Количество водителей}
+\VpadConfig{015} {Операция}
+\VpadConfig{016} {Спускная кнопка}
+\VpadConfig{017} {\red Zero trim key}
+\VpadConfig{018} {запись данных}
+\VpadConfig{020} {Конфигур. RS 232}
+\VpadConfig{021} {COM 1}
+\VpadConfig{022} {COM 2}
+\VpadConfig{023} {Скорость передачи в бодах}
+\VpadConfig{024} {Бит данных}
+\VpadConfig{025} {Паритет}
+\VpadConfig{026} {Стоповый бит}
+\VpadConfig{027} {RTS контроль}
+\VpadConfig{030} {GPS приемник}
+\VpadConfig{031} {Активирование}
+\VpadConfig{032} {UTC временной интервал, ч}
+\VpadConfig{033} {Летнее-зимнее время}
+\VpadConfig{040} {Голосовой ответный сигнал}
+\VpadConfig{041} {Выдача голосового сигнала прервана}
+\VpadConfig{060} {Сигнал о скорости}
+\VpadConfig{061} {Датчик скорости, 1/100м}
+\VpadConfig{062} {PT1 постоянная фильтра}
+\VpadConfig{063} {Фильтрующая система}
+\VpadConfig{064} {Максим. скорость, км/ч}
+\VpadConfig{065} {\red Connection}
+\VpadConfig{070} {IO-загрузка}
+\VpadConfig{071} {Аналоговый вход}
+\VpadConfig{072} {Температура воздуха}
+\VpadConfig{080} {Цифровой вход}
+\VpadConfig{081} {Устранение дребезгов контактов IO-A [10ms]}
+\VpadConfig{082} {Устранение дребезгов контактов IO-D [10ms]}
+\VpadConfig{083} {Устранение дребезгов контактов IO-G [10ms]}
+\VpadConfig{084} {Устранение дребезгов контактов IO-K [10ms]}
+\VpadConfig{085} {Передний отвал}
+\VpadConfig{086} {Задний ход}
+\VpadConfig{087} {Парковка}
+\VpadConfig{088} {Разбрасыватель}
+\VpadConfig{100} {Базисные настройки}
+\VpadConfig{101} {Тип}
+\VpadConfig{110} {Турбина}
+\VpadConfig{111} {Приоритет}
+\VpadConfig{112} {\red Single suction mouth mode}
+\VpadConfig{121} {Автоматика-режим ожидания, с}
+\VpadConfig{122} {Джойстик отвал}
+\VpadConfig{123} {Индикация числа оборотов}
+\VpadConfig{140} {Управление числом оборотов щетки}
+\VpadConfig{141} {Управление прижатием щетки}
+\VpadConfig{142} {Диаметр щетки}
+\VpadConfig{150} {Новое измерение, мм}
+\VpadConfig{151} {Сигнал тревоги ,мм}
+\VpadConfig{152} {Ошибка, мм}
+\VpadConfig{160} {Корректировка угла слева [град.]}
+\VpadConfig{161} {Корректировка угла справа [град.]}
+\VpadConfig{170} {Ротационное давление (атм)}
+\VpadConfig{180} {ничего}
+\VpadConfig{181} {цифровые выходы}
+\VpadConfig{200} {Выбор программы}
+\VpadConfig{201} {Зимние настройки}
+\VpadConfig{202} {Летние настройки}
+\VpadConfig{203} {Программа}
+\VpadConfig{220} {Обозначение}
+\VpadConfig{221} {Деблокирование пользователя}
+\VpadConfig{222} {Джойстик щетка}
+\VpadConfig{223} {Летняя уборка со спец. подм-всас.агрегатом}
+\VpadConfig{224} {Зимняя уборка со спец. подм-всас.агрегатом}
+\VpadConfig{225} {Максим. нагрузка на ось [бар]}
+\VpadConfig{226} {Движение щетки}
+\VpadConfig{227} {Конструкция подвески}
+\VpadConfig{228} {Движение форсунки}
+\VpadConfig{230} {Дислокация}
+\VpadConfig{231} {Режим ожидания}
+\VpadConfig{232} {Установка нуля}
+\VpadConfig{233} {Стартовая фаза}
+\VpadConfig{234} {Фаза работы на прогрев}
+\VpadConfig{235} {Фаза работы по инерции}
+\VpadConfig{240} {Регулирование давления прижима}
+\VpadConfig{241} {активирован}
+\VpadConfig{242} {База данных}
+\VpadConfig{248} {Зеркало подметания}
+\VpadConfig{249} {заблокировано}
+\VpadConfig{250} {Зеркало подметания 40-60}
+\VpadConfig{251} {Зеркало подметания 60-80}
+\VpadConfig{252} {Зеркало подметания 80-100}
+\VpadConfig{253} {Зеркало подметания 100-120}
+\VpadConfig{254} {Зеркало подметания 120-140}
+\VpadConfig{255} {Зеркало подметания >140}
+\VpadConfig{260} {Коррекция рабочего положения}
+\VpadConfig{261} {Рабочее положение слева}
+\VpadConfig{262} {Рабочее положение справа}
+\VpadConfig{263} {Регулировка слева}
+\VpadConfig{264} {Регулировка справа}
+\VpadConfig{300} {Регулирование числа оборотов}
+\VpadConfig{301} {База 5 км/ч}
+\VpadConfig{302} {База 10 км/ч}
+\VpadConfig{303} {База 15 км/ч}
+\VpadConfig{304} {База 20 км/ч}
+\VpadConfig{305} {База 25 км/ч}
+\VpadConfig{306} {База 30 км/ч}
+\VpadConfig{307} {База 40 км/ч}
+\VpadConfig{308} {База 50 км/ч}
+\VpadConfig{309} {База 60 км/ч}
+\VpadConfig{320} {Число оборотов щетка, новая [\percent ]}
+\VpadConfig{321} {Число оборотов щетка, отработ. [\percent ]}
+\VpadConfig{350} {Передняя турбина}
+\VpadConfig{351} {Задняя турбина}
+\VpadConfig{360} {Регулятор}
+\VpadConfig{361} {Параметр 0}
+\VpadConfig{362} {Параметр 1}
+\VpadConfig{363} {Параметр 2}
+\VpadConfig{364} {Параметр 3}
+\VpadConfig{365} {Бортовая автоматика}
+\VpadConfig{366} {Обшивка}
+\VpadConfig{370} {Цифровые выходы}
+\VpadConfig{371} {Резерв 1}
+\VpadConfig{372} {Резерв 2}
+\VpadConfig{400} {Двигатель}
+\VpadConfig{410} {Контроль}
+\VpadConfig{411} {Приоритет корректировки}
+\VpadConfig{412} {Корректировка скорости}
+\VpadConfig{413} {Режим корректировки}
+\VpadConfig{420} {Время старта/останова}
+\VpadConfig{421} {Время прогрева, с}
+\VpadConfig{422} {Время прогрева 2, с}
+\VpadConfig{423} {Время прогрева 2 темпер. прекращения, [°C]}
+\VpadConfig{424} {Время охлаждения, с}
+\VpadConfig{440} {Датчики}
+\VpadConfig{441} {Индикация уровня масла}
+\VpadConfig{442} {Индикация охлаждающей жидкости}
+\VpadConfig{443} {Индикация топлива}
+\VpadConfig{449} {заблокировано}
+\VpadConfig{450} {Таблица 1}
+\VpadConfig{451} {Таблица 2}
+\VpadConfig{460} {Ограничения числа оборотов}
+\VpadConfig{461} {Величина шага числа оборотов, 1/мин}
+\VpadConfig{462} {Стартовое число оборотов, 1/мин}
+\VpadConfig{463} {мин.число оборотов, 1/мин}
+\VpadConfig{464} {макс.число оборотов, 1/мин}
+\VpadConfig{465} {Прогрев - число оборотов, 1/мин}
+\VpadConfig{466} {Прогрев 2-число оборотов, 1/мин}
+\VpadConfig{467} {Дислокации-число оборотов, 1/мин}
+\VpadConfig{468} {Деблокирование-число оборотов, 1/мин}
+\VpadConfig{469} {Режим ожидания-число оборотов,1/мин}
+\VpadConfig{470} {Установка нуля-число оборотов, 1/мин}
+\VpadConfig{480} {Величина шага числа оборотов, \percent }
+\VpadConfig{481} {Стартовое число оборотов, \percent }
+\VpadConfig{482} {мин.число оборотов, \percent }
+\VpadConfig{483} {макс.число оборотов, \percent }
+\VpadConfig{484} {Прогрев 2-число оборотов, \percent }
+\VpadConfig{485} {Установка нуля-число оборотов,\percent }
+\VpadConfig{500} {Вода}
+\VpadConfig{501} {Всасывающая тележка}
+\VpadConfig{502} {Маркированная форсунка}
+\VpadConfig{503} {Поливомоечная гребенка}
+\VpadConfig{504} {Поливомоечная гребенка (низкое давление)}
+\VpadConfig{505} {Поливомоечная гребенка (высокое давление)}
+\VpadConfig{506} {Доолнительное оснащение}
+\VpadConfig{507} {Рециркуляция}
+\VpadConfig{1150} {Зимняя уборка}
+\VpadConfig{1151} {Летняя уборка}
+\VpadConfig{1152} {на выбор}
+\VpadConfig{1250} {ничего}
+\VpadConfig{1251} {прямо}
+\VpadConfig{1252} {не прямо}
+\VpadConfig{1253} {маркировка}
+\VpadConfig{1254} {Пробел}
+\VpadConfig{1300} {автоматический}
+\VpadConfig{1301} {прервано}
+\VpadConfig{1302} {счетчик}
+\VpadConfig{1500} {рабочее значение}
+\VpadConfig{1501} {заданное значение}
+\VpadConfig{1502} {переключить}
+\VpadConfig{1550} {ничего}
+\VpadConfig{1551} {впереди}
+\VpadConfig{1552} {сзади}
+\VpadConfig{1600} {ничего}
+\VpadConfig{1601} {передний отвал}
+\VpadConfig{1602} {сменный прибор}
+\VpadConfig{1620} {Машина с поворотной автоматикой}
+\VpadConfig{1621} {Машина без поворотной автоматики}
+\VpadConfig{1622} {Машина с закрытыми форсунками}
+\VpadConfig{1623} {Полу-машина с поворотной автоматикой}
+\VpadConfig{1624} {Полу-машина без поворотной автоматики}
+\VpadConfig{1625} {Полу-машина с закрытыми форсунками}
+\VpadConfig{1626} {Работать вручную}
+\VpadConfig{1627} {Вручную с закрытыми форсунками}
+\VpadConfig{1628} {Работать сзади}
+\VpadConfig{1629} {Только сдув}
+\VpadConfig{1630} {Только Разбрасыватель}
+\VpadConfig{1660} {Щетка, аэроп.-всасывающая тележка}
+\VpadConfig{1661} {Аэроп.-всасывающая тележка}
+\VpadConfig{1662} {Щетка / аэроп.всасывающая тележка/задний сдув}
+\VpadConfig{1663} {Задний всасывающий агрегат}
+\VpadConfig{1664} {Щетка}
+\VpadConfig{1665} {Дороги-Всасывание сзади открыто}
+\VpadConfig{1666} {Дороги-Всасывание оба открыто}
+\VpadConfig{1667} {Щетка, дороги-всасыв. сзади открыто}
+\VpadConfig{1668} {Щетка, дороги-всасыв. оба открыто}
+\VpadConfig{1669} {Щетка / аэроп.всасывающая тележка/задний всасывающий агрегат}
+\VpadConfig{1670} {Ручной всасывающий шланг}
+\VpadConfig{1700} {ничего}
+\VpadConfig{1701} {MC6}
+\VpadConfig{1750} {ничего}
+\VpadConfig{1751} {HAWE}
+\VpadConfig{1800} {ничего}
+\VpadConfig{1801} {RWY}
+\VpadConfig{1802} {HWY}
+\VpadConfig{1850} {ничего}
+\VpadConfig{1852} {Стандартно к CAN}
+\VpadConfig{1900} {не определено}
+\VpadConfig{1901} {Зимняя программа 1}
+\VpadConfig{1902} {Зимняя программа 2}
+\VpadConfig{1903} {Зимняя программа 3}
+\VpadConfig{1904} {Зимняя программа 4}
+\VpadConfig{1905} {Зимняя программа 5}
+\VpadConfig{1906} {Зимняя программа 6}
+\VpadConfig{1907} {Зимняя программа 7}
+\VpadConfig{1908} {Зимняя программа 8}
+\VpadConfig{1909} {Щетка}
+\VpadConfig{1910} {Сзади}
+\VpadConfig{1911} {Задняя щетка}
+\VpadConfig{1912} {Задняя щетка отвал}
+\VpadConfig{1913} {Взлетно-посадочная полоса}
+\VpadConfig{1914} {Место стоянки}
+\VpadConfig{1915} {Рулежные дорожки}
+\VpadConfig{1950} {не определено}
+\VpadConfig{1951} {Летняя программа1}
+\VpadConfig{1952} {Летняя программа 2}
+\VpadConfig{1953} {Летняя программа 3}
+\VpadConfig{1954} {Летняя программа 4}
+\VpadConfig{1955} {Летняя программа 5}
+\VpadConfig{1956} {Летняя программа 6}
+\VpadConfig{1957} {Летняя программа 7}
+\VpadConfig{1958} {Летняя программа 8}
+\VpadConfig{1959} {Щетка, аэроп.-всасывающая тележка}
+\VpadConfig{1960} {Аэроп.-всасывающая тележка}
+\VpadConfig{1961} {\red Broom, runway suction mouth, rear blower}
+\VpadConfig{1962} {Задний всасывающий агрегат}
+\VpadConfig{1963} {Щетка}
+\VpadConfig{1964} {Ручной всасывающий шланг}
+\VpadConfig{2000} {ничего}
+\VpadConfig{2001} {Дополн.-впрыскивающая форсунка}
+\VpadConfig{2002} {Форсунки во всасыв. трубе}
+\VpadConfig{2003} {Чистка емкости}
+\VpadConfig{2004} {Форсунки для передней щетки}
+\VpadConfig{2005} {Ручной всасывающий шланг}
+\VpadConfig{2050} {ничего}
+\VpadConfig{2051} {вручную}
+\VpadConfig{2052} {автоматически}
+\VpadConfig{2053} {\red No securing required}
+\VpadConfig{2100} {Tridec}
+\VpadConfig{2101} {Hydequip}
+\VpadConfig{2150} {Linak}
+\VpadConfig{2151} {Hawe}
+\VpadConfig{2200} {Кнопка}
+\VpadConfig{2201} {Вкл/выкл переключатель}
+\VpadConfig{2250} {Дорога}
+\VpadConfig{2251} {Аэропорт}
+\VpadConfig{2300} {клавиатура}
+\VpadConfig{2301} {двигатель}
+\VpadConfig{5001} {Задние или сдувочные форсунки}
+\VpadConfig{5002} {Поворотная автоматика}
+\VpadConfig{5003} {Час-Число оборотов двигателя, об/мин}
+\VpadConfig{5004} {Час--число оборотов щетки, \percent }
+\VpadConfig{5005} {Час-число оборотов передней турбины, \percent }
+\VpadConfig{5006} {Час-число оборотов задней турбины, \percent }
+\VpadConfig{10000} {да}
+\VpadConfig{10001} {нет}
+\VpadConfig{10003} {текст не найден}
+
+\VpadError{000} {Системная ошибка}
+\VpadError{001} {\#\ 001 Ссылка}
+\VpadError{010} {\#\ 010 джойстик 1 передача данных по отвалу}
+\VpadError{020} {\#\ 020 джойстик 2 передача данных по отвалу}
+\VpadError{030} {\#\ 030 джойстик щетка передача данных}
+\VpadError{031} {\#\ 031 джойстик щетка связь CAN с модулем IO}
+\VpadError{032} {\#\ 032 джойстик 3 ошибка}
+\VpadError{033} {\#\ 033 датчик поворота щетки не найден}
+\VpadError{033a} {\ \ 033 датчик поворота щетки не найден}
+\VpadError{034} {\#\ 034 управление подвеской не найдено}
+\VpadError{035} {\#\ 035 Джойстик 3 выключен и подвеска ручная}
+\VpadError{040} {\#\ 040 RC6 ТУРБИНА передача данных}
+\VpadError{040a} {\ \ 040 RC6 ТУРБИНА передача данных}
+\VpadError{046} {\#\ 046 RC6 турбина проп.клапан насос}
+\VpadError{047} {\#\ 047 RC6 турбина проп.клапан двигатель впереди}
+\VpadError{048} {\#\ 048 RC6 турбина проп.клапан двигатель сзади}
+\VpadError{049} {\#\ 049 RC6 турбина датчик давления}
+\VpadError{050} {\#\ 050 RC6 турбина характеристика впереди}
+\VpadError{051} {\#\ 051 RC6 турбина характеристика сзади}
+\VpadError{052} {\#\ 052 RC6 турбина датчик числа оборотов впереди}
+\VpadError{053} {\#\ 053 RC6 турбина датчик числа оборотов сзади}
+\VpadError{054} {\#\ 054 RC6 турбина кодирующий штекер}
+\VpadError{067} {\#\ 067 RC6 щетка диаметр малый}
+\VpadError{068} {\#\ 068 RC6 щетка диаметр недостаточный}
+\VpadError{069} {\#\ 069 регулировка щетки:максимальный износ}
+\VpadError{070} {\#\ 070 RC6 щетка проп.клапан насос}
+\VpadError{071} {\#\ 071 RC6 щетка проп.клапан двигатель}
+\VpadError{072} {\#\ 072 RC6 щетка датчик давления}
+\VpadError{073} {\#\ 073 RC6 щетка характеристика двигателя}
+\VpadError{074} {\#\ 074 RC6 щетка характеристика насоса}
+\VpadError{075} {\#\ 075 RC6 щетка датчик числа оборотов}
+\VpadError{076} {\#\ 076 RC6 щетка кодирующий штекер}
+\VpadError{080} {\#\ 080 Регулировка щетки обмен данными}
+\VpadError{080a} {\ \ 080 Регулировка щетки обмен данными}
+\VpadError{081} {\#\ 081 Регулировка щетки датчик скорости слева}
+\VpadError{082} {\#\ 082 Регулировка щетки датчик скорости справа}
+\VpadError{083} {\#\ 083 Регулировка щетки давление поднять слева}
+\VpadError{084} {\#\ 084 Регулировка щетки системное давление слева}
+\VpadError{085} {\#\ 085 Регулировка щетки давление поднять справа}
+\VpadError{086} {\#\ 086 Регулировка щетки системное давление справа}
+\VpadError{087} {\#\ 087 Регулировка щетки ротационное давление}
+\VpadError{088} {\#\ 088 Регулировка щетки запорный клапан слева}
+\VpadError{089} {\#\ 089 Регулировка щетки запорный клапан справа}
+\VpadError{090} {\#\ 090 Регулировка щетки проп.клапан слева}
+\VpadError{091} {\#\ 091 Регулировка щетки проп.клапан справа}
+\VpadError{092} {\#\ 092 Регулировка щетки золотниковый клапан поднять слева}
+\VpadError{093} {\#\ 093 Регулировка щетки золотниковый клапан опустить слева}
+\VpadError{094} {\#\ 094 Регулировка щетки золотниковый клапан поднять справа}
+\VpadError{095} {\#\ 095 Регулировка щетки золотниковый клапан опустить справа}
+\VpadError{096} {\#\ 096 Регулировка щетки провести коррекцию нуля}
+\VpadError{100} {\#\ 100 Передача данных двигателя}
+\VpadError{101} {\#\ 101 Давление моторного масла}
+\VpadError{102} {\#\ 102 Температура охлажд. воды двигателя}
+\VpadError{103} {\#\ 103 Защита от перегрева охлажд.воды двигателя}
+\VpadError{104} {\#\ 104 Зарядка аккумулятора двигателя}
+\VpadError{105} {\#\ 105 Возд. фильтр двигателя}
+\VpadError{109} {\#\ 109 Давление масла обрыв кабеля двигателя}
+\VpadError{110} {\#\ 110 Связь двигатель CAN}
+\VpadError{111} {\#\ 111 Переключатель вакуума двигателя}
+\VpadError{112} {\#\ 112 Уровень воды двигателя}
+\VpadError{113} {\#\ 113 Фильтр гидравл. масла}
+\VpadError{114} {\#\ 114 Уровень гидравл. масла}
+\VpadError{115} {\#\ 115 Температура гидравл. масла}
+\VpadError{116} {\#\ 116 Двигатель мало топлива}
+\VpadError{117} {\#\ 117 Аварийное отключение двигателя}
+\VpadError{118} {\#\ 118 Уровень масла двигателя}
+\VpadError{119} {\#\ 119 Серьезная неполадка двигателя (красный)}
+\VpadError{120} {\#\ 120 Критическая неполадка двигателя (оранжевый)}
+\VpadError{121} {\#\ 121 Неполадка двигателя (желтый)}
+\VpadError{122} {\#\ 122 Сервис двигателя}
+\VpadError{200} {\#\ 200 Передача данных клавиатура}
+\VpadError{220} {\#\ 220 Сигнал скорости}
+\VpadError{221} {\#\ 221 Макс. скорость}
+\VpadError{240} {\#\ 240 Рулевое управление не выровнено}
+\VpadError{241} {\#\ 241 Превышена доп. нагрузка на ось}
+\VpadError{242} {\#\ 242 Регулировка или фактическое значение неполадка впереди справа}
+\VpadError{243} {\#\ 243 Регулировка или фактическое значение неполадка впереди слева}
+\VpadError{244} {\#\ 244 Регулировка или фактическое значение неполадка сзади справа}
+\VpadError{245} {\#\ 245 Регулировка или фактическое значение неполадка сзади слева}
+\VpadError{246} {\#\ 246 Неполадка датчик угла впереди справа}
+\VpadError{247} {\#\ 247 Неполадка датчик угла впереди слева}
+\VpadError{248} {\#\ 248 Неполадка датчик угла сзади справа}
+\VpadError{249} {\#\ 249 Неполадка датчик угла сзади слева}
+\VpadError{250} {\#\ 250 Неполадка датчик давления впереди}
+\VpadError{251} {\#\ 251 Неполадка датчик давления сзади}
+\VpadError{252} {\#\ 252 Напряжение электропитания слишком низкое}
+\VpadError{253} {\#\ 253 Напряжение электропитания слишком высокое}
+\VpadError{254} {\#\ 254 Макс. отклонение датчика угла}
+\VpadError{255} {\#\ 255 Перегрузка заднего моста}
+\VpadError{256} {\#\ 256 Тормоз работает в ручном режиме}
+\VpadError{257} {\#\ 257 Температура гидравл. масла (охладитель)}
+\VpadError{258} {\#\ 258 Перегрев гидравлического масла (охладитель)}
+\VpadError{259} {\#\ 259 Гидравлика-вентилятор проп.клапан}
+\VpadError{260} {\#\ 260 Датчик температуры гидравлика}
+\VpadError{300} {\#\ 300 Защита от работы всухую}
+\VpadError{700} {\#\ 700 Отсутв. деблокирование летней программы}
+\VpadError{701} {\#\ 701 Отсуств. деблокирование зимней программы}
+\VpadError{702} {\#\ 702 Летняя программа с турбиной RWY}
+\stopsetups
+
+
+\startsetups [VpHUNGARIAN]
+\JoyBroom{001} {Vers.}
+\JoyBroom{002} {Joystick}
+\JoyBroom{003} {Kezelés}
+\JoyBroom{004} {zárolva}
+\JoyBroom{005} {Joystick3}
+\JoyBroom{006} {Aktív!}
+\JoyBroom{007} {Nullapozíció}
+\JoyBroom{008} {Kiegyenlít.?}
+\JoyBroom{009} {Kiegy. akt.!}
+\JoyBroom{010} {F.sz. csökk.}
+\JoyBroom{011} {Kiegy kezd!}
+\JoyBroom{012} {Nullértékek}
+\JoyBroom{013} {Átvétel?}
+\JoyBroom{014} {dupla}
+\JoyBroom{015} {Nullakiegy.}
+\JoyBroom{016} {Ellenőrz.}
+\JoyBroom{017} {Törléskép}
+\JoyBroom{018} {Kefe erre}
+\JoyBroom{019} {jobbra ford.}
+\JoyBroom{020} {balra ford.}
+\JoyBroom{021} {Kiegyenlítés}
+\JoyBroom{022} {befejezv}
+\JoyBroom{023} {IO-Module}
+\JoyBroom{024} {grafikonról}
+\JoyBroom{025} {Kefe behúzás}
+\JoyBroom{026} {nem aktív}
+\JoyBroom{027} {kezd.}
+\JoyBroom{028} {Seb. > 0}
+\JoyBroom{029} {munkaá.-ban}
+\JoyBroom{030} {Fúv. sülly.}
+\JoyBroom{031} {forgatás}
+\JoyBroom{032} {nincs bizt.}
+\JoyBroom{033} {biztosítva}
+\JoyBroom{034} {kikapcsolás}
+\JoyBroom{035} {Fényerő}
+\JoyBroom{036} {Változat}
+\JoyBroom{037} {Bor.bizt.}
+\JoyBroom{038} {Menü vége ?}
+\JoyBroom{039} {Héjazat}
+\JoyBroom{040} {csökkentett}
+\JoyBroom{041} {süllyesztés}
+\JoyBroom{042} {Fúvókák}
+\JoyBroom{043} {emel./sülly.}
+\JoyBroom{044} {Motorburk.}
+\JoyBroom{045} {Zár / nyit}
+\JoyBroom{046} {Reteszelés}
+\JoyBroom{047} {J2 MotBur}
+\JoyBroom{048} {Fedél nyitás}
+\JoyBroom{049} {kész}
+\JoyBroom{050} {Szívótor em.}
+\JoyBroom{051} {Szívókar em.}
+\JoyBroom{052} {Szívók. fent}
+\JoyBroom{053} {Retesz. nyit}
+\JoyBroom{054} {Fedél nyitás}
+\JoyBroom{055} {Fedél nyitva}
+\JoyBroom{056} {Fedél zárás}
+\JoyBroom{057} {Retesz zár}
+\JoyBroom{058} {Bevitel hiba}
+\JoyBroom{059} {SzívK sülly.}
+\JoyBroom{060} {SzívóK lent}
+\JoyBroom{061} {Kefe KözÁll.}
+\JoyBroom{062} {forgatás?}
+\JoyBroom{063} {süllyeszt!}
+\JoyBroom{064} {Középáll. ok}
+\JoyBroom{065} {Vízteszt}
+\JoyBroom{066} {Hát. szívó}
+\JoyBroom{067} {SzívT sülly.}
+\JoyBroom{068} {Hátsó sz.kar}
+\JoyBroom{069} {nincs fent!}
+\JoyBroom{070} {V-seprű}
+\JoyBroom{071} {Seprű behúz!}
+\JoyBroom{072} {Seprű bal}
+\JoyBroom{073} {Seprű jobb}
+\JoyBroom{074} {Mindk. seprű}
+\JoyBroom{075} {Szívórács}
+\JoyBroom{076} {Kefe ford.}
+\JoyBroom{077} {SzívóK Vége}
+\JoyBroom{078} {V. bal}
+\JoyBroom{079} {V. jo.}
+\JoyBroom{080} {Behúzv}
+\JoyBroom{081} {Középre áll.}
+\JoyBroom{082} {Hiba}
+\JoyBroom{083} {Nincs hiba}
+\JoyBroom{084} {Par. IO-mod.}
+\JoyBroom{085} {Kefe poz.}
+\JoyBroom{086} {Nincs víz}
+\JoyBroom{087} {Joystick3}
+\JoyBroom{088} {Szög érzék.}
+\JoyBroom{089} {IO-modul}
+\JoyBroom{090} {Mod. Típ}
+\JoyBroom{091} {nincs m.}
+\JoyBroom{092} {Üzemm. rug.}
+\JoyBroom{093} {nincs m.}
+\JoyBroom{094} {Kézi}
+\JoyBroom{095} {Automatikus}
+\JoyBroom{096} {Szívófedél}
+\JoyBroom{097} {Vész-forgat.}
+\JoyBroom{098} {Be}
+\JoyBroom{099} {Ki}
+\JoyBroom{100} {Vész-emelés}
+
+\JoyPlow{001} {Ki}
+\JoyPlow{002} {Be}
+\JoyPlow{003} {v-ON}
+\JoyPlow{004} {ÉS}
+\JoyPlow{005} {VAGY}
+\JoyPlow{006} {NyomLekap}
+\JoyPlow{007} {Reteszelés}
+\JoyPlow{008} {Hidraulika}
+\JoyPlow{009} {Ékeke}
+\JoyPlow{010} {Seprű}
+\JoyPlow{011} {Változatok}
+\JoyPlow{012} {TG Ki}
+\JoyPlow{013} {TG Úszóállás}
+\JoyPlow{014} {TG Eketeher}
+\JoyPlow{015} {TG Reteszel.}
+\JoyPlow{016} {TG Reteszel.}
+\JoyPlow{017} {Tár. foly.}
+\JoyPlow{018} {Tár. start}
+\JoyPlow{019} {Fényerő}
+\JoyPlow{020} {maxÁram}
+\JoyPlow{021} {VPad Csatl.}
+\JoyPlow{022} {Üzemórák}
+\JoyPlow{023} {Imp/10mtr}
+\JoyPlow{024} {Standard}
+\JoyPlow{025} {Master}
+\JoyPlow{026} {Slave}
+\JoyPlow{027} {Menü vége?}
+\JoyPlow{028} {Emel. nélk.}
+\JoyPlow{029} {Emeléssel}
+\JoyPlow{030} {Ford Jobb o.}
+\JoyPlow{031} {Ford Bal o.}
+\JoyPlow{032} {Napi km}
+\JoyPlow{033} {Összes km}
+\JoyPlow{034} {Napi óra}
+\JoyPlow{035} {Összes óra}
+\JoyPlow{036} {Nap törlés}
+\JoyPlow{037} {Készülékhiba}
+\JoyPlow{038} {Parancs hiba}
+\JoyPlow{039} {Reteszelés}
+\JoyPlow{040} {Szárnye menü}
+\JoyPlow{041} {Fel-/leszer.}
+\JoyPlow{042} {Joystick ki}
+\JoyPlow{043} {Nap törl. ok}
+\JoyPlow{044} {Homl.}
+\JoyPlow{045} {Bőv.}
+\JoyPlow{046} {Oldal}
+\JoyPlow{047} {F.Pfe}
+\JoyPlow{048} {F.Sws}
+\JoyPlow{049} {F.Sns}
+\JoyPlow{050} {Bőv.}
+\JoyPlow{051} {S.Pfe}
+\JoyPlow{052} {S.Sws}
+\JoyPlow{053} {S.Sns}
+\JoyPlow{054} {Nincs}
+\JoyPlow{055} {Joystick}
+\JoyPlow{056} {I/O-modul M}
+\JoyPlow{057} {I/O-modul S}
+\JoyPlow{058} {Nincs}
+\JoyPlow{059} {Megszakítás}
+\JoyPlow{060} {Rövidz.}
+\JoyPlow{061} {Túláram}
+\JoyPlow{062} {Német}
+\JoyPlow{063} {Nyit Zár}
+\JoyPlow{064} {Eke b/j}
+\JoyPlow{065} {Kész}
+\JoyPlow{066} {Szárny forg.}
+\JoyPlow{067} {Aut. forg.}
+\JoyPlow{068} {Adatrögzítés}
+\JoyPlow{069} {Sonderpr RP}
+\JoyPlow{070} {Tár. Fok. 1}
+\JoyPlow{071} {Tár. Fok. 2}
+\JoyPlow{072} {Tárál}
+\JoyPlow{073} {Retesz. nyit}
+\JoyPlow{074} {Forg. be}
+\JoyPlow{075} {Szárny beh.}
+\JoyPlow{076} {Forg. ki}
+\JoyPlow{077} {Retesz zár}
+\JoyPlow{078} {Stop and Go}
+\JoyPlow{079} {Víz}
+\JoyPlow{080} {Szivatt.}
+\JoyPlow{081} {Fel-/leszer.}
+\JoyPlow{082} {Min. teh.}
+\JoyPlow{083} {Max. teh.}
+\JoyPlow{084} {Retesz. hiba}
+\JoyPlow{085} {Forg. hiba}
+
+\VpadConfig{001} {Ált. beállítások}
+\VpadConfig{010} {Kezelőkészülék}
+\VpadConfig{011} {Alapbeállítások}
+\VpadConfig{012} {Nyelv}
+\VpadConfig{013} {A kijelző visszaállítási ideje [s]}
+\VpadConfig{014} {Vezetők száma}
+\VpadConfig{015} {Alkalmazás}
+\VpadConfig{016} {Lefúvógomb}
+\VpadConfig{017} {Nulla kiegyenlítőgomb}
+\VpadConfig{018} {Adatrögzítés}
+\VpadConfig{020} {Konfig. RS232}
+\VpadConfig{021} {COM 1}
+\VpadConfig{022} {COM 2}
+\VpadConfig{023} {Baudrate}
+\VpadConfig{024} {Adatbitek}
+\VpadConfig{025} {Paritás}
+\VpadConfig{026} {Stopbitek}
+\VpadConfig{027} {RTS kontrollok}
+\VpadConfig{030} {GPS vevő}
+\VpadConfig{031} {Aktiválás}
+\VpadConfig{032} {UTC időintervallum [ó]}
+\VpadConfig{033} {Nyári/téli idő}
+\VpadConfig{040} {Nyelv visszajelzés}
+\VpadConfig{041} {Kiadás megszakítása}
+\VpadConfig{060} {Menetjel}
+\VpadConfig{061} {Jeladó [1/100m]}
+\VpadConfig{062} {PT1-szűrőállandó}
+\VpadConfig{063} {Szűrési módszer}
+\VpadConfig{064} {Max. sebesség [km/h]}
+\VpadConfig{065} {Csatlakozás}
+\VpadConfig{070} {IO-kiosztás}
+\VpadConfig{071} {Analóg bemenetek}
+\VpadConfig{072} {Levegő hőmérséklet}
+\VpadConfig{080} {Digitális bemenetek}
+\VpadConfig{081} {Zavarmentesítés IO-A [10ms]}
+\VpadConfig{082} {Zavarmentesítés IO-D [10ms]}
+\VpadConfig{083} {Zavarmentesítés IO-A [10ms]}
+\VpadConfig{084} {Zavarmentesítés IO-K [10ms]}
+\VpadConfig{085} {Homlokeke}
+\VpadConfig{086} {Hátrameneti fokozat}
+\VpadConfig{087} {Parkolóállás}
+\VpadConfig{088} {Szóró}
+\VpadConfig{100} {Alap-szabályzás}
+\VpadConfig{101} {Építési mód}
+\VpadConfig{110} {Turbina}
+\VpadConfig{111} {Prioritás}
+\VpadConfig{112} {Szívótorok-önálló üzem}
+\VpadConfig{121} {Standby-automatika [s]}
+\VpadConfig{122} {Eke joystick}
+\VpadConfig{123} {Fordulatszámkijelzés}
+\VpadConfig{140} {Seprűfordulatszám-vezérlés}
+\VpadConfig{141} {Seprűnyomás-vezérlés}
+\VpadConfig{142} {Seprűátmérő}
+\VpadConfig{150} {Új méret [mm]}
+\VpadConfig{151} {Figyelmeztetés [mm]}
+\VpadConfig{152} {Hiba [mm]}
+\VpadConfig{160} {Szögkorrekció bal [deg]}
+\VpadConfig{161} {Szögkorrekció jobb [deg]}
+\VpadConfig{170} {Forgónyomás [bar]}
+\VpadConfig{180} {nincs}
+\VpadConfig{181} {Digitális kimenetek}
+\VpadConfig{200} {Programkiválasztás}
+\VpadConfig{201} {Téli beállítások}
+\VpadConfig{202} {Nyári beállítások}
+\VpadConfig{203} {Program}
+\VpadConfig{220} {Megnevezés}
+\VpadConfig{221} {Felhasználó engedélyezés}
+\VpadConfig{222} {Seprű joystick}
+\VpadConfig{223} {Nyári alkalmazás speciális KBG-vel}
+\VpadConfig{224} {Téli alkalmazás speciális KBG-vel}
+\VpadConfig{225} {max. tengelyterhelés [bar]}
+\VpadConfig{226} {Seprűmozgatás}
+\VpadConfig{227} {Rugózás építési mód}
+\VpadConfig{228} {Fúvókamozgatás}
+\VpadConfig{230} {Diszlokáció}
+\VpadConfig{231} {Standby}
+\VpadConfig{232} {Nullakiegy.}
+\VpadConfig{233} {Indítási fázis}
+\VpadConfig{234} {Melegítési fázis}
+\VpadConfig{235} {Utánfutás fázis}
+\VpadConfig{240} {Leszorítónyomás szabályzás}
+\VpadConfig{241} {aktiválva}
+\VpadConfig{242} {Adatbázis}
+\VpadConfig{248} {Sepréstükör}
+\VpadConfig{249} {zárolva}
+\VpadConfig{250} {Sepréstükör  40-60}
+\VpadConfig{251} {Sepréstükör  60-80}
+\VpadConfig{252} {Sepréstükör  80-100}
+\VpadConfig{253} {Sepréstükör 100–120}
+\VpadConfig{254} {Sepréstükör 120-140}
+\VpadConfig{255} {Sepréstükör > 140}
+\VpadConfig{260} {A munkaállás korrekciója}
+\VpadConfig{261} {Munkaállás bal}
+\VpadConfig{262} {Munkaállás jobb}
+\VpadConfig{263} {Utánállítás bal}
+\VpadConfig{264} {Utánállítás jobb}
+\VpadConfig{300} {Fordulatszám szabályzás}
+\VpadConfig{301} {Alap  5 km/h}
+\VpadConfig{302} {Alap 10 km/h}
+\VpadConfig{303} {Alap 15 km/h}
+\VpadConfig{304} {Alap 20 km/h}
+\VpadConfig{305} {Alap 25 km/h}
+\VpadConfig{306} {Alap 30 km/h}
+\VpadConfig{307} {Alap 40 km/h}
+\VpadConfig{308} {Alap 50 km/h}
+\VpadConfig{309} {Alap 60 km/h}
+\VpadConfig{320} {Új seprű fordulatszám [\percent ]}
+\VpadConfig{321} {Használt seprű fordulatszám [\percent ]}
+\VpadConfig{350} {Turbina elöl}
+\VpadConfig{351} {Turbina hátul}
+\VpadConfig{360} {Szabályzó}
+\VpadConfig{361} {0. paraméter}
+\VpadConfig{362} {1. paraméter}
+\VpadConfig{363} {2. paraméter}
+\VpadConfig{364} {3. paraméter}
+\VpadConfig{365} {Héjazat automatika}
+\VpadConfig{366} {Héjazat}
+\VpadConfig{370} {Digitális kiemenetek}
+\VpadConfig{371} {1. tartalék}
+\VpadConfig{372} {2. tartalék}
+\VpadConfig{400} {Dízelmotor}
+\VpadConfig{410} {Vezérlés}
+\VpadConfig{411} {Korrekció- Prioritás}
+\VpadConfig{412} {Sebesség korrekció}
+\VpadConfig{413} {Korrekció-üzemmód}
+\VpadConfig{420} {Indítás/leállítás időzítés}
+\VpadConfig{421} {Melegítési idő [s]}
+\VpadConfig{422} {Melegítési idő 2 [s]}
+\VpadConfig{423} {Melegítés 2 megszakítási hőm. [°C]}
+\VpadConfig{424} {Lehűlési idő [s]}
+\VpadConfig{440} {Érzékelők}
+\VpadConfig{441} {Olajszint kijelző}
+\VpadConfig{442} {Hűtőfolyadékszint kijelző}
+\VpadConfig{443} {Üzemanyag kijelző}
+\VpadConfig{449} {zárolva}
+\VpadConfig{450} {Táblázat 1}
+\VpadConfig{451} {Táblázat 2}
+\VpadConfig{460} {Fordulatszámkorlátozások}
+\VpadConfig{461} {Léptetés fordulatszám [ford/perc]}
+\VpadConfig{462} {Indítási fordulatszám [ford/perc]}
+\VpadConfig{463} {Min. fordulatszám [ford/perc]}
+\VpadConfig{464} {Max. fordulatszám [ford/perc]}
+\VpadConfig{465} {Melegítési fordulatszám [ford/perc]}
+\VpadConfig{466} {Melegítés 2 fordulatszám [ford/perc]}
+\VpadConfig{467} {Diszlokációs fordulatszám [ford/perc]}
+\VpadConfig{468} {Engedélyezési fordulatszám [ford/perc]}
+\VpadConfig{469} {Készenléti fordulatszám [ford/perc]}
+\VpadConfig{470} {Nullakiegyenlítési fordulatszám [ford/perc]}
+\VpadConfig{480} {Léptetés fordulatszám [\percent ]}
+\VpadConfig{481} {Indítási fordulatszám [\percent ]}
+\VpadConfig{482} {min. fordulatszám [\percent ]}
+\VpadConfig{483} {max. fordulatszám [\percent ]}
+\VpadConfig{484} {Melegítés 2 fordulatszám [\percent ]}
+\VpadConfig{485} {Nullakiegyenlítési fordulatszám [\percent ]}
+\VpadConfig{500} {Víz}
+\VpadConfig{501} {Szívótorok}
+\VpadConfig{502} {Jelölőfúvóka}
+\VpadConfig{503} {Szórógerenda}
+\VpadConfig{504} {Szórógerenda (kisnyomás)}
+\VpadConfig{505} {Szórógerenda (nagynyomás)}
+\VpadConfig{506} {Speciális felszereltség}
+\VpadConfig{507} {Újrahasznosítás}
+\VpadConfig{1150} {Téli alkalmazás}
+\VpadConfig{1151} {Nyári alkalmazás}
+\VpadConfig{1152} {kiválasztható}
+\VpadConfig{1250} {nincs}
+\VpadConfig{1251} {Egyenes}
+\VpadConfig{1252} {Nem egyenes}
+\VpadConfig{1253} {Jelölés}
+\VpadConfig{1254} {Szóköz}
+\VpadConfig{1300} {automatikus}
+\VpadConfig{1301} {Megszakítás}
+\VpadConfig{1302} {Számláló}
+\VpadConfig{1500} {Munkaértékek}
+\VpadConfig{1501} {Előírt értékek}
+\VpadConfig{1502} {átvitel}
+\VpadConfig{1550} {nincs}
+\VpadConfig{1551} {elöl}
+\VpadConfig{1552} {hátul}
+\VpadConfig{1600} {nincs}
+\VpadConfig{1601} {Homlokeke}
+\VpadConfig{1602} {Cserekészülék}
+\VpadConfig{1620} {Eke/kefe/hátul; átforg.}
+\VpadConfig{1621} {Eke/kefe/hátul; szabadon forg.}
+\VpadConfig{1622} {Eke/kefe/hátul; fúvókák zárv.}
+\VpadConfig{1623} {Kefe/hátul; átforg.}
+\VpadConfig{1624} {Kefe/hátul; szabadon forg.}
+\VpadConfig{1625} {Kefe/hátul;  fúvókák zárv.}
+\VpadConfig{1626} {Csak kefe; szabad forgatás}
+\VpadConfig{1627} {Csak kefe; fúvókák zárolva}
+\VpadConfig{1628} {Csak hátul}
+\VpadConfig{1629} {Csak fúvás}
+\VpadConfig{1630} {Csak szóró}
+\VpadConfig{1660} {Kefe/Reptér-szívás}
+\VpadConfig{1661} {Reptér-szívás}
+\VpadConfig{1662} {Kefe/Reptér-szívás/Hátsó kifúvás}
+\VpadConfig{1663} {Hátsó szívó}
+\VpadConfig{1664} {Kefe}
+\VpadConfig{1665} {Utca-szívás (hátul nyitva)}
+\VpadConfig{1666} {Utca-szívás (mindkettő nyitva)}
+\VpadConfig{1667} {Kefe/Utca-szívás (hátul nyitva)}
+\VpadConfig{1668} {Kefe/Utca-szívás (mindkettő nyitva)}
+\VpadConfig{1669} {Kefe/Reptér-szívás/Hátsó szívás}
+\VpadConfig{1670} {Kézi szívótömlő}
+\VpadConfig{1700} {nincs}
+\VpadConfig{1701} {MC6}
+\VpadConfig{1750} {nincs}
+\VpadConfig{1751} {Kefevezérlés}
+\VpadConfig{1800} {nincs}
+\VpadConfig{1801} {RWY}
+\VpadConfig{1802} {HWY}
+\VpadConfig{1850} {nincs}
+\VpadConfig{1852} {Standard a CAN-on}
+\VpadConfig{1900} {nincs meghatározva}
+\VpadConfig{1901} {1. téli prog.}
+\VpadConfig{1902} {2. téli prog.}
+\VpadConfig{1903} {3. téli prog.}
+\VpadConfig{1904} {4. téli prog.}
+\VpadConfig{1905} {5. téli prog.}
+\VpadConfig{1906} {6. téli prog.}
+\VpadConfig{1907} {7. téli prog.}
+\VpadConfig{1908} {8. téli prog.}
+\VpadConfig{1909} {Kefe}
+\VpadConfig{1910} {Hátul}
+\VpadConfig{1911} {Kefe hátul}
+\VpadConfig{1912} {Kefe hátul eke}
+\VpadConfig{1913} {Pálya}
+\VpadConfig{1914} {Előtér}
+\VpadConfig{1915} {Gördülőutak}
+\VpadConfig{1950} {nincs meghatározva}
+\VpadConfig{1951} {1. nyári prog.}
+\VpadConfig{1952} {2. nyári prog.}
+\VpadConfig{1953} {3. nyári prog.}
+\VpadConfig{1954} {4. nyári prog.}
+\VpadConfig{1955} {5. nyári prog.}
+\VpadConfig{1956} {6. nyári prog.}
+\VpadConfig{1957} {7. nyári prog.}
+\VpadConfig{1958} {8. nyári prog.}
+\VpadConfig{1959} {Kefe/Reptér-szívás}
+\VpadConfig{1960} {Reptér-szívás}
+\VpadConfig{1961} {Kefe/Reptér-szívás/Hátsó kifúvás}
+\VpadConfig{1962} {Hátsó szívó}
+\VpadConfig{1963} {Kefe}
+\VpadConfig{1964} {Kézi szívótömlő}
+\VpadConfig{2000} {nincs}
+\VpadConfig{2001} {Kiegészítő szórófúvóka}
+\VpadConfig{2002} {Fúvókák a szívócsőben}
+\VpadConfig{2003} {Tartálytisztítás}
+\VpadConfig{2004} {Fúvókák a homlokseprűhöz}
+\VpadConfig{2005} {Kézi szívótömlő}
+\VpadConfig{2050} {nincs}
+\VpadConfig{2051} {kézi}
+\VpadConfig{2052} {automatikus}
+\VpadConfig{2053} {szintén nincs biztosítva}
+\VpadConfig{2100} {Tridec}
+\VpadConfig{2101} {Hydequip}
+\VpadConfig{2150} {Linak}
+\VpadConfig{2151} {Hawe}
+\VpadConfig{2200} {Gomb}
+\VpadConfig{2201} {Be-Ki-kapcsoló}
+\VpadConfig{2250} {Utca}
+\VpadConfig{2251} {Repülőtér}
+\VpadConfig{2300} {Billentyűzet}
+\VpadConfig{2301} {Motor}
+\VpadConfig{5001} {Hátsó vagy kifúvófúvókák}
+\VpadConfig{5002} {Forgatóautomatika}
+\VpadConfig{5003} {Std.-fordulatszám motor [ford/perc]}
+\VpadConfig{5004} {Std.-fordulatszám [\percent ]}
+\VpadConfig{5005} {Std.-fordulatszám homlokturbina [\percent ]}
+\VpadConfig{5006} {Std.-fordulatszám hátsó turbina [\percent ]}
+\VpadConfig{10000} {igen}
+\VpadConfig{10001} {nem}
+\VpadConfig{10003} {Szöveg nem található}
+
+\VpadOperating{001} {Minden hajtás kikapcsol!}
+\VpadOperating{002} {Jelszó megadása}
+\VpadOperating{003} {Kérem, deaktiválja az engedélyező gombot}
+\VpadOperating{004} {Figyelem: a kefének a nyári üzemhez középső pozícióban kell állnia}
+\VpadOperating{005} {Figyelem: a szívótorkokat a téli üzemhez le kell szerelni}
+\VpadOperating{006} {Vízszóró bekapcsolás}
+\VpadOperating{012} {érvényes adatok}
+\VpadOperating{013} {érvénytelen adatok}
+\VpadOperating{014} {kiegyenlítés}
+\VpadOperating{015} {várakozás}
+\VpadOperating{017} {megszakítás}
+\VpadOperating{018} {állapot}
+\VpadOperating{019} {aktív}
+\VpadOperating{020} {ki}
+\VpadOperating{026} {Kérem várjon, a megbízás feldolgozása folyamatban.}
+\VpadOperating{027} {Melegítési fázis: kérem a hajtásokat bekapcsolni.}
+\VpadOperating{028} {Megszakítás a "menü"-vel}
+\VpadOperating{030} {Hozzáférés megtagadva}
+\VpadOperating{031} {Adatok sikeresen elmentve}
+\VpadOperating{032} {Adatok sikeresen helyreállítva}
+\VpadOperating{033} {A másolási folyamat nem sikerült}
+\VpadOperating{034} {minden számláló törölve}
+\VpadOperating{035} {A törlési folyamat nem sikerült}
+\VpadOperating{036} {Figyelem, a számlálók törlődnek!}
+\VpadOperating{037} {Figyelem, minden számláló törlődik!}
+\VpadOperating{038} {Figyelem, a konfiguráció cseréje!}
+\VpadOperating{039} {Figyelem, standard konfiguráció betöltése!}
+\VpadOperating{050} {Nincs elég szabad memória}
+\VpadOperating{051} {A mappa üres.}
+\VpadOperating{052} {Fájl nem található}
+\VpadOperating{053} {Folyamat megszakítva}
+\VpadOperating{070} {Motor}
+\VpadOperating{071} {Kefe}
+\VpadOperating{072} {Turbina}
+\VpadOperating{110} {GPS pozíció}
+\VpadOperating{111} {Fogadó státusz}
+\VpadOperating{112} {Hosszúsági fok}
+\VpadOperating{113} {Szélességi fok}
+\VpadOperating{114} {Geoid magasság}
+\VpadOperating{115} {Műholdak száma}
+\VpadOperating{116} {UTC dátum/idő}
+\VpadOperating{120} {Napi számláló}
+\VpadOperating{121} {Szezonszámláló}
+\VpadOperating{122} {Összes számláló}
+\VpadOperating{124} {Megtett távolság}
+\VpadOperating{125} {Kezdet}
+\VpadOperating{135} {Figyelem, a napi számlálók törlődnek}
+\VpadOperating{136} {Figyelem, a szezon számlálók törlődnek}
+\VpadOperating{137} {Megerősítés a TÖRLÉS gombbal}
+\VpadOperating{140} {Vezető kiválasztás}
+\VpadOperating{141} {Vezető}
+\VpadOperating{160} {Vpad-beállítások}
+\VpadOperating{161} {Kontraszt}
+\VpadOperating{162} {Fényerő}
+\VpadOperating{163} {Gomb-aktiválás világítás}
+\VpadOperating{164} {Gomb háttérvilágítás}
+\VpadOperating{165} {Hangerő}
+\VpadOperating{200} {állapot}
+\VpadOperating{201} {Nyomás [bar]}
+\VpadOperating{202} {Fordulatszám [ford/perc]}
+\VpadOperating{210} {Kefe-diagnosztika}
+\VpadOperating{211} {Előírt érték [\percent ]}
+\VpadOperating{212} {Szivattyúállás}
+\VpadOperating{220} {Turbina diagnosztika}
+\VpadOperating{221} {Előírt érték elöl [\percent ]}
+\VpadOperating{222} {Előírt érték hátul [\percent ]}
+\VpadOperating{223} {Fordulatszám elöl [ford/perc]}
+\VpadOperating{224} {Fordulatszám hátul [ford/perc]}
+\VpadOperating{230} {Szögdiagnosztika}
+\VpadOperating{231} {Nullapozíció jobb}
+\VpadOperating{232} {Nullapozíció bal}
+\VpadOperating{233} {Mért érték jobb}
+\VpadOperating{234} {Mért érték bal}
+\VpadOperating{235} {Kefenyomás [bar]}
+\VpadOperating{236} {Forgásszög}
+\VpadOperating{240} {Motor diagnosztika}
+\VpadOperating{241} {Előírt fordulatszám [ford/perc]}
+\VpadOperating{242} {Forgatónyomaték [Nm]}
+\VpadOperating{243} {Menetsebesség [km/h]}
+\VpadOperating{1000} {Szerviz beállítások}
+\VpadOperating{1001} {Ált. beállítások}
+\VpadOperating{1005} {Hőmérséklet kiegyenlítés}
+\VpadOperating{1006} {Óra beállítása}
+\VpadOperating{1007} {Diagnosztika}
+\VpadOperating{1008} {Szoftver}
+\VpadOperating{1020} {PT1000 belső (-30,5°C)}
+\VpadOperating{1021} {PT1000 belső (+40,5°C)}
+\VpadOperating{1030} {Hardver}
+\VpadOperating{1031} {CAN && I2C}
+\VpadOperating{1032} {Digitális kimenetek}
+\VpadOperating{1034} {Digitális bemenetek}
+\VpadOperating{1035} {Analóg bemenetek}
+\VpadOperating{1040} {Vpad}
+\VpadOperating{1041} {Billentyűzet}
+\VpadOperating{1042} {Eke joystick}
+\VpadOperating{1043} {Eke Master-joystick}
+\VpadOperating{1044} {Eke Slave-joystick}
+\VpadOperating{1045} {Seprű joystick}
+\VpadOperating{1046} {Seprű Főjoystick}
+\VpadOperating{1047} {Seprű bővítőjoystick}
+\VpadOperating{1049} {MC6}
+\VpadOperating{1050} {Kefeszabályzás}
+\VpadOperating{1052} {Operációs rendszer}
+\VpadOperating{1060} {Hardver verzió}
+\VpadOperating{1061} {ID-rendszer}
+\VpadOperating{1062} {MC6 változatok}
+\VpadOperating{1070} {Vpad -> billentyűzet}
+\VpadOperating{1071} {Billentyűzet -> Vpad}
+\VpadOperating{1080} {belső hőmérséklet}
+\VpadOperating{1090} {IO-dugasz}
+\VpadOperating{1110} {Gyári szám}
+\VpadOperating{1111} {Adatmentés}
+\VpadOperating{1112} {Konfig. betöltés}
+\VpadOperating{1113} {Számláló állítás}
+\VpadOperating{1114} {Progr. frissítés}
+\VpadOperating{1115} {Nyelvek telepítése}
+\VpadOperating{1116} {Std.-konfig. betöltés}
+\VpadOperating{1117} {Érintő kalibrálás}
+\VpadOperating{1118} {Konfig. nyomtatás}
+\VpadOperating{1119} {Progr. befejezése}
+\VpadOperating{1131} {Belső konfig.-mentés betöltés}
+\VpadOperating{1132} {Konfig. importálása}
+\VpadOperating{1133} {Számláló importálása}
+\VpadOperating{1134} {inden számláló törlése}
+\VpadOperating{1135} {Gyári beállítások betöltése}
+\VpadOperating{1140} {Belső konfig.-mentés létrehozás}
+\VpadOperating{1143} {Gyári beállítások mentése}
+\VpadOperating{1145} {Rendszermentés CF-kártyára}
+\VpadOperating{1150} {Év-kód}
+\VpadOperating{1151} {Szám}
+\VpadOperating{1160} {Nap}
+\VpadOperating{1161} {Hónap}
+\VpadOperating{1162} {Év}
+\VpadOperating{1163} {Óra}
+\VpadOperating{1164} {Perc}
+\VpadOperating{1165} {Másodperc}
+\VpadOperating{1170} {fájlba}
+\VpadOperating{1171} {teljes}
+\VpadOperating{5000} {Ez a CF-kártya nem támogatott!}
+\VpadOperating{5011} {Figyelem: CF-kártya tele!}
+\VpadOperating{5012} {Információ: CF-kártya majdnem tele.}
+
+\VpadError{000}	{Rendszerhiba}
+\VpadError{001}	{\#\ 001 Információ}
+\VpadError{002}	{\#\ 002 Hajtómotor indítás}
+\VpadError{010}	{\#\ 010 Eke 1. joystick adatforgalom}
+\VpadError{020}	{\#\ 020 Eke 2. joystick adatforgalom}
+\VpadError{030}	{\#\ 030 Seprű joystick adatforgalom}
+\VpadError{031}	{\#\ 031 Seprű Jstck CAN-kom. IO-modulokkal}
+\VpadError{032}	{\#\ 032 3. joystick hiba}
+\VpadError{033}	{\#\ 033 Kefe-forgásadó nem található}
+\VpadError{033a}	{\ \ 033 Kefe-forgásadó nem található}
+\VpadError{034}	{\#\ 034 Rugózásvezérlés nem található}
+\VpadError{035}	{\#\ 035 3. joystick kikapcsolva és kézi rugózás}
+\VpadError{040}	{\#\ 040 RC6 adatforgalom}
+\VpadError{040a}	{\ \ 040 RC6 adatforgalom}
+\VpadError{046}	{\#\ 046 RC6 turbina szivattyú prop. szelep}
+\VpadError{047}	{\#\ 047 RC6 turbina motor prop. szelep elöl}
+\VpadError{048}	{\#\ 048 RC6 turbina motor prop. szelep hátul}
+\VpadError{049}	{\#\ 049 RC6 turbina nyomásérzékelő}
+\VpadError{050}	{\#\ 050 RC6 turbina jelleggörbe elöl}
+\VpadError{051}	{\#\ 051 RC6 turbina jelleggörbe hátul}
+\VpadError{052}	{\#\ 052 RC6 turbina fordulatszám érzékelő elöl}
+\VpadError{053}	{\#\ 053 RC6 turbina fordulatszám érzékelő hátul}
+\VpadError{054}	{\#\ 054 RC6 turbina dugaszkötés}
+\VpadError{067}	{\#\ 067 RC6 kefe átmérő kicsi}
+\VpadError{068}	{\#\ 068 RC6 kefe átmérő nem elegendő}
+\VpadError{069}	{\#\ 069 Kefeszabályzás: maximális elhasználódás}
+\VpadError{070}	{\#\ 070 RC6 kefe szivattyú prop. szelep}
+\VpadError{071}	{\#\ 071 RC6 kefe motor prop. szelep}
+\VpadError{072}	{\#\ 072 RC6 kefe nyomásérzékelő}
+\VpadError{073}	{\#\ 073 RC6 kefe motor jelleggörbe}
+\VpadError{074}	{\#\ 074 RC6 kefe szivattyú jelleggörbe}
+\VpadError{075}	{\#\ 075 RC6 kefe fordulatszám érzékelő}
+\VpadError{076}	{\#\ 076 RC6 kefe dugaszkötés}
+\VpadError{080}	{\#\ 080 Kefeszabályzás adatforgalom}
+\VpadError{080a}	{\ \ 080 Kefeszabályzás adatforgalom}
+\VpadError{081}	{\#\ 081 Kefeszabályzás útérzékelő bal}
+\VpadError{082}	{\#\ 082 Kefeszabályzás útérzékelő jobb}
+\VpadError{083}	{\#\ 083 Kefeszabályzás nyomás emelés bal}
+\VpadError{084}	{\#\ 084 Kefeszabályzás rendszernyomás bal}
+\VpadError{085}	{\#\ 085 Kefeszabályzás nyomás emelés jobb}
+\VpadError{086}	{\#\ 086 Kefeszabályzás rendszernyomás jobb}
+\VpadError{087}	{\#\ 087 Kefeszabályzás forgónyomás}
+\VpadError{088}	{\#\ 088 Kefeszabályzás zárószelep bal}
+\VpadError{089}	{\#\ 089 Kefeszabályzás zárószelep jobb}
+\VpadError{090}	{\#\ 090 Kefeszabályzás prop. szelep bal}
+\VpadError{091}	{\#\ 091 Kefeszabályzás prop. szelep jobb}
+\VpadError{092}	{\#\ 092 Kefeszabályzás tolószelep emelés bal}
+\VpadError{093}	{\#\ 093 Kefeszabályzás tolószelep süllyesztés bal}
+\VpadError{094}	{\#\ 094 Kefeszabályzás tolószelep emelés jobb}
+\VpadError{095}	{\#\ 095 Kefeszabályzás tolószelep süllyesztés jobb}
+\VpadError{096}	{\#\ 096 Kefeszabályzás nullakiegyenlítés végrehajtás}
+\VpadError{100}	{\#\ 100 Motor adatforgalom}
+\VpadError{101}	{\#\ 101 Motor olajnyomás}
+\VpadError{102}	{\#\ 102 Motor hűtővíz hőm.}
+\VpadError{103}	{\#\ 103 Motor hűtővíz hőm.véd.}
+\VpadError{104}	{\#\ 104 Motor töltésellenőrzés}
+\VpadError{105}	{\#\ 105 Motor légszűrő}
+\VpadError{109}	{\#\ 109 Motor olajnyomás vezetékszakadás}
+\VpadError{110}	{\#\ 110 Motor CAN kommunikáció}
+\VpadError{111}	{\#\ 111 Motor vákuumkapcsoló}
+\VpadError{112}	{\#\ 112 Motor vízszint}
+\VpadError{113}	{\#\ 113 Hidraulika olajszűrő}
+\VpadError{114}	{\#\ 114 Hidraulika olajszint}
+\VpadError{115}	{\#\ 115 Hidraulika olajhőm.}
+\VpadError{116}	{\#\ 116 Motor kevés üzemanyag}
+\VpadError{117}	{\#\ 117 Motor vész-ki aktiválva}
+\VpadError{118}	{\#\ 118 Motor olajszint}
+\VpadError{119}	{\#\ 119 Súlyos motorhiba (piros)}
+\VpadError{120}	{\#\ 120 Kritikus motorhiba (narancs)}
+\VpadError{121}	{\#\ 121 Motorhiba (sárga)}
+\VpadError{122}	{\#\ 122 Motorszerviz}
+\VpadError{123}	{\#\ 123 AdBlue majdnem üres}
+\VpadError{124}	{\#\ 124 Adblue üres}
+\VpadError{125}	{\#\ 125 Forgatónyomaték határolás aktív}
+\VpadError{126}	{\#\ 126 Folyamatos forgatónyomaték határolás}
+\VpadError{200}	{\#\ 200 Billentyűzet-adatforgalom}
+\VpadError{220}	{\#\ 220 Seb.-jel}
+\VpadError{221}	{\#\ 221 Max. sebesség}
+\VpadError{240}	{\#\ 240 Rugózás nincs munkamagasságban}
+\VpadError{241}	{\#\ 241 Beállított tengelyterhelés érték túllépve}
+\VpadError{242}	{\#\ 242 Szabályzás vagy tényleges érték hiba elöl jobbra}
+\VpadError{243}	{\#\ 243 Szabályzás vagy tényleges érték hiba elöl balra}
+\VpadError{244}	{\#\ 244 Szabályzás vagy tényleges érték hiba hátul jobbra}
+\VpadError{245}	{\#\ 245 Szabályzás vagy tényleges érték hiba hátul balra}
+\VpadError{246}	{\#\ 246 Szögérzékelő hiba elöl jobbra}
+\VpadError{247}	{\#\ 247 Szögérzékelő hiba elöl balra}
+\VpadError{248}	{\#\ 248 Szögérzékelő hiba hátul jobbra}
+\VpadError{249}	{\#\ 249 Szögérzékelő hiba hátul balra}
+\VpadError{250}	{\#\ 250 Nyomásérzékelő hiba elöl}
+\VpadError{251}	{\#\ 251 Nyomásérzékelő hiba hátul}
+\VpadError{252}	{\#\ 252 Ellátófeszültség túl alacsony}
+\VpadError{253}	{\#\ 253 Ellátófeszültség túl magas}
+\VpadError{254}	{\#\ 254 Szögérzékelő max. eltérés}
+\VpadError{255}	{\#\ 255 Hátsó tengely túlterhelés}
+\VpadError{256}	{\#\ 256 Fék aktív kézi működtetéssel}
+\VpadError{257}	{\#\ 257 Hidraulika olaj hőmérséklet (hűtő)}
+\VpadError{258}	{\#\ 258 Hidraulika olaj túlmelegedés (hűtő)}
+\VpadError{259}	{\#\ 259 Hidraulika ventilátor prop.-szelep}
+\VpadError{260}	{\#\ 260 Hidraulika hőmérsékletérzékelő}
+\VpadError{261}	{\#\ 261 SCR-rendszer sűrített levegő ellátás elégtelen}
+\VpadError{300}	{\#\ 300 Szárazonfutás védelem}
+\VpadError{700}	{\#\ 700 Nyári program engedélyezés hiányzik}
+\VpadError{701}	{\#\ 701 Téli program engedélyezés hiányzik}
+\VpadError{702}	{\#\ 702 Nyári program RWY turbinával}
+\stopsetups
+
+
+
+\stopenvironment

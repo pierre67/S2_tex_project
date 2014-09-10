@@ -1,0 +1,75 @@
+\startcomponent c_00_front_s2_100-da
+\product prd_ba_s2_100-da
+
+%\setups [FRENCH,pagestyle:frontmatter]
+
+\startboschungmakeup
+\setups[pagestyle:title]
+\startalignment[middle]
+
+\midaligned{\externalfigure[innentitel]}
+\blank[1*big]
+
+\definefont[AffiliationFont][Sans sa.55]
+\defineornament
+[SomeAffiliation]
+[rotation=,corner={right,bottom},location={left,bottom},
+voffset=-3pt,alternative=b,frame=off]
+[style=AffiliationFont,offset=6pt]
+
+{\bkd Betjeningsvejledning\godown [9pt]}
+
+\placefigure[none]{}
+{\SomeAffiliation
+{\BAversionDE; \BAdateDE}
+{\bfc\BosFull {Sdeux}}}
+
+\blank[2*big]
+
+{\tfx\BosFull{Boschung}/PBV; Technische Redaktion, Matran, CH}
+
+\stopalignment
+
+\stopboschungmakeup
+%
+\startboschungmakeup
+
+\setupwhitespace [medium]
+
+\setups[pagestyle:marginless]
+
+{\sla Impressum}
+\blank [medium]
+
+Denne betjeningsvejledning beskriver den rigtige anvendelse af \sdeux. Læs denne betjeningsvejledning grundigt igennem, før \sdeux\ tages i brug første gang, for at få kendskab til betjeningselementerne og deres funktioner. Køretøjet må kun anvendes til de formål, det er konstrueret til (korrekt anvendelse).
+Enhver anden anvendelse anses som forkert. \Boschung\ hæfter ikke for skader, der opstår på grund af, at køretøjet ikke anvendes korrekt. I dette tilfælde er det alene brugeren, der er ansvarlig. Korrekt anvendelse omfatter også at overholde vedligeholdelsesanvisningerne og -intervallerne.\par
+
+Dette dokument er den originale betjeningsvejledning.
+Illustrationerne kan i enkelte tilfælde afvige fra Deres køretøjsversion.
+\blank [medium]
+
+
+\starttextbackground[CB]
+Kontakt den tekniske redaktion på følgende adresse, hvis De har spørgsmål eller forslag til denne betjeningsvejledning:
+
+\md
+{\Caps Marcel Boschung AG}\crlf
+Rédaction technique\crlf
+Route des Muëses 2\crlf
+CH-1753 Matran
+
+{\tt doc.mechanical@boschung.com}
+\stoptextbackground
+\blank[medium]
+
+\copyright\ \CopyrightyearDE\ Marcel Boschung AG Matran, \BAversionDE
+
+Den foreliggende betjeningsvejlednings originalsprog: fr (fransk) og de (tysk). Alle andre sprogversioner af denne betjeningsvejledning er oversættelser af den originale version.
+
+Alle rettigheder forbeholdes. Genoptryk og mangfoldiggørelse, også af uddrag, er ikke tilladt uden skriftlig tilladelse fra \BosFull{Boschung}.
+
+
+\stopboschungmakeup
+% \setups{pagestyle:normal}
+\stopcomponent
+

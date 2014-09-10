@@ -1,0 +1,589 @@
+\startcomponent c_45_vpad_s2_110-nl
+\product prd_ba_s2_110-nl
+
+\startchapter[title={Boordcomputer (Vpad)},
+reference={sec:vpad}]
+
+\setups[pagestyle:marginless]
+
+
+\startsection[title={Beschrijving van de Vpad},
+reference={vpad:description}]
+
+\startfigtext [left] {De Vpad SN in de cabine}
+{\externalfigure[vpad:inside:view]}
+\textDescrHead{Innovatief, intelligent … } De \Vpad\ werd geconcipieerd voor de besturing van aggregaten van gemeentes, wier technologie alsmaar complexer is geworden en die een groot aantal zeer uiteenlopende functies ter beschikking stellen.
+Met de \Vpad\ heeft de bediener een systeem bij de hand, dat zich niet daartoe beperkt om in real-time informatie~– visueel of akoestisch~– over alle werk- en machineprocessen te leveren.
+Wat de \Vpad\ vooral onderscheidt en wat hem zo baanbrekend maakt, is de intuïtieve gebruikersbegeleiding, bedieningsergonomie en commandologica.
+
+Dankzij zijn veelzijdige functies kan de \Vpad\ uitermate flexibel worden gebruikt, en wordt daardoor tot veel meer dan gewoon een elektronische besturingseenheid.
+\stopfigtext
+
+\textDescrHead{… universeel} Compatibiliteit en flexibiliteit stonden bij de ontwikkeling van de \Vpad\ voorop:
+als modulaire besturingseenheid kan hij individueel worden aangepast aan lokale omstandigheden en uitrustingsvarianten, en dankzij zijn talrijke elektronische interfaces en routes voor gegevensoverdracht~– tot en met WLAN~– staan alle mogelijkheden open.
+De \Vpad\ werkt met de modernste elektronica met 32-bit technologie en een real-time besturingssysteem.
+\vfill
+
+
+\startfigtext[left]{Multifunctionele console}
+{\externalfigure[console:topview]}
+\textDescrHead{… en modulair} Dankzij zijn modulariteit bezit de \Vpad\ een enorm voordeel:
+zo kan de in de \sdeux\ standaard ingezette versie~SN te allen tijde stapsgewijs met andere componenten, zoals bijvoorbeeld een modem of een console (zie afbeelding), worden uitgebreid.
+De modulariteit is niet beperkt tot de hardware, ook de software van het systeem kan in hoge mate uitgebreid en aan veranderende behoeften aangepast worden.
+
+De multifunctionele console van de \sdeux\ is een hoogontwikkelde interface tussen bediener en machine. Het hele veeg-/zuigsysteem kan via deze console worden bestuurd.
+\stopfigtext
+
+\page [yes]
+
+
+\subsection[vpad:home]{Hoofdbeeldscherm}
+
+%% Note: outcommented by PB
+% \placefig[left][fig:vpad:engineData]{Accueil mode transport}
+% {\scale[sx=1.5,sy=1.5]
+% {\setups[VpadFramedFigureHome]
+% \VpadScreenConfig{
+% \VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}
+% \framed{\null}}
+% }
+
+
+\start
+
+\setupcombinations[width=\textwidth]
+
+\placefig [here][fig:vpad:engineData]{Hoofdbeeldscherm}
+{\startcombination [2*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Rij}modus}
+{\setups[VpadFramedFigureWork]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Werk}modus}
+\stopcombination}
+
+\stop
+
+\blank [1*big]
+
+Het hoofdbeeldscherm van de \Vpad\ omvat alle benodigde elementen voor de bewaking van alle functies van de \sdeux.
+
+In het bovenste deel bevinden zich de controle-indicaties.
+
+Het middelste deel toont in real-time o.\,a. de volgende gegevens:
+snelheid, toerental en temperatuur van de motor, brandstofpeil, vulstand van het recyclingwater enz.
+
+De modus \aW{Rijden} wordt gesymboliseerd door een haas~\textSymb{transport_mode}, de modus \aW{Werk} door een schildpad~\textSymb{working_mode}.
+
+De menubalk aan de onderste rand toont de beschikbare menu´s: Druk in het midden van het aanrakingsgevoelige beeldscherm (touchscreen) om aanvullende menu´s te tonen.
+
+\page [yes]
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+\startcolumns
+
+\startSymVpad
+\externalfigure[vpadTEnginOilPressure][height=1.7\lH]
+\SymVpad
+\textDescrHead{Motoroliedruk}(rood) Motoroliedruk te laag. Zet de motor onmiddellijk af.
+
++\:Foutmelding \# 604
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningBattery][height=1.7\lH]
+\SymVpad
+\textDescrHead{Acculading}(rood) Acculaadstroom te laag. Breng de garage op de hoogte.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningEngine1][height=1.7\lH]
+\SymVpad
+\textDescrHead{Motordiagnose}(geel) Fout in de motorbesturing. Breng de garage op de hoogte.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Garage opzoeken}(geel) Regulier voertuigonderhoud is noodzakelijk,
+of is een fout in de motorbesturing (Garage opzoeken). % Zie na in het onderhoudsschema.
+
++\:Foutmeldingen \# 650 tot \# 653, of \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBrakeError][height=1.7\lH]
+\SymVpad
+\textDescrHead{Remsysteem}(rood) Fout in het remsysteem. Breng de garage op de hoogte.
+
++\:Foutmelding \# 902
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakePark][height=1.7\lH]
+\SymVpad
+\textDescrHead{Vastzetrem}(rood) Vastzetrem van het voertuig is geactiveerd.
+
++\:Foutmelding \# 905
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTEngineHeating][height=1.7\lH]
+\SymVpad
+\textDescrHead{Voorgloei-installatie}(geel) Motor wordt voorgegloeid.
+
+Een knipperende lamp geeft aan dat er een fout werd geregistreerd in het gebeurtenissengeheugen.
+\stopSymVpad
+
+\columnbreak
+
+\startSymVpad
+\externalfigure[vpadTFuelReserve][height=1.7\lH]
+\SymVpad
+\textDescrHead{Brandstofpeil}(geel) Brandstofpeil is zeer laag (reserve).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBlink][height=1.7\lH]
+\SymVpad
+\textDescrHead{Waarschuwingsknipperlichten}(groen) Waarschuwingsknipperlichten zijn geactiveerd.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTLowBeam][height=1.7\lH]
+\SymVpad
+\textDescrHead{Parkeerlicht}(groen) Parkeerlicht is ingeschakeld.
+\stopSymVpad
+
+\startSymVpad
+\HL\NC \externalfigure[vpadSyWaterTemp][height=1.7\lH]
+\SymVpad
+\textDescrHead{Temperatuur}(rood) Temperatuur van de hydraulische vloeistof of van de motor te hoog. Breng de garage op de hoogte.
+
++\:Foutmelding \# 700 of \# 610
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningFilter][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filter verstopt}(rood) Het gecombineerde hydraulische filter of het luchtfilter is verstopt.
+
++\:Foutmelding \# 702 of \# 851
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTSpray][height=1.7\lH]
+\SymVpad
+\textDescrHead{Waterpistool}(geel) Hogedrukwaterpomp voor het waterpistool is geactiveerd.
+
+Schakelaar \textSymb{temoin_buse} in de plafondconsole.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTClear][height=1.7\lH]
+\SymVpad
+\textDescrHead{Foutmelding}(rood) Er bevindt zich een foutmelding in het geheugen van de \Vpad. Druk op de toets~\textSymb{vpadClear} om alle geregistreerde berichten te tonen. Breng de garage op de hoogte.
+\stopSymVpad
+
+\stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
+\page [yes]
+
+
+\section{Vpad menu´s}
+
+\start
+
+\setupTABLE [background=color,
+frame=off,
+option=stretch,textwidth=\makeupwidth]
+
+\setupTABLE [r] [each] [style=sans, background=color, bottomframe=on, framecolor=TableWhite, rulethickness=1.5pt]
+\setupTABLE [r] [first][backgroundcolor=TableDark, style=sansbold]
+\setupTABLE [r] [odd][backgroundcolor=TableMiddle]
+\setupTABLE [r] [even] [backgroundcolor=TableLight]
+\bTABLE [split=repeat]
+\bTABLEhead
+\bTR\bTD Menu \eTD\bTD Benaming\index{Vpad+Indicatie} \eTD\bTD Functie \eTD\eTR
+\eTABLEhead
+
+\bTABLEbody
+\bTR\bTD \externalfigure [v:symbole:clear] \eTD\bTD Foutmelding(en) \eTD\bTD De in de Vpad geregistreerde foutmeldingen tonen en bevestigen. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:beacon]\externalfigure [v:symbole:beacon:black]} \eTD\bTD Alzijdig zwaailicht \eTD\bTD Alzijdig zwaailicht aan/uit \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:engine] \eTD\bTD Real-time gegevens \eTD\bTD Real-time gegevens van motor en hydrauliek tonen\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:oneTwoThree] \eTD\bTD Tellers \eTD\bTD Weergave van de bedrijfsurentellers: dagteller, seizoensteller, totaalteller\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:serviceInfo] \eTD\bTD Onderhoudsinterval \eTD\bTD Toont de datum en de resterende bedrijfsuren tot aan het volgende onderhoud of tot aan de volgende grote service \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:trash] \eTD\bTD Teller \eTD\bTD Teller terugzetten of service-interval terugzetten \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:sunglasses] \eTD\bTD Beeldschermmodus \eTD\bTD Soort beeldschermverlichting omschakelen tussen \aW{Dag} en \aW{Nacht} \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:color] \eTD\bTD Helderheid/Contrast \eTD\bTD Instellingen voor helderheid en contrast van het beeldscherm \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:select] \eTD\bTD Selectie \eTD\bTD Selecteren van de gemarkeerde invoer of bevestigen van een foutmelding \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Bevestiging \eTD\bTD Bevestigen van de selectie \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Omhoog/Omlaag, \\pijlen \eTD\bTD Markering naar boven/beneden verschuiven of geselecteerde waarde verhogen/verlagen \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Waarschuwingstoon bij achteruitrijden \eTD\bTD Akoestisch signaal bij achteruitrijden activeren/deactiveren \eTD\eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+
+\subsubsubject{Verdere indicaties op de Vpad}
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+\startcolumns
+
+\startSymVpad
+\externalfigure[sym:vpad:water]
+\SymVpad
+\textDescrHead{Vulstand vers water} Vulstand van het verse water niet voldoende (max. 190\,l; achter de bestuurderscabine).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater:yellow]
+\SymVpad
+\textDescrHead{Vulstand recyclingwater}(geel) Vulstand van het recyclingwater onder de warmtewisselaar. De hydraulische vloeistof wordt niet gekoeld en het bevochtigingssysteem van het zuigkanaal niet opgewarmd.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater]
+\SymVpad
+\textDescrHead{Vulstand recyclingwater}(rood) Vulstand van het recyclingwater niet voldoende (max. 140\,l; onder de vuilcontainer).
+\stopSymVpad
+
+\stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\page [yes]
+
+\startsection[title={Instellen van de helderheid van het beeldscherm},
+reference={sec:vpad:brightness}]
+
+Het beeldscherm van de \Vpad\ kan worden ingezet in twee voorgeconfigureerde helderheidsniveaus: Modus \aW{Dag}~– \textSymb{vpadSunglasses}, normale helderheid~– en modus \aW{Nacht}~– \textSymb{vpadMoon}, verminderde helderheid.
+Met de toets \textSymb{vpadColor} krijgt u toegang tot verschillende parameters.
+Om de voorgeconfigureerde helderheidsniveaus te veranderen gaat u als volgt te werk:
+
+\startSteps
+\item Druk op het midden van het aanrakingsgevoelige beeldscherm (touchscreen) om door de menubalk aan de onderste rand van het beeldscherm te scrollen.
+\item Druk op het symbool \textSymb{vpadSunglasses} resp.
+\textSymb{vpadMoon} om de modus te selecteren die u wilt veranderen.
+\item Druk op \textSymb{vpadColor} om de parameters te tonen.
+\item Markeer met behulp van de pijlsymbolen~\textSymb{vpadUp}\textSymb{vpadDown} de parameter die u wilt wijzigen, en selecteer hem met~\textSymb{vpadSelect}.
+\item Wijzig de waarde met behulp van de symbolen\textSymb{vpadMinus}\textSymb{vpadPlus}. Voorzichtig, verminder de helderheid niet zo sterk (\VpadOp{162} -255), dat u niets meer op het beeldscherm kunt herkennen!
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadGPS}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\null}}{Druk in het midden op het touchscreen}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadOp{162}\hfill 15 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Selecteer met \textSymb{vpadSelect}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadNull}}}%
+\framed[backgroundscreen=.9]{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD \VpadOp{162}\hfill -80 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Waarde wijzigen met \textSymb{vpadMinus}\textSymb{vpadPlus}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Bevestig de waarde met \textSymb{vpadReturn}.
+\item Druk nog eens op het symbool \textSymb{vpadReturn} om terug te gaan naar het hoofdbeeldscherm.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Bedrijfsuren- en kilometerteller},
+reference={vpad:compteurs}]
+
+De software van de \Vpad\ beschikt over drie verschillende meetperioden~– \aW{Dag}, \aW{Seizoen}, \aW{Totaal}~–, waarin verschillende tellers kunnen lopen, zoals \aW{Afgelegde traject}, \aW{Bedrijfsuren} (motor of bezem), \aW{Werktijd} (per bestuurder).
+
+Om de tellers af te lezen of ze terug te zetten gaat u als volgt te werk:
+
+\startSteps
+\item Druk op het midden van het touchscreen om door de menubalk te scrollen.
+\item Druk op het symbool \textSymb{vpadOneTwoThree} om de dagteller te tonen.
+\item Met behulp van de Terug/Verder symbolen~\textSymb{vpadBW}\textSymb{vpadFW} kunt u omschakelen naar de totaal- of seizoensteller.
+\item Druk op \textSymb{vpadTrash} om de getoonde teller terug te zetten.
+\item In een dialoogvenster wordt u gevraagd om het terugzetten te bevestigen.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{120} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 87.4\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 62.0\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 240.2\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 901.9\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,1\,l/h \eTD\eTR
+\eTABLE}}{Druk op het symbool~\textSymb{vpadOneTwoThree}, vervolgens op~\textSymb{vpadBW} of~\textSymb{vpadFW}}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadBW}{vpadFW}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 522.0\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 662.8\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 1605.5\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 2608.4\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,0\,l/h \eTD\eTR
+\eTABLE}}{Zet de teller terug met \textSymb{vpadTrash}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadTrash}{vpadNull}{vpadNull}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{136} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{137} \eTD\eTR
+\eTABLE}}{Bevestig met \textSymb{vpadTrash}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Voer indien nodig het wachtwoord in, en bevestig dan het terugzetten met behulp van het symbool \textSymb{vpadTrash}.
+\item Druk op het symbool \textSymb{vpadReturn} om terug te gaan naar het hoofdbeeldscherm.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+\startsection[title={Wartungsintervalle},
+reference={vpad:maintenance}]
+
+Het onderhoudsschema van de \sdeux\ kent twee basisvormen van het onderhoud: het reguliere onderhoud en de grote service (door een met de \boschung-klantendienst overeengekomen vakgarage).
+
+Om de tellers af te lezen of terug te zetten gaat u als volgt te werk:
+\startSteps
+\item Druk op het midden van het touchscreen om door de menubalk te scrollen.
+\item Druk op het symbool \textSymb{vpadServiceInfo} om de onderhoudsintervallen te tonen.
+\item Ga met behulp van de pijlsymbolen~\textSymb{vpadUp}\textSymb{vpadDown} naar de gewenste interval.
+\item Druk op het symbool~\textSymb{vpadTrash} om een interval terug te zetten. Voer het wachtwoord in met behulp van~\textSymb{vpadPlus}\textSymb{vpadMinus} en bevestig met~\textSymb{vpadSelect}).
+\item In een dialoogvenster wordt u gevraagd om het terugzetten te bevestigen.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadNull}{vpadNull}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD[nc=2] \VpadOp{190} \eTD\eTR
+\bTR\bTD \VpadOp{191}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{192}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR
+\bTR\bTD \VpadOp{193}\eTD\bTD \VpadOp{195}\hfill 2400\,h \eTD\eTR
+\eTABLE}}{Druk op het symbool~\textSymb{vpadTrash} om een interval terug te zetten}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD \hfill 2014-03-31 \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{002}\hfill 0000 \eTD\eTR
+\eTABLE}}{Voer het wachtwoord in (cijfercode)}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD[backgroundcolor=black,color=TableWhite] \VpadOp{041}\eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{042} \eTD\eTR
+\bTR\bTD \VpadOp{043} \eTD\eTR
+\eTABLE}}{Selecteer en bevestig met~\textSymb{vpadSelect}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Bevestig het terugzetten met behulp van het symbool~\textSymb{vpadSelect}.
+\item Druk op het symbool \textSymb{vpadReturn} om terug te gaan naar het hoofdbeeldscherm.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Foutmanagement via de Vpad},
+reference={vpad:error}]
+
+
+De \Vpad\ toont fouten\index{Vpad+Foutmeldingen}, die door de elektronische besturingssystemen gediagnostiseerd en door de CAN-bus overgedragen werden.
+Wanneer er een minder ernstige fout wordt geregistreerd, dan brandt het symbool~\textSymb{VpadTClear} (rood).
+Wanneer het gaat om een fout van hoge prioriteit, dan brandt het symbool~\textSymb{VpadTClear} en weerklinkt er bovendien een alarmtoon.
+Om het alarm te beëindigen moet de foutmelding bevestigd (als \aW{ter kennis genomen} bevestigd) worden.
+
+Om foutmeldingen te lezen en te bevestigen gaat u als volgt te werk:
+
+\startSteps
+\item Druk op het symbool~\textSymb{vpadClear} op het beeldscherm van de \Vpad.
+\item Druk op het symbool~\textSymb{vpadClear} om de geselecteerde melding te bevestigen.
+\item Naast de bevestigde melding verschijnt nu een \aW{\#}-symbool, dat de melding bevestigt als \aW{ter kennis genomen}, en de markering springt naar de volgende melding (voor zover voorhanden).
+\item Nadat alle meldingen werden bevestigd, keert het display terug naar het hoofdbeeldscherm.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851a} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Weergave van de meldingen}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Bevestig met~\textSymb{vpadClear}}
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadBeam}{vpadEngine}}}%
+\framed{\null}}{Terug naar het hoofdbeeldscherm}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Om de meldingen opnieuw te tonen drukt u op het symbool~\textSymb{vpadClear}. Foutmeldingen worden pas dan van de \Vpad\ verwijderd, als de oorzaak van het probleem werd geëlimineerd.
+\stopSteps
+
+
+\subsection{De meest frequente foutmeldingen (met storingsoorzaak)}
+
+\subsubsubject{\VpadEr{604}} % {\#\ 604 Pression huile moteur basse}
+
++ \textSymb{vpadTEnginOilPressure}~– Schakel de motor onmiddellijk uit. Controleer het oliepeil en breng de garage op de hoogte.
+
+
+\subsubsubject{\VpadEr{609}} % {\#\ 609 Température eau refroidissement moteur haute}
+
++ \textSymb{vpadSyWaterTemp}~– Onderbreek uw werk. Laat de motor zonder last verder lopen en observeer de temperatuurontwikkeling:
+
+Wanneer de temperatuur daalt, dan controleert u de vulstanden van koelvloeistof, motorolie en hydraulische vloeistof en de toestand van de koeler.
+Wanneer de vulstanden en de koeler in orde zijn, dan rijdt u voor de verdere foutdiagnose voorzichtig naar de garage.
+
+\subsubsubject{\VpadEr{610}} % {\#\ 610 Température eau refroidissement moteur trop haute}
+
++ \textSymb{vpadSyWaterTemp}~– Onderbreek uw werk. Controleer de vulstanden van koelvloeistof en motorolie, en breng onmiddellijk de garage op de hoogte.
+
+
+\subsubsubject{\VpadEr{650}} % {\#\ 650 Se rendre à un garage}
+
++ \textSymb{vpadWarningService}~– Breng onmiddellijk uw garage op de hoogte.
+% \VpadEr{651} % {\#\ 651 Moteur en mode urgence}
+
+
+\subsubsubject{\VpadEr{652}} % {\#\ 652 Inspection véhicule}
+% \VpadEr{653} % {\#\ 653 Grand service moteur}
+
++ \textSymb{vpadWarningService}~– Het volgende reguliere onderhoud is noodzakelijk. Raadpleeg het onderhoudsschema en maak een afspraak met uw garage.
+
+
+\subsubsubject{\VpadEr{700}} % {\#\ 700 Température d'huile hydraulique}
+
++ \textSymb{vpadSyWaterTemp}~– Onderbreek uw werk. Laat de motor zonder last verder lopen en observeer de temperatuurontwikkeling:
+
+Wanneer de temperatuur daalt, dan controleert u de vulstanden van koelvloeistof, motorolie en hydraulische vloeistof en de toestand van de koeler.
+Wanneer de vulstanden en de koeler in orde zijn, dan rijdt u voor de verdere foutdiagnose voorzichtig naar de garage.
+
+
+\subsubsubject{\VpadEr{702}} % {\#\ 702 Filtre d'huile hydraulique}
+
++ \textSymb{vpadWarningFilter}~– Het hydraulische retour- en/of aanzuigfilter is verstopt. Vervang onmiddellijk het filterelement.
+% \VpadEr{703} % {\#\ 703 Vidange d'huile hydraulique}
+
+
+\subsubsubject{\VpadEr{800}} % {\#\ 800 Interrupteur d'urgence actionné}
+
++ \textSymb{vpadTClear}~– U heeft de Noodstop-schakelaar geactiveerd. Schakel de ontsteking uit en start de motor opnieuw om de melding te verwijderen.
+
+
+\subsubsubject{\VpadEr{801}} % {\#\ 905 Frein à main actionné}
+
+De vuilcontainer is opgetild of niet helemaal neergelaten. De snelheid van het voertuig is begrensd op 5\,km/h, zolang de vuilcontainer niet is neergelaten.
+
+\subsubsubject{\VpadEr{851}} % {\#\ 851 Filtre à air}
+
++ \textSymb{vpadWarningFilter}~– Het luchtfilter is verstopt. Vervang onmiddellijk het filterelement.
+
+
+\subsubsubject{\VpadEr{902}} % {\#\ 902 Pression de freinage}
+
++ \textSymb{vpadTBrakeError}~– De remdruk is niet voldoende. Onderbreek uw werk en breng onmiddellijk de garage op de hoogte.
+% \VpadEr{904} % {\#\ 904 Interrupteur de direction d'avancement}
+
+
+\subsubsubject{\VpadEr{905}} % {\#\ 905 Frein à main actionné}
+
++ \textSymb{vpadTBrakePark}~– De vastzetrem is niet volledig ontspannen. De snelheid van het voertuig is begrensd op 5\,km/h, zolang de vastzetrem niet is ontspannen.
+
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+
+
+
+

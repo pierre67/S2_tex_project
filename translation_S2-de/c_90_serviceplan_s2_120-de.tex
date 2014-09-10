@@ -1,0 +1,374 @@
+\startcomponent c_90_serviceplan_s2_120-de
+\product prd_ba_s2_120-de
+
+
+\chapter[sec:schedule]{Wartungsplan}
+
+\startregister[index][wartplan]{Wartungsplan+Fahrzeug}
+
+
+\section{Allgemeines}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck \enskip Qualifikation {\definedfont[SansBoldItalic] Check} \enskip}
+Kontrolle, die vom\index{Qualifikation+Wartungspersonal} Betriebspersonal
+des Fahrzeuges ohne fremde Hilfe ausgeführt werden kann. Grundkenntnisse der
+Motorfahrzeugtechnik sind allerdings Voraussetzung.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro \enskip Qualifikation {\definedfont[SansBoldItalic] Servicearbeit} \enskip}
+Reguläre Wartungsarbeit, die im Rahmen der Instandhaltung durchzuführen ist. Die
+Wartung muss in einer zugelassenen Werkstatt von einer Fachkraft mit dem
+erforderlichen Werkzeug durchgeführt werden.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial \enskip Qualifikation {\definedfont[SansBoldItalic] Spezialarbeit} \enskip}
+Spezielle\index{Spezialarbeit} Wartungsarbeit, die nur von einer Person
+ausgeführt werden darf, die eine spezifische, vom \BoschungNote||Kundendienst
+anerkannte Schulung absolviert hat.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual \enskip Typ {\definedfont[SansBoldItalic] Sichtkontrolle} \enskip}
+Mittels\index{Sichtkontrolle} Sichtprüfung durchzuführender Kontrollpunkt.
+Festgestellte Störungen oder Schäden müssen der für die Wartung zuständigen
+Person mitgeteilt werden.
+\stoptextrule
+}
+
+Bei allen Wartungsarbeiten sind drei Qualifikationsstufen (Anforderung an
+Personal und Ausrüstung) und vier Wartungstypen (Art der Arbeit) zu
+unterscheiden.
+
+\startTwoPar
+{\em Qualifikationsstufen:}	\par \blank [medium]
+\start \setupwhitespace	[none]
+\symDescr{\textSymb{maint:check}} Check \par
+\symDescr{\textSymb{maint:pro}} Servicearbeit \par
+\symDescr{\textSymb{maint:special}} Spezialarbeit	\par
+\stop
+\TwoPar
+{\em Wartungstypen:}	\par \blank [medium]
+\start \setupwhitespace	[none]
+\symDescr{\textSymb{maint:visual}} Sichtkontrolle	\par
+\symDescr{\textSymb{maint:function}} Funktionskontrolle	\par
+\symDescr{\textSymb{maint:level}} Füllstandskontrolle \par
+\symDescr{\textSymb{maint:exchange}} Betriebsstoffaustausch \par
+\symDescr{\textSymb{maint:generic}} Sonstige Tätigkeiten \par
+\stop
+\stopTwoPar
+
+\handItem{Siehe hierzu die Erläuterungen in den Randspalten.}
+
+
+\placeNote[][service_picto]{}{%
+ \noteF
+\starttextrule{\Pmtfunction \enskip Typ {\definedfont[SansBoldItalic] Funktionskontrolle} \enskip}
+Kontrollen, die\index{Kontrolle+Funktion} über eine Sichtprüfung
+hinausgehen, \eG\ Funktionskontrolle der Bremse, Zustandskontrolle von
+Bauteilen, manuelle Kontrolle auf festen Sitz.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtlevel \enskip Typ {\definedfont[SansBoldItalic] Füllstandskontrolle} \enskip}
+Die\index{Kontrolle+Füllstand} Füllstandskontrolle von Betriebsstoffen umfasst
+die Kontrolle~– per Sichtprüfung oder mit dem Messstab~– sowie ggf. das
+Auffüllen mit dem entsprechenden Betriebsstoff. {\em Hierzu zählt auch die
+Zentralschmierung.} Lesen Sie dazu den Abschnitt \about[sec:liqquantities],
+wo Sie Informationen zu Qualität und Menge der Betriebsstoffe finden.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtexchange \enskip Typ {\definedfont[SansBoldItalic] Betriebsstoffaustausch} \enskip}
+Dazu\index{Betriebsstoffe+Austausch} gehört der Wechsel des Betriebsstoffs
+sowie die anschließende Füllstandskontrolle. Informationen zu Qualität und
+Menge der Betriebsstoffe finden Sie \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+\starttextrule{\Pmtgeneric \enskip Typ {\definedfont[SansBoldItalic] Sonstige Tätigkeiten} \enskip}
+Verschiedene, entsprechend der Anweisungen fachgerecht auszuführende Wartungsarbeiten.
+\stoptextrule
+}%
+
+\blank[big]
+%% TODO; en
+\starttextbackground[FC]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+Bitte beachten Sie bei der Ausführung der Kontroll- und Wartungspunkte die
+Sicherheits- und Umweltschutzbestimmungen. \BosFull{boschung}
+weist jegliche Haftung für Personen- oder Materialschäden zurück, die in
+Folge der Nichtbeachtung dieser Bestimmungen entstehen.
+\stopPictPar
+\stoptextbackground
+\page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Wartungsplan des Fahrzeugs}
+
+Die\index{Kontrolle, periodische} Fahrzeugwartung besteht aus regelmäßig
+auszuführenden Wartungarbeiten, aus periodischen Kontrollen (Checks) sowie einem
+einmalig auszuführenden Service\footnote{Alle Stundenangaben verstehen sich als
+Betriebsstunden}:
+
+\starttextbackground[FC]
+\starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Wartungsarbeiten \NC 50\,h \NC Erster Service nach 50\,h \NC \NR
+\NC \NC 600\,h \NC Reguläre Wartung alle 600\,h / 12 Monate \NC \NR
+\NC \NC 1200\,h \NC Reguläre Wartung alle 1200\,h / 2 Jahre \NC \NR
+\NC \NC 2400\,h \NC Reguläre Wartung alle 2400\,h / 4 Jahre \NC \NR
+\NC \NC 4800\,h \NC Reguläre Wartung alle 4800\,h / 8 Jahre \NC \NR
+\NC \Pmtcheck\enskip Checkliste \NC Täglich \NC Während der ganzen Arbeitssaison \NC \NR
+\NC \NC Wöchentlich \NC Während der ganzen Arbeitssaison \NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Der folgende Wartungsplan bezieht sich auf das Grundfahrzeug. Beachten Sie
+auch den Wartungsplan zu den Aggregaten (\eG\ Kehrmaschine, Schmutzbehälter) ab
+\at{Seite}[sec:schedaggr].
+
+Bei doppelten Angaben zum Wartungsintervall (\eG\ \quotation{Alle
+600\,h~/ 12~Monate}) besitzt der jeweils zuerst eintretende Zeitpunkt Priorität.
+
+Die Arbeiten der einzelnen Wartungspläne~– außer der einmaligen Wartung nach
+50~Stunden~– sind kumulativ auszuführen: Alle 1200~Betriebsstunden ist die
+600-Stunden||Wartung {\em und} die 1200-Stunden||Wartung durchzuführen; alle
+2400~Betriebsstunden ist die 600-Stunden-, die 1200-Stunden {\em und} die
+2400-Stunden||Wartung durchzuführen; etc.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Tägliche Kontrolle}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Tägliche Kontrolle \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Fahrzeug reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Fahrzeug auf eventuelle Beschädigungen überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Kontrolle auf Leckagen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Motorölstand des Dieselmotors überprüfen (mit Messstab!) \eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kühlflüssigkeitsstand des Dieselmotors überprüfen \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Hydraulikflüssigkeitsstand prüfen (Schauglas am Tank) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kraftstoffstand überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Scheibenwaschflüssigkeitsstand prüfen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funktionskontrolle der Kontrollleuchten und der Beleuchtung von Instrumententafel und Kontrollpanel \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funktionskontrolle der Feststellbremse \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funktionskontrolle der Beleuchtungs- und Signaleinrichtungen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+\subsection[table:scheduleweekly]{Wöchentliche Kontrolle}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Wöchentliche Kontrolle \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Reifenfülldruck prüfen (Druck siehe Rad||Typenschild im Führerhaus) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Luftfilterpatrone überprüfen und ggf. reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Alle Schmierpunkte schmieren (Chassis, Knicklenkung) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection [sec:50h]{Wartung nach 50\,h~– einmalig}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Wartung nach 50\,h~– einmalig \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Kühlflüssigkeitsstand des Dieselmotors überprüfen \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Luftfilterkartusche reinigen; ggf. ersetzen \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Hydrauliköl||Rücklauf- und Ansaugfilter ersetzen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Hydraulikflüssigkeitsstand prüfen (Schauglas am Tank) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Zentralschmieranlage (Option): Schmiermittelvorrat und -konsistenz überprüfen \eTD \bTD \Tpro \eTD \bTD \inP[main:graissageCentral] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Alle Schmierpunkte schmieren (Fahrgestell, Knicklenkung) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Füllstand der Scheibenwaschflüssigkeit prüfen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen des Führerhauses überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen des Motors am Chassis überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen der Pumpen am Motor überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen des Kombikühlers überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen der Achsen überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Räder\index{Anzugsdrehmoment+Räder} auf festen Sitz prüfen (Anzugsdrehmoment: 180\,Nm) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Reifenfülldruck prüfen (Druck siehe Rad||Typenschild im Führerhaus) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Weg des Feststellbremshebels überprüfen|/|nachstellen \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zustand der Batterie prüfen; Pole|/|Klemmen reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Einstellung der Scheinwerfer gemäß Straßenverkehrsordnung prüfen, ggf. einstellen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Spulenkerne der Magnetventile mit Kupferfett schmieren \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Ereignisspeicher (Vpad und Motorsteuergerät) auslesen; ggf. Ursachen der Fehler beheben \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection {Wartung alle 600\,h / 12 Monate}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Wartung alle 600\,h / 12 Monate \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Ölwechsel Dieselmotor \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:oilDraining] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Motorölfilter ersetzen \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:oilFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kraftstofffilter ersetzen \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:fuelFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Dichtheit des Motors und der Komponenten im Motorraum prüfen \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Dichtheit und Befestigung der Auspuffanlage prüfen \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zustand des Keilrippenriemens des Dieselmotors überprüfen, ggf. ersetzen \eTD \bTD \Tpro \eTD \bTD \inP[sSec:vw:belt] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kühlflüssigkeitsstand des Dieselmotors überprüfen \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Luftfilterkartusche ersetzen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Hydrauliköl||Rücklauf- und Ansaugfilter ersetzen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Füllstand des Hydraulikflüssigkeitstanks prüfen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Zentralschmieranlage (Option): Schmiermittelvorrat und -konsistenz überprüfen \eTD \bTD \Tpro \eTD \bTD \inP[main:graissageCentral] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Alle Schmierpunkte schmieren (Fahrgestell, Knicklenkung) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Füllstand der Scheibenwaschflüssigkeit prüfen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liquids] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen des Führerhauses überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen des Motors am Chassis überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen der Pumpen am Motor überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen des Kombikühlers überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Befestigungen der Achsen überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Weg des Feststellbremshebels überprüfen|/|nachstellen \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Bremstrommeln und -backen prüfen|/|reinigen; Bremsmechanismus reinigen \eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Räder\index{Anzugsdrehmoment+Räder} auf festen Sitz prüfen (Anzugsdrehmoment: 180\,Nm) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Reifenfülldruck prüfen (Druck siehe Rad||Typenschild im Führerhaus) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zustand der Batterie prüfen; Pole|/|Klemmen reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Einstellung der Scheinwerfer gemäß Straßenverkehrsordnung prüfen, ggf. einstellen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Spulenkerne der Magnetventile mit Kupferfett schmieren \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid] \eTD \eTR
+%%Note: Chapter has been removed
+%\bTR \bTD \Tgen \eTD \bTD Rostschutz prüfen, ggf. nachbessern|/|erneuern \eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Ereignisspeicher (Vpad und Motorsteuergerät) auslesen; ggf. Ursachen der Fehler beheben \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Wartung alle 1200\,h / 2 Jahre}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Wartung alle 1200\,h / 2 Jahre \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Hydrauliköl wechseln (Tank) \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kältemittel (R134a) der Klimaanlage erneuern \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Wartung alle 2400\,h / 4 Jahre}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Wartung alle 2400\,h / 4 Jahre \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tgen \eTD \bTD Zahnriemen des Dieselmotors ersetzen \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Wartung alle 4800\,h / 8 Jahre}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Wartung alle 4800\,h / 8 Jahre \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Hydraulik||Schlauchleitungen überprüfen, ggf. ersetzen \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Wasserpumpe ersetzen (gleichzeitig mit dem Zahnriemen) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Wartung der Aggregate}
+
+Die Wartung\startregister[index][wartplanAgg]{Wartungsplan+Aggregate} der
+Aggregate umfasst regelmäßig auszuführende Wartungsarbeiten\index{Periodische
+Kontrolle} sowie tägliche und wöchentliche Kontrollen:
+
+\starttextbackground[FC]
+\starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Wartungsarbeiten \NC 50\,h \NC Erster Service nach 50\,h \NC \NR
+\NC \NC 600\,h \NC Reguläre Wartung alle 600\,h / 12 Monate \NC \NR
+\NC \Pmtcheck\enskip Checkliste \NC Täglich \NC Während der ganzen Arbeitssaison \NC \NR
+\NC \NC Wöchentlich \NC Während der ganzen Arbeitssaison \NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Der folgende Wartungsplan bezieht sich auf Standardaggregate, mit denen die
+\sdeux\ üblicherweise ausgerüstet ist. Für spezielle Aggregate, die nicht in
+dieser Bedienungsanleitung beschrieben sind, ist der Wartungsplan des
+jeweiligen Aggregats zu beachten.
+
+
+\subsection[table:scheduledaily]{Tägliche Kontrolle}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Tägliche Kontrolle \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Schmutzbehälter und Recyclingvorrichtung reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Saugmund und Saugkanal reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection[table:scheduledaily]{Wöchentliche Kontrolle}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type \eTD \bTD Wöchentliche Kontrolle \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tgen \eTD \bTD Verschleiß von Seitenbesen und Frontbesen (Option) überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Saugmundklappe und Saugmundgummis überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Alle Schmierpunkte schmieren (Schmutzbehälter, Besen, Saugmund) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Wartung nach 50\,h~– einmalig}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD
+Art \eTD \bTD Wartung nach 50\,h~– einmalig \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tfun \eTD \bTD Befestigungen der Besen überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Saugmundklappe und Saugmundgummis einstellen \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Wartung alle 600\,h|/|12 Monate}
+
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Art \eTD \bTD Wartung alle 600\,h|/|12 Monate \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tfun \eTD \bTD Befestigungen der Besen überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Saugmundklappe und Saugmundgummis einstellen \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\bTR \bTD \Tchg \eTD \bTD Ölwechsel Hochdruckwasserpumpe für Wasserpistole (Option) \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplanAgg]
+\stop
+
+
+\stopcomponent
+% vim: fdm=indent

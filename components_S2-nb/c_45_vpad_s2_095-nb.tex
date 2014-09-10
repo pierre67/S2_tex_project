@@ -1,0 +1,590 @@
+% coding: utf-8
+
+\startcomponent c_45_vpad_s2_095-nb
+
+\startchapter[title={Kjørecomputer (Vpad)},
+reference={sec:vpad}]
+
+\setups[pagestyle:marginless]
+
+
+\startsection[title={Beskrivelse av Vpad},
+reference={vpad:description}]
+
+\startfigtext [left] {Vpad SN i førerhuset}
+{\externalfigure[vpad:inside:view]}
+\textDescrHead{Innovativ, intelligent … } Enheten\Vpad\ er blitt utviklet for styring av aggregater i det kommunaltekniske innsatsområdet, for å imøtekomme denne stadig mer komplekse teknologien og til fulle å kunne utnytte et mangfold av funksjoner.
+Med \Vpad\ har operatøren et system tilgjengelig, som ikke er begrenset til, kun å vise sanntids-informasjon~– visuelt eller akustisk~– over samtlige arbeids- og maskinprosesser.
+Det som utmerker \Vpad\ spesielt og som den setter nye standarder for, er den intuitive brukerveiledningen, brukerergonomien og kommandologikken.
+
+Takket være dens mangfold av funksjoner er \Vpad\ meget fleksibel i bruk og utgjør dermed mye mer enn kun en elektronisk styreenhet.
+\stopfigtext
+
+\textDescrHead{… universell} kompatibilitet og fleksibilitet har vært i fokus under utviklingen av \Vpad:
+Som modulær styreenhet kan den tilpasses lokale forhold og utstyrsvarianter, og grunnet dens tallrike elektroniske grensesnitt og metoder for dataoverføring~– også via WLAN~– står alle muligheter åpne.
+\Vpad\ arbeider med det siste innen elektronikk med 32-bit-teknologi og sanntids-driftssystem.
+\vfill
+
+
+\startfigtext[left]{Multifunksjonspanel}
+{\externalfigure[console:topview]}
+\textDescrHead{… og modulær} Grunnet dens modularitet har \Vpad\ en enorm fordel:
+Slik kan den i \sdeux\ som standard anvendte versjonen~SN når som helst utvides trinnvis med ytterligere komponenter, som for eksempel et modem eller et panel (se figur).
+Modulariteten er ikke begrenset til maskinvaren, for også på programvaresiden kan dette systemet i stor grad utvides og tilpasses de endrede behov.
+
+Multifunksjonspanelet til \sdeux\ er et høyt utviklet grensesnitt mellom operatør og maskin. Det komplette feie-/sugesystemet lar seg styre via dette panelet.
+\stopfigtext
+
+\page [yes]
+
+
+\subsection[vpad:home]{Hovedskjerm}
+
+%% Note: outcommented by PB
+% \placefig[left][fig:vpad:engineData]{Accueil mode transport}
+% {\scale[sx=1.5,sy=1.5]
+% {\setups[VpadFramedFigureHome]
+% \VpadScreenConfig{
+% \VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}
+% \framed{\null}}
+% }
+
+
+\start
+
+\setupcombinations[width=\textwidth]
+
+\placefig [here][fig:vpad:engineData]{Hovedskjerm}
+{\startcombination [2*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Kjøre}modus}
+{\setups[VpadFramedFigureWork]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Arbeids}modus}
+\stopcombination}
+
+\stop
+
+\blank [1*big]
+
+Hovedskjermen til \Vpad\ omfatter alle nødvendige elementer for overvåkning av samtlige funksjonene til \sdeux.
+
+I den øvre delen finner du kontrollvisningene.
+
+I den midtre delen vises bl.\,a. de følgende data i sanntid:
+Hastigheten, turtallet og temperaturen til motoren, drivstoffnivået, fyllenivået til resirkuleringsvannet osv.
+
+Modusen \aW{Kjøre} symboliseres med en hare~\textSymb{transport_mode}, modusen \aW{Arbeid} symboliseres av en skilpadde~\textSymb{working_mode}.
+
+Menylinjen ved nedre kanten viser menyene som er tilgjengelige: Trykk på midten av den berøringsfølsome skjermen (touch-screen), for visning av ytterligere menyer.
+
+\page [yes]
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+\startcolumns
+
+\startSymVpad
+\externalfigure[vpadTEnginOilPressure][height=1.7\lH]
+\SymVpad
+\textDescrHead{Motoroljetrykk}(rød) For lavt motoroljetrykk. Slå umiddelbart av motoren.
+
++\:Feilmelding \# 604
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningBattery][height=1.7\lH]
+\SymVpad
+\textDescrHead{Batteriladning}(rød) For lav batteriladestrøm. Ta kontakt med verkstedet.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningEngine1][height=1.7\lH]
+\SymVpad
+\textDescrHead{Motordiagnose}(gul) Feil i motorstyringen. Ta kontakt med verkstedet.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Verksted må oppsøkes}(gul) Standard kjøretøyvedlikehold har forfalt. Se til vedlikeholdsplanen.
+
++\:Feilmeldinger \# 650 til \# 653, eller \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBrakeError][height=1.7\lH]
+\SymVpad
+\textDescrHead{Bremsesystem}(rød) Feil i bremsesystemet. Ta kontakt med verkstedet.
+
++\:Feilmelding \#  902
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakePark][height=1.7\lH]
+\SymVpad
+\textDescrHead{Parkeringsbremse}(rød) Parkeringsbremsen er aktivert.
+
++\:Feilmelding \#  905
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTEngineHeating][height=1.7\lH]
+\SymVpad
+\textDescrHead{Forglødeanlegg}(gul) Motoren blir forglødet.
+
+En blinkende lampe indikerer, at det er registrert en feil i hendelsesminnet.
+\stopSymVpad
+
+\columnbreak
+
+\startSymVpad
+\externalfigure[vpadTFuelReserve][height=1.7\lH]
+\SymVpad
+\textDescrHead{Drivstoffnivå}(gul) Drivstoffnivå er svært lavt (reserve).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBlink][height=1.7\lH]
+\SymVpad
+\textDescrHead{Varselblinklys}(grønn) Varselblinklys er aktivert.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTLowBeam][height=1.7\lH]
+\SymVpad
+\textDescrHead{Parkeringslys}(grønn) Parkeringslys er koblet inn.
+\stopSymVpad
+
+\startSymVpad
+\HL\NC \externalfigure[vpadSyWaterTemp][height=1.7\lH]
+\SymVpad
+\textDescrHead{Temperatur}(rød) For høy temperatur på hydraulikkvæsken eller motoren. Ta kontakt med verkstedet.
+
++\:Feilmelding \# 700 eller \# 610
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningFilter][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filter er tett}(rød) Det kombinerte hydraulikkfilteret eller luftfilteret er tett.
+
++\:Feilmelding \# 702 eller \# 851
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTSpray][height=1.7\lH]
+\SymVpad
+\textDescrHead{Vannpistol}(gul) Høytrykksvannpumpen for vannpistolen er deaktivert.
+
+Bryter \textSymb{temoin_buse} i takpanelet.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTClear][height=1.7\lH]
+\SymVpad
+\textDescrHead{Feilmelding}(rød) En feilmelding foreligger i minnet til \Vpad. Trykk på tasten~\textSymb{vpadClear}, for å vise alle registrerte meldinger. Ta kontakt med verkstedet.
+\stopSymVpad
+
+\stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
+\page [yes]
+
+
+\section{Vpad-menyer}
+
+\start
+
+\setupTABLE [background=color,
+frame=off,
+option=stretch,textwidth=\makeupwidth]
+
+\setupTABLE [r] [each] [style=sans, background=color, bottomframe=on, framecolor=TableWhite, rulethickness=1.5pt]
+\setupTABLE [r] [first][backgroundcolor=TableDark, style=sansbold]
+\setupTABLE [r] [odd][backgroundcolor=TableMiddle]
+\setupTABLE [r] [even] [backgroundcolor=TableLight]
+\bTABLE [split=repeat]
+\bTABLEhead
+\bTR\bTD Meny \eTD\bTD Betegnelse\index{Vpad+Visning} \eTD\bTD Funksjon \eTD\eTR
+\eTABLEhead
+
+\bTABLEbody
+\bTR\bTD \externalfigure [v:symbole:clear] \eTD\bTD Feilmelding(er) \eTD\bTD Vise og kvittere (bekrefte) feilmeldingene som er registrert i Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:beacon]\externalfigure [v:symbole:beacon:black]} \eTD\bTD Roterende varsellys \eTD\bTD Roterende varsellys på/av \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:engine] \eTD\bTD Sanntidsdata \eTD\bTD Vise sanntids driftsdata for motor og hydraulikk\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:oneTwoThree] \eTD\bTD Teller \eTD\bTD Visning av driftstimetellere: Dagsteller, sesongteller, totalteller\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:serviceInfo] \eTD\bTD Vedlikeholdsintervall \eTD\bTD Viser datoen samt gjenværende driftstimer frem til neste vedlikehold eller til neste større service \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:trash] \eTD\bTD Teller \eTD\bTD Tilbakestille teller eller tilbakestille serviceintervall \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:sunglasses] \eTD\bTD Skjermmodus \eTD\bTD Koble om typen skjermbelysning mellom \aW{Dag} og \aW{Natt} \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:color] \eTD\bTD Lysstyrke/kontrast \eTD\bTD Innstilling for lysstyrken og kontrasten til skjermen \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:select] \eTD\bTD Valg \eTD\bTD Valg av den markerte innføringen eller kvittering av en feilmelding \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Bekreftelse \eTD\bTD Bekreftelse av valget \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Opp/ned, \\Pfeile \eTD\bTD Forskyve markering oppover/nedover eller øke/redusere valgt verdi \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Varseltone for rygging \eTD\bTD Aktivere/deaktivere varselsignal for rygging \eTD\eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+
+\subsubsubject{Øvrige visninger på Vpad}
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+\startcolumns
+
+\startSymVpad
+\externalfigure[sym:vpad:water]
+\SymVpad
+\textDescrHead{Fyllenivå ferskvann} Fyllenivået for ferskvann er ikke tilstrekkelig (maks. 190\,l; bak førerhuset).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater:yellow]
+\SymVpad
+\textDescrHead{Fyllenivå resirkuleringsvann}(gul) Fyllenivået til resirkuleringsvannet er under varmeveksleren. Det skjer ingen kjøling av hydraulikkvæsken og ingen oppvarming av befuktningssystemet til sugekanalen.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater]
+\SymVpad
+\textDescrHead{Fyllenivå resirkuleringsvann}(rød) Fyllenivået til resirkuleringsvannet er ikke tilstrekkelig (maks. 140\,l; under smussbeholderen).
+\stopSymVpad
+
+\stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\page [yes]
+
+\startsection[title={Innstilling av lysstyrken til skjermen},
+reference={sec:vpad:brightness}]
+
+Skjermen til \Vpad\ kan drives i to forhåndskonfigurerte lysstyrketrinn: Modus \aW{Dag}~– \textSymb{vpadSunglasses}, normal lysstyrke~– og modus \aW{Natt}~– \textSymb{vpadMoon}, redusert lysstyrke.
+Med tasten \textSymb{vpadColor} kan du få tilgang til forskjellige parametere.
+
+For å endre de forhåndskonfigurerte lysstyrketrinnene, gå frem som følger:
+
+\startSteps
+\item Trykk på midten av den berøringsfølsome skjermen (touchscreen), for å skrolle gjennom menylinjen på nedre skjermkanten.
+\item Trykk på symbolet \textSymb{vpadSunglasses} hhv.
+\textSymb{vpadMoon}, for å velge modusen, som du vil endre.
+\item Trykk \textSymb{vpadColor}, for å vise parametrene.
+\item Benytt pilsymbolene~\textSymb{vpadUp}\textSymb{vpadDown} til å markere parameteren, som du ønsker å endre, og velg den ut med~\textSymb{vpadSelect}.
+\item Endre verdien ved hjelp av symbolene\textSymb{vpadMinus}\textSymb{vpadPlus}. Forsiktig, ikke reduser lysstyrken så kraftig (\VpadOp{162} -255), at det ikke lenger er mulig å se noe på skjermen!
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadGPS}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\null}}{Trykk på midten av berøringsskjermen}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadOp{162}\hfill 15 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Velg med \textSymb{vpadSelect}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadNull}}}%
+\framed[backgroundscreen=.9]{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD \VpadOp{162}\hfill -80 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Endre verdi med \textSymb{vpadMinus}\textSymb{vpadPlus}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Bekreft verdien med \textSymb{vpadReturn}.
+\item Trykk en gang til på symbolet \textSymb{vpadReturn}, for å komme tilbake til hovedskjermen.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Driftstime- og kilometerteller},
+reference={vpad:compteurs}]
+
+Programvaren til \Vpad\ har tre forskjellige måleperioder~– \aW{Dag}, \aW{Sesong}, \aW{Total}~–, i hvilke det kan løpe forskjellige tellere, som \aW{Tilbakelagt strekning}, \aW{Driftstimer} (motor eller børste), \aW{Arbeidstid} (per fører).
+
+For å lese av tellerne eller å tilbakestille de, gå frem som følger:
+
+\startSteps
+\item Trykk på midten av berøringsskjermen, for å skrolle gjennom menylinjen.
+\item Trykk på symbolet \textSymb{vpadOneTwoThree}, for å vise dagstelleren.
+\item Ved hjelp av tilbake-/frem-symbolene~\textSymb{vpadBW}\textSymb{vpadFW} kan det skiftes over til total- eller sesongtelleren.
+\item Trykk på \textSymb{vpadTrash}, for å tilbakestille den viste telleren.
+\item Det vises et dialogvindu som oppfordrer deg til å bekrefte tilbakestillingen.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{120} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 87.4\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 62.0\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 240.2\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 901.9\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,1\,l/time \eTD\eTR
+\eTABLE}}{Trykk på symbolet~\textSymb{vpadOneTwoThree}, deretter på~\textSymb{vpadBW} eller~\textSymb{vpadFW}}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadBW}{vpadFW}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 522.0\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 662.8\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 1605.5\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 2608.4\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,0\,l/time \eTD\eTR
+\eTABLE}}{Bruk \textSymb{vpadTrash} for å tilbakestille telleren}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadTrash}{vpadNull}{vpadNull}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{136} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{137} \eTD\eTR
+\eTABLE}}{Bekreft med \textSymb{vpadTrash}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Legg inn passordet, når påkrevd, og bekreft så tilbakestillingen ved hjelp av symbolet \textSymb{vpadTrash}.
+\item Trykk på symbolet \textSymb{vpadReturn}, for å komme tilbake til hovedskjermen.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+\startsection[title={Vedlikeholdsintervaller},
+reference={vpad:maintenance}]
+
+Vedlikeholdsplanen til \sdeux\ omfatter to grunntyper av vedlikehold: standard vedlikehold og stor service (fagverksted som har serviceavtale med \boschung-kundeservice).
+
+For å lese av eller å tilbakestille tellerne, gå frem som følger:
+\startSteps
+\item Trykk på midten av berøringsskjermen, for å skrolle gjennom menylinjen.
+\item Trykk på symbolet \textSymb{vpadServiceInfo}, for å vise vedlikeholdsintervallene.
+\item Benytt pilsymbolene~\textSymb{vpadUp}\textSymb{vpadDown} for å skifte til ønsket intervall.
+\item Trykk på symbolet ~\textSymb{vpadTrash}, for å tilbakestille et vedlikeholdsintervall. Tast inn passordet ved hjelp av~\textSymb{vpadPlus}\textSymb{vpadMinus} og bekreft med~\textSymb{vpadSelect}).
+\item Det vises et dialogvindu som oppfordrer deg til å bekrefte tilbakestillingen.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadNull}{vpadNull}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD[nc=2] \VpadOp{190} \eTD\eTR
+\bTR\bTD \VpadOp{191}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{192}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR
+\bTR\bTD \VpadOp{193}\eTD\bTD \VpadOp{195}\hfill 2400\,h \eTD\eTR
+\eTABLE}}{Trykk på symbolet~\textSymb{vpadTrash}, for å tilbakestille et intervall}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD \hfill 2014-03-31 \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{002}\hfill 0000 \eTD\eTR
+\eTABLE}}{Tast inn passordet (tallkode)}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD[backgroundcolor=black,color=TableWhite] \VpadOp{041}\eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{042} \eTD\eTR
+\bTR\bTD \VpadOp{043} \eTD\eTR
+\eTABLE}}{Velg og bekreft med~\textSymb{vpadSelect}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Bekreft tilbakestillingen ved hjelp av~\textSymb{vpadSelect}.
+\item Trykk på symbolet \textSymb{vpadReturn}, for å komme tilbake til hovedskjermen.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Feilstyring via Vpad},
+reference={vpad:error}]
+
+
+\Vpad\ viser feil\index{Vpad+feilmeldinger}, som er diagnostisert av de elektroniske styresystemene og overført av CAN-Bus.
+Når en mindre alvorlige feil blir registrert, lyser symbolet~\textSymb{VpadTClear} (rødt).
+Når det dreier seg om en feil av høy prioritet, lyser symbolet~\textSymb{VpadTClear} og en alarmtone lyder i tillegg.
+For å stoppe alarmen, må feilmeldingen kvitteres (\aW{notert} bekreftes).
+
+For å lese feilmeldinger og kvittere de, gå frem som følger:
+
+\startSteps
+\item Trykk på symbolet~\textSymb{vpadClear} på skjermen til \Vpad.
+\item Trykk på symbolet~\textSymb{vpadClear}, for å kvittere den valgte meldingen.
+\item Ved siden av den kvitterte meldingen vises det nå et \aW{\#}-symbol, som marker meldingen som \aW{notert}, og markeringen hopper til neste melding (såfremt det finnes flere).
+\item Etter at alle meldingene er blitt kvittert, går visningen tilbake til hovedskjermen.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851a} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Visning av meldingene}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Kvitter med~\textSymb{vpadClear}}
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadBeam}{vpadEngine}}}%
+\framed{\null}}{Tilbake til hovedskjermen}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item For å vise meldingen på nytt, trykk på symbolet~\textSymb{vpadClear}. Feilmeldinger blir først slettet fra \Vpad\, når årsaken til problemet er fjernet.
+\stopSteps
+
+
+\subsection{De vanligste feilmeldingene (med feilsøk)}
+
+\subsubsubject{\VpadEr{604}} % {\#\ 604 Pression huile moteur basse}
+
++ \textSymb{vpadTEnginOilPressure}~– Slå umiddelbart av motoren. Kontroller oljenivået, ta kontakt med verkstedet.
+
+
+\subsubsubject{\VpadEr{609}} % {\#\ 609 Température eau refroidissement moteur haute}
+
++ \textSymb{vpadSyWaterTemp}~– Avbryt arbeidet. La motoren gå videre uten belastning og følg med på temperaturutviklingen:
+
+Når temperaturen synker, kontroller fyllenivåene på kjølevæske, motorolje og hydraulikkvæske samt tilstanden til kjøleren.
+Når fyllenivåene og kjøleren er i orden, kjør maskinen forsiktig til verkstedet for videre feildiagnose.
+
+\subsubsubject{\VpadEr{610}} % {\#\ 610 Température eau refroidissement moteur trop haute}
+
++ \textSymb{vpadSyWaterTemp}~– Avbryt arbeidet. Kontroller fyllenivåene på kjølevæsle og motorolje, ta omgående kontakt med verkstedet.
+
+
+\subsubsubject{\VpadEr{650}} % {\#\ 650 Se rendre à un garage}
+
++ \textSymb{vpadWarningService}~– Ta omgående kontakt med ditt verksted.
+% \VpadEr{651} % {\#\ 651 Moteur en mode urgence}
+
+
+\subsubsubject{\VpadEr{652}} % {\#\ 652 Inspection véhicule}
+% \VpadEr{653} % {\#\ 653 Grand service moteur}
+
++ \textSymb{vpadWarningService}~– Det neste standard vedlikeholdet har forfalt. Konsulter vedlikeholdsplanen og avtal en termin med ditt verksted.
+
+
+\subsubsubject{\VpadEr{700}} % {\#\ 700 Température d'huile hydraulique}
+
++ \textSymb{vpadSyWaterTemp}~– Avbryt arbeidet. La motoren gå videre uten belastning og følg med på temperaturutviklingen:
+
+Når temperaturen synker, kontroller fyllenivåene på kjølevæske, motorolje og hydraulikkvæske samt tilstanden til kjøleren.
+Når fyllenivåene og kjøleren er i orden, kjør maskinen forsiktig til verkstedet for videre feildiagnose.
+
+
+\subsubsubject{\VpadEr{702}} % {\#\ 702 Filtre d'huile hydraulique}
+
++ \textSymb{vpadWarningFilter}~– Hydraulikk-tilbakeløpet- og/eller sugefilteret er tett. Skift omgående ut filterelementet.
+% \VpadEr{703} % {\#\ 703 Vidange d'huile hydraulique}
+
+
+\subsubsubject{\VpadEr{800}} % {\#\ 800 Interrupteur d'urgence actionné}
+
++ \textSymb{vpadTClear}~– Du har betjent Nødstopp-bryteren. Slå av tenningen og start motoren på nytt, for å slette meldingen.
+
+
+\subsubsubject{\VpadEr{801}} % {\#\ 905 Frein à main actionné}
+
+Smussbeholderen er hevet eller ikke senket fullstendig. Hastigheten til kjøretøyet er begrenset til 5\,km/h, så lenge smussbeholderen ikke er senket.
+
+\subsubsubject{\VpadEr{851}} % {\#\ 851 Filtre à air}
+
++ \textSymb{vpadWarningFilter}~– Luftfilteret er tett. Skift omgående ut filterelementet.
+
+
+\subsubsubject{\VpadEr{902}} % {\#\ 902 Pression de freinage}
+
++ \textSymb{vpadTBrakeError}~– Bremsetrykket er ikke tilstrekkelig. Avbryt arbeidet og ta omgående kontakt med verkstedet.
+% \VpadEr{904} % {\#\ 904 Interrupteur de direction d'avancement}
+
+
+\subsubsubject{\VpadEr{905}} % {\#\ 905 Frein à main actionné}
+
++ \textSymb{vpadTBrakePark}~– Parkeringsbremsen er ikke løsnet fullstendig. Hastigheten til kjøretøyet er begrenset til 5\,km/h, så lenge parkeringsbremsen ikke er løsnet.
+
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+
+
+
+

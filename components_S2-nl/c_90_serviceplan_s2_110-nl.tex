@@ -1,0 +1,338 @@
+\startcomponent c_90_serviceplan_s2_110-nl
+\product prd_ba_s2_110-nl
+
+\chapter[sec:schedule]{Onderhoudsschema}
+
+\startregister[index][wartplan]{Onderhoudsschema+Voertuig}
+
+
+\section{Algemeen}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck \enskip Kwalificatie {\definedfont[SansBoldItalic] Check} \enskip}
+Controle, die door het\index{Kwalificatie+Onderhoudspersoneel} bedieningspersoneel van het voertuig zonder hulp van derden kan worden uitgevoerd. Basiskennis van de techniek van motorvoertuigen is wel een voorwaarde.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro \enskip Kwalificatie {\definedfont[SansBoldItalic] Servicewerk} \enskip}
+Regulier onderhoudswerk, dat moet worden uitgevoerd in het kader van de instandhouding. Het onderhoud moet in een erkende garage worden uitgevoerd door een vakman met het vereiste gereedschap.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial \enskip Kwalificatie {\definedfont[SansBoldItalic] Speciaal werk} \enskip}
+Speciaal\index{Speciaal werk} onderhoudswerk, dat alleen mag worden uitgevoerd door een persoon die een specifieke, door de \BoschungNote-klantendienst erkende scholing heeft doorlopen.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual \enskip Type {\definedfont[SansBoldItalic] Zichtcontrole} \enskip}
+Door middel van\index{Zichtcontrole} zichtcontrole uit te voeren controlepunt. Vastgestelde storingen of schade moeten de voor het onderhoud verantwoordelijke persoon worden meegedeeld.
+\stoptextrule
+}
+
+Bij alle onderhoudswerkzaamheden moet een onderscheid worden gemaakt tussen drie kwalificatieniveaus (eis aan personeel en uitrusting) en vier onderhoudstypen (soort werk).
+
+\startTwoPar
+{\em Kwalificatieniveaus:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:check}} Check \par
+\symDescr{\textSymb{maint:pro}} Servicewerk \par
+\symDescr{\textSymb{maint:special}} Speciaal werk \par
+\stop
+\TwoPar
+{\em Onderhoudstypen:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:visual}} Zichtcontrole \par
+\symDescr{\textSymb{maint:function}} Functiecontrole \par
+\symDescr{\textSymb{maint:level}} Vulstandcontrole \par
+\symDescr{\textSymb{maint:exchange}} Vervanging van bedrijfsstoffen \par
+\symDescr{\textSymb{maint:generic}} Overige werkzaamheden \par
+\stop
+\stopTwoPar
+
+\handItem{Zie hiervoor de uitleg in de margekolommen.}
+
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtfunction \enskip Type {\definedfont[SansBoldItalic] Functiecontrole} \enskip}
+Controles die\index{Controle+Functie} verdergaan dan een zichtcontrole, \eG\ functiecontrole van de rem, controle van de toestand van componenten, handmatige controle op vaste zitting.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtlevel \enskip Type {\definedfont[SansBoldItalic] Vulstandcontrole} \enskip}
+De\index{Controle+Vulstand} vulstandcontrole van bedrijfsstoffen omvat de controle~– door zichtcontrole of met de meetstaaf~– en evt. het bijvullen met de betreffende bedrijfsstof. {\em Hiertoe behoort ook de centrale smering.} Lees daarvoor de paragraaf \about[sec:liqquantities], waar u informatie over kwaliteit en hoeveelheid van de bedrijfsstoffen vindt.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtexchange \enskip Type {\definedfont[SansBoldItalic] Vervanging van bedrijfsstoffen} \enskip}
+Daartoe\index{Bedrijfsstoffen+Vervanging} behoort de vervanging van de bedrijfsstof en de aansluitende vulstandcontrole. Informatie over kwaliteit en hoeveelheid van de bedrijfsstoffen vindt u \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+\starttextrule{\Pmtgeneric \enskip Type {\definedfont[SansBoldItalic] Overige werkzaamheden} \enskip}
+Verschillende, overeenkomstig de aanwijzingen vakkundig uit te voeren onderhoudswerkzaamheden.
+\stoptextrule
+}%
+
+\blank[big]
+\starttextbackground[CB]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+Gelieve bij de uitvoering van de controle- en onderhoudspunten de veiligheidsvoorschriften en de voorschriften ter bescherming van het milieu in acht te nemen. \BosFull{boschung} wijst elke aansprakelijk voor persoonlijke en materiële schade als gevolg van de niet-inachtneming van deze voorschriften van de hand.
+\stopPictPar
+\stoptextbackground
+\page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Onderhoudsschema van het voertuig}
+
+Het\index{Controle, periodieke} onderhoud van het voertuig bestaat uit regelmatig uit te voeren onderhoudswerkzaamheden, uit periodieke controles (checks) en een eenmalig uit te voeren service\footnote{Alle opgaven over uren moeten worden opgevat als opgaven over bedrijfsuren}:
+
+\starttextbackground[FC]
+\starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Werkzaamheden \NC 50\,h\NC Eerste service na 50\,h\NC \NR
+\NC\NC 600\,h\NC Regulier onderhoud om de 600\,h / 1 jaar\NC \NR
+\NC\NC 1200\,h\NC Regulier onderhoud om de 1200\,h / 2 jaar\NC \NR
+\NC\NC 2400\,h \NC Regulier onderhoud om de 2400\,h / 4 jaar\NC \NR
+\NC\NC 4800\,h \NC Regulier onderhoud om de 4800\,h / 8 jaar\NC \NR
+\NC \Pmtcheck\enskip Checklist\NC Dagelijks \NC Tijdens het hele werkseizoen \NC \NR
+\NC\NC Wekelijks\NC Tijdens het hele werkseizoen\NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Het volgende onderhoudsschema heeft betrekking op het basisvoertuig. Neem ook het onderhoudsschema bij de aggregaten (\eG\ veegmachine, vuilcontainer) vanaf \at{pagina}[sec:schedaggr] in acht.
+
+Bij dubbele opgaven over de onderhoudsinterval (\eG\ \quotation{Om de 600\,h~/ 12~maanden}) bezit telkens het het eerst optredende moment prioriteit.
+
+De werkzaamheden van de afzonderlijke onderhoudsschema´s~– behalve het eenmalige onderhoud na 50~uur~–
+moeten cumulatief worden uitgevoerd: Om de 1200~bedrijfsuren moet het 600-uur
+onderhoud {\em en} het 1200-uur onderhoud worden uitgevoerd; enz.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Dagelijkse controle}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Soort\eTD \bTD Dagelijkse controle\eTD \bTD \Tcheck \eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Voertuig reinigen\eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning]\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Voertuig controleren op eventuele beschadigingen\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Controle op lekkages\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Motoroliepeil van de dieselmotor controleren (met meetstaaf!)\eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Koelvloeistofpeil van de dieselmotor controleren\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Peil van de hydraulische vloeistof controleren (kijkglas aan de tank)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Brandstofpeil controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Peil van de vloeistof voor de ruitensproeier controleren\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Functiecontrole van de controlelampen en van de verlichting van instrumentenpaneel en controlepaneel \eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Functiecontrole van de vastzetrem\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Functiecontrole van de verlichtings- en signaalinrichtingen\eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting]\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+\subsection[table:scheduleweekly]{Wekelijkse controle}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Soort \eTD \bTD Wekelijkse controle \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Bandenspanning controleren (druk zie wieltypeplaatje in de bestuurderscabine)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Luchtfilterpatronen controleren en evt. reinigen\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Alle smeerpunten smeren (chassis, schemelstuurinrichting) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection [sec:50h]{Onderhoud na 50\,h~– eenmalig}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Soort\eTD \bTD Onderhoud na 50\,h~– eenmalig\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Koelvloeistofpeil van de dieselmotor controleren\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Luchtfilterpatroon reinigen; evt. vervangen\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Spanning van de poly-V-riem van de dieselmotor controleren, evt. vervangen\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Retour- en aanzuigfilter voor hydraulische olie vervangen\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Peil van de hydraulische vloeistof controleren (kijkglas aan de tank)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Centrale smeerinstallatie (optie): smeermiddelvoorraad en -consistentie controleren\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Alle smeerpunten smeren (onderstel, schemelstuurinrichting)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Vulstand van de vloeistof voor de ruitensproeier controleren\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de bestuurderscabine controleren\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de motor aan het chassis controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de pompen aan de motor controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de combikoeler controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de assen controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Wielen\index{Aandraaimoment+Wielen} controleren op vaste zitting (aandraaimoment: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bandenspanning controleren (druk zie wieltypeplaatje in de bestuurderscabine)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Weg van de hendel van de vastzetrem controleren/bijstellen\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Toestand van de accu controleren; polen/klemmen reinigen\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Instelling van de koplampen conform verkeersreglement controleren, evt. instellen\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Spoelkernen van de magneetkleppen smeren met kopervet\eTD \bTD \Tspecial \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Gebeurtenissengeheugen (Vpad en motorbesturingsapparaat) uitlezen; evt. oorzaken van de fouten elimineren\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection {Onderhoud om de 600\,h / 12 maanden}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Soort\eTD \bTD Onderhoud om de 600\,h / 12 maanden\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Olieverversing dieselmotor\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilDraining]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Motoroliefilter vervangen\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Brandstoffilter vervangen\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:fuelFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Dichtheid van de motor en van de componenten in de motorruimte controleren\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Dichtheid en bevestiging van de uitlaatinstallatie controleren\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Toestand en spanning van de poly-V-riem van de dieselmotor controleren, evt. vervangen\eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Koelvloeistofpeil van de dieselmotor controleren\eTD \bTD \Tcheck\eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Luchtfilterpatroon vervangen\eTD \bTD \Tcheck\eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Retour- en aanzuigfilter voor hydraulische olie vervangen\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Vulstand van de hydraulische vloeistoftank controleren\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Centrale smeerinstallatie (optie): smeermiddelvoorraad en -consistentie controleren\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Alle smeerpunten smeren (onderstel, schemelstuurinrichting)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Vulstand van de vloeistof voor de ruitensproeier controleren\eTD \bTD \Tcheck\eTD \bTD \inP[sec:liquids]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de bestuurderscabine controleren\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de motor aan het chassis controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de pompen aan de motor controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de combikoeler controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de assen controleren\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Weg van de hendel van de vastzetrem controleren/bijstellen\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Remtrommels en -blokken controleren/reinigen; remmechanisme reinigen\eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Wielen\index{Aandraaimoment+Wielen} controleren op vaste zitting (aandraaimoment: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Bandenspanning controleren (druk zie wieltypeplaatje in de bestuurderscabine)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Toestand van de accu controleren; polen/klemmen reinigen\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Instelling van de koplampen conform verkeersreglement controleren, evt. instellen\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Spoelkernen van de magneetkleppen smeren met kopervet\eTD \bTD \Tspecial \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+% \bTR \bTD \Tgen \eTD \bTD Roestbescherming controleren, evt. bijwerken/vernieuwen\eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Gebeurtenissengeheugen (Vpad en motorbesturingsapparaat) uitlezen; evt. oorzaken van de fouten elimineren\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Onderhoud om de 1200\,h / 2 jaar}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Soort\eTD \bTD Onderhoud om de 1200\,h / 2 jaar\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Hydraulische olie verversen (tank)\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Koelmiddel (R134a) van de airco vernieuwen\eTD \bTD \Tspecial \eTD \bTD \emptY\eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Onderhoud om de 2400\,h / 4 jaar}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Soort\eTD \bTD Onderhoud om de 2400\,h / 4 jaar\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Tandriem van de dieselmotor vervangen \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Onderhoud om de 4800\,h / 8 jaar}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Soort\eTD \bTD Onderhoud om de 4800\,h / 8 jaar\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Hydraulische slangleidingen controleren, evt. vervangen\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Waterpomp vervangen (gelijktijdig met de tandriem) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Onderhoud van de aggregaten}
+
+Het onderhoud\startregister[index][wartplanAgg]{Onderhoudsschema+Aggregaten} van de aggregaten omvat regelmatig uit te voeren onderhoudswerkzaamheden\index{Periodieke controle} zoals dagelijkse en wekelijkse controles:
+
+\starttextbackground[FC]
+\starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Werkzaamheden \NC 50\,h\NC Eerste service na 50\,h\NC \NR
+\NC\NC 600\,h\NC Regulier onderhoud om de 600\,h / 1 jaar\NC \NR
+\NC \Pmtcheck\enskip Checklist\NC Dagelijks \NC Tijdens het hele werkseizoen \NC \NR
+\NC\NC Wekelijks\NC Tijdens het hele werkseizoen\NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Het volgende onderhoudsschema heeft betrekking op standaard aggregaten, waarmee de \sdeux\ gewoonlijk is uitgerust. Voor speciale aggregaten die niet in deze handleiding zijn beschreven, moet het onderhoudsschema van het betreffende aggregaat in acht worden genomen.
+
+
+\subsection[table:scheduledaily]{Dagelijkse controle}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Soort\eTD \bTD Dagelijkse controle\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Vuilcontainer en recyclinginrichting reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zuigmond en zuigkanaal reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection[table:scheduledaily]{Wekelijkse controle}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Type \eTD \bTD Wekelijkse controle \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Slijtage van bezems en frontbezem (optie) controleren \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Klep en rubbers van de zuigmond controleren \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Alle smeerpunten smeren (vuilcontainer, bezems, zuigmond) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Onderhoud na 50\,h~– eenmalig}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD
+Art \eTD \bTD Onderhoud na 50\,h~– eenmalig \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de bezems controleren \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Klep en rubbers van de zuigmond instellen \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Onderhoud om de 600\,h / 12 maanden}
+
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Soort \eTD \bTD Onderhoud om de 600\,h / 12 maanden \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Bevestigingen van de bezems controleren \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Klep en rubbers van de zuigmond instellen \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\bTR \bTD \Tchg \eTD \bTD Olieverversing hogedrukwaterpomp voor waterpistool (optie) \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+\stopregister[index][wartplanAgg]
+\stop
+
+
+\stopcomponent
+% vim: fdm=indent
+
