@@ -248,7 +248,6 @@ notamment en matière de protection de l’environnement.
 \stopsection
 
 
-
 \startsection [title={Tuyau d’aspiration à main},
 							reference={sec:using:suction:hose},
 							]
@@ -304,6 +303,51 @@ pour désactiver la pompe à eau haute pression.
 \item Exercez une brève traction sur le tuyau pour lâcher le cran de blocage et enrouler le tuyau.
 \item Remettez le pistolet dans son logement et fermez le portillon latéral.
 \stopSteps
+
+\stopsection
+
+\page [yes]
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Travailler avec le troisième balai (option)},
+							reference={sec:using:frontBrush},
+							]
+
+\startSteps
+\item Procédez\index{balayage} à la mise en service du véhicule selon la procédure décrite \in{§}[sec:using:start], \atpage[sec:using:start].
+\item Activez\index{3\high{e} balai} le mode \quote{travail}
+(pressez sur le bouton à l’extrémité du sélecteur de marche).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Vérifiez que le 3\high{e} balai soit activé à l'écran du Vpad
+(voir \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK},\atpage[vpad:menu]).
+\item Pressez la touche \textSymb{joy_key_frontbrush_act} pour actionner le système hydraulique du 3\high{e} balai.
+\item Pressez la touche \textSymb{joy_key_frontbrush_left} ou \textSymb{joy_key_frontbrush_right} pour actionner la rotation du 3\high{e} balai, selon le sens de rotation souhaité.
+
+\item Ajustez la vitesse de rotation du balai au moyen des touches \textSymb{joy_key_frontbrush_increase}
+et \textSymb{joy_key_frontbrush_decrease} de la console de médiane.
+
+\item Positionnez le balai au moyen des joysticks selon l'illustration ci||dessous.
+
+\stopSteps
+
+{\md Remarque:} {\lt pour déplacer les balais latéraux, pressez la touche \textSymb{joy_key_frontbrush_act} pour désactiver le système hydraulique du 3\high{e} balai.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Positionnement du troisième balai}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Déplacez le balai haut|/|bas; gauche|/|droite}
+{\externalfigure [work:frontBrush:incline]}{Inclinez le balai sur l'axe transversal|/|longitudinal}
+\stopcombination}
+\stop
 
 
 

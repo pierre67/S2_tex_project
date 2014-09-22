@@ -86,7 +86,14 @@ Le rang du bas affiche les menus disponibles: pressez le centre de l’écran ta
 \page [yes]
 
 
-\startcolumns
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},
+							after={\nobreak\hrule\blank [2*medium]\page[preference]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+% \startcolumns
+
+\subsection{Témoins d'avertissement affichés à l’écran du Vpad}
+
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
@@ -111,11 +118,21 @@ Le rang du bas affiche les menus disponibles: pressez le centre de l’écran ta
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Aller au garage} (jaune) L’échéance du prochain service d’entretien est atteinte ou un défaut du moteur
-est enregistré.
+\textDescrHead{Aller au garage} (jaune) L’échéance du prochain service d’entretien est atteinte
+(voir \about [sec:schedule] \atpage [sec:schedule])
+ou un défaut du moteur nécessitant l'intervention d'un spécialiste est enregistré.
 
 
 +\:message d’erreur \# 650 à \# 653, ou \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filtre antiparticule} (jaune) La procédure de régénération du filtre antiparticule démarrera
+dès que les conditions le permettront.
+
+{\md Note:} {\lt il est préférable de ne pas arrêter le moteur lorsque le témoin est allumé.}
 \stopSymVpad
 
 \startSymVpad
@@ -180,9 +197,8 @@ contactez votre garage.
 \startSymVpad
 \externalfigure[vpadTSpray][height=1.7\lH]
 \SymVpad
-\textDescrHead{Pistolet d’eau} (jaune) La pompe haute pression pour le pistolet d’eau est activée.
-
-Interrupteur \textSymb{temoin_buse} de la console de plafond
+\textDescrHead{Pistolet d’eau} (jaune) La pompe haute pression pour le pistolet d’eau est activée
+(Interrupteur \textSymb{temoin_buse} sur la console au plafond de la cabine).
 \stopSymVpad
 
 \startSymVpad
@@ -192,14 +208,15 @@ Interrupteur \textSymb{temoin_buse} de la console de plafond
 Pressez sur \textSymb{vpadClear} pour afficher la liste du|/|des message(s) présent(s); alertez le garage.
 \stopSymVpad
 
-\stopcolumns
+% \stopcolumns
 
 \stopsection
 
 \page [yes]
 
 
-\section{Description des menus du Vpad}
+\startsection [title={Description des menus du Vpad},
+				reference={vpad:menu}]
 
 \start
 
@@ -229,14 +246,20 @@ Pressez sur \textSymb{vpadClear} pour afficher la liste du|/|des message(s) pré
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Touche de confirmation \eTD\bTD Valider la sélection \eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Flèches haut|/|bas \eTD\bTD Mettre en surbrillance la ligne supérieure|/|inférieure \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Signal de marche arrière \eTD\bTD Activer|/|Désactiver le signal {\em bip!} de marche arrière \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Arrêt de l'écran \eTD\bTD Une pression prolongée (env. 5\,s) provoque l'arrêt de l'écran du Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Troisième balai\index{3\high{e} balai} (option) \eTD\bTD Activer|/|désactiver les fonctions du 3\high{e} balai.
+Il peut alors être activé selon la procédure décrite à la page \at[sec:using:frontBrush]. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
-\subsubsubject{Autres symboles affichés à l’écran du Vpad}
 
 
-\startcolumns
+\subsection{Autres symboles affichés à l’écran du Vpad}
+
+
+\subsubsubject{Réserve d'eau claire et de recyclage}
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -258,9 +281,76 @@ Pressez sur \textSymb{vpadClear} pour afficher la liste du|/|des message(s) pré
 \stopSymVpad
 
 
-\stopcolumns
+\subsubsubject{Système d'aspiration} % nouveau
+
+{\em Ce symbole est affiché uniquement lorsque les balais ne sont pas activés.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Bouche d'aspiration} Système\index{bouche d'aspiration} d'aspiration activé:
+la bouche d'aspiration est abaissée et la turbine est activée.
+\stopSymVpad
+
+
+\subsubsubject{Système de balais latéraux} % nouveau
+
+{\em Ce symbole est affiché uniquement lorsque le 3\high{e} balai n'est pas activé.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Balais latéraux} Les balais\index{balayage}\index{balais latéraux} sont activés. La vitesse de rotation en \% de la vitesse
+maximale [V\low{max}] est affichée au-dessous du symbole, la force de délestage
+est indiquée au-dessus de chaque balai (\type{~}~= flottante, 14~= délestage maximum).
+
+{\md Délestage:} {\lt plus la force de délestage est faible, plus la pression des balais au sol est élevée.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Position flottante} (bande inférieure verte)
+Une pression prolongée (env. 2\,s) du joystick vers l'avant supprime le délestage
+du balai; le balai repose sur le sol de tout son poids. La vitesse de rotation des balai est à 60\,\% de V\low{max}
+(exemple).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Balais latéraux} Les balais sont activés. La rotation est à l'arrêt et les balais sont en position haute.
+\stopSymVpad
+
+
+\subsubsubject{Troisième Balai (option)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Troisième balai} Le 3\high{e} balai\index{3\high{e} balai} est activé. La vitesse de rotation en \% de la vitesse
+maximale [V\low{max}] est affichée au-dessous du symbole.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Position flottante} (bande inférieure verte)
+Une pression prolongée (env. 2\,s.) du joystick vers l'avant supprime le délestage
+du balai; le balai repose sur le sol de tout son poids. La vitesse de rotation du balai est à 70\,\% de V\low{max}
+(exemple).
+
+{\md Sens de rotation:} {\lt la bande supérieure indique le sens de rotation actif
+(flèche noire sur rectangle jaune).}
+\stopSymVpad
+
+\stopsection
+
 
 \page [yes]
+
 
 \startsection[title={Réglage de la luminosité de l’écran},
               reference={sec:vpad:brightness}]
@@ -281,7 +371,7 @@ Pour régler la luminosité prédéfinie, procédez comme suit:
 \startcombination [3*1]
 {\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
 \VpadScreenConfig{
-\VpadFoot{\VpadPictures{vpadGPS}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadServiceInfo}{vpadSunglasses}{vpadColor}}}%
 \framed{\null}}{Pressez sur l’écran tactile}
 {\setups[VpadFramedFigure]
 \VpadScreenConfig{
@@ -336,7 +426,7 @@ Pour consulter ou réinitialiser les compteurs, procédez comme suit:
 \startcombination [3*1]
 {\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
 \VpadScreenConfig{
-\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadServiceInfo}{vpadSunglasses}{vpadColor}}}%
 \framed{\bTABLE
 \bTR\bTD \VpadOp{120} \eTD\eTR
 \bTR\bTD \VpadOp{123}\hfill 87.4\,h \eTD\eTR
