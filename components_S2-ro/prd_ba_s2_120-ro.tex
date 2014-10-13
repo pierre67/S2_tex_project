@@ -1,6 +1,6 @@
 \enabledirectives [system.synctex]
 
-\startproduct prd_ba_s2_120-sv
+\startproduct prd_ba_s2_120-ro
 
 \enablemode[%
 screen,
@@ -12,7 +12,7 @@ myriadpro,
 \project prj_ba_s2
 
 \version [final]
-\setups [SWEDISH,VpSWEDISH]
+\setups [ROMANIAN,VpGERMAN]
 
 %===============================================================================
 %===============================================================================
@@ -48,10 +48,10 @@ color=LinkColor,
 openaction={firstpage,UseOutlines},
 menu=on,
 display=TwoColumn,
-title={Bruksanvisning S2},
-author={Pierre Bovet (Teknisk redaktion Boschung, Matran)},
-subtitle={med underhållsschema},
-keyword={S2, bruksanvisning, underhållsschema, handbok, manual}
+title={Instrucțiuni de operare S2},
+author={Pierre Bovet ( Redactare tehnică Boschung, Matran)},
+subtitle={cu plan de întreținere},
+keyword={S2, Instrucțiuni de operare, Wartungsplan, Manual, Manual}
  ]
 \stopmode
 \startmode[print]
@@ -71,10 +71,10 @@ color=LinkColor,
 openaction={firstpage,UseOutlines},
 menu=on,
 display=TwoColumn,
-title={Manuel d’utilisation S2},
-author={Pierre Bovet (Teknisk redaktion Boschung, Matran)},
-subtitle={med underhållsschema},
-keyword={S2, bruksanvisning, underhållsschema, handbok, manual}
+title={Instrucțiuni de operare S2},
+author={Pierre Bovet ( Redactare tehnică Boschung, Matran)},
+subtitle={cu plan de întreținere},
+keyword={S2, Instrucțiuni de operare, Wartungsplan, Manual, Manual}
 ]
 \stopmode
 \setupinteractionscreen [option=bookmark]
@@ -86,8 +86,8 @@ keyword={S2, bruksanvisning, underhållsschema, handbok, manual}
 
 \startfrontmatter
  % \setuppagenumbering [conversion=romannumerals]
- \component c_00_front_s2_120-sv
- \marking[header]{Innehålls}
+ \component c_00_front_s2_120-ro
+ \marking[header]{Cuprins}
 \completecontent
 
 \stopfrontmatter
@@ -95,43 +95,43 @@ keyword={S2, bruksanvisning, underhållsschema, handbok, manual}
 \startbodymatter
 \define\LASTchapter{10}
 % \showframe
-\component c_10_safety_s2_120-sv
-\component c_20_prescriptions_s2_120-sv
-\component c_30_overview_s2_120-sv
-\component c_40_control_s2_120-sv
-\component c_45_vpad_s2_120-sv
-\component c_60_work_s2_120-sv
-\component c_80_maintenance_s2_120-sv
-\component c_90_serviceplan_s2_120-sv
+\component c_10_safety_s2_120-ro
+\component c_20_prescriptions_s2_120-ro
+\component c_30_overview_s2_120-ro
+\component c_40_control_s2_120-ro
+\component c_45_vpad_s2_120-ro
+\component c_60_work_s2_120-ro
+\component c_80_maintenance_s2_120-ro
+\component c_90_serviceplan_s2_120-ro
 
-%\page[yes,empty,right]
+% \page[yes,empty,right]
 \stopbodymatter
 
 \startbackmatter
 \definelayer [bg:toc] [state=stop]
-\marking[header]{Ordindex}
-\IndexHead{Ordindex}
+\marking[header]{Index}
+\IndexHead{Index}
 {\switchtobodyfont[small]\placeindex [n=3]}
-\page[yes,right]
-\marking[header]{Figurindex}
+\page[empty]
+\marking[header]{Index imagini}
 \startcolumns[n=3]
 \setupselector[caption][n=2]
-\IndexHead{Figurindex}
+\IndexHead{Index imagini}
 \placelist[fig]
 \stopcolumns
 \page[yes]
 
 \setuppagenumbering[state=stop]
- \component c_99_back_s2_120-sv
+ \component c_99_back_s2_120-ro
 \stopbackmatter
 
-\seeindex{Service}{Underhåll}
-\seeindex{Reparation}{Underhåll}
-\seeindex{Hastighetsreglering}{Farthållare}
-\seeindex{Huvudbrytare}{Batterifrånskiljare}
-\seeindex{Chassi}{Kaross}
-\seeindex{Kaross}{Chassi}
-\seeindex{Golvkontakt}{Fotkontakt}
+\seeindex{Service}{întreținere}
+\seeindex{Mentenanță}{întreținere}
+\seeindex{Regulator viteză}{Tempomat}
+\seeindex{Întrerupător principal}{Separator baterii}
+\seeindex{Șasiu}{caroserie}
+\seeindex{Caroserie}{Șasiu}
+\seeindex{Întrerupător de podea}{Întrerupător de picior}
 
 \pagebreak[yes,blank,right]
 % \showlayout

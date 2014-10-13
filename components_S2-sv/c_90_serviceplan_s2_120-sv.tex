@@ -2,86 +2,68 @@
 \product prd_ba_s2_120-sv
 
 
-\chapter[sec:schedule]{Wartungsplan}
+\chapter[sec:schedule]{Underhållsschema}
 
-\startregister[index][wartplan]{Wartungsplan+Fahrzeug}
+\startregister[index][wartplan]{Underhållsschema+Fordon}
 
 
-\section{Allgemeines}
+\section{Allmänt}
 
 \placeNote[][service_picto]{}{%
 \noteF
-\starttextrule{\Pmtcheck \enskip Qualifikation {\definedfont[SansBoldItalic] Check} \enskip}
-Kontrolle, die vom\index{Qualifikation+Wartungspersonal} Betriebspersonal
-des Fahrzeuges ohne fremde Hilfe ausgeführt werden kann. Grundkenntnisse der
-Motorfahrzeugtechnik sind allerdings Voraussetzung.
+\starttextrule{\Pmtcheck \enskip Kvalifikation{\definedfont[SansBoldItalic] Inspektion} \enskip}
+Kontroller som kan genomföras\index{Driftspersonal+Underhållspersonal} av driftspersonal utan extern hjälp. Grundläggande kunskaper om fordonsteknik förutsätts dock.
 \stoptextrule \blank[line]
 
-\starttextrule{\Pmtpro \enskip Qualifikation {\definedfont[SansBoldItalic] Servicearbeit} \enskip}
-Reguläre Wartungsarbeit, die im Rahmen der Instandhaltung durchzuführen ist. Die
-Wartung muss in einer zugelassenen Werkstatt von einer Fachkraft mit dem
-erforderlichen Werkzeug durchgeführt werden.
+\starttextrule{\Pmtpro \enskip Kvalifikation{\definedfont[SansBoldItalic] Servicearbete} \enskip}
+Vanliga underhållsarbeten som ska genomföras inom ramen för fordonets service. Underhållsarbeten måste genomföras av fackpersonal i en auktoriserad verkstad med lämpliga verktyg.
 \stoptextrule \blank[line]
 
-\starttextrule{\Pmtspecial \enskip Qualifikation {\definedfont[SansBoldItalic] Spezialarbeit} \enskip}
-Spezielle\index{Spezialarbeit} Wartungsarbeit, die nur von einer Person
-ausgeführt werden darf, die eine spezifische, vom \BoschungNote||Kundendienst
-anerkannte Schulung absolviert hat.
+\starttextrule{\Pmtspecial \enskip Kvalifikation{\definedfont[SansBoldItalic] Specialarbeten} \enskip}
+Speciella\index{Specialarbeten} underhållsarbeten får endast utföras av personer som har genomgått en specialutbildning som certifierats av \BoschungNote-kundtjänst. 
 \stoptextrule \blank[line]
 
-\starttextrule{\Pmtvisual \enskip Typ {\definedfont[SansBoldItalic] Sichtkontrolle} \enskip}
-Mittels\index{Sichtkontrolle} Sichtprüfung durchzuführender Kontrollpunkt.
-Festgestellte Störungen oder Schäden müssen der für die Wartung zuständigen
-Person mitgeteilt werden.
+\starttextrule{\Pmtvisual \enskip Typ {\definedfont[SansBoldItalic] Visuell kontroll} \enskip}
+Kontroll\index{Visuell kontroll} som ska genomföras visuellt.
+Underrätta omedelbart ansvarig person om du upptäcker skador eller störningar.
 \stoptextrule
 }
 
-Bei allen Wartungsarbeiten sind drei Qualifikationsstufen (Anforderung an
-Personal und Ausrüstung) und vier Wartungstypen (Art der Arbeit) zu
-unterscheiden.
+Vid alla underhållsarbeten skiljer man mellan tre olika kvalifikationsnivåer (krav på personal och utrustning) och fyra underhållstyper (typ av arbete).
 
 \startTwoPar
-{\em Qualifikationsstufen:}	\par \blank [medium]
-\start \setupwhitespace	[none]
-\symDescr{\textSymb{maint:check}} Check \par
-\symDescr{\textSymb{maint:pro}} Servicearbeit \par
-\symDescr{\textSymb{maint:special}} Spezialarbeit	\par
+{\em Kvalifikationsnivåer:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:check}} Inspektion \par
+\symDescr{\textSymb{maint:pro}} Servicearbete \par
+\symDescr{\textSymb{maint:special}} Specialarbete \par
 \stop
 \TwoPar
-{\em Wartungstypen:}	\par \blank [medium]
-\start \setupwhitespace	[none]
-\symDescr{\textSymb{maint:visual}} Sichtkontrolle	\par
-\symDescr{\textSymb{maint:function}} Funktionskontrolle	\par
-\symDescr{\textSymb{maint:level}} Füllstandskontrolle \par
-\symDescr{\textSymb{maint:exchange}} Betriebsstoffaustausch \par
-\symDescr{\textSymb{maint:generic}} Sonstige Tätigkeiten \par
+{\em Typer av underhåll:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:visual}} Visuell kontroll\par
+\symDescr{\textSymb{maint:function}} Funktionskontroll \par
+\symDescr{\textSymb{maint:level}} Nivåkontroll\par
+\symDescr{\textSymb{maint:exchange}} Byte av drivmedel\par
+\symDescr{\textSymb{maint:generic}} Övriga arbeten \par
 \stop
 \stopTwoPar
 
-\handItem{Siehe hierzu die Erläuterungen in den Randspalten.}
+\handItem{Se förklaringar i kantspalterna.}
 
 
 \placeNote[][service_picto]{}{%
- \noteF
-\starttextrule{\Pmtfunction \enskip Typ {\definedfont[SansBoldItalic] Funktionskontrolle} \enskip}
-Kontrollen, die\index{Kontrolle+Funktion} über eine Sichtprüfung
-hinausgehen, \eG\ Funktionskontrolle der Bremse, Zustandskontrolle von
-Bauteilen, manuelle Kontrolle auf festen Sitz.
+\noteF
+\starttextrule{\Pmtfunction \enskip Typ {\definedfont[SansBoldItalic] Funktionskontroll} \enskip}
+Kontroller som\index{Kontroll+Funktion} går utöver en visuell kontroll, t.ex.funktionskontroll av bromsarna, kontroll av komponenters skick, manuell kontroll att delar sitter ordentligt.
 \stoptextrule \blank[big]
-\starttextrule{\Pmtlevel \enskip Typ {\definedfont[SansBoldItalic] Füllstandskontrolle} \enskip}
-Die\index{Kontrolle+Füllstand} Füllstandskontrolle von Betriebsstoffen umfasst
-die Kontrolle~– per Sichtprüfung oder mit dem Messstab~– sowie ggf. das
-Auffüllen mit dem entsprechenden Betriebsstoff. {\em Hierzu zählt auch die
-Zentralschmierung.} Lesen Sie dazu den Abschnitt \about[sec:liqquantities],
-wo Sie Informationen zu Qualität und Menge der Betriebsstoffe finden.
+\starttextrule{\Pmtlevel \enskip Typ {\definedfont[SansBoldItalic] Nivåkontroll} \enskip}
+Nivåkontrollen\index{Kontroll+Nivå} omfattar kontroll av nivån på drivmedel~– visuellt eller med mätsticka~– samt påfyllning av respektive medel. {\em Hit hör även centralsmörjningen.} Läs igenom avsnittet \about[sec:liqquantities], där du hittar mer information om drivmedlens kvalitet och mängd.
 \stoptextrule \blank[big]
-\starttextrule{\Pmtexchange \enskip Typ {\definedfont[SansBoldItalic] Betriebsstoffaustausch} \enskip}
-Dazu\index{Betriebsstoffe+Austausch} gehört der Wechsel des Betriebsstoffs
-sowie die anschließende Füllstandskontrolle. Informationen zu Qualität und
-Menge der Betriebsstoffe finden Sie \atpage[sec:liqquantities].
+\starttextrule{\Pmtexchange \enskip Typ {\definedfont[SansBoldItalic] Byte av drivmedel} \enskip}
+Hit\index{Drivmedel+Byte} hör påfyllning av drivmedel och efterföljande nivåkontroll. Information om drivmedlens kvalitet och mängd hittar du på \atpage[sec:liqquantities].
 \stoptextrule \blank[big]
-\starttextrule{\Pmtgeneric \enskip Typ {\definedfont[SansBoldItalic] Sonstige Tätigkeiten} \enskip}
-Verschiedene, entsprechend der Anweisungen fachgerecht auszuführende Wartungsarbeiten.
+\starttextrule{\Pmtgeneric \enskip Typ {\definedfont[SansBoldItalic] Övriga arbeten} \enskip} Olika underhållsarbeten som ska genomföras i enlighet med anvisningarna.
 \stoptextrule
 }%
 
@@ -90,48 +72,37 @@ Verschiedene, entsprechend der Anweisungen fachgerecht auszuführende Wartungsar
 \starttextbackground[FC]
 \setupparagraphs [PictPar][1][width=6em,inner=\hfill]
 \startPictPar\PMgeneric~\Penvironment\PictPar
-Bitte beachten Sie bei der Ausführung der Kontroll- und Wartungspunkte die
-Sicherheits- und Umweltschutzbestimmungen. \BosFull{boschung}
-weist jegliche Haftung für Personen- oder Materialschäden zurück, die in
-Folge der Nichtbeachtung dieser Bestimmungen entstehen.
+Beakta säkerhets- och miljöbestämmelserna när du genomför kontroll- och underhållspunkterna. \BosFull{boschung}
+frånsäger sig allt ansvar för person- och materialskador som uppstår till följd av att de här anvisningarna inte har följts.
 \stopPictPar
 \stoptextbackground
 \page
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Wartungsplan des Fahrzeugs}
+\section{Fordonets underhållsschema}
 
-Die\index{Kontrolle, periodische} Fahrzeugwartung besteht aus regelmäßig
-auszuführenden Wartungarbeiten, aus periodischen Kontrollen (Checks) sowie einem
-einmalig auszuführenden Service\footnote{Alle Stundenangaben verstehen sich als
-Betriebsstunden}:
+Fordonet\index{Kontroller, periodiska} ska underhållas genom regelbundna underhållsarbeten, periodiska kontroller (inspektioner) och en engångsservice\footnote{Alla timuppgifter anges i driftstimmar}:
 
 \starttextbackground[FC]
 \starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
-\NC \Pmtpro\enskip Wartungsarbeiten \NC 50\,h   \NC Erster Service nach 50\,h                    \NC \NR
-\NC                                 \NC 600\,h  \NC Reguläre Wartung alle 600\,h / 12 Monate     \NC \NR
-\NC                                 \NC 1200\,h  \NC Reguläre Wartung alle 1200\,h / 2 Jahre     \NC \NR
-\NC                                 \NC 2400\,h \NC Reguläre Wartung alle 2400\,h / 4 Jahre      \NC \NR
-\NC                                 \NC 4800\,h \NC Reguläre Wartung alle 4800\,h / 8 Jahre      \NC \NR
-\NC \Pmtcheck\enskip Checkliste     \NC Täglich \NC Während der ganzen Arbeitssaison \NC \NR
-\NC                                 \NC Wöchentlich  \NC Während der ganzen Arbeitssaison     \NC \NR
+\NC \Pmtpro\enskip Underhållsarbeten\NC 50\,h\NC Första service efter 50\,h\NC \NR
+\NC\NC 600\,h\NC Normalt underhåll var 600:e\,h/12 månader\NC \NR
+\NC\NC 1200\,h\NC Normalt underhåll var 1200:e\,h/2 år\NC \NR
+\NC\NC 2400\,h\NC Normalt underhåll var 2400:e\,h/4 år\NC \NR
+\NC\NC 4800\,h\NC Normalt underhåll var 4800:e\,h/8 år\NC \NR
+\NC \Pmtcheck\enskip Checklista\NC Varje dag\NC Under hela arbetssäsongen \NC \NR
+\NC\NC Varje vecka\NC Under hela arbetssäsongen\NC \NR
 \stoptabulate
 \stoptextbackground
 \blank [big]
 
-Der folgende Wartungsplan bezieht sich auf das Grundfahrzeug. Beachten Sie
-auch den Wartungsplan zu den Aggregaten (\eG\ Kehrmaschine, Schmutzbehälter) ab
-\at{Seite}[sec:schedaggr].
+Följande underhållsschema gäller för fordonet i sitt standardutförande. Beakta även underhållsschemat för aggregaten (\eG\ sopningsmaskin, smutsbehållare) fr.o.m.
+\at{sidan}[sec:schedaggr].
 
-Bei doppelten Angaben zum Wartungsintervall (\eG\ \quotation{Alle
-600\,h~/ 12~Monate}) besitzt der jeweils zuerst eintretende Zeitpunkt Priorität.
+Om det anges dubbla uppgifter vid underhållsintervallet (\eG\ \quotation{var 600:e\,h~/12~månader}) gäller den tidpunkt som inträffar först.
 
-Die Arbeiten der einzelnen Wartungspläne~– außer der einmaligen Wartung nach
-50~Stunden~– sind kumulativ auszuführen: Alle 1200~Betriebsstunden ist die
-600-Stunden||Wartung {\em und} die 1200-Stunden||Wartung durchzuführen; alle
-2400~Betriebsstunden ist die 600-Stunden-, die 1200-Stunden {\em und} die
-2400-Stunden||Wartung durchzuführen; etc.
+Arbetena i de enskilda underhållsschemana~– förutom engångsservicen efter 50~timmar~– ska genomföras kumulativt: Var 1200:e~driftstimme ska 600-h-underhållet {\em och} 1200-h-underhållet genomföras. Var 2400:e~driftstimme ska 600-h-, 1200-h{\em och} 2400-h-underhållet genomföras osv.
 
 \page [yes]
 
@@ -140,148 +111,148 @@ Die Arbeiten der einzelnen Wartungspläne~– außer der einmaligen Wartung nach
 \start
 \setup[tbl:schedule]
 
-\subsection[table:scheduledaily]{Tägliche Kontrolle}
+\subsection[table:scheduledaily]{Daglig kontroll}
 
 \bTABLE
 \bTABLEhead
-\bTR \bTD Art   \eTD \bTD Tägliche Kontrolle                                                                                  \eTD \bTD \Tcheck \eTD \bTD Ref.                      \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Daglig kontroll\eTD \bTD \Tcheck \eTD \bTD Ref.\eTD \eTR
 \eTABLEhead
 \bTABLEbody
-\bTR \bTD \Tgen \eTD \bTD Fahrzeug reinigen                                                                                   \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning]        \eTD \eTR
-\bTR \bTD \Tvis \eTD \bTD Fahrzeug auf eventuelle Beschädigungen überprüfen                                                   \eTD \bTD \Tcheck \eTD \bTD \emptY                    \eTD \eTR
-\bTR \bTD \Tvis \eTD \bTD Kontrolle auf Leckagen                                                                              \eTD \bTD \Tcheck \eTD \bTD \emptY                    \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Motorölstand des Dieselmotors überprüfen (mit Messstab!)                                            \eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel]  \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Kühlflüssigkeitsstand des Dieselmotors überprüfen                                                   \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Hydraulikflüssigkeitsstand prüfen (Schauglas am Tank)                                               \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]       \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Kraftstoffstand überprüfen                                                                          \eTD \bTD \Tcheck \eTD \bTD \emptY                    \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Scheibenwaschflüssigkeitsstand prüfen                                                               \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]         \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Funktionskontrolle der Kontrollleuchten und der Beleuchtung von Instrumententafel und Kontrollpanel \eTD \bTD \Tcheck \eTD \bTD \emptY                    \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Funktionskontrolle der Feststellbremse                                                              \eTD \bTD \Tcheck \eTD \bTD \emptY           \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Funktionskontrolle der Beleuchtungs- und Signaleinrichtungen                                        \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting]        \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Rengöring av fordonet\eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning]\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Kontrollera om fordonet har skador\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Kolla efter läckage\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera motoroljenivån i dieselmotorn (med mätsticka!)\eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera kylvätskenivån i dieselmotorn \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera nivån av hydraulvätska (synglas på tanken)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera bränslenivån\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera nivån på spolarvätska\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Funktionskontroll på kontrollampor och belysningen på instrumentbräda och kontrollpanel \eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroll av handbromsens funktion\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontroll av belysnings- och signalanordningarnas funktion\eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting]\eTD \eTR
 \eTABLEbody
 \eTABLE
 
 \testpage [8]
-\subsection[table:scheduleweekly]{Wöchentliche Kontrolle}
+\subsection[table:scheduleweekly]{Veckokontroller}
 
 \bTABLE
 \bTABLEhead
-\bTR \bTD Art \eTD \bTD Wöchentliche Kontrolle \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Veckokontroll \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
 \eTABLEhead
 \bTABLEbody
-\bTR \bTD \Tfun \eTD \bTD Reifenfülldruck prüfen (Druck siehe Rad||Typenschild im Führerhaus)                                    \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]    \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Luftfilterpatrone überprüfen und ggf. reinigen                                                      \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]      \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Alle Schmierpunkte schmieren (Chassis, Knicklenkung) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera däcktrycket (för tryck, se hjulens typskylt i förarhytten)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrolleraluftfilterpatronen och rengör vid behov\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smörj alla smörjpunkter (chassi, ramstyrning) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
 \eTABLEbody
 \eTABLE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection [sec:50h]{Wartung nach 50\,h~– einmalig}
+\subsection [sec:50h]{Service efter 50\,h~– engångs}
 
 \bTABLE
 \bTABLEhead
-\bTR \bTD Art   \eTD \bTD Wartung nach 50\,h~– einmalig                                                                          \eTD \bTD Q.      \eTD \bTD Ref.                                               \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Underhåll efter 50\,h~– engångs\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
 \eTABLEhead
 \bTABLEbody
-\bTR \bTD \Tlev \eTD \bTD Kühlflüssigkeitsstand des Dieselmotors überprüfen                                                      \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling]                          \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Luftfilterkartusche reinigen; ggf. ersetzen                                                            \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]                               \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Hydrauliköl||Rücklauf- und Ansaugfilter ersetzen                                                       \eTD \bTD \Tcheck   \eTD \bTD \inP[sec:hydraulic]                                \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Hydraulikflüssigkeitsstand prüfen (Schauglas am Tank)                                                  \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]       \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Zentralschmieranlage (Option): Schmiermittelvorrat und -konsistenz überprüfen                          \eTD \bTD \Tpro   \eTD \bTD \inP[main:graissageCentral]                        \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Alle Schmierpunkte schmieren (Fahrgestell, Knicklenkung)                                               \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Füllstand der Scheibenwaschflüssigkeit prüfen                                                          \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]                                  \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen des Führerhauses überprüfen                                                              \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen des Motors am Chassis überprüfen                                                         \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen der Pumpen am Motor überprüfen                                                           \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen des Kombikühlers überprüfen                                                              \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen der Achsen überprüfen                                                                    \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Räder\index{Anzugsdrehmoment+Räder} auf festen Sitz prüfen (Anzugsdrehmoment: 180\,Nm)                 \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Reifenfülldruck prüfen (Druck siehe Rad||Typenschild im Führerhaus)                                    \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]    \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Weg des Feststellbremshebels überprüfen|/|nachstellen                                                  \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Zustand der Batterie prüfen; Pole|/|Klemmen reinigen                                                   \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Einstellung der Scheinwerfer gemäß Straßenverkehrsordnung prüfen, ggf. einstellen                      \eTD \bTD \Tcheck   \eTD \bTD \inP[sec:lighting]                            \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Spulenkerne der Magnetventile mit Kupferfett schmieren                                                 \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid]                                 \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Ereignisspeicher (Vpad und Motorsteuergerät) auslesen; ggf. Ursachen der Fehler beheben                \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera kylvätskenivån i dieselmotorn \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Rengör luftfilterpatronen och byt ut vid behov\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Byt ut returledningsfiltret för hydraulolja samt insugsfiltret\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera nivån av hydraulvätska (synglas på tanken)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Centralsmörjsystem (tillval): Kontrollera smörjmedlets nivå och konsistens\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smörj alla smörjpunkter (chassi, ramstyrning)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera nivån på spolarvätskan\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera förarhyttens fästelement\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera motorns fästen på chassit\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera pumpens fästen på motorn\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera kombikylarens fästelement\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera axlarnas fästelement\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera\index{Åtdragningsmoment+Hjul} att hjulen är korrekt monterade (åtdragningsmoment: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera däcktrycket (för tryck, se hjulens typskylt i förarhytten)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera/justera handbromsspakens väg\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera batteriernas skick. Rengör poler/klämmor\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera om strålkastarna är inställda i enlighet med gällande trafikregler. Justera vid behov\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smörj magnetventilernas spolkärna med kopparfett\eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Läs av händelseminnet (Vpad och motorstyrenhet). Åtgärda orsaken till ev. fel\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
 \eTABLEbody
 \eTABLE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection {Wartung alle 600\,h / 12 Monate}
+\subsection {Underhåll var 600:e\,h/12 månader}
 
 \bTABLE
 \bTABLEhead
-\bTR \bTD Art   \eTD \bTD Wartung alle 600\,h / 12 Monate                                                                              \eTD \bTD Q.        \eTD \bTD Ref.                                                \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Underhåll var 600:e\,h /12 månader\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
 \eTABLEhead
 \bTABLEbody
-\bTR \bTD \Tchg \eTD \bTD Ölwechsel Dieselmotor                                                                                        \eTD \bTD \Tpro     \eTD \bTD \inP[ssSec:vw:oilDraining]                                     \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Motorölfilter ersetzen                                                                                       \eTD \bTD \Tpro     \eTD \bTD \inP[ssSec:vw:oilFilter]                                 \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Kraftstofffilter ersetzen                                                                                    \eTD \bTD \Tpro     \eTD \bTD \inP[ssSec:vw:fuelFilter]                             \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Dichtheit des Motors und der Komponenten im Motorraum prüfen                                                 \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Dichtheit und Befestigung der Auspuffanlage prüfen                                                           \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Zustand des Keilrippenriemens des Dieselmotors überprüfen, ggf. ersetzen \eTD \bTD \Tpro   \eTD \bTD \inP[sSec:vw:belt]                                    \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Kühlflüssigkeitsstand des Dieselmotors überprüfen                                                            \eTD \bTD \Tcheck   \eTD \bTD \inP[sSec:vw:cooling]                           \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Luftfilterkartusche ersetzen                                                                                 \eTD \bTD \Tcheck   \eTD \bTD \emptY                                \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Hydrauliköl||Rücklauf- und Ansaugfilter ersetzen                                                             \eTD \bTD \Tcheck   \eTD \bTD \inP[sec:hydraulic]                                \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Füllstand des Hydraulikflüssigkeitstanks prüfen                                                              \eTD \bTD \Tcheck     \eTD \bTD \inP[sec:hydraulic]                                 \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Zentralschmieranlage (Option): Schmiermittelvorrat und -konsistenz überprüfen                                \eTD \bTD \Tpro     \eTD \bTD \inP[main:graissageCentral]                         \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Alle Schmierpunkte schmieren (Fahrgestell, Knicklenkung)                                                     \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
-\bTR \bTD \Tlev \eTD \bTD Füllstand der Scheibenwaschflüssigkeit prüfen                                                                \eTD \bTD \Tcheck   \eTD \bTD \inP[sec:liquids]                                   \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen des Führerhauses überprüfen                                                                    \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen des Motors am Chassis überprüfen                                                               \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen der Pumpen am Motor überprüfen                                                                 \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen des Kombikühlers überprüfen                                                                    \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Befestigungen der Achsen überprüfen                                                                          \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Weg des Feststellbremshebels überprüfen|/|nachstellen                                                        \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Bremstrommeln und -backen prüfen|/|reinigen; Bremsmechanismus reinigen                                       \eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Räder\index{Anzugsdrehmoment+Räder} auf festen Sitz prüfen (Anzugsdrehmoment: 180\,Nm)                       \eTD \bTD \Tcheck \eTD \bTD \emptY                                             \eTD \eTR
-\bTR \bTD \Tfun \eTD \bTD Reifenfülldruck prüfen (Druck siehe Rad||Typenschild im Führerhaus)                                          \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]    \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Zustand der Batterie prüfen; Pole|/|Klemmen reinigen                                                         \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Einstellung der Scheinwerfer gemäß Straßenverkehrsordnung prüfen, ggf. einstellen                            \eTD \bTD \Tcheck   \eTD \bTD \inP[sec:lighting]                            \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Spulenkerne der Magnetventile mit Kupferfett schmieren                                                       \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid]                                 \eTD \eTR
+\bTR \bTD \Tchg \eTD \bTD Oljebyte dieselmotor\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilDraining]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Byt ut motoroljefiltet\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:oilFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Byt ut bränslefiltret\eTD \bTD \Tpro\eTD \bTD \inP[ssSec:vw:fuelFilter]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera att motorn och komponenterna i motorrummet är täta\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera att avgassystemet är tätt och korrekt monterat\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera skicket på dieselmotorns ribbrem. Byt ut vid behov \eTD \bTD \Tpro\eTD \bTD \inP[sSec:vw:belt]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera kylvätskenivån i dieselmotorn \eTD \bTD \Tcheck\eTD \bTD \inP[sSec:vw:cooling]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Byt ut luftfilterpatronen\eTD \bTD \Tcheck\eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Byt ut returledningsfiltret för hydraulolja samt insugsfiltret\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera nivån i tanken för hydraulvätska\eTD \bTD \Tcheck\eTD \bTD \inP[sec:hydraulic]\eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Centralsmörjsystem (tillval): Kontrollera smörjmedlets nivå och konsistens\eTD \bTD \Tpro\eTD \bTD \inP[main:graissageCentral]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smörj alla smörjpunkter (chassi, ramstyrning)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Kontrollera nivån på spolarvätskan\eTD \bTD \Tcheck\eTD \bTD \inP[sec:liquids]\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera förarhyttens fästelement\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera motorns fästen på chassit\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera pumpens fästen på motorn\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera kombikylarens fästelement\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera axlarnas fästelement\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera/justera handbromsspakens väg\eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera och rengör bromstrumma och bromsbackar. Rengör bromsmekanismen\eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera\index{Åtdragningsmoment+Hjul} att hjulen är korrekt monterade (åtdragningsmoment: 180\,Nm)\eTD \bTD \Tcheck \eTD \bTD \emptY\eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera däcktrycket (för tryck, se hjulens typskylt i förarhytten)\eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera batteriernas skick. Rengör poler/klämmor\eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera om strålkastarna är inställda i enlighet med gällande trafikregler. Justera vid behov\eTD \bTD \Tcheck\eTD \bTD \inP[sec:lighting]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smörj magnetventilernas spolkärna med kopparfett\eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid]\eTD \eTR
 %%Note: Chapter has been removed
-%\bTR \bTD \Tgen \eTD \bTD Rostschutz prüfen, ggf. nachbessern|/|erneuern                                                               \eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion]                             \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Ereignisspeicher (Vpad und Motorsteuergerät) auslesen; ggf. Ursachen der Fehler beheben                      \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+%\bTR \bTD \Tgen \eTD \bTD Kontrollera rostskyddet, bättra på/applicera nytt vid behov\eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion]\eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Läs av händelseminnet (Vpad och motorstyrenhet). Åtgärda orsaken till ev. fel\eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
 \eTABLEbody
 \eTABLE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection {Wartung alle 1200\,h / 2 Jahre}
+\subsection {Underhåll var 1200:e\,h/2 år}
 \bTABLE
 \bTABLEhead
-\bTR \bTD Art   \eTD \bTD Wartung alle 1200\,h / 2 Jahre                                                                                          \eTD \bTD Q.    \eTD \bTD Ref.                \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Underhåll var 1200:e\,h/2 år\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
 \eTABLEhead
 \bTABLEbody
-\bTR \bTD \Tchg \eTD \bTD Hydrauliköl wechseln (Tank)                                                                                              \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Kältemittel (R134a) der Klimaanlage erneuern                                                                             \eTD \bTD \Tspecial \eTD \bTD \emptY              \eTD \eTR
+\bTR \bTD \Tchg \eTD \bTD Byt hydraulolja (tank)\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Fyll på med kylvätska (R134a) i klimatanläggningen\eTD \bTD \Tspecial \eTD \bTD \emptY\eTD \eTR
 \eTABLEbody
 \eTABLE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection {Wartung alle 2400\,h / 4 Jahre}
+\subsection {Underhåll var 2400:e\,h/4 år}
 \bTABLE
 
 \bTABLEhead
-\bTR \bTD Art   \eTD \bTD Wartung alle 2400\,h / 4 Jahre                                      \eTD \bTD Q.    \eTD \bTD Ref.                \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Underhåll var 2400:e\,h/4 år\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
 \eTABLEhead
 \bTABLEbody
-	\bTR \bTD \Tgen \eTD \bTD Zahnriemen des Dieselmotors ersetzen \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Byt ut dieselmotorns kuggrem\eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
 \eTABLEbody
 \eTABLE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection {Wartung alle 4800\,h / 8 Jahre}
+\subsection {Underhåll var 4800:e\,h/8 år}
 \bTABLE
 
 \bTABLEhead
-\bTR \bTD Art   \eTD \bTD Wartung alle 4800\,h / 8 Jahre                      \eTD \bTD Q.    \eTD \bTD Ref.                \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Underhåll var 4800:e\,h/8 år\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
 \eTABLEhead
 \bTABLEbody
-\bTR \bTD \Tgen \eTD \bTD Hydraulik||Schlauchleitungen überprüfen, ggf. ersetzen  \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Wasserpumpe ersetzen (gleichzeitig mit dem Zahnriemen) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera hydraulslangledningarna. Byt ut vid behov\eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Byt ut vattenpumpen (samtidigt som kuggremmen) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
 \eTABLEbody
 \eTABLE
 
@@ -290,78 +261,74 @@ Die Arbeiten der einzelnen Wartungspläne~– außer der einmaligen Wartung nach
 \page [yes]
 
 
-\section[sec:schedaggr]{Wartung der Aggregate}
+\section[sec:schedaggr]{Underhåll av aggregaten}
 
-Die Wartung\startregister[index][wartplanAgg]{Wartungsplan+Aggregate} der
-Aggregate umfasst regelmäßig auszuführende Wartungsarbeiten\index{Periodische
-Kontrolle} sowie tägliche und wöchentliche Kontrollen:
+Aggregaten\startregister[index][wartplanAgg]{Underhållsschema+ska} underhållas genom regelbundna underhållsarbeten\index{periodiska
+kontroller} samt dagliga kontroller och veckokontroller:
 
 \starttextbackground[FC]
 \starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
-\NC \Pmtpro\enskip Wartungsarbeiten \NC 50\,h   \NC Erster Service nach 50\,h                              \NC \NR
-\NC                                 \NC 600\,h  \NC Reguläre Wartung alle 600\,h / 12 Monate               \NC \NR
-\NC \Pmtcheck\enskip Checkliste     \NC Täglich \NC Während der ganzen Arbeitssaison \NC \NR
-\NC                                 \NC Wöchentlich  \NC Während der ganzen Arbeitssaison     \NC \NR
+\NC \Pmtpro\enskip Underhållsarbeten\NC 50\,h\NC Första service efter 50\,h\NC \NR
+\NC\NC 600\,h\NC Normalt underhåll var 600:e\,h/12 månader\NC \NR
+\NC \Pmtcheck\enskip Checklista\NC Varje dag\NC Under hela arbetssäsongen \NC \NR
+\NC\NC Varje vecka\NC Under hela arbetssäsongen\NC \NR
 \stoptabulate
 \stoptextbackground
 \blank [big]
 
-Der folgende Wartungsplan bezieht sich auf Standardaggregate, mit denen die
-\sdeux\ üblicherweise ausgerüstet ist. Für spezielle Aggregate, die nicht in
-dieser Bedienungsanleitung beschrieben sind, ist der Wartungsplan des
-jeweiligen Aggregats zu beachten.
+Följande underhållsschema gäller för standardaggregat som vanligen ingår i utrustningen på \sdeux\. För specialaggregat som inte beskrivs i den här bruksanvisningen ska du beakta underhållsschemat till respektive aggregat.
 
 
-\subsection[table:scheduledaily]{Tägliche Kontrolle}
+\subsection[table:scheduledaily]{Daglig kontroll}
 
 \bTABLE
 \bTABLEhead
-\bTR \bTD Art   \eTD \bTD Tägliche Kontrolle                                             \eTD \bTD Q.      \eTD \bTD Ref.           \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Daglig kontroll\eTD \bTD Q.\eTD \bTD Ref.\eTD \eTR
 \eTABLEhead
 \bTABLEbody
-\bTR \bTD \Tgen \eTD \bTD Schmutzbehälter und Recyclingvorrichtung reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
-\bTR \bTD \Tgen \eTD \bTD Saugmund und Saugkanal reinigen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Rengör smutsbehållaren och återvinningsanordningen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Rengör sugmunstycket och sugkanalen \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
 \eTABLEbody
 \eTABLE
 
-\subsection[table:scheduledaily]{Wöchentliche Kontrolle}
+\subsection[table:scheduledaily]{Veckokontroller}
 
 \bTABLE
 \bTABLEhead
-\bTR \bTD Type \eTD \bTD Wöchentliche Kontrolle \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\bTR \bTD Typ \eTD \bTD Veckokontroll \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
 \eTABLEhead
 \bTABLEbody
-	\bTR \bTD \Tgen \eTD \bTD Verschleiß von Seitenbesen und Frontbesen (Option) überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
-	\bTR \bTD \Tgen \eTD \bTD Saugmundklappe und Saugmundgummis überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
-	\bTR \bTD \Tgen \eTD \bTD Alle Schmierpunkte schmieren (Schmutzbehälter, Besen, Saugmund) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera om sidokvastarna och frontkvasten (tillval) är nedslitna\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Kontrollera sugmunstyckets lucka och gummilister \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Smörj alla smörjpunkter (smutsbehållare, kvastar, sugmunstycke) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
 \eTABLEbody
 \eTABLE
 
 
-\subsection {Wartung nach 50\,h~– einmalig}
+\subsection {Service efter 50\,h~– engångs}
 
 \bTABLE
 \bTABLEhead
 \bTR \bTD
-Art \eTD \bTD Wartung nach 50\,h~– einmalig \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+Art \eTD \bTD Underhåll efter 50\,h~– engångs\eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
 \eTABLEhead
 \bTABLEbody
-	\bTR \bTD \Tfun \eTD \bTD Befestigungen der Besen überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
-	\bTR \bTD \Tgen \eTD \bTD Saugmundklappe und Saugmundgummis einstellen \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera kvastarnas fästelement \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Ställ in sugmunstyckets lucka och gummilister \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
 \eTABLEbody
 \eTABLE
 
 
-\subsection {Wartung alle 600\,h|/|12 Monate}
+\subsection {Underhåll var 600:e\,h/12 månader}
 
 
 \bTABLE
 \bTABLEhead
-\bTR \bTD Art \eTD \bTD Wartung alle 600\,h|/|12 Monate \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\bTR \bTD Typ\eTD \bTD Underhåll var 600:e\,h/12 månader\eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
 \eTABLEhead
 \bTABLEbody
-	\bTR \bTD \Tfun \eTD \bTD Befestigungen der Besen überprüfen \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
-	\bTR \bTD \Tgen \eTD \bTD Saugmundklappe und Saugmundgummis einstellen \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Kontrollera kvastarnas fästelement \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Ställ in sugmunstyckets lucka och gummilister \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
 \eTABLEbody
 \eTABLE
 
@@ -371,3 +338,4 @@ Art \eTD \bTD Wartung nach 50\,h~– einmalig \eTD \bTD Q. \eTD \bTD Ref. \eTD \
 
 \stopcomponent
 % vim: fdm=indent
+

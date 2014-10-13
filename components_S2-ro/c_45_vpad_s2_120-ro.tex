@@ -1,0 +1,661 @@
+\startcomponent c_45_vpad_s2_120-ro
+\product prd_ba_s2_120-ro
+
+\startchapter[title={Computer de bord (Vpad)},
+reference={sec:vpad}]
+
+\setups[pagestyle:marginless]
+
+
+\startsection[title={Descrierea dispozitivului Vpad},
+reference={vpad:description}]
+
+\startfigtext [left] {Dispozitivul Vpad SN în postul de comandă}
+{\externalfigure[vpad:inside:view]}
+\textDescrHead{Inovator, inteligent … } Dispozitivul \Vpad\ a fost conceput pentru comanda agregatelor din domeniul administrației locale, ale cărui tehnologii au devenit tot mai complexe și căruia îi stau la dispoziție o varietate de funcții.
+Prin intermediul \Vpad\ utilizatorul are la dispoziție un sistem care nu se limitează la faptul de a oferi în timp real informații - în mod vizual sau acustic - despre toate operațiunile de lucru și acțiunile mașinii.
+Însă prin ceea ce se remarcă în primul rând dispozitivul \Vpad\ și capitolul la care acest dispozitiv stabilește un nou standard, este meniul intuitiv, ergonomia și logica de operare.
+
+Datorită multitudinii sale de funcții, \Vpad\ poate fi utilizat într-un mod extrem de flexibil, devenind astfel mai mult decât o simplă unitate electronică de comandă.
+\stopfigtext
+
+\textDescrHead{… universal} La crearea \Vpad\, compatibilitatea și flexibilitatea au stat în centrul atenției:
+Ca unitate modulară de comandă, dispozitivul poate fi adaptat individual la situații și variante locale de echipare și datorită numeroaselor sale interfețe electronice și soluții de transfer de date – până la WLAN – toate posibilitățile sunt deschise.
+Dispozitivul \Vpad\ lucrează cu cele mai moderne sisteme electronice, cu tehnologii 32 bit și cu sistem de operare în timp real.
+\vfill
+
+
+\startfigtext[left]{Consolă multifuncțională}
+{\externalfigure[console:topview]}
+\textDescrHead{… și modular} Datorită modularității sale, dispozitivul \Vpad\ dispune de un avantaj enorm:
+În acest fel, versiunea SN utilizată în serie în \sdeux\ poate fi completată treptat, în orice moment cu alte componente, cum ar fi de exemplu un modem sau o consolă (a se vedea imaginea).
+Modularitatea nu se limitează la Hardware, și din punctul de vedere al softului, sistemul poate fi extins și poate fi adaptat la alte necesități schimbătoare.
+
+Consola multifuncțională a \sdeux\ este o interfață deosebit de dezvoltată între utilizator și mașină. Întregul sistem de măturat/aspirație poate fi controlat prin intermediul acestei console.
+\stopfigtext
+
+\page [yes]
+
+
+\subsection[vpad:home]{Ecran principal}
+
+%% Note: outcommented by PB
+% \placefig[left][fig:vpad:engineData]{Accueil mode transport}
+% {\scale[sx=1.5,sy=1.5]
+% {\setups[VpadFramedFigureHome]
+% \VpadScreenConfig{
+% \VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}
+% \framed{\null}}
+% }
+
+
+\start
+
+\setupcombinations[width=\textwidth]
+
+\placefig [here][fig:vpad:engineData]{Ecran principal}
+{\startcombination [2*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Mod} de mers}
+{\setups[VpadFramedFigureWork]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Mod de}lucru}
+\stopcombination}
+
+\stop
+
+\blank [1*big]
+
+Ecranul principal al \Vpad\ cuprinde toate elemente necesare pentru monitorizarea tuturor funcțiilor dispozitivului \sdeux.
+
+În zona superioară se află afișaje de control.
+
+Zona de mijloc indică în timp real, printre altele,\, următoarele date:
+Viteză, turație și temperatura motorului, nivel carburant, nivel de umplere apă de reciclare, etc.
+
+Modul \aW{Mers} este simbolizat printr-un iepure~\textSymb{transport_mode}, modul \aW{Lucru} printr-o broască țepoasă~\textSymb{working_mode}.
+
+Lista de meniuri din partea de jos indică toate meniurile disponibile: Apăsați în mijlocul ecranului (Touchscreen), pentru a afișa meniurile suplimentare.
+
+\page [yes]
+
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+
+\subsection{Afişaje de control pe ecranul Vpad}
+
+% \startcolumns
+
+\startSymVpad
+\externalfigure[vpadTEnginOilPressure][height=1.7\lH]
+\SymVpad
+\textDescrHead{Presiune ulei motor}(roșu) Presiune ulei motor prea mică. Opriți imediat motorul.
+
++\:Fehlermeldung \# 604
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningBattery][height=1.7\lH]
+\SymVpad
+\textDescrHead{Încărcare acumulator}(roșu) Curent încărcare acumulator prea mic. Informați atelierul de reparații.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningEngine1][height=1.7\lH]
+\SymVpad
+\textDescrHead{Diagnosticare motor}(galben) Eroare la sistemul de comandă al motorului. Informați atelierul de reparații.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Mergeţi la cel mai apropiat service}(galben) Inspecţia regulată a autovehiculul este scadentă
+(A se vedea \about [sec:schedule] \atpage [sec:schedule])
+Sau a fost înregistrată o eroare la motor (este necesar un service de specialitate).
+
++\:Fehlermeldungen \# 650 până la \# 653, sau \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filtru particule}(galben) Se începe regenerarea filtrului de particule, imediat ce starea de funcţionare permite acest lucru.
+
+{\md Indicație:} {\lt Dacă este posibil, nu opriţi {\em motorul}, atâta timp cât apare acest afişaj!}
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBrakeError][height=1.7\lH]
+\SymVpad
+\textDescrHead{Sistem de frânare}(roșu) Eroare la nivelul sistemului de frânare. Informați atelierul de reparații.
+
++\:Fehlermeldung \# 902
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakePark][height=1.7\lH]
+\SymVpad
+\textDescrHead{Frână de staționare}(roșu) Frâna de staționare este activată.
+
++\:Fehlermeldung \# 905
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTEngineHeating][height=1.7\lH]
+\SymVpad
+\textDescrHead{Instalație de pre-încălzire}(galben) Motorul este pre-încălzit.
+
+O lampă cu aprindere intermitentă indică că a fost înregistrată o eroare în memoria de rezultate.
+\stopSymVpad
+
+% \columnbreak
+
+\startSymVpad
+\externalfigure[vpadTFuelReserve][height=1.7\lH]
+\SymVpad
+\textDescrHead{Nivel de umplere combustibil}(galben) Nivelul de umplere cu combustibil este prea scăzut (rezervă).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBlink][height=1.7\lH]
+\SymVpad
+\textDescrHead{Lumini intermitente de avertizare}(verde) Luminile intermitente de avertizare sunt activate.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTLowBeam][height=1.7\lH]
+\SymVpad
+\textDescrHead{Lumină poziție}(verde) Lumina de poziție este în funcțiune.
+\stopSymVpad
+
+\startSymVpad
+\HL\NC \externalfigure[vpadSyWaterTemp][height=1.7\lH]
+\SymVpad
+\textDescrHead{Temperatură}(roșu) Temperatura lichidului hidraulic sau al motorului este prea ridicată. Informați atelierul de reparații.
+
++\:Fehlermeldung \# 700 sau \# 610
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningFilter][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filtru înfundat}(roșu) Filtrul hidraulic combinat sau filtrul de aer este înfundat.
+
++\:Fehlermeldung \# 702 sau \# 851
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTSpray][height=1.7\lH]
+\SymVpad
+\textDescrHead{Pistol de apă}(galbenă) Pompa de apă de înaltă presiune pentru pistolul de apă este activată.
+
+Întrerupător \textSymb{temoin_buse} în consola de tavan.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTClear][height=1.7\lH]
+\SymVpad
+\textDescrHead{Mesaj eroare}(roșu) Un mesaj de eroare se află în memoria \Vpad. Apăsați tasta ~\textSymb{vpadClear}, pentru a afișa toate notificările înregistrate. Informați atelierul de reparații.
+\stopSymVpad
+
+% \stopcolumns
+\stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
+\page [yes]
+
+
+\startsection [title={Meniuri Vpad},
+reference={vpad:menu}]
+
+\start
+
+\setupTABLE [background=color,
+frame=off,
+option=stretch,textwidth=\makeupwidth]
+
+\setupTABLE [r] [each] [style=sans, background=color, bottomframe=on, framecolor=TableWhite, rulethickness=1.5pt]
+\setupTABLE [r] [first][backgroundcolor=TableDark, style=sansbold]
+\setupTABLE [r] [odd][backgroundcolor=TableMiddle]
+\setupTABLE [r] [even] [backgroundcolor=TableLight]
+\bTABLE [split=repeat]
+\bTABLEhead
+\bTR\bTD Meniu \eTD\bTD Denumire\index{Vpad+Afișaj} \eTD\bTD Funcție \eTD\eTR
+\eTABLEhead
+
+\bTABLEbody
+\bTR\bTD \externalfigure [v:symbole:clear] \eTD\bTD Mesaj(e) de eroare \eTD\bTD Afișare mesaje de eroare memorate în Vpad și confirmare. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:beacon]\externalfigure [v:symbole:beacon:black]} \eTD\bTD Girofar \eTD\bTD Girofar pornit/oprit \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:engine] \eTD\bTD Date în timp real \eTD\bTD Afișare date de funcționare în timp real pentru motor și sistem hidraulic\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:oneTwoThree] \eTD\bTD Contor \eTD\bTD Afișaj contor ore de funcționare: Contor zile, contor anotimpuri, contor total\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:serviceInfo] \eTD\bTD Interval de revizie \eTD\bTD Indică data, precum și orele de funcționare rămase până la următoarea revizie sau până la următorul service \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:trash] \eTD\bTD Contor \eTD\bTD Resetați contorul sau resetați intervalul de service \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:sunglasses] \eTD\bTD Mod ecran \eTD\bTD Comutare iluminat ecran între modul de \aW{zi} și \aW{de noapte} \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:color] \eTD\bTD Luminozitate/contrast \eTD\bTD Setări pentru luminozitatea și contrastul ecranului \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:select] \eTD\bTD Selectare \eTD\bTD Selectarea înregistrării marcate sau confirmarea unui mesaj de eroare \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Confirmare \eTD\bTD Confirmarea selectării \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Sus/jos, \\Pfeile \eTD\bTD Deplasare marcaj în sus/jos sau mărire/scădere valoare selectată \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Semnal acustic de avertizare pentru mersul înapoi \eTD\bTD Activare/dezactivare semnal acustic de avertizare pentru mersul înapoi \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Deconectaţi ecranul \eTD\bTD Menţineţi butonul apăsat aproximativ 5 secunde, pentru a decupla ecranul Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD A treia mătură\index{A treia mătură} (opțional) \eTD\bTD Cuplaţi cea de-a treia mătură.
+Cea de-a treia mătură poate fi activată în modul descris la pagina \at[sec:using:frontBrush] . \eTD\eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+
+% \startcolumns
+
+\subsection{Alte simboluri pe ecranul Vpad}
+
+
+\subsubsubject{Rezervă de apă proaspătă şi de reciclare}
+
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+
+\startSymVpad
+\externalfigure[sym:vpad:water]
+\SymVpad
+\textDescrHead{Nivel umplere apă proaspătă} Nivel umplere apă proaspătă insuficient (max. 190\,l; în spatele cabinei șoferului).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater:yellow]
+\SymVpad
+\textDescrHead{Nivel umplere apă de reciclare}(galben) Nivel de umplere apă de reciclare sub schimbătorul de căldură. Nu are loc nici o răcire a fluidului hidraulic și nici o încălzire a sistemului de umezire a canalului de aspirație.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater]
+\SymVpad
+\textDescrHead{Nivel umplere apă de reciclare} Nivel umplere apă reciclare insuficient (max. 140\,l; sub recipientul pentru gunoi).
+\stopSymVpad
+
+
+\subsubsubject{Sistem de aspirație} % nouveau
+
+{\em Acest simbol este afişat doar atunci când mătura este dezactivată.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Gură de aspirație} Sistem de aspirație\index{Gură de aspirație} activată:
+Gura de aspiraţie este coborâtă, turbina este activată.
+\stopSymVpad
+
+
+\subsubsubject{Mături laterale} % nouveau
+
+{\em Acest simbol este afişat când a treia mătură nu este activată.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Mături laterale} Besen\index{Măturare}\index{Mături laterale } activate. Viteza de rotaţie (în \% viteza maximă de rotaţie)[V\low{max}]) este afişată sub simbol, descărcarea actuală a fiecărei mături este afişată deasupra simbolului (\type{ } = poziţie de plutire, 14 = descărcare maximă).
+
+{\md Descărcare:} {\lt Cu cât descărcarea este mai mică, cu atât mai mare este presiunea exercitată de mături pe pardoseală.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Poziţia de plutire}(verde pe marginea inferioară)
+Pentru a decupla descărcarea, menţineţi manetele timp de 2 s apăsate în faţă; mătura se află acum cu întreaga sa greutate pe pământ. Viteza de rotaţie a măturii este la 60\hairspace\% din V\low{max} (exemplu).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Măturile laterale } Măturile sunt activate. Sunt scoase din funcţiune şi sunt ridicate.
+\stopSymVpad
+
+
+\subsubsubject{A treia mătură (opțional)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{A treia mătură} A treia mătură\index{A 3-a. mătură} este activată. Viteza de rotaţie (în \%  din viteza maximă de rotație [V\low{max}]) este afişată sub simbol.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Poziţia de plutire}(verde pe marginea inferioară)
+Pentru a decupla descărcarea, menţineţi manetele timp de 2 s apăsate în faţă; mătura se află acum cu întreaga sa greutate pe pământ. Viteza de rotaţie a măturii este la 70\hairspace\% din V\low{max} (exemplu).
+
+{\md Direcţia de rotaţie::} {\lt În partea superioară este afişată direcţia de rotaţie (săgeată neagră pe fundal galben).}
+\stopSymVpad
+
+\stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
+
+\page [yes]
+
+\startsection[title={Reglarea luminozității ecranului},
+reference={sec:vpad:brightness}]
+
+Ecranul \Vpad\ poate fi utilizat în două trepte preconfigurate de luminozitate: Modul \aW{zi}~– \textSymb{vpadSunglasses}, luminozitate normală~– și modul \aW{noapte}~– \textSymb{vpadMoon}, luminozitate redusă.
+Cu tasta \textSymb{vpadColor} puteți avea acces la diferiți parametri.
+
+Pentru a modifica treptele preconfigurate de luminozitate, procedați după cum urmează:
+
+\startSteps
+\item Apăsați în mijlocul ecranului (Touchscreen), pentru a derula lista de meniuri de pe marginea inferioară a ecranului.
+\item Apăsați pe simbolul \textSymb{vpadSunglasses} respectiv \textSymb{vpadMoon}, pentru a selecta modul pe care doriți să îl modificați.
+\item Apăsați \textSymb{vpadColor}, pentru a afișa parametri.
+\item Cu ajutorul simbolului săgeată, selectați~\textSymb{vpadUp}\textSymb{vpadDown} parametrul pe care doriți să îl modificați și selectați-l cu ~\textSymb{vpadSelect}.
+\item Modificați valoarea cu ajutorul simbolului \textSymb{vpadMinus}\textSymb{vpadPlus}. Atenție, nu reduceți prea mult luminozitatea (\VpadOp{162} -255), astfel încât să nu mai puteți vedea nimic pe ecran!
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadGPS}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\null}}{Apăsați în mijlocul Touchscreen -ului}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadOp{162}\hfill 15 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Selectare cu \textSymb{vpadSelect}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadNull}}}%
+\framed[backgroundscreen=.9]{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD \VpadOp{162}\hfill -80 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Modificare valoare cu \textSymb{vpadMinus}\textSymb{vpadPlus}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Confirmați valoarea cu \textSymb{vpadReturn}.
+\item Apăsați încă o dată simbolul \textSymb{vpadReturn}, pentru a vă întoarce la ecranul principal.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Contor ore de funcționare și kilometri},
+reference={vpad:compteurs}]
+
+Softul \Vpad\ dispune de trei perioade diferite de măsurare~– \aW{zi}, \aW{sezon}, \aW{total}~–, în care pot funcționa diferite contoare, cum ar fi pentru \aW{Distanța străbătută}, \aW{orele de funcționare} (motor sau perie), \aW{timp de lucru} (per șofer).
+
+Pentru a citi contoarele sau pentru a le reseta, procedați după cum urmează:
+
+\startSteps
+\item Apăsați în mijlocul Touchscreen-ului, pentru a derula lista de meniuri.
+\item Apăsați încă o dată simbolul \textSymb{vpadOneTwoThree}, pentru a afișa contorul pentru zile.
+\item Cu ajutorul simbolurilor înainte/inapoi~\textSymb{vpadBW}\textSymb{vpadFW} puteți comuta la contorul total sau pentru sezoane.
+\item Apăsați \textSymb{vpadTrash}, pentru a reseta contorul afișat.
+\item Într-o fereastră de dialog sunteți solicitat să confirmați resetarea.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadTachygraph}{vpadSunglasses}{vpadColor}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{120} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 87.4\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 62.0\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 240.2\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 901.9\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,1\,l/h \eTD\eTR
+\eTABLE}}{Apăsați simbolul~\textSymb{vpadOneTwoThree}, la final~\textSymb{vpadBW} sau~\textSymb{vpadFW}}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadBW}{vpadFW}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 522.0\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 662.8\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 1605.5\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 2608.4\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,0\,l/h \eTD\eTR
+\eTABLE}}{Resetați contorul cu \textSymb{vpadTrash} }
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadTrash}{vpadNull}{vpadNull}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{136} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{137} \eTD\eTR
+\eTABLE}}{Confirmați cu \textSymb{vpadTrash}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Dacă este necesar, introduceți parola și confirmați apoi resetarea cu ajutorul simbolului \textSymb{vpadTrash}.
+\item Apăsați simbolul \textSymb{vpadReturn}, pentru a vă întoarce la ecranul principal.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+\startsection[title={Intervale de revizie},
+reference={vpad:maintenance}]
+
+Planul de revizii pentru \sdeux\ prevede două tipuri de revizii: revizii regulate și service (asigurat de un atelier de reparații, stabilit de comun acord cu \boschung-Kundendienst ).
+
+Pentru a citi contoarele sau pentru a le reseta, procedați după cum urmează:
+\startSteps
+\item Apăsați în mijlocul Touchscreen-ului, pentru a derula lista de meniuri.
+\item Apăsați simbolul \textSymb{vpadServiceInfo}, pentru a afișa contorul pentru zile.
+\item Cu ajutorul simbolului săgeată~\textSymb{vpadUp}\textSymb{vpadDown} treceți la intervalul dorit.
+\item Apăsați simbolul ~\textSymb{vpadTrash}, pentru a reseta un interval. Introduceți parola cu ajutorul ~\textSymb{vpadPlus}\textSymb{vpadMinus} și confirmați cu~\textSymb{vpadSelect}).
+\item Într-o fereastră de dialog sunteți solicitat să confirmați resetarea.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadNull}{vpadNull}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD[nc=2] \VpadOp{190} \eTD\eTR
+\bTR\bTD \VpadOp{191}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{192}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR
+\bTR\bTD \VpadOp{193}\eTD\bTD \VpadOp{195}\hfill 2400\,h \eTD\eTR
+\eTABLE}}{Apăsați simbolul ~\textSymb{vpadTrash}, pentru a reseta un interval}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD \hfill 2014-03-31 \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{002}\hfill 0000 \eTD\eTR
+\eTABLE}}{Introduceți parola (codul de cifre)}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD[backgroundcolor=black,color=TableWhite] \VpadOp{041}\eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{042} \eTD\eTR
+\bTR\bTD \VpadOp{043} \eTD\eTR
+\eTABLE}}{Selectați și confirmați cu~\textSymb{vpadSelect}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Confirmați resetarea cu ajutorul simbolului~\textSymb{vpadSelect}.
+\item Apăsați simbolul \textSymb{vpadReturn}, pentru a vă întoarce la ecranul principal.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Managementul erorilor prin Vpad},
+reference={vpad:error}]
+
+
+Dispozitivul \Vpad\ afișează erorile\index{Vpad+Mesaje erori}, care sunt diagnosticate de sistemele electronice de comandă și sunt transmise prin CAN-Bus.
+Atunci când este înregistrată o eroare minoră, se aprinde simbolul~\textSymb{VpadTClear} (roșu).
+Când este vorba de o eroare de o prioritate ridicată, se aprinde un simbol~\textSymb{VpadTClear} și suplimentar se aude un semnal acustic.
+Pentru a finaliza alarma, trebuie confirmat mesajul de eroare (ca \aW{luat la cunoștință}).
+
+Pentru a citi și confirma mesajele de eroare, procedați după cum urmează:
+
+\startSteps
+\item Apăsați simbolul~\textSymb{vpadClear} de pe ecranul \Vpad.
+\item Apăsați simbolul~\textSymb{vpadClear}, pentru a confirma mesajul selectat.
+\item În afară de mesajul confirmat apare un simbol \aW{\#}, care marchează mesajul ca fiind \aW{luat la cunoștință}, iar marcajul trece la următorul mesaj (dacă acesta există).
+\item După ce toate mesajele au fost confirmate, afișajul revine la ecranul principal.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851a} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Afișarea mesajelor}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Confirmați cu~\textSymb{vpadClear}}
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadBeam}{vpadEngine}}}%
+\framed{\null}}{Înapoi la ecranul principal}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Pentru a afișa din nou mesajele, apăsați din nou simbolul~\textSymb{vpadClear}. Mesajele de eroare sunt șterse de \Vpad\ doar după ce problema a fost remediată.
+\stopSteps
+
+
+\subsection{Cele mai frecvente mesaje de eroare (cu căutarea defecțiunii)}
+
+\subsubsubject{\VpadEr{604}} % {\#\ 604 Pression huile moteur basse}
+
++ \textSymb{vpadTEnginOilPressure}~– Opriți imediat motorul. Verificați nivelul de ulei, informați atelierul specializat.
+
+
+\subsubsubject{\VpadEr{609}} % {\#\ 609 Température eau refroidissement moteur haute}
+
++ \textSymb{vpadSyWaterTemp}~– Întrerupeți activitatea. Lăsați motorul să meargă fără încărcătură și observați evoluția temperaturii:
+
+Dacă temperatura scade, verificați nivelul de umplere cu lichid de răcire, precum și starea radiatorului.
+În cazul în care nivelul de umplere este corect, iar starea radiatorului este bună, pentru diagnosticarea suplimentară mergeți cu atenție la un atelier de reparații.
+
+\subsubsubject{\VpadEr{610}} % {\#\ 610 Température eau refroidissement moteur trop haute}
+
++ \textSymb{vpadSyWaterTemp}~– Întrerupeți activitatea. Verificați nivelul de umplere cu lichid de răcire și ulei de motor, informați imediat atelierul de reparații.
+
+
+\subsubsubject{\VpadEr{650}} % {\#\ 650 Se rendre à un garage}
+
++ \textSymb{vpadWarningService}~– informați imediat atelierul de reparații.
+% \VpadEr{651} % {\#\ 651 Moteur en mode urgence}
+
+
+\subsubsubject{\VpadEr{652}} % {\#\ 652 Inspection véhicule}
+% \VpadEr{653} % {\#\ 653 Grand service moteur}
+
++ \textSymb{vpadWarningService}~– Următoarea revizie regulată este scadentă. Consultați planul de revizii și faceți programare la atelierul de reparații.
+
+
+\subsubsubject{\VpadEr{700}} % {\#\ 700 Température d'huile hydraulique}
+
++ \textSymb{vpadSyWaterTemp}~– Întrerupeți activitatea. Lăsați motorul să meargă fără încărcătură și observați evoluția temperaturii:
+
+Dacă temperatura scade, verificați nivelul de umplere cu lichid de răcire, precum și starea radiatorului.
+În cazul în care nivelul de umplere este corect, iar starea radiatorului este bună, pentru diagnosticarea suplimentară mergeți cu atenție la un atelier de reparații.
+
+
+\subsubsubject{\VpadEr{702}} % {\#\ 702 Filtre d'huile hydraulique}
+
++ \textSymb{vpadWarningFilter}~– Filtrul hidraulic de retur și/sau filtrul de aspirație este înfundat. Înlocuiți imediat elementul filtrant.
+% \VpadEr{703} % {\#\ 703 Vidange d'huile hydraulique}
+
+
+\subsubsubject{\VpadEr{800}} % {\#\ 800 Interrupteur d'urgence actionné}
+
++ \textSymb{vpadTClear}~– Ați acționat întrerupătorul pentru situațiile de avarie. Opriți sistemul de aprindere și porniți din nou motorul, pentru a șterge eroarea.
+
+
+\subsubsubject{\VpadEr{801}} % {\#\ 905 Frein à main actionné}
+
+Recipientul de gunoi este ridicat sau nu este complet coborât. Viteza autovehiculului este limitată la 5\,km/h, atâta timp cât recipientul pentru gunoi nu este coborât.
+
+\subsubsubject{\VpadEr{851}} % {\#\ 851 Filtre à air}
+
++ \textSymb{vpadWarningFilter}~– Filtrul de aer este înfundat. Înlocuiți imediat elementul filtrant.
+
+
+\subsubsubject{\VpadEr{902}} % {\#\ 902 Pression de freinage}
+
++ \textSymb{vpadTBrakeError}~– Presiunea de frânare nu este suficientă. Întrerupeți activitatea și informați atelierul de reparații.
+% \VpadEr{904} % {\#\ 904 Interrupteur de direction d'avancement}
+
+
+\subsubsubject{\VpadEr{905}} % {\#\ 905 Frein à main actionné}
+
++ \textSymb{vpadTBrakePark}~– Frâna de staționare nu este complet eliberată. Viteza autovehiculului este limitată la 5\,km/h, atâta timp cât frâna de staționare este încă activată.
+
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent

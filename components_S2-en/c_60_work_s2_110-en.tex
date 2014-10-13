@@ -268,6 +268,50 @@ The freshwater tank must contain sufficient water; the \sdeux\ must be in \aW{wo
 \stopSteps
 
 \stopsection
+
+\page [yes]
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Working with the third broom (optional)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Start up\index{Sweeping} the vehicle as described in \in{Section}[sec:using:start] \atpage[sec:using:start] .
+\item Select\index{3rd broom} \aW{working} mode (button on the end of the gearshift).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Ensure that the third broom shows up as activated on the Vpad screen (see \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Press the \textSymb{joy_key_frontbrush_act}~button to activate the hydraulics of the third broom.
+\item Press the \textSymb{joy_key_frontbrush_left} or \textSymb{joy_key_frontbrush_right}~button to start the third broom turning in the desired direction.
+
+\item Use the \textSymb{joy_key_frontbrush_increase} and \textSymb{joy_key_frontbrush_decrease}~buttons on the multifunction console to set the rotary speed.
+
+\item Use the joystick to position the broom, as shown in the diagrams below.
+
+\stopSteps
+
+{\md Important:} {\lt Before the side brooms can be positioned, the hydraulics of the third broom must be deactivated by pressing the \textSymb{joy_key_frontbrush_act}~button.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Positioning the third broom}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Move up|/|down; left|/|right}
+{\externalfigure [work:frontBrush:incline]}{Tip left|/|right; tip forward|/|back}
+\stopcombination}
+\stop
+
+\stopsection
+
 \stopregister[index][chap:using]
 
 \stopchapter

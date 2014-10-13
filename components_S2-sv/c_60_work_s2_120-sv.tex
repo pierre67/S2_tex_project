@@ -2,8 +2,8 @@
 \product prd_ba_s2_120-sv
 
 
-\startchapter [title={Die S2 im Alltag},
-							reference={chap:using}]
+\startchapter [title={Det dagliga arbetet med S2},
+reference={chap:using}]
 
 \setups [pagestyle:marginless]
 
@@ -12,34 +12,34 @@
 % {\externalfigure [work:ignition:key]}
 \startregister[index][chap:using]{Inbetriebnahme}
 
-\startsection [title={Inbetriebnahme},
-							reference={sec:using:start}]
+\startsection [title={Driftsättning},
+reference={sec:using:start}]
 
 
 \startSteps
-\item Stellen Sie sicher, dass die regulären Kontrollen und Wartungen vorschriftsmäßig durchgeführt wurden.
-\item Starten Sie mithilfe des Zündschlüssels den Motor: Zündung einschalten, dann Schlüssel im Uhrzeigersinn weiterdrehen und halten, bis der Motor startet (nur möglich wenn Fahrstufenwahlhebel auf Neutral).
+\item Kontrollera att de regelbundna kontrollerna och underhållsarbetena har genomförts som de ska.
+\item Starta motorn med hjälp av tändningsnyckeln: Slå på tändningen, fortsätt sedan att vrida nyckeln medurs och håll kvar den där tills motorns startar (fungerar endast när växelspaken befinner sig i neutralläget).
 \stopSteps
 
 \start
 \setupcombinations [width=\textwidth]
 
-\placefig[here][fig:select:drive]{Fahrstufenwahlhebel}
+\placefig[here][fig:select:drive]{Växelspak}
 {\startcombination [2*1]
-{\externalfigure [work:select:fDrive]}{Wahlhebel in Stellung \aW{Vorwärtsfahrt}}
-{\externalfigure [work:select:rDrive]}{Wahlhebel in Stellung \aW{Rückwärtsfahrt}}
+{\externalfigure [work:select:fDrive]}{Växelspak i läget\aW{framåtkörning}}
+{\externalfigure [work:select:rDrive]}{Växelspak i läget\aW{backning}}
 \stopcombination}
 \stop
 
 
 \startSteps [continue]
-\item Drehen Sie den Schalter des Fahrstufenwahlhebels, um im \aW{Fahr}modus eine Fahrstufe einzulegen:
+\item Vrid växelspakens kontakt för att lägga i en växel i\aW{kör}läget:
 \startitemize [R]
-\item Erste Stufe
-\item Zweite Stufe (Automatikbetrieb; startet automatisch in erster Stufe)
+\item Första steget
+\item Andra steget (automatdrift; startar automatiskt i det första steget)
 \stopitemize
 
-oder drücken Sie auf den Knopf außen am Hebel, um den \aW{Arbeits}modus zu aktivieren|/|deaktivieren.
+eller tryck på knappen på spakens utsida för att aktivera/avaktivera \aW{arbets}läget.
 \stopSteps
 
 \startbuffer [work:config]
@@ -47,9 +47,9 @@ oder drücken Sie auf den Knopf außen am Hebel, um den \aW{Arbeits}modus zu akt
 \startPictPar
 \PMrtfm
 \PictPar
-Im Arbeitsmodus steht nur die erste Fahrstufe zur Verfügung und der Motor dreht mit 1300\,min\high{\textminus 1}.
+I arbetsläget kan endast det första steget användas och motorn arbetar med 1300\,min\high{\textminus 1}.
 
-Steuern Sie die Motordrehzahl mithilfe der Tasten~\textSymb{joy_key_engine_increase} und~\textSymb{joy_key_engine_decrease} der Multifunktionskonsole.
+Reglera motorvarvtalet med hjälp av knapparna ~\textSymb{joy_key_engine_increase} och~\textSymb{joy_key_engine_decrease} på multifunktionskonsolen.
 \stopPictPar
 \stoptextbackground
 \stopbuffer
@@ -57,52 +57,52 @@ Steuern Sie die Motordrehzahl mithilfe der Tasten~\textSymb{joy_key_engine_incre
 \getbuffer [work:config]
 
 \startSteps [continue]
-\item Drücken Sie den Fahrstufenwahlhebel nach oben und nach vorne (Vorwärtsfahrt) bzw. nach oben und nach hinten (Rückwärtsfahrt). Siehe Abbildungen oben.
-\item Lösen Sie vor dem Beschleunigen die Feststellbremse.
+\item Tryck växelspaken uppåt och framåt (framåtkörning) resp. uppåt och bakåt(backning). Se figurer ovan.
+\item Lossa handbromsen innan du accelererar.
 \stopSteps
 
 \starttextbackground [FC]
 \startPictPar
 \PMrtfm
 \PictPar
-{\md Lösen Sie die Feststellbremse vollständig!} Die Position des Feststellbremshebels wird von einem elektronischen Sensor überwacht: Wenn die Feststellbremse nicht vollständig gelöst ist, ist die Fahrgeschwindigkeit auf 5\,km/h begrenzt.
+{\md Lossa handbromsen helt!} Handbromsens position övervakas av en elektronisk sensor. När handbromsen inte är helt lossad är fordonets hastighet begränsad till 5\,km/h.
 \stopPictPar
 \stoptextbackground
 
 \startSteps [continue]
-\item Drücken Sie langsam das Fahrpedal, um das Fahrzeug in Bewegung zu versetzen.
+\item Tryck långsamt ned gaspedalen för att sätta fordonet i rörelse.
 \stopSteps
 
 
 %% NOTE: New text [2014-04-29]:
-\subsection [sSec:suctionClap] {Saugkanalklappe}
+\subsection [sSec:suctionClap] {Lucka till sugkanal}
 
-Das Saugsystem erzeugt einen Luftstrom entweder vom Saugmund oder vom Handsaugschlauch (Option) zum Schmutzbehälter.
+Sugsystemet genererar ett luftflöde antingen från sugmunstycket eller från handsugslangen (tillval) till smutsbehållaren.
 
-Eine von Hand zu betätigende Klappe (\inF[fig:suctionClap], \atpage[fig:suctionClap]) erlaubt es, den Luftstrom zwischen Saugmund und Handsaugschlauch umzuschalten.
+Med en lucka som manövreras för hand (\inF[fig:suctionClap], \atpage[fig:suctionClap]) kan man koppla om luftflödet mellan sugmunstycket och handsugslangen.
 
-\placefig [here] [fig:suctionClap] {Saugkanalklappe}
+\placefig [here] [fig:suctionClap] {Lucka till sugkanal}
 {\startcombination [2*1]
-{\externalfigure [work:suctionClap:open]}{Saugkanal geöffnet}
-{\externalfigure [work:suctionClap:closed]}{Saugkanal geschlossen}
+{\externalfigure [work:suctionClap:open]}{Sugkanal öppen}
+{\externalfigure [work:suctionClap:closed]}{Sugkanal stängd}
 \stopcombination}
 
-Im Normalbetrieb~– Arbeiten mit dem Saugmund~– muss der Saugkanal geöffnet sein (Umschalthebel zeigt nach oben).
+I normal drift~– arbete med sugmunstycket~– måste sugkanalen vara öppen (omkopplingsspaken pekar uppåt).
 
-Um den Handsaugschlauch einsetzen zu können, muss der Saugkanal geschlossen sein (Umschalthebel zeigt nach unten). Auf diese Weise wird der Luftstrom  durch den Handsaugschlauch geleitet.
+För att du ska kunna sätta i handsugslangen måste sugkanalen vara stängd (omkopplingsspaken pekar nedåt). På så sätt leds luftflödet genom handsugslangen.
 %% End new text
 
 \stopsection
 
 
-\startsection [title={Außerbetriebnahme},
-							reference={sec:using:stop}]
+\startsection [title={Ta maskinen ur drift},
+reference={sec:using:stop}]
 
-\index{Außerbetriebnahme}
+\index{Ta maskinen ur drift}
 
 \startSteps
-\item Aktivieren Sie die Feststellbremse (Hebel zwischen den Sitzen) und legen Sie den Fahrstufenwahlhebel auf \aW{Neutral}.
-\item Führen Sie die erforderlichen Kontrollarbeiten~– tägliche und ggf. wöchentliche Kontrollen~– durch wie auf \atpage[table:scheduledaily] beschrieben.
+\item Aktivera handbromsen(spak mellan stolarna) och ställ växelspaken i \aW{neutralläge}.
+\item Genomför de nödvändiga kontrollarbetena~– de dagliga och ev. de veckovisa kontrollerna~– på det sätt som beskrivs på \atpage[table:scheduledaily].
 \stopSteps
 
 \getbuffer [prescription:handbrake]
@@ -110,25 +110,25 @@ Um den Handsaugschlauch einsetzen zu können, muss der Saugkanal geschlossen sei
 \stopsection
 
 
-\startsection [title={Kehren und Saugen},
-							reference={sec:using:work}]
+\startsection [title={Sopnings- och uppsugningsarbeten},
+reference={sec:using:work}]
 
 \startSteps
-\item Führen Sie die\index{Kehren} Inbetriebnahme des Fahrzeugs durch wie in  \in{§}[sec:using:start], \atpage[sec:using:start] beschrieben.
-\item Aktivieren Sie\index{Saugen} den \aW{Arbeits}modus (Knopf außen am Fahrstufenwahlhebel).
+\item Ta fordonet i drift\index{Sopning} på det sätt som beskrivs i\in{§}[sec:using:start], \atpage[sec:using:start].
+\item Aktivera \index{Uppsugning}\aW{arbets}läget (knapp på utsidan av växelspaken).
 \stopSteps
 
 % \getbuffer [work:config]
 %% NOTE: outcommented by PB
 
 \startSteps [continue]
-\item Drücken Sie die Taste~\textSymb{joy_key_suction_brush}, um Turbine und Besen einzuschalten.
+\item Tryck på knappen~\textSymb{joy_key_suction_brush} för att slå på turbin och kvastar.
 
-{\md Variante:} {\lt Drücken Sie die Taste~\textSymb{joy_key_suction}, um nur mit dem Saugmund zu arbeiten.}
+{\md Alternativ:} {\lt Tryck på knappen ~\textSymb{joy_key_suction} för att arbeta endast med sugmunstycket.}
 
-\item Stellen Sie Umdrehungsgeschwindigkeit der Besen mithilfe der Tasten~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} der Multifunktionskonsole ein.
+\item Ställ in rotationshastigheten på kvastarna med knapparna~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} på multifunktionskonsolen.
 
-\item Bringen Sie die Besen mithilfe des jeweiligen Joysticks so in Position, dass Sie die optimale Arbeitsbreite erreichen.
+\item Med hjälp av respektive spak ska du föra kvastarna till en position där den optimala arbetsbredden nås.
 \stopSteps
 
 \vfill
@@ -136,101 +136,101 @@ Um den Handsaugschlauch einsetzen zu können, muss der Saugkanal geschlossen sei
 \start
 \setupcombinations [width=\textwidth]
 
-\placefig[here][fig:brush:position]{Positionieren der Besen}
+\placefig[here][fig:brush:position]{Positionering av kvastarna}
 {\startcombination [2*1]
-{\externalfigure [work:brushes:enlarge]}{Besen nach außen|/|innen}
-{\externalfigure [work:brush:left:raise]}{Besen auf|/|ab}
+{\externalfigure [work:brushes:enlarge]}{Kvastar inåt/utåt}
+{\externalfigure [work:brush:left:raise]}{Kvastar upp/ned}
 \stopcombination}
 \stop
 
 \page [yes]
 
 
-\subsubsubject{Befeuchtung von Besen und Saugkanal}
+\subsubsubject{Befuktning av kvastar och sugkanal}
 
-Betätigen\index{Kehren+Befeuchtung} Sie den Schalter~\textSymb{temoin_busebalais} zwischen den Sitzen:
+Aktivera\index{Sopning+Befuktning} kontakten~\textSymb{temoin_busebalais} mellan stolarna.
 
-{\md Position 1:} Wasserpumpe läuft automatisch, solange die Besen aktiviert sind.
+{\md Position 1:} Vattenpumpen arbetar automatiskt så länge kvastarna är aktiva.
 
-{\md Position 2:} Wasserpumpe läuft permanent. (Nützlich \eG\ für Einstellarbeiten.)
+{\md Position 2:} Vattenpumpen arbetar permanent (praktiskt vid t.ex.inställningsarbeten.)
 
 
-\subsubsubject{Grobschmutz}
+\subsubsubject{Grovsmuts}
 
 \startSteps [continue]
-\item Wenn die Gefahr besteht, dass größere Schmutzobjekte (\eG\ PET||Flaschen) den Saugmund blockieren, öffnen\index{Grobschmutzklappe} Sie die Grobschmutzklappe mittels der seitlichen Tasten der Multifunktionskonsole oder~– wenn das nicht ausreicht~– heben Sie\index{Saugmund+Grobschmutz} den Saugmund vorübergehend an.
+\item Om det finns risk för att större föremål (t.ex.PET-flaskor) blockerar sugmunstycket ska du öppna luckan för grovsmuts\index{Lucka för grovsmuts} med hjälp av knapparna på sidan av multifunktionskonsolen eller ~– om detta inte är tillräckligt~– lyfta upp\index{Sugmunstycke+Grovsmuts} sugmunstycket tillfälligt.
 \stopSteps
 
 \start
 \setupcombinations [width=\textwidth]
 
-\placefig[here][fig:suctionMouth:clap]{Umgehen mit Grobschmutz}
+\placefig[here][fig:suctionMouth:clap]{Hantering av grovsmuts}
 {\startcombination [2*1]
-{\externalfigure [work:suction:open]}{Grobschmutzklappe öffnen}
-{\externalfigure [work:suction:raise]}{Saugmund vorübergehend anheben}
+{\externalfigure [work:suction:open]}{Öppna luckan för grovsmuts}
+{\externalfigure [work:suction:raise]}{Lyft sugmunstycket tillfälligt}
 \stopcombination}
 \stop
 
 \stopsection
 
 
-\startsection [title={Entleeren des Schmutzbehälters},
-							reference={sec:using:container}]
+\startsection [title={Tömma smutsbehållaren},
+reference={sec:using:container}]
 
 \startSteps
-\item Fahren\index{Schmutzbehälter+Entleeren} Sie das Fahrzeug an einen zum Entleeren geeigneten Platz. Achten Sie darauf, dass die geltenden Umweltschutzbestimmungen eingehalten werden.
-\item Aktivieren Sie die Feststellbremse und legen Sie den Fahrstufenwahlhebel auf \aW{Neutral}. (Erforderlich zur Freigabe des Behälter||Kippen||Schalters).
+\item Kör\index{Smutsbehållare+Tömning} fordonet till en plats som lämpar sig för att tömma smutsbehållaren. Beakta gällande miljöskyddsbestämmelser.
+\item Dra åt handbromsen och ställ växelspaken i \aW{neutralläge}. (Nödvändigt för att spärra upp kontakten för tippning av behållaren).
 \stopSteps
 
 \getbuffer [prescription:container:gravity]
 
 \startSteps [continue]
-\item Entriegeln und öffnen Sie die Verschlussklappe des Schmutzbehälters.
-\item Betätigen Sie den Schalter~\textSymb{temoin_kipp2} (Mittelkonsole, zwischen den Sitzen), um den Schmutzbehälter aufzukippen.
-\item Wenn der Behälter entleert ist, waschen Sie das Innere mit einem Wasserstrahl. Sie können hierzu die integrierte Wasserpistole (optionale Ausstattung) verwenden.
+\item Lås upp och öppna locket till smutsbehållaren.
+\item Aktivera kontakten~\textSymb{temoin_kipp2} (mittkonsol mellan stolarna) för att tippa upp smutsbehållaren.
+\item När behållaren är tom ska du tvätta insidan med vattenstråle. Du kan använda den integrerade vattensprutan (tillval).
 \stopSteps
 
 \start
 \setupcombinations [width=\textwidth]
-\placefig[here][fig:brush:adjust]{Handhabung des Schmutzbehälters}
+\placefig[here][fig:brush:adjust]{Hantering av smutsbehållaren}
 {\startcombination [3*1]
-{\externalfigure [container:cover:unlock]}{Verriegelung der Verschlussklappe}
-{\externalfigure [container:safety:unlocked]}{Sicherungsstrebe}
-{\externalfigure [container:safety:locked]}{Sicherungsstrebe verriegelt}
+{\externalfigure [container:cover:unlock]}{Lås till smutsbehållarens lock}
+{\externalfigure [container:safety:unlocked]}{Säkerhetsstötta}
+{\externalfigure [container:safety:locked]}{Säkerhetsstötta låst}
 \stopcombination}
 \stop
 
 \startSteps [continue]
-\item Überprüfen|/|reinigen Sie die Dichtungen und die Auflageflächen der Dichtungen des Behälters, des Recyclingsystems und des Saugkanals.
+\item Kontrollera/rengör packningarna och kontaktytorna på packningarna, behållaren, återvinningssystemet och sugkanalen.
 \stopSteps
 
 \getbuffer [prescription:container:tilt]
 
 \startSteps [continue]
-\item Betätigen Sie den Schalter~\textSymb{temoin_kipp2}, um den Schmutzbehälter abzulassen. (Entfernen Sie ggf. vorher die Sicherungsstreben von den Hydraulikzylindern.)
-\item Verriegeln Sie die Verschlussklappe des Schmutzbehälters.
+\item Aktivera kontakten~\textSymb{temoin_kipp2} för att tömma smutsbehållaren. (Ta först bort säkerhetsstöttorna från hydraulcylindrarna, om tillämpligt.)
+\item Lås locket till smutsbehållaren.
 \stopSteps
 
 \stopsection
 
 
-\startsection [title={Handsaugschlauch},
-							reference={sec:using:suction:hose}]
+\startsection [title={Handsugslang},
+reference={sec:using:suction:hose}]
 
-Die \sdeux\ kann optional\index{Handsaugschlauch} mit einem Handsaugschlauch ausgerüstet werden. Dieser ist auf der Verschlussklappe des Schmutzbehälters fixiert; seine Bedienung ist unkompliziert.
+\sdeux\ kan utrustas\index{Handsugslang} med en handsugslang som tillval. Slangen är fäst på smutsbehållarens lock och enkel att använda.
 
-{\sla Voraussetzungen:}
+{\sla Förutsättningar:}
 
-Der Schmutzbehälter ist vollständig abgesenkt; die \sdeux\ befindet sich im \aW{Arbeits}modus. (Siehe \in{§}[sec:using:start], \atpage[sec:using:start].)
+Smutsbehållaren är helt nedsänkt; \sdeux\ befinner sig i \aW{arbets}läget. (Se \in{§}[sec:using:start], \atpage[sec:using:start].)
 
-\startfigtext[left][fig:using:suction:hose]{Handsaugschlauch}
+\startfigtext[left][fig:using:suction:hose]{Handsugslang}
 {\externalfigure[work:suction:hose]}
 \startSteps
-\item Drücken Sie die Taste~\textSymb{temoin_aspiration_manuelle} der Deckenkonsole, um das Saugsystem zu aktivieren.
-\item Ziehen Sie die Feststellbremse fest an, bevor Sie das Führerhaus verlassen.
-\item Schließen Sie den Saugkanal mit der Saugkanalklappe. (Siehe \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
-\item Ziehen Sie den Handsaugschlauch am Mundstück aus seiner Halterung und beginnen Sie die Arbeit.
-\item Nach Beendigung der Arbeit betätigen Sie erneut die Taste~\textSymb{temoin_aspiration_manuelle}, um das Saugsystem auszuschalten.
+\item Tryck på knappen~\textSymb{temoin_aspiration_manuelle} på takkonsolen för att aktivera sugsystemet.
+\item Dra åt handbromsen ordentligt innan du lämnar förarhytten.
+\item Stäng sugkanalen med dess lucka. (Se \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Dra handsugslangen ur sin hållare från munstycket och börja arbetet.
+\item När du är klar ska du trycka på knappen~\textSymb{temoin_aspiration_manuelle} igen för att slå från sugsystemet.
 \stopSteps
 \stopfigtext
 
@@ -241,28 +241,28 @@ Der Schmutzbehälter ist vollständig abgesenkt; die \sdeux\ befindet sich im \a
 \setups[pagestyle:normal]
 
 
-\startsection [title={Hochdruckwasserpistole},
-							reference={sec:using:water:spray}]
+\startsection [title={Högtrycksvattenspruta },
+reference={sec:using:water:spray}]
 
-Die \sdeux\ kann optional\index{Wasserpistole} mit einer Hochdruckwasserpistole ausgerüstet werden. Die Wasserpistole ist in der hinteren rechten Wartungstür befestigt und mit einer 10-Meter||Schlauchhaspel~– auf der gegenüberliegenden Fahrzeugseite~– verbunden.
+\sdeux\ kan utrustas\index{Vattenspruta} med en högtrycksvattenspruta som tillval. Vattensprutan är installerad på den bakre högra underhållsdörren och ansluten till en 10 m lång slangvinda~på den motsatta fordonssidan~.
 
-Gehen Sie so vor, um die Wasserpistole einzusetzen:
+Vattensprutan används på följande sätt:
 
-{\sla Voraussetzungen:}
+{\sla Förutsättningar:}
 
-Im Frischwassertank befindet sich ausreichend Wasser; die \sdeux\ befindet sich im \aW{Arbeits}modus. (Siehe \in{§}[sec:using:start], \atpage[sec:using:start].)
+Det finns tillräckligt med vatten i renvattentanken; \sdeux\ befinner sig i \aW{arbets}läget. (Se \in{§}[sec:using:start], \atpage[sec:using:start].)
 
-\placefig[margin][fig:using:water:spray]{Hochdruckwasserpistole}
+\placefig[margin][fig:using:water:spray]{Högtrycksvattenspruta }
 {\externalfigure[work:water:spray]}
 
 \startSteps
-\item Drücken Sie die Taste~\textSymb{temoin_buse} der Deckenkonsole, um die Hochdruckwasserpumpe zu aktivieren.
-\item Ziehen Sie die Feststellbremse fest an, bevor Sie das Führerhaus verlassen.
-\item Öffnen Sie die hintere rechte Wartungstür und nehmen Sie die Wasserpistole heraus.
-\item Rollen Sie so viel Schlauch ab wie nötig und beginnen Sie Ihre Arbeit.
-\item Nach Beendigung der Arbeit betätigen Sie erneut die Taste~\textSymb{temoin_buse}, um die Hochdruckwasserpumpe auszuschalten.
-\item Ziehen Sie kurz am Schlauch, um die Blockierung zu lösen und den Schlauch aufzurollen.
-\item Befestigen Sie die Wasserpistole wieder in ihrer Halterung und schließen Sie die Wartungstür.
+\item Tryck på knappen~\textSymb{temoin_buse} på takkonsolen för att aktivera högtrycksvattenpumpen.
+\item Dra åt handbromsen ordentligt innan du lämnar förarhytten.
+\item Öppna den bakre högra underhållsdörren och ta ut vattensprutan.
+\item Rulla upp så mycket av slangen som du behöver och börja arbetet.
+\item När du är klar ska du trycka på knappen~\textSymb{temoin_buse} igen för att slå från högtrycksvattenpumpen.
+\item Dra kort i slangen för att låsa upp spärren och rulla upp slangen.
+\item Sätt tillbaka vattensprutan i hållaren och stäng underhållsdörren.
 \stopSteps
 
 \stopsection
@@ -270,3 +270,4 @@ Im Frischwassertank befindet sich ausreichend Wasser; die \sdeux\ befindet sich 
 
 \stopchapter
 \stopcomponent
+

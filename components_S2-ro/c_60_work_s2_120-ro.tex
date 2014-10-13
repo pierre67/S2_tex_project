@@ -1,0 +1,316 @@
+\startcomponent c_60_work_s2_120-ro
+\product prd_ba_s2_120-ro
+
+
+\startchapter [title={ S2 în viața de zi cu zi},
+reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Punerea în funcțiune}
+
+\startsection [title={Punerea în funcțiune},
+reference={sec:using:start}]
+
+
+\startSteps
+\item Asigurați-vă că verificările și reviziile regulate sunt realizate în conformitate cu prevederile în vigoare.
+\item Porniți motorul cu ajutorul cheii de contact: Porniți sistemul de aprindere, apoi rotiți cheia în sensul acelor de ceas și mențineți până în momentul în care motorul pornește (posibil doar atunci când maneta de selectare a vitezei de mers este în poziție neutră).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Manetă de selectare a vitezelor}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Maneta selectorul de viteză în poziția \aW{Mers înainte}}
+{\externalfigure [work:select:rDrive]}{Maneta selectorul de viteză în poziția \aW{Mers înapoi}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Rotiți comutatorul manetei selectorului de viteze, pentru a trece în altă treaptă de viteză în modul \aW{Mers}:
+\startitemize [R]
+\item Prima treaptă
+\item A doua treaptă (mod de funcționare automat; pornește automat în prima treaptă)
+\stopitemize
+
+sau apăsați pe butonul exterior al manetei, pentru a activa/dezactiva \aW{modul} de lucru.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+În modul de lucru, este disponibilă doar prima treaptă de viteză, iar motorul are o turație de 1300\,min\high{\textminus 1}.
+
+Verificați turația motorului cu ajutorul tastelor ~\textSymb{joy_key_engine_increase} și~\textSymb{joy_key_engine_decrease} al consolei multifuncționale.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Apăsați maneta schimbătorului de viteză în sus și în față (mers înainte), respectiv în sus și în spate (mers cu spatele). A se vedea imaginile de mai sus.
+\item Înainte de a accelera, eliberați frâna de mână.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Decuplaţi complet frâna de mână!} Poziția manetei schimbătorului de viteze este monitorizată de un senzor electronic: În cazul în care frâna de mână nu a fost decuplată complet, viteza de mers este limitată la 5\,km/h.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Apăsați încet pedala de accelerație, pentru a pune autovehiculul în mișcare.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Clapetă canal de aspirare}
+
+Sistemul de aspirare produce un flux de aer fie de la gura de aspirare sau de la furtunul de aspirare manuală (opțional) la recipientul de gunoi.
+
+O clapetă care trebuie acționată manual (\inF[fig:suctionClap], \atpage[fig:suctionClap]) permite comutarea fluxului de aer între gura de aspirare și furtunul de aspirare manual.
+
+\placefig [here] [fig:suctionClap] {Clapetă canal de aspirare}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Canal de aspirare deschis}
+{\externalfigure [work:suctionClap:closed]}{Canal de aspirare închis}
+\stopcombination}
+
+În modul normal de funcționare~– operațiuni de lucru cu gura de aspirare~– canalul de aspirare trebuie să fie deschis (maneta de comutare indică în sus).
+
+Pentru a putea folosi un furtun cu aspirare manuală, canalul de aspirare trebuie să fie închis (maneta de comutare indică în jos). În acest fel, fluxul de aer este deviat prin furtunul de aspirare manuală.
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Scoaterea din funcțiune},
+reference={sec:using:stop}]
+
+\index{Scoaterea din funcțiune}
+
+\startSteps
+\item Activați frâna de mână (maneta dintre scaune) și poziționați maneta schimbătorului de viteză în poziția \aW{Neutră}.
+\item Efectuați operațiunile necesare de verificare~– verificări zilnice și, dacă este necesar, săptămânale~– în modul descris în \atpage[table:scheduledaily].
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+
+\startsection [title={Operațiunile de măturare și aspirare},
+reference={sec:using:work}]
+
+\startSteps
+\item Puneți autovehiculul în funcțiune\index{Măturare} în modul descris în \in{§}[sec:using:start], \atpage[sec:using:start].
+\item Activați\index{Aspirare} modul \aW{de lucru} (butonul din exteriorul manetei schimbătorului de viteze).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Apăsați tasta~\textSymb{joy_key_suction_brush}, pentru a pune în funcțiune turbinele și măturile.
+
+{\md Varianta:} {\lt Apăsați tasta~\textSymb{joy_key_suction}, pentru a lucra doar cu gura de aspirare.}
+
+\item Reglați viteza de rotire a măturilor cu ajutorul tastelor ~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} de pe consola multifuncțională.
+
+\item Cu ajutorul joystick-urilor corespunzătoare, aduceți măturile într-o poziție adecvată, astfel încât acestea să poată atinge lățimea optimă de lucru.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Poziționarea măturilor}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Mături în exterior/interior}
+{\externalfigure [work:brush:left:raise]}{Mături jos/sus}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Umezirea măturilor și a canalului de aspirare}
+
+Acționați\index{Măturare+Umezire} întrerupătorul~\textSymb{temoin_busebalais} dintre scaune:
+
+{\md Poziția 1:} Pompa de apă funcționează automat, atâta timp cât măturile sunt activate.
+
+{\md Poziția 2:} Pompa de apă funcționează permanent. (Util \eG\ pentru operațiunile de reglare.)
+
+
+\subsubsubject{Gunoiul grosier}
+
+\startSteps [continue]
+\item Atunci când există riscul ca deșeuri de dimensiuni mai mari (\eG\ sticle PET) blocheaza gura de aspirare, deschideți\index{Clapetă gunoi grosier} clapeta pentru gunoi grosier folosind tastele laterale de pe consola multifuncționalăsau~– dacă nu este suficient~– ridicați\index{Gură de aspirare+Gunoi grosier} temporar gura de aspirare.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Manipularea gunoiului grosier}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Deschidere clapetă pentru gunoiul grosier}
+{\externalfigure [work:suction:raise]}{Ridicare temporară a gurii de aspirare}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Golirea recipientului de gunoi},
+reference={sec:using:container}]
+
+\startSteps
+\item Conduceți autovehiculul\index{Recipient gunoi+Golire} într-un loc adecvat pentru golire. Asigurați-vă de faptul că normele în vigoare în materie de protejare a mediului înconjurător sunt respectate.
+\item Activați frâna de mână și poziționați maneta schimbătorului de viteză în poziția \aW{Neutră}. (Necesar pentru decuplarea întrerupătorului pentru înclinarea recipientului)
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Deblocați și deschideți clapeta de închidere a recipientului de gunoi.
+\item Acționați întrerupătorul~\textSymb{temoin_kipp2} (consola centrală dintre scaune), pentru a înclina recipientul de gunoi.
+\item Atunci când recipientul a fost golit complet, curățați interiorul cu un jet de apă. În acest sens, puteți utiliza pistolul integrat de apă (dotare opțională).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Manipularea recipientului de gunoi}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Blocarea manetei de închidere}
+{\externalfigure [container:safety:unlocked]}{Proptă de siguranță}
+{\externalfigure [container:safety:locked]}{Proptă de siguranță blocată}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Verificați/curățați garniturile și suprafețele de fixare ale garniturilor recipientului, ale sistemului de reciclare și ale canalului de aspirare.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Acționați întrerupătorul~\textSymb{temoin_kipp2}, pentru a coborî recipientul de gunoi. (Dacă este cazul, în prealabil îndepărtați propta de siguranță de la cilindrul hidraulic.)
+\item Deblocați clapeta de închidere a recipientului de gunoi.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Furtun de aspirare manuală},
+reference={sec:using:suction:hose}]
+
+Opțional, \sdeux\ poate fi echipată\index{Furtun de aspirare manuală} cu un furtun de aspirare manuală. Acesta este fixat pe clapeta de închidere a recipientului de gunoi; manevrarea sa este extrem de simplă.
+
+{\sla Condiții:}
+
+Recipientul de gunoi este complet coborât; \sdeux\ se află în mod de \aW{lucru}. (A se vedea \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Furtun de aspirare manuală}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Apăsați tasta~\textSymb{temoin_aspiration_manuelle} al consolei de tavan, pentru a activa sistemul de aspirare.
+\item Trageți frâna de mână, înainte de a părăsi cabina șoferului.
+\item Închideți canalul de aspirare cu clapeta de acoperire. (A se vedea \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Trageți furtunul de aspirare din suport și începeți operațiunea de lucru.
+\item După terminarea operațiunilor de lucru, apăsați din nou tasta~\textSymb{temoin_aspiration_manuelle}, pentru a decupla sistemul de aspirare.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Pistol de apă de înaltă presiune},
+reference={sec:using:water:spray}]
+
+Opțional, \sdeux\ poate fi echipată\index{Pistol de apă} cu un pistol de apă de înaltă presiune. Pistolul de apă este fixat pe ușa de revizie posterioară din partea dreaptă și este legat cu tambur pentru furtun de 10 metri~– de partea opusă a autovehiculului~.
+
+Procedați după cum urmează pentru a utiliza pistolul de apă:
+
+{\sla Condiții:}
+
+În rezervorul pentru apă proaspătă se află o cantitate suficientă de apă; \sdeux\ se află în \aW{modul de}lucru. (A se vedea \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Pistol de apă de înaltă presiune}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Apăsați tasta~\textSymb{temoin_buse} al consolei de tavan, pentru a activa pompa de apă de înaltă presiune.
+\item Trageți frâna de mână, înainte de a părăsi cabina șoferului.
+\item Deschideți ușa anterioară de revizie din partea dreaptă și scoateți pistolul de apă.
+\item Rulați furtunul cât este necesar și începeți-vă activitatea.
+\item După terminarea operațiunilor de lucru, apăsați din nou tasta~\textSymb{temoin_buse}, pentru a decupla pompa de apă de înaltă presiune.
+\item Trageți ușor furtunul pentru a debloca sistemul de blocare și pentru a rula furtunul.
+\item Fixați pistolul de apă la loc în suportul său și închideți ușa de revizie.
+\stopSteps
+
+\stopsection
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Lucraţi cu a treia mătură (Opţional)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Puneți\index{Măturatul} autovehiculul în funcțiune, în modul descris în \in{capitolul}[sec:using:start] \atpage[sec:using:start] .
+\item Activați\index{A 3-a mătură} modul de\aW{lucru}(butonul din exteriorul manetei schimbătorului de viteze).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Asiguraţi-vă că a treia mătură este activată pe ecranul Vpad
+(A se vedea \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Apăsaţi tasta~\textSymb{joy_key_frontbrush_act}, pentru a acţiona sistemul hidraulic al celei de-a treia mături.
+\item Apăsaţi tasta~\textSymb{joy_key_frontbrush_left} sau~\textSymb{joy_key_frontbrush_right}, pentru a roti mătura în direcţia dorită.
+
+\item Verificați turația motorului cu ajutorul tastelor ~\textSymb{joy_key_frontbrush_increase} și~\textSymb{joy_key_frontbrush_decrease} al  consolei multifuncțioanle.
+
+\item Poziţionaţi mătura cu ajutorul manetei, în modul prezentat în imagini.
+
+\stopSteps
+
+{\md Indicație:} {\lt Pentru a putea poziţiona măturile laterale, cu ajutorul tastei trebuie dezactivat ~\textSymb{joy_key_frontbrush_act} sistemul hidraulic al celei de-a treia mături.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Poziţionarea celei de-a treia mături}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{În sus/jos; stânga/dreapta}
+{\externalfigure [work:frontBrush:incline]}{Transversal/Longitudinal}
+\stopcombination}
+\stop
+
+
+
+\stopsection
+
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent

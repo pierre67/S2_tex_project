@@ -80,9 +80,17 @@ The menu bar along the bottom of the screen shows the available menus: Touch the
 
 \page [yes]
 
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+% \startcolumns
+
+\subsection{Indicator symbols on the Vpad screen} % nouveau
+
+
 \start % local group for temporary redefinition of \textDescrHead [TF]
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
-\startcolumns
+
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
@@ -107,10 +115,20 @@ The menu bar along the bottom of the screen shows the available menus: Touch the
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Service display}(yellow) Regular vehicle maintenance is due. Consult the maintenance schedule.
+\textDescrHead{Go to workshop}(yellow) Regular vehicle maintenance is due (see \about [sec:schedule] \atpage [sec:schedule]) or an engine error has been registered (specialist workshop required).
 
-+\:Error message \# 650 to \# 653, or \# 703
++\:Fehlermeldungen \# 650 to \# 653, or \# 703
 \stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Particulate filter}(yellow) Regeneration of the particulate filter will be started as soon as operating conditions permit.
+
+{\md Important:} {\lt If possible, {\em do not} switch the engine off while this indicator is lit!}
+\stopSymVpad
+
 
 \startSymVpad
 \externalfigure[vpadTBrakeError][height=1.7\lH]
@@ -135,7 +153,6 @@ The menu bar along the bottom of the screen shows the available menus: Touch the
 \textDescrHead{Pre||heating system}(yellow) The engine is being pre||heated.
 \stopSymVpad
 
-\columnbreak
 
 \startSymVpad
 \externalfigure[vpadTFuelReserve][height=1.7\lH]
@@ -185,7 +202,6 @@ The menu bar along the bottom of the screen shows the available menus: Touch the
 \textDescrHead{Error message}(red) An error message has been saved on the \Vpad. Press the \textSymb{vpadClear}~button, to display all registered notifications. Contact the workshop.
 \stopSymVpad
 
-\stopcolumns
 \stop % local group for temporary redefinition of \textDescrHead
 
 \stopsection
@@ -193,10 +209,10 @@ The menu bar along the bottom of the screen shows the available menus: Touch the
 \page [yes]
 
 
-\section{Vpad menus}
+\startsection [title={The Vpad menus},
+reference={vpad:menu}]
 
 \start
-\product prd_ba_s2_095-en
 
 \setupTABLE [background=color,
 frame=off,
@@ -224,17 +240,23 @@ option=stretch,textwidth=\makeupwidth]
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Confirm \eTD\bTD Confirm the selection \eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Up|/|down, \\ arrows \eTD\bTD Move up|/|down or increase|/|decrease the selected value \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Reversing warning tone \eTD\bTD Activate|/|deactivate reversing warning signal \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Switch off screen \eTD\bTD Hold down for around 5 seconds to switch off the Vpad screen. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Third broom\index{3rd broom} (optional) \eTD\bTD Release the third broom.
+The third broom can then be activated as described on page \at[sec:using:frontBrush]. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
 
-\subsubsubject{More displays on the Vpad}
+\subsection{Additional icons on the Vpad screen}
+
+
+\subsubsubject{Freshwater and recycling water reservoirs}
+
 
 \start % local group for temporary redefinition of \textDescrHead [TF]
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
-
-\startcolumns
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -254,7 +276,66 @@ option=stretch,textwidth=\makeupwidth]
 \textDescrHead{Recycled water fill level}(red) The recycled water fill level is too low (max. 140\,l; under the dirt hopper).
 \stopSymVpad
 
-\stopcolumns
+
+\subsubsubject{Suction system} % nouveau
+
+{\em This icon is only shown when the brooms have been deactivated.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Suction mouth} Suction system\index{Suction mouth} activated:
+The suction mouth is lowered and the turbine is activated.
+\stopSymVpad
+
+
+\subsubsubject{Side brooms} % nouveau
+
+{\em This icon is only shown when the third broom has not been activated.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Side brooms} Brooms\index{Sweeping}\index{Side brooms} activated. Rotary speed (in \% of max. rotary speed [V\low{max}]) is displayed below the icon, the current relief level for each broom is displayed above the icon (\type{~}~= float position, 14~= maximum relief).
+
+{\md Relief:} {\lt The lower the relief, the higher the pressure with which the brooms contact the ground.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Float position}(green at lower edge)
+To deactivate relief, press the joystick forward and hold it there for around 2 seconds~– the full weight of the broom will then be bearing down on the ground. The rotary speed of the brooms is 60\hairspace\% of V\low{max} (example).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Side brooms} The brooms have been activated. They are stationary and raised.
+\stopSymVpad
+
+
+\subsubsubject{Third broom (optional)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Third broom} The third broom\index{3rd broom} has been activated. The rotary speed (in \% of max. rotary speed [V\low{max}]) is indicated underneath the icon.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Float position}(green at lower edge)
+To deactivate relief, press the joystick forward and hold it there for around 2 seconds – the full weight of the broom will then be bearing down on the ground. The rotary speed of the brooms is 70\hairspace\% of V\low{max} (example).
+
+{\md Direction of rotation:} {\lt The direction of rotation is indicated at the top (black arrow on yellow background).}
+\stopSymVpad
+
+\stopsection
+
 \stop % local group for temporary redefinition of \textDescrHead
 
 \page [yes]

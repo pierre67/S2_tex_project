@@ -1,0 +1,347 @@
+\startcomponent c_40_control_s2_120-ro
+\product prd_ba_s2_120-ro
+
+
+\startchapter [title={Elementele de comandă ale autovehiculului},
+reference={chap:ctrl}]
+
+\setups[pagestyle:marginless]
+
+\placefig[here][fig:ctrl:cab:front]{Elemente de comandă}
+{\externalfigure[ctrl:cab:front]}
+
+\startcolumns [n=3]
+\startLongleg
+ \item Coloană de direcție (\in{§}[sec:steeringColumn])
+ \item Reglare coloană de direcție
+ \item Pedală de frână și de accelerație
+ \item Computer de bord \Vpad SN (\inP[sec:vpad])
+ \item Consolă de tavan (\inP[sec:ctrl:aux])
+ \item Radio/MP3
+\stopLongleg
+
+
+\subsubsubject{Dotări opționale}
+
+\startLongleg [continue]
+ \item Monitor mers cu spatele
+\stopLongleg
+\stopcolumns
+
+\startsection [title={Coloana de direcție},
+reference={sec:steeringColumn}]
+
+\subsection{Reglarea coloanei de direcție}
+
+\textDescrHead{Înclinarea volanului} Apăsați pedala și \Ltwo simultan reglați unghiul de înclinare al coloanei de direcție. Eliberați pedala pentru a bloca la loc mecanismul coloanei de direcție.
+
+\page[yes]
+\setups [pagestyle:normal]
+
+
+\subsection{Sisteme de iluminat și de semnalizare}
+
+\placefig [margin] [fig:column:left] {Manetă multifuncțională și întrerupător rotativ}
+{\externalfigure[ctrl:column:left]}
+
+\placefig [margin] [fig:column:right] {Manetă de selectare a vitezelor de mers}
+{\externalfigure[ctrl:column:right]}
+
+
+\subsubsubject{Întrerupător rotativ}
+
+\startitemize[width=1.7em]
+\sym{\textSymb{com_lowlight}} Lumină fază scurtă (rotire \TorqueR).
+\startitemize
+\sym{1} Lumină de poziție
+\sym{2} Lumină fază scurtă
+\stopitemize
+\stopitemize
+
+
+\subsubsubject{Manetă multifuncțională}
+
+\startitemize[width=1.7em]
+\sym{\textSymb{com_lowlight}} {[}Nicht belegt{]}
+\sym{\textSymb{com_light}} Claxon luminos (Apăsați scurt maneta în sus)
+\sym{\textSymb{com_blink}} Indicator direcție de mers (maneta în sus/jos)
+\sym{\textSymb{com_claxonArrow}} Claxon (apăsați butonul din exteriorul manetei)
+\sym{\textSymb{com_wipper}} Ștergătoare de parbriz
+\startitemize
+\sym{J} Temporizare
+\sym{O} Oprit
+\sym{I} 1. treaptă de viteză
+\sym{II} 2. treaptă de viteză
+\stopitemize
+\sym{\textSymb{com_washerArrow}} Instalație de spălare a parbrizelor (apăsați pe coroană, la capătul manetei).
+\stopitemize
+
+
+\subsubsubject{Manetă de selectare a vitezelor}
+
+Funcțiile manetei de selectare a vitezelor de mers sunt descrise în detaliu în capitolul \about[chap:using], începând cu\atpage[sec:using:start].
+
+\stopsection
+
+\page [yes]
+
+
+\startsection [title={Alte funcții},
+reference={sec:ctrl:add}]
+
+
+\subsection[sec:ctrl:aux]{Consolă de tavan}
+
+{\sl Consola\index{Consolă de tavan} de tavan se află în partea din față a tavanului din cabină, pe partea șoferului.}
+\placefig [margin] [fig:console:aux] {Consolă de tavan}
+{\externalfigure[ctrl:console:aux]}
+
+
+\placefig [margin] [fig:console:climat] {Încălzire și instalație de climatizare}
+{\externalfigure[ctrl:console:climat]}
+
+
+\startitemize [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_retrochauffant}} Încălzire oglinzi exterioare
+\sym{\textBigSymb{temoin_hazard}} Lumină intermitentă de avertizare
+\sym{\textBigSymb{temoin_eclairage_L}} Farul de lucru
+\stopitemize
+
+
+\subsubsubject{Dotări opționale}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_buse}} Pompă de apă de înaltă presiune pentru pistolul de apă \crlf {\sl a se vedea \atpage[sec:using:water:spray]}
+\sym{\textBigSymb{temoin_aspiration_manuelle}} Turbină pentru furtunul de aspirație manual \crlf {\sl a se vedea \atpage[sec:using:suction:hose]}
+\stopLeg
+
+
+\subsection[sec:ctrl:climat]{Încălzire și instalație de climatizare}
+
+{\sl Această consolă\index{Consolă de încălzire} se află pe peretele din spate al cabinei șoferului, între scaune.}
+
+\startitemize [unpacked][width=23mm]
+\sym{\bf 0\quad I\quad II\quad III} întrerupător rotativ suflantă
+\sym{\externalfigure[tirette_chauffage][height=1em]} Regulator de translație pentru temperatură
+\stopitemize
+
+
+\subsubsubject{Dotări opționale}
+
+\startitemize [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_climat_bk}} Instalație de climatizare
+\stopitemize
+
+\page [yes]
+
+\setups [pagestyle:bigmargin]
+
+
+\subsection[sec:ctrl:central]{Consolă centrală}
+
+{\sl Consola\index{Consolă centrală} centrală se află între scaune.}
+
+\placefig [margin] [fig:console:central] {Consolă centrală}
+{\externalfigure[ctrl:console:central]}
+
+
+\subsubsubject{Umezirea măturii}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_busebalais}} Pompă de apă de joasă tensiune\index{Pompă de apă} pentru sistemul de umezire\index{Pompă de apă+Umezire} al măturii. (Poziția 1: \aW{Automatic}; Poziția 2: \aW{Permanent})
+\stopLeg
+
+
+\subsubsubject{Înclinarea recipientului de murdărie}
+
+\setupinmargin[right][style=normal]
+\inright{%
+\startitemize
+\sym{\textSymb{mand_readtheoperatingmanual}} Vă rugăm să respectați instrucțiunile de folosire a frânei de staționare \atpage[sec:using:stop].
+\stopitemize}
+
+\startLeg [unpacked][width=1.7em]
+\sym{\textBigSymb{temoin_kipp2}} Înclinarea recipientului de murdărie.
+Pentru\index{Recipient de gunoi+Înclinare} a putea înclina recipientul de murdărie, trebuie activată frâna de staționare, iar maneta de selectare a vitezelor trebuie fixată în poziția neutră.
+\stopLeg
+
+
+\subsubsubject{Oprire de urgență}
+
+\starttextbackground [FC]
+\startPictPar
+\externalfigure[Emergency_Stop][Pict]
+\PictPar
+În cazuri de urgență\index{Oprire de urgență} toate echipamentele de aspirație și măturat, precum și mecanismele de acționare, pot fi scoase din funcțiune prin apăsarea întrerupătorului de avarie.
+\stopPictPar
+\stoptextbackground
+
+
+\subsection[sec:foot:switch]{Întrerupător de picior}
+
+\placefig [margin] [fig:foot:switch] {Întrerupător de picior}
+{\vskip 60pt
+\externalfigure[work:foot:switch]}
+
+Cu ajutorul acestui întrerupător\index{Întrerupător de picior} de la piciorul coloanei de direcție (\inF[fig:foot:switch]) puteți coborî rapid mătura, atunci când este necesar (\eG\ în vârful unei pante, urmarea pe un trotuar).
+
+\stopsection
+\page[yes]
+\setups [pagestyle:marginless]
+
+
+\startsection[title={Consolă multifuncțională},
+reference={ctrl:console:middle}]
+
+\startlocalfootnotes
+
+\startfigtext[left]{Consolă multifuncțională}
+{\externalfigure[overview:joy:large]}
+
+
+\subsubsubject{Joystick-uri}
+
+\textDescrHead{Fără mătură frontală (sau mătură frontală dezactivată):}
+Joystick-urile comandă independent unul de celălalt câte o mătură: Ridicare/coborâre~(\textSymb{joystick_aa}) sau stânga/dreapta~(\textSymb{joystick_gd}). Joystick-ul stâng controlează mătura stângă, iar cel drept controlează mătura dreaptă.\footnote{Pentru a putea modifica poziția măturii laterale la un autovehicul care este echipat cu mătură frontală, această mătură trebuie dezactivată (tasta~\textSymb{joy_key_frontbrush_act}).}
+
+\textDescrHead{Cu mătură frontală:}
+Cu ajutorul Joystick-ului stâng puteți ridica/coborî mătura frontală(\textSymb{joystick_aa}) și o puteți deplasa în direcția stânga/dreapta (\textSymb{joystick_gd}). Cu ajutorul joystickului drept înclinați mătura pe axa sa longitudinală~(\textSymb{joystick_aa}) și transversală~(\textSymb{joystick_gd}).
+
+\placelocalfootnotes %[height=\textheight]
+\stopfigtext
+\stoplocalfootnotes
+% \vfill
+
+\adaptlayout [height=+5mm]
+
+
+\subsubsubject{Taste laterale}
+
+\startcolumns
+
+\startPictList
+\VPcltr
+\PictList
+Tempomat: Creșterea vitezei reglate
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPclbr
+\PictList
+Tempomat: Micșorarea vitezei reglate
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrtr
+\PictList
+Ridicare gură de aspirație
+\stopPictList
+
+\startPictList
+\VPcrbr
+\PictList
+Coborâre gură de aspirație
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrtf
+\PictList
+Deschidere clapetă gunoi grosier (în față la gura de aspirație)
+\stopPictList\vskip -3pt
+
+\startPictList
+\VPcrbf
+\PictList
+Închidere clapetă gunoi grosier
+\stopPictList
+
+\stopcolumns
+
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+\subsubsubject{Taste simboluri}
+
+% \startcolumns
+
+\startSymVpad
+\externalfigure[joy:stop]
+\SymVpad
+\textDescrHead{Stop} Oprire echipament activat:
+
+1\:× apăsați: 3.\,dezactivați mătura\crlf
+2\:× apăsați: Dezactivați totul
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:tempomat]
+\SymVpad
+\textDescrHead{Tempomat} Reglați tempomatele la viteza momentană și activați-le. Pentru dezactivare, acționați din nou tasta ~\textSymb{joy:tempomat} sau frânați. Accelerați/încetiniți cu tastele laterale.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:minus]
+\SymVpad
+\textDescrHead{Viteza măturii} Reducerea vitezei de rotație a măturii laterale sau a măturii frontale.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:plus]
+\SymVpad
+\textDescrHead{Viteza măturii} Creșterea vitezei de rotație a măturii laterale sau a măturii frontale.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:eng:minus]
+\SymVpad
+\textDescrHead{Turație motor} Reduceți turația motorului diesel.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:eng:plus]
+\SymVpad
+\textDescrHead{Turație motor} Măriți turația motorului diesel.
+\stopSymVpad
+\columnbreak
+
+\startSymVpad
+\externalfigure[joy:suc]
+\SymVpad
+\textDescrHead{Aspirație} Activați sistemul de aspirație: Gura de aspirație este coborâtă, turbina și pompa de apă de reciclare sunt puse în funcțiune.\note [recyclingwaterpump] \crlf
+Apăsați~\textSymb{joy:stop} tasta stop pentru a dezactiva sistemul.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:sucbrs]
+\SymVpad
+\textDescrHead{Activați operațiunea de măturare/aspirație}sistemul de aspirare/măturare: Gura de aspirație este coborâtă, măturile laterale sunt coborâte și poziționate, turbina, mătura și pompa de apă de reciclare sunt puse în funcțiune.\note [recyclingwaterpump] \crlf
+Apăsați~\textSymb{joy:stop} tasta stop pentru a dezactiva sistemul.
+\stopSymVpad
+
+\footnotetext[recyclingwaterpump]{Pompa cu apă proaspătă este de asemenea cuplată, atunci când întrerupătorul este poziționat ~\textBigSymb{temoin_busebalais} pe \aW{Automatic} (a se vedea \in [sec:ctrl:central] la \atpage [sec:ctrl:central]).}
+\startSymVpad
+\externalfigure[joy:ftbrs:act]
+\SymVpad
+\textDescrHead{Mătură frontală activată} Activare/dezactivare mătură frontală.
+%% NOTE @Andrew: Singular
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:right]
+\SymVpad
+\textDescrHead{Mătură frontală stânga} Direcție de rotire pentru operațiunile cu mătura frontală pe partea stângă (direcția de rotație: sensul acelor de ceas).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[joy:ftbrs:left]
+\SymVpad
+\textDescrHead{Mătură frontală dreapta} Direcție de rotire pentru operațiunile cu mătura frontală pe partea stângă (direcția de rotație: în sensul invers acelor de ceas).
+\stopSymVpad
+
+% \stopcolumns
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent

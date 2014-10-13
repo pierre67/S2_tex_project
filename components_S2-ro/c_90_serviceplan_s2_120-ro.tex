@@ -1,0 +1,339 @@
+\startcomponent c_90_serviceplan_s2_120-ro
+\product prd_ba_s2_120-ro
+
+
+\chapter[sec:schedule]{Plan de întreținere}
+
+\startregister[index][wartplan]{Plan de întreținere+autovehicul}
+
+
+\section{Generalități}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck \enskip Calificare {\definedfont[SansBoldItalic] Verificare} \enskip}
+Verificările care pot fi\index{Calificare+Personal de întreținere}realizate de personalul operator al autovehiculului fără asistență externă. Cunoștințele de bază în domeniul tehnologiilor autovehiculelor reprezintă însă o condiție.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro \enskip Calificare {\definedfont[SansBoldItalic] Activități de service} \enskip}
+Lucrările regulate de întreținere, care sunt incluse în cadrul planului de întreținere. Lucrările de întreținere trebuie realizate într-un atelier autorizat, de persoane de specialitate, cu instrumente de lucru corespunzătoare.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial \enskip Calificare {\definedfont[SansBoldItalic] Activități speciale} \enskip}
+Activități speciale\index{Activități speciale} de întreținere, care pot fi realizate de o singură persoană, care a absolvit în prealabil un curs de instruire specific, recunoscut de Serviciul de clienți al \BoschungNote.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual \enskip Tip {\definedfont[SansBoldItalic] Control vizual} \enskip}
+Punct de control care trebuie realizat prin intermediul\index{Control vizual} controlului vizual. Defecțiunile sau daunele constatate trebuie comunicate persoanei responsabile cu întreținerea.
+\stoptextrule
+}
+
+În cazul tuturor lucrărilor de întreținere se face deosebirea între trei trepte de calificare (cerințe la personal și echipament) și patru tipuri de întreținere (tipul activității).
+
+\startTwoPar
+{\em Trepte de calificare:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:check}} Verificare \par
+\symDescr{\textSymb{maint:pro}} Operațiuni de service \par
+\symDescr{\textSymb{maint:special}} Operațiuni speciale \par
+\stop
+\TwoPar
+{\em Tipuri de întreținere:} \par \blank [medium]
+\start \setupwhitespace [none]
+\symDescr{\textSymb{maint:visual}} Verificare vizuală \par
+\symDescr{\textSymb{maint:function}} Verificarea stării de funcţionare \par
+\symDescr{\textSymb{maint:level}} Verificarea nivelului de umplere \par
+\symDescr{\textSymb{maint:exchange}} Schimb combustibil \par
+\symDescr{\textSymb{maint:generic}} Alte activități \par
+\stop
+\stopTwoPar
+
+\handItem{În acest sens, a se vedea explicațiile din coloanele marginale.}
+
+
+\placeNote[][service_picto]{}{%
+ \noteF
+\starttextrule{\Pmtfunction \enskip Tip {\definedfont[SansBoldItalic] Verificarea stării de funcționare} \enskip}
+Controalele care necesită mai mult\index{Verificare+funcționare} de o verificare vizuală, \eG\ Verificarea stării de funcționare a frânelor, verificarea stării de funcționare a componentelor, verificarea manuală a poziției stabile.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtlevel \enskip Tip {\definedfont[SansBoldItalic] Verificare nivel de umplere} \enskip}
+Verificarea\index{Verificare+nivel de umplere} nivelului de umplere cu carburant cuprinde verificarea~– prin control vizual sau cu tija de măsurare~– și, dacă este cazul, umplerea cu cantitatea corespunzătoare de carburant. {\em Aici se înscrie și gresarea centralizată.} În acest sens, citiți capitolul \about[sec:liqquantities], unde puteți să găsiți informații despre calitatea și cantitatea carburanților.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtexchange \enskip Tip {\definedfont[SansBoldItalic] Schimb carburant} \enskip}
+Dazu\index{Carburanți+Schimb} face parte schimbul de carburant, precum și controlul final al nivelului de umplere. Informații privind calitatea și cantitatea de carburanți găsiți în \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+\starttextrule{\Pmtgeneric \enskip Tip {\definedfont[SansBoldItalic] Alte operațiuni} \enskip}
+Diferite lucrări de întreținere, care trebuie executate în mod corespunzător, în conformitate cu instrucțiunile.
+\stoptextrule
+}%
+
+\blank[big]
+%% TODO; en
+\starttextbackground[FC]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+La execuția punctelor de întreținere și verificare, vă rugăm să respectați normele de siguranță și privind protejarea mediului înconjurător. \BosFull{boschung} nu își asumă nici o responsabilitate pentru daunele personale și materiale, care pot apărea ca urmare a nerespectării acestor prevederi.
+\stopPictPar
+\stoptextbackground
+\page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Planul de întreținere al autovehiculului}
+
+Întreținerea autovehiculului\index{Verificări periodice} constă din lucrări de revizie care trebuie realizate la intervale regulate de timp, din verificări periodice (Checks), precum și dintr-o verificare service care trebuie realizată o singură dată\footnote{Toate informațiile privind orele trebuie considerate ca fiind ore de funcționare}:
+
+\starttextbackground[FC]
+\starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Lucrări de întreținere \NC 50\,h \NC Primul service după 50\,h \NC \NR
+\NC \NC 600\,h \NC Revizie regulată la fiecare 600\,h / 12 luni \NC \NR
+\NC \NC 1200\,h \NC Revizie regulată la fiecare 1200\,h / 2 ani \NC \NR
+\NC \NC 2400\,h \NC Revizie regulată la fiecare 2400\,h / 4 ani \NC \NR
+\NC \NC 4800\,h \NC Revizie regulată la fiecare 4800\,h / 8 ani \NC \NR
+\NC \Pmtcheck\enskip Listă de verificare \NC Zilnic \NC În cursul întregului sezon de lucru \NC \NR
+\NC \NC Săptămânal\NC În cursul întregului sezon de lucru \NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Următorul plan de întreținere se referă la autovehiculul standard. Respectați și planul de întreținere pentru agregate (\eG\ mașina de măturat, recipientul pentru gunoi) de la \at{pagina}[sec:schedaggr].
+
+În cazul informațiilor duble despre intervalul de întreținere (\eG\ \quotation{La fiecare 600\,h~/ 12~luni}), primele date menționate au prioritate.
+
+Lucrările din cadrul planului de întreținere~– în afară de revizia efectuată o singură dată după 50~Stunden~– trebuie realizat cumulativ: La fiecare 1200~ore de funcționare trebuie efectuată revizia de 600 de ore {\em și} revizia de 1200 de ore; etc.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Verificarea zilnică}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Verificare zilnică \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Curățare autovehicul \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Verificarea autovehiculului pentru identificarea unor eventuale defecțiuni \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Verificarea pentru identificarea unor eventuale scurgeri \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificare motor privind nivelul de umplere cu ulei (cu tija de măsurare!) \eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificarea nivelului de umplere cu lichid de răcire a motorului diesel \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificarea nivelului de umplere cu fluid hidraulic (geam de verificare pe rezervor) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificare nivel combustibil \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificare nivel lichid de spălare a parbrizului\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea stării de funcționare a luminilor de control și a iluminatului a bordului și panoului de comandă \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea stării de funcționare a frânei de mână \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea stării de funcționare a sistemelor de iluminat și de semnalizare \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+\subsection[table:scheduleweekly]{Verificări săptămânale}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Verificare săptămânală \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Verificare presiune anvelope (presiune a se vedea tăblița de identificare pentru anvelope din cabina șoferului) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificare și dacă este cazul curățarea cartușului filtrului de aer \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Gresarea punctelor de gresare (șasiu, direcție articulată) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection [sec:50h]{Revizie după 50\,h~– o singură dată}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Revizie după 50\,h~– o singură dată \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Verificarea nivelului de umplere cu lichid de răcire a motorului diesel \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Curățare cartuș filtru de aer; dacă este cazul, înlocuirea acestuia \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Înlocuire filtru hidraulic de retur și filtru de aspirație \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificarea nivelului de umplere cu fluid hidraulic (geam de verificare pe rezervor) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Instalație de gresare centralizată (opțional): Verificare rezervă și consistență lubrifiant \eTD \bTD \Tpro \eTD \bTD \inP[main:graissageCentral] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Gresarea punctelor de ungere (șasiu, direcție articulată) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificarea nivelului de umplere cu lichid pentru spălarea parbrizului\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare din cabina șoferului \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale motorului pe șasiu \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale pompei la motor\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale radiatorului combinat \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale axelor \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea fixării\index{Moment de strângere+Roți} roților (moment de strângere: 180\,Nm) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificare presiune anvelope (presiune a se vedea tăblița de identificare pentru anvelope din cabina șoferului) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea/reglarea căi manetei schimbătorului de viteză \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea stării bateriei; curățarea polilor/bornelor \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea reglării potrivit Codului Rutier și, dacă este necesar, o nouă reglare \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Gresarea miezului bobinei de la ventilul electromagnetic cu vaselină pe bază de cupru \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea memoriei (Vpad și sistem de comandă al motorului); dacă este cazul remediați cauzele erorilor \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection {Revizie la fiecare 600\,h / 12 luni}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Revizie la fiecare 600\,h / 12 luni \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Schimb ulei motor diesel \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:oilDraining] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Înlocuire filtru ulei de motor \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:oilFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Înlocuire filtru carburant \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:fuelFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea etanșeității motorului și a componentelor din spațiul motorului \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea etanșeității și fixării instalației de eșapament \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea și, dacă este cazul, înlocuirea curelei de transmisie a motorului diesel \eTD \bTD \Tpro \eTD \bTD \inP[sSec:vw:belt] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificarea nivelului de umplere cu lichid de răcire a motorului diesel \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Înlocuirea cartușului de la filtrul de aer \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Înlocuire filtru hidraulic de retur și filtru de aspirație \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificarea nivelului de umplere cu lichid hidraulic \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Instalație de gresare centralizată (opțional): Verificare rezervă și consistență lubrifiant \eTD \bTD \Tpro \eTD \bTD \inP[main:graissageCentral] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Gresarea punctelor de ungere (șasiu, direcție articulată) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Verificarea nivelului de umplere cu lichid pentru spălarea parbrizului\eTD \bTD \Tcheck \eTD \bTD \inP[sec:liquids] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare din cabina șoferului \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale motorului pe șasiu \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale pompei la motor\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale radiatorului combinat \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale axelor \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea/reglarea căi manetei schimbătorului de viteză \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificare/curățare tambur și sabot de frână; curățarea mecanismului de frânare \eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificarea fixării\index{Moment de strângere+Roți} roților (moment de strângere: 180\,Nm) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Verificare presiune anvelope (presiune a se vedea tăblița de identificare pentru anvelope din cabina șoferului) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea stării bateriei; curățarea polilor/bornelor \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea reglării potrivit Codului Rutier și, dacă este necesar, o nouă reglare \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Gresarea miezului bobinei de la ventilul electromagnetic cu vaselină pe bază de cupru \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid] \eTD \eTR
+%%Note: Chapter has been removed
+%\bTR \bTD \Tgen \eTD \bTD Verificarea nivelului de protecție împotriva ruginii, dacă este cazului îmbunătățirea/refacerea acestuia \eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Verificarea memoriei (Vpad și sistem de comandă al motorului); dacă este cazul remediați cauzele erorilor \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Revizie la fiecare 1200\,h / 2 ani}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Revizie la fiecare 1200\,h / 2 ani \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Schimb ulei hidraulic (rezervor) \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Înlocuire agent de refrigerare (R134a) din aerul condiționat \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Revizie la fiecare 2400\,h / 4 ani}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Revizie la fiecare 2400\,h / 4 ani \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+ \bTR \bTD \Tgen \eTD \bTD Înlocuire curea dințată a motorului diesel \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Revizie la fiecare 4800\,h / 8 ani}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Revizie la fiecare 4800\,h / 8 ani \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Verificare tuburi flexibile ale instalației hidraulice, dacă este cazul, înlocuirea acestora \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Înlocuire pompă de apă (în același timp cu cureaua dințată) \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Întreținerea agregatelor}
+
+Întreținerea agregatelor\startregister[index][wartplanAgg]{Plan de întreținere+agregate} cuprinde lucrări regulate de revizie,\index{Controale periodice} precum și controale zilnice și săptămânale:
+
+\starttextbackground[FC]
+\starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Lucrări de întreținere \NC 50\,h \NC Primul service după 50\,h \NC \NR
+\NC \NC 600\,h \NC Revizie regulată la fiecare 600\,h / 12 luni \NC \NR
+\NC \Pmtcheck\enskip Listă de verificare \NC Zilnic \NC În cursul întregului sezon de lucru \NC \NR
+\NC \NC Săptămânal\NC În cursul întregului sezon de lucru \NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Următorul plan de întreținere se referă la agregatele standard, cu care \sdeux\ este echipată în mod obișnuit. Pentru agregatele speciale, care nu sunt descrise în acest manual de instrucțiuni, trebuie respectat planul de întreținere al respectivului agregat.
+
+
+\subsection[table:scheduledaily]{Verificarea zilnică}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Control zilnic \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Curățare recipient de gunoi și sistem de reciclare \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Curățarea gurii și canalului de aspirare \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection[table:scheduledaily]{Verificări săptămânale}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Control săptămânal \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+ \bTR \bTD \Tgen \eTD \bTD Verificarea uzurii măturilor laterale și a măturii frontale (opțional) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+ \bTR \bTD \Tgen \eTD \bTD Reglare clapetă și cauciuc gură de aspirare\eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+ \bTR \bTD \Tgen \eTD \bTD Gresarea tuturor punctelor de ungere(recipient de gunoi, mături, gură de aspirare) \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Revizie după 50\,h~– o singură dată}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD
+Art \eTD \bTD Revizie după 50\,h~– o singură dată \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+ \bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale măturilor \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+ \bTR \bTD \Tgen \eTD \bTD Reglare clapetă ți cauciuc gură de aspirare \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Revizie la fiecare 600\,h / 12 luni}
+
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Tip \eTD \bTD Revizie la fiecare 600\,h / 12 luni \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+ \bTR \bTD \Tfun \eTD \bTD Verificarea dispozitivelor de fixare ale măturilor \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+ \bTR \bTD \Tgen \eTD \bTD Reglare clapetă ți cauciuc gură de aspirare \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\bTR \bTD \Tchg \eTD \bTD Schimb ulei pompă de apă de înaltă presiune pentru pistolul de apă(Opțional) \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplanAgg]
+\stop
+
+
+\stopcomponent
+% vim: fdm=indent
+

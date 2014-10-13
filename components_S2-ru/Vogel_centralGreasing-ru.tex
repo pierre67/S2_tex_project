@@ -1,0 +1,201 @@
+\startsection[title={Система централизованной смазки},
+reference={main:graissageCentral}]
+%
+%
+\subsection{Описание управляющего модуля}
+%
+Машину \sdeux\ можно оснастить\index{Система централизованной смазки} системой централизованной смазки (опция). Система централизованной смазки периодически распределяет смазочное средство по всем точкам смазки.
+%
+\startfigtext [left] [vogel_affichage] {Модуль индикации}
+{\externalfigure[vogel_base2][W50]}
+\blank
+\startLeg
+\item 7-значный дисплей: Значения и рабочее состояние
+\item \LED: Перерыв в работе системы (режим ожидания)
+\item \LED: Насос в рабочем режиме
+\item \LED: Управление системой с помощью переключателя цикла
+\item \LED: Контроль системы с помощью переключателя давления
+\item \LED: Сообщение об ошибке
+\item Кнопки прокрутки:
+\startLeg [R]
+\item Включить дисплей
+\item Показать значения
+\item Изменить значения
+\stopLeg
+\item Кнопка смены режима; подтверждение значений параметров
+\item Запуск цикла промежуточной смазки
+\stopLeg
+\stopfigtext
+%
+Система централизованной смазки включает смазочный насос, прозрачный резервуар смазки на левой стороне шасси и управляющий модуль в центральном блоке электрической системы.
+% \blank
+\page [yes]
+%
+%
+\subsubsubject{Индикация и кнопки управляющего модуля}
+%
+\start
+\stdfontsemicn
+%
+\setupTABLE [frame=off,style={\ssx\setupinterlinespace[line=.93\lH]},background=color,
+option=stretch,
+split=repeat]
+%
+\setupTABLE [r] [each] [topframe=on,framecolor=white]
+%
+\setupTABLE [c] [odd] [backgroundcolor=TableMiddle]
+\setupTABLE [c] [even] [backgroundcolor=TableLight]
+\setupTABLE [c] [1][width=9mm,style={\bfx\setupinterlinespace[line=.93\lH]}]
+\setupTABLE [r] [first] [topframe=off,style={\bfx\setupinterlinespace[line=.93\lH]},
+]
+%
+%
+\bTABLE
+\bTABLEhead
+\bTR\bTD Поз. \eTD
+\bTD Светодиод \eTD\bTD Режим индикации \eTD
+\bTD Режим программирования \eTD\eTR
+\eTABLEhead
+%
+\bTABLEbody
+\bTR\bTD 2 \eTD
+\bTD Рабочее состояние {\em Временное отключение}\hskip.5em\null \eTD
+\bTD Система находится в режиме ожидания\hskip.5em\null \eTD %
+\bTD Длительность прерывания может регулироваться \eTD\eTR
+\bTR\bTD 3 \eTD
+\bTD Рабочее состояние {\em Контакт} \eTD
+\bTD Работает насос\eTD
+\bTD Время работы может регулироваться \eTD\eTR
+\bTR\bTD 4 \eTD
+\bTD Контроль системы {\em CS} \eTD
+\bTD С внешним выключателем цикла \eTD
+\bTD Режим контроля можно выключить или изменить \eTD\eTR
+\bTR\bTD 5 \eTD
+\bTD Контроль системы {\em PS} \eTD
+\bTD С внешним выключателем, срабатывающим от давления \eTD
+\bTD Режим контроля можно выключить или изменить \eTD\eTR
+\bTR\bTD 6 \eTD
+\bTD Неисправность {\em Сбой} \eTD
+\bTD [nc=2] Возникла функциональная неисправность. Причина может выдаваться на дисплей в форме кода ошибки после того, как будет нажата кнопка \textSymb{vogel_DK}. Выполнение функций прекращается. \eTD\eTR
+\bTR\bTD 7 \eTD
+\bTD Кнопки со стрелками \textSymb{vogelTop} \textSymb{vogelBottom} \eTD
+\bTD [nc=2] \items[symbol=R]{Включение дисплея, опрос параметров (режим индикации), регулировка показанного (I) параметра (режим программирования)}
+\eTD\eTR
+\bTR\bTD 8 \eTD
+\bTD Кнопка \textSymb{vogelSet} \eTD
+\bTD [nc=2] Переключение между режимами индикации и программирования или подтверждение введенных значений. \eTD\eTR
+\bTR\bTD 9 \eTD
+\bTD Кнопка \textSymb{vogel_DK} \eTD
+\bTD [nc=2] Если инструмент находится в состоянии {\em Пауза}, при нажатии на кнопку запускается цикл промежуточной смазки. После подтверждения сообщения об ошибке, оно удаляется. \eTD\eTR
+\eTABLEbody
+\eTABLE
+\stop
+\vfill
+%
+\startfigtext [left] [vogel_touches]{Модуль индикации}
+{\externalfigure[vogel_base][width=50mm]}
+\textDescrHead{Режим индикации} Коротко нажать на одну из кнопок со стрелками \textSymb{vogelTop} \textSymb{vogelBottom}, чтобы включить 7-значный дисплей \textSymb{led_huit}. Следующим нажатием на кнопку \textSymb{vogelTop} можно вывести на дисплей различные параметры с их значениями. Режим {\em индикации} распознается по непрерывному свечению \LED\char"2060s (\in{2 – 6, рис.}[vogel_affichage]).
+\blank [medium]
+\textDescrHead{Режим программирования} Для изменения значений нажмите и держите, по крайней мере 2 секунды кнопку \textSymb{vogelSet}, чтобы переключиться в режим {\em программирования}: Мигают\LED\char"2060s. Коротко нажать на кнопку \textSymb{vogelSet}, чтобы\index{Централизованная смазка+Программирование} переключить индикацию, а затем изменить желаемые значения с помощью кнопок \textSymb{vogelTop} \textSymb{vogelBottom}. Нажать\index{Централизованная смазка+Индикация} кнопку \textSymb{vogelSet} для подтверждения.
+\stopfigtext
+%
+\page [yes]
+%
+%
+\subsection{Подменю в режиме {\em Индикация}}
+%
+\vskip -9pt
+%
+\adaptlayout [height=+5mm]
+%
+\startcolumns[balance=no]\stdfontsemicn
+%
+\startSymVogel
+\externalfigure[vogel_tpa][width=26mm]
+\SymVogel
+\textDescrHead{Время прерывания [h]} Нажмите кнопку \textSymb{vogelTop}, чтобы отобразить запрограммированные значения.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_068][width=26mm]
+\SymVogel
+\textDescrHead{Остающееся время прерывания [h]} Время, остающееся до следующего цикла смазки.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_090][width=26mm]
+\SymVogel
+\textDescrHead{Общее время прерывания [h]} Общее время отключения между двумя циклами.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_tco][width=26mm]
+\SymVogel
+\textDescrHead{Время смазки [min]} Нажмите кнопку \textSymb{vogelTop}, чтобы отобразить запрограммированные значения.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_tirets][width=26mm]
+\SymVogel
+\textDescrHead{Инструмент в режиме ожидания} Индикация невозможна, так как инструмент находится в режиме ожидания (прерывание).
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_026][width=26mm]
+\SymVogel
+\textDescrHead{Время смазки [min]} Длительность процесса смазки.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_cop][width=26mm]
+\SymVogel
+\textDescrHead{Контроль системы} Нажмите \textSymb{vogelTop}, чтобы вывести на дисплей запрограммированные значения.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_off][width=26mm]
+\SymVogel
+\textDescrHead{Режим контроля} \hfill PS: манометрический выключатель;\crlf
+CS: переключатель циклов; OFF: деактивирован.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_0h][width=26mm]
+\SymVogel
+\textDescrHead{Рабочие часы} Нажмите \textSymb{vogelTop}, чтобы отобразить значение по частям.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_005][width=26mm]
+\SymVogel
+\textDescrHead{Часть 1: 005} Рабочее время отображается двумя частями; для перехода к части 2 нажмите \textSymb{vogelTop}.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_338][width=26mm]
+\SymVogel
+\textDescrHead{Часть 2: 33,8} 2-я часть числа 33,8; в совокупности получается рабочее время 533,8 ч.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_fh][width=26mm]
+\SymVogel
+\textDescrHead{Время неисправности} Нажмите \textSymb{vogelTop}, чтобы отобразить значение по частям.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_000][width=26mm]
+\SymVogel
+\textDescrHead{Часть 1: 000} Время сбоя отображается двумя частями;\crlf
+к части 2 посредством \textSymb{vogelTop}.
+\stopSymVogel
+%
+\startSymVogel
+\externalfigure[vogel_338][width=26mm]
+\SymVogel
+\textDescrHead{Часть 2: 33,8} 2-ячасть числа 33,8; в совокупности получается время сбоя 33,8 ч.
+\stopSymVogel
+%
+\stopcolumns
+\stopsection
+\page [yes]

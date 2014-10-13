@@ -266,6 +266,54 @@ Im Frischwassertank befindet sich ausreichend Wasser; die \sdeux\ befindet sich 
 \stopSteps
 
 \stopsection
+
+\page [yes]
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Mit dem dritten Besen arbeiten (Option)},
+							reference={sec:using:frontBrush},
+							]
+
+\startSteps
+\item Nehmen\index{Kehren} Sie das Fahrzeug in Betrieb, so wie in \in{Abschnitt}[sec:using:start] \atpage[sec:using:start] beschrieben.
+\item Aktivieren\index{3.\,Besen} Sie den\aW{Arbeits}modus (Knopf außen am Fahrstufenwahlhebel).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Stellen Sie sicher, dass der dritte Besen auf dem Vpad||Bildschirm aktiviert ist
+(siehe \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Drücken Sie die Taste~\textSymb{joy_key_frontbrush_act}, um die Hydraulik des dritten Besens zu betätigen.
+\item Drücken Sie die Taste~\textSymb{joy_key_frontbrush_left} oder~\textSymb{joy_key_frontbrush_right}, um den dritten Besen in der gewünschten Richtung rotierne zu lassen.
+
+\item Stellen Sie die Rotationsgeschwindigkeit mithilfe der Tasten~\textSymb{joy_key_frontbrush_increase} und~\textSymb{joy_key_frontbrush_decrease} der Multifunktionskonsole ein.
+
+\item Positionieren Sie den Besen mithilfe der Joysticks, so wie in den Abbildungen unten gezeigt.
+
+\stopSteps
+
+{\md Hinweis:} {\lt Um die Seitenbesen positionieren zu können, muss mittels der Taste~\textSymb{joy_key_frontbrush_act} die Hydraulik des dritten Besens deaktiviert werden.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Positionieren des dritten Besens}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Nach oben|/|unten; nach links|/|rechs}
+{\externalfigure [work:frontBrush:incline]}{Quer-|/|Längsneigen}
+\stopcombination}
+\stop
+
+
+
+\stopsection
+
+
 \stopregister[index][chap:using]
 
 \stopchapter
