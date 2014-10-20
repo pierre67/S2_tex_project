@@ -82,9 +82,14 @@ reference={vpad:description}]
 
 \page [yes]
 
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+
+\subsection{Контрольные индикаторы на экране Vpad}
+
 \start % local group for temporary redefinition of \textDescrHead [TF]
 % \define[1]\textDescrHead{{\bf#1\fourperemspace}}
-\startcolumns
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
@@ -106,13 +111,24 @@ reference={vpad:description}]
 \textDescrHead{Диагностика двигателя}(желтый) Ошибка в системе управления двигателем. Свяжитесь с мастерской.
 \stopSymVpad
 
+
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Свяжитесь с мастерской}(желтый) Наступил срок регулярного обслуживания машины. См. план технического обслуживания.
+\textDescrHead{Обратиться в мастерскую}(желтый) Наступил срок регулярного техобслуживания машины (см. \about [sec:schedule] \atpage [sec:schedule]), или была обнаружена неисправность двигателя (требуется специализированная мастерская).
 
-+\:Сообщения об ошибках \# 650 – \# 653 или \# 703
++\:Сообщения об ошибках \# 650 – \# 653, или \# 703
 \stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Пылевой фильтр}(желтый) При первой возможности начнется регенерация пылевого фильтра.
+
+{\md Указание:} {\lt Пока горит этот индикатор, по возможности {\em не} останавливайте двигатель!}
+\stopSymVpad
+
 
 \startSymVpad
 \externalfigure[vpadTBrakeError][height=1.7\lH]
@@ -139,7 +155,6 @@ reference={vpad:description}]
 Мигающая лампочка показывает, что в памяти событий зарегистрирована ошибка.
 \stopSymVpad
 
-\columnbreak
 
 \startSymVpad
 \externalfigure[vpadTFuelReserve][height=1.7\lH]
@@ -189,7 +204,6 @@ reference={vpad:description}]
 \textDescrHead{Сообщение об ошибке}(красный) Сообщение об ошибке в памяти \Vpad. Нажмите кнопку~\textSymb{vpadClear}, чтобы просмотреть все сохраненные сообщения. Свяжитесь с мастерской.
 \stopSymVpad
 
-\stopcolumns
 \stop % local group for temporary redefinition of \textDescrHead
 
 \stopsection
@@ -197,7 +211,7 @@ reference={vpad:description}]
 \page [yes]
 
 
-\section{Меню Vpad}
+\startsection [title={Меню Vpad}, reference={vpad:menu}]
 
 \start
 
@@ -227,17 +241,22 @@ option=stretch,textwidth=\makeupwidth]
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Подтверждение \eTD\bTD Подтверждение выбора \eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Вверх/вниз \\Pfeile \eTD\bTD Перемещение отметки вверх или вниз либо увеличение/уменьшение выбранного значения \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Сигнал заднего хода \eTD\bTD Активация/деактивация акустического сигнала заднего хода \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Выключение экрана \eTD\bTD Удерживать около 5 секунд для выключения экрана Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Третья щетка\index{3-я щетка} (опция) \eTD\bTD Разблокирование третьей щетки.
+Теперь третью щетку можно включить в соответствии с описанием на странице \at[sec:using:frontBrush]. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
 
-\subsubsubject{Другие индикаторы Vpad}
+\subsection{Другие пиктограммы на экране Vpad}
+
+\subsubsubject{Запас чистой и регенерированной воды}
 
 \start % local group for temporary redefinition of \textDescrHead [TF]
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
 
-\startcolumns
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -257,10 +276,70 @@ option=stretch,textwidth=\makeupwidth]
 \textDescrHead{Уровень воды системы регенерации}(красный) Недостаточный уровень воды (макс. 140\,л; ниже бункера для отходов).
 \stopSymVpad
 
-\stopcolumns
+
+\subsubsubject{Система всасывания} % nouveau
+
+{\em Эта пиктограмма отображается только, когда щетки деактивированы.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Патрубок всасывания} Система всасывания\index{Патрубок всасывания} активирован:
+патрубок всасывания опущен, турбина активирована.
+\stopSymVpad
+
+
+\subsubsubject{Боковая щетка} % nouveau
+
+{\em Эта пиктограмма отображается только, когда третья щетка деактивирована.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Боковые щетки} Щетки\index{Уборка}\index{Боковые щетки} активированы. Скорость вращения (в \% максимальной скорости вращения [V\low{max}]) отображается под пиктограммой, текущая компенсация нагрузки с соответствующей щетки – над пиктограммой (\type{ } = плавающее положение, 14 = максимальная компенсация).
+
+{\md Компенсация нагрузки:} {\lt Чем ниже компенсация нагрузки, тем выше давление прижима щеток к поверхности земли.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Плавающее положение}(нижняя кромка зеленого цвета)
+Чтобы выключить компенсацию нагрузки, переместите джойстик вперед на примерно 2 с; щетка будет опираться на поверхность всем своим весом. Скорость вращения щеток составляет 60\hairspace\% V\low{max} (пример).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Боковые щетки} Щетки активированы. Они неподвижны и подняты.
+\stopSymVpad
+
+
+\subsubsubject{Третья щетка (опция)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Третья щетка} Третья щетка\index{3-я щетка} активирована. Скорость вращения (в \% максимальной скорости вращения [V\low{max}]) отображается под пиктограммой.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Плавающее положение}(нижняя кромка зеленого цвета)
+Чтобы выключить компенсацию нагрузки, переместите джойстик вперед на примерно 2 с; щетка будет опираться на поверхность всем своим весом. Скорость вращения щеток составляет 70\hairspace\% V\low{max} (пример).
+
+{\md Направление вращения:} {\lt В верхней части отображается направление вращения (черная стрелка на желтом фоне).}
+\stopSymVpad
+
+\stopsection
+
 \stop % local group for temporary redefinition of \textDescrHead
 
 \page [yes]
+
 
 \startsection[title={Настройка яркости экрана},
 reference={sec:vpad:brightness}]

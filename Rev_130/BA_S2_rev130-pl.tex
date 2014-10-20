@@ -1,0 +1,172 @@
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+% \startcolumns
+
+\subsection{Komunikaty i prezentacje kontrolne na ekranie Vpad} % nouveau
+
+%% ajout
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Skontaktowanie się z warsztatem}(żółte) Konieczne regularne serwisowanie pojazdu (patrz \about [sec:schedule] \atpage [sec:schedule]) lub zarejestrowano błąd silnika (konieczna wizyta w warsztacie specjalistycznym).
+
++\:Komunikaty błędu \# 650 do \# 653, lub \# 703
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filtr drobin}(żółte) Uruchomiona została regeneracja filtra drobin, o ile tryb pracy na to pozwoli.
+
+{\md Instrukcja:} {\lt Prosimy w miarę możliwości {\em nie} zatrzymywać silnika tak długo, jak długo wyświetlany jest ten komunikat!}
+\stopSymVpad
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Wyłączenie ekranu \eTD\bTD Przytrzymać przez około 5 sekund w stanie wciśnięcia w celu wyłączenia ekranu Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Trzecia miotła\index{3. Miotła} (opcja) \eTD\bTD Załączenie trzeciej miotły.
+Trzecia miotła może być teraz aktywowana zgodnie z opisem na stronie \at[sec:using:frontBrush]. \eTD\eTR
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% corriger
+
+\startsection [title={Menu Vpad}, reference={vpad:menu}]
+
+
+
+\subsection{Pozostałe symbole na ekranie Vpad}
+
+
+\subsubsubject{Zasób wody świeżej i recyclingowej}
+
+
+\subsubsubject{System ssący} % nouveau
+
+{\em Symbol ten jest pokazywany tylko wtedy, gdy miotły są zdezaktywowane.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Ustnik ssący} System ssący\index{Ustnik ssący} aktywowane:
+Ustnik ssący jest opuszczony, a turbina aktywowana.
+\stopSymVpad
+
+
+\subsubsubject{Miotła boczna} % nouveau
+
+{\em Symbol ten jest pokazywany tylko wtedy, gdy trzecia miotła jest zdezaktywowana.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Miotła boczna} Miotła\index{Zamiatanie}\index{Miotła boczna} aktywowane. Prędkość obrotowa (w \% maksymalnej prędkości obrotowej [V\low{max}]) prezentowana jest pod symbolem, a aktualne odciążenie danej miotły prezentowane jest nad symbolem (\type{ } = ustawienie pływające, 14 = odciążenie maksymalne).
+
+{\md Odciążenie:} {\lt Im mniejsze jest odciążenie, tym silniejszy jest nacisk miotły na podłoże.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Ustawienie pływające}(zielone przy dolnej krawędzi)
+W celu wyłączenia odciążenia prosimy przetrzymać joystick przez około 2 sekundy w stanie wciśnięcia do przodu; miotła spoczywa teraz całym swym ciężarem własnym na podłożu. Prędkość obrotowa mioteł wynosi około 60\hairspace\% wartości V\low{max} (przykład).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Miotły boczne} Miotły są aktywowane. Są w stanie spoczynku i są podniesione.
+\stopSymVpad
+
+
+\subsubsubject{Trzecia miotła (opcja)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Trzecia miotła} Trzecia miotła\index{3. miotła} jest aktywowana. Prędkość obrotowa (w \% maksymalnej prędkości obrotowej [V\low{max}]) wyświetlona jest pod symbolem.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Ustawienie pływające}(zielone przy dolnej krawędzi)
+W celu wyłączenia odciążenia prosimy przetrzymać joystick przez około 2 sekundy w stanie wciśnięcia do przodu; miotła spoczywa teraz całym swym ciężarem własnym na podłożu. Prędkość obrotowa mioteł wynosi około 70\hairspace\% wartości V\low{max} (przykład).
+
+{\md Kierunek obrotów:} {\lt Przy górnej krawędzi wyświetlany jest kierunek obrotów (czarna strzałka na żółtym tle).}
+\stopSymVpad
+
+\stopsection
+
+
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Praca z trzecią miotłą (opcja)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Prosimy uruchomić pojazd w trybie \index{Zamiatanie} według opisu w \in{podrozdziale}[sec:using:start] \atpage[sec:using:start].
+\item Prosimy aktywować\index{3. miotła } \aW{tryb pracy} (przycisk zewnętrzny na zewnątrz przy dźwigni wyboru stopnia jazdy).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Prosimy upewnić się, że trzecia miotła została zaktywowana na ekranie Vpad (patrz \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Prosimy nacisnąć przycisk~\textSymb{joy_key_frontbrush_act}, w celu aktywowania hydrauliki trzeciej miotły.
+\item Prosimy nacisnąć na przycisk~\textSymb{joy_key_frontbrush_left} lub~\textSymb{joy_key_frontbrush_right}, w celu uruchomienia trzeciej szczotki w żądany kierunek obrotów.
+
+\item Prosimy ustawić prędkość obrotową za pomocą przycisków ~\textSymb{joy_key_frontbrush_increase} oraz~\textSymb{joy_key_frontbrush_decrease} znajdujących się na konsoli wielofunkcyjnej.
+
+\item Prosimy wypozycjonować miotłę przy użyciu joysticka zgodnie z poniższą ilustracją.
+
+\stopSteps
+
+{\md Instrukcja:} {\lt Celem umożliwienia sobie wypozycjonowania mioteł bocznych, należy za pomocą przycisku ~\textSymb{joy_key_frontbrush_act} zdezaktywować hydraulikę trzeciej miotły.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Pozycjonowanie trzeciej miotły}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{W górę/dół, w lewo/prawo}
+{\externalfigure [work:frontBrush:incline]}{Pochylanie poprzeczne i podłużne}
+\stopcombination}
+\stop
+
+
+
+\stopsection
+
+
+%%% Änderungen Benedikt Sturny
+
+% S. 68
+\item Prosimy zaktywować hamulec postojowy i ustawić dźwignię stopnia jazdy na pozycję \aW{neutralną}. (Wymagane w celu uwolnienia przełącznika przechyłu zbiornika).
+
+
+% S. 93
+
+\subsection[niveau_hydrau]{Poziom napełnienia}
+
+Wziernik przezroczysty\index{Poziom napełnienia+Olej hydrauliczny}\index{Serwisowanie+Instalacja hydrauliczna} umożliwia kontrolę stanu oleju hydraulicznego.
+Po spadku poziomu napełnienia należy przed uzupełnieniem stanu zbadać przyczynę tego spadku. Prosimy przestrzegać przepisowych częstotliwości wymiany (tabela u góry) oraz specyfikacji oleju hydraulicznego (tabela \at{strona}[sec:liqquantities]).
+
+
+\subsubsection{Uzupełnienie stanu oleju hydraulicznego}
+
+Uzupełnianie stanu oleju hydraulicznego prosimy prowadzić aż do pełnego zakrycia środkowego wziernika.
+Prosimy uruchomić silnik oraz ponownie sprawdzić poziom i uzupełnić, aż osiągnięty zostanie właściwy poziom napełnienia.

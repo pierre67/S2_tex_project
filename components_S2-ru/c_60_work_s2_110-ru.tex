@@ -181,7 +181,8 @@ reference={sec:using:container}]
 
 \startSteps
 \item Отведите\index{Бункер для грязи+Опорожнение} машину в подходящее место для опорожнения бункера. Соблюдайте действующие правила охраны окружающей среды.
-\item Включите стояночный тормоз. (Это необходимо для разблокирования переключателя опрокидывания бункера.)
+% \item Включите стояночный тормоз. (Это необходимо для разблокирования переключателя опрокидывания бункера.)
+\item Поставьте машину на стояночный тормоз и переведите рычаг переключения передач в \aW{нейтральное} положение. (Это необходимо для разблокирования переключателя опрокидывания бункера.)
 \stopSteps
 
 \getbuffer [prescription:container:gravity]
@@ -268,6 +269,52 @@ reference={sec:using:water:spray}]
 \stopSteps
 
 \stopsection
+
+\page [yes]
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Работа с третьей щеткой (опция)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Введите\index{Уборка} машину в эксплуатацию в соответствии с описанием в \in{разделе}[sec:using:start] \atpage[sec:using:start].
+\item Активируйте\index{3-я щетка} \aW{рабочий} режим (кнопка на внешней стороне рычага переключения передач).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Убедитесь, что третья щетка активирована на экране Vpad (см. \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Чтобы задействовать гидравлику третьей щетки, нажмите кнопку~\textSymb{joy_key_frontbrush_act}.
+\item Чтобы активировать вращение третьей щетки в нужном направлении, нажмите кнопку~\textSymb{joy_key_frontbrush_left} или~\textSymb{joy_key_frontbrush_right}.
+
+\item Настройте скорость вращения кнопками~\textSymb{joy_key_frontbrush_increase} и~\textSymb{joy_key_frontbrush_decrease} на многофункциональной консоли.
+
+\item Джойстиками установите щетку в нужное положение так, как показано на иллюстрациях.
+
+\stopSteps
+
+{\md Указание:} {\lt Чтобы положение боковых щеток можно было изменить, нужно деактивировать гидравлику третьей щетки кнопкой~\textSymb{joy_key_frontbrush_act}.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Позиционирование третьей щетки}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Вверх/вниз; влево/вправо}
+{\externalfigure [work:frontBrush:incline]}{Наклон в поперечном/продольном направлении}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+
 \stopregister[index][chap:using]
 
 \stopchapter

@@ -1,0 +1,172 @@
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+% \startcolumns
+
+\subsection{Контрольные индикаторы на экране Vpad} % nouveau
+
+%% ajout
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Обратиться в мастерскую}(желтый) Наступил срок регулярного техобслуживания машины (см. \about [sec:schedule] \atpage [sec:schedule]), или была обнаружена неисправность двигателя (требуется специализированная мастерская).
+
++\:Сообщения об ошибках \# 650 – \# 653, или \# 703
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Пылевой фильтр}(желтый) При первой возможности начнется регенерация пылевого фильтра.
+
+{\md Указание:} {\lt Пока горит этот индикатор, по возможности {\em не} останавливайте двигатель!}
+\stopSymVpad
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Выключение экрана \eTD\bTD Удерживать около 5 секунд для выключения экрана Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Третья щетка\index{3-я щетка} (опция) \eTD\bTD Разблокирование третьей щетки.
+Теперь третью щетку можно включить в соответствии с описанием на странице \at[sec:using:frontBrush]. \eTD\eTR
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% corriger
+
+\startsection [title={Меню Vpad}, reference={vpad:menu}]
+
+
+
+\subsection{Другие пиктограммы на экране Vpad}
+
+
+\subsubsubject{Запас чистой и регенерированной воды}
+
+
+\subsubsubject{Система всасывания} % nouveau
+
+{\em Эта пиктограмма отображается только, когда щетки деактивированы.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Патрубок всасывания} Система всасывания\index{Патрубок всасывания} активирован:
+патрубок всасывания опущен, турбина активирована.
+\stopSymVpad
+
+
+\subsubsubject{Боковая щетка} % nouveau
+
+{\em Эта пиктограмма отображается только, когда третья щетка деактивирована.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Боковые щетки} Щетки\index{Уборка}\index{Боковые щетки} активированы. Скорость вращения (в \% максимальной скорости вращения [V\low{max}]) отображается под пиктограммой, текущая компенсация нагрузки с соответствующей щетки – над пиктограммой (\type{ } = плавающее положение, 14 = максимальная компенсация).
+
+{\md Компенсация нагрузки:} {\lt Чем ниже компенсация нагрузки, тем выше давление прижима щеток к поверхности земли.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Плавающее положение}(нижняя кромка зеленого цвета)
+Чтобы выключить компенсацию нагрузки, переместите джойстик вперед на примерно 2 с; щетка будет опираться на поверхность всем своим весом. Скорость вращения щеток составляет 60\hairspace\% V\low{max} (пример).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Боковые щетки} Щетки активированы. Они неподвижны и подняты.
+\stopSymVpad
+
+
+\subsubsubject{Третья щетка (опция)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Третья щетка} Третья щетка\index{3-я щетка} активирована. Скорость вращения (в \% максимальной скорости вращения [V\low{max}]) отображается под пиктограммой.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Плавающее положение}(нижняя кромка зеленого цвета)
+Чтобы выключить компенсацию нагрузки, переместите джойстик вперед на примерно 2 с; щетка будет опираться на поверхность всем своим весом. Скорость вращения щеток составляет 70\hairspace\% V\low{max} (пример).
+
+{\md Направление вращения:} {\lt В верхней части отображается направление вращения (черная стрелка на желтом фоне).}
+\stopSymVpad
+
+\stopsection
+
+
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Работа с третьей щеткой (опция)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Введите\index{Уборка} машину в эксплуатацию в соответствии с описанием в \in{разделе}[sec:using:start] \atpage[sec:using:start].
+\item Активируйте\index{3-я щетка} \aW{рабочий} режим (кнопка на внешней стороне рычага переключения передач).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Убедитесь, что третья щетка активирована на экране Vpad (см. \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Чтобы задействовать гидравлику третьей щетки, нажмите кнопку~\textSymb{joy_key_frontbrush_act}.
+\item Чтобы активировать вращение третьей щетки в нужном направлении, нажмите кнопку~\textSymb{joy_key_frontbrush_left} или~\textSymb{joy_key_frontbrush_right}.
+
+\item Настройте скорость вращения кнопками~\textSymb{joy_key_frontbrush_increase} и~\textSymb{joy_key_frontbrush_decrease} на многофункциональной консоли.
+
+\item Джойстиками установите щетку в нужное положение так, как показано на иллюстрациях.
+
+\stopSteps
+
+{\md Указание:} {\lt Чтобы положение боковых щеток можно было изменить, нужно деактивировать гидравлику третьей щетки кнопкой~\textSymb{joy_key_frontbrush_act}.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Позиционирование третьей щетки}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Вверх/вниз; влево/вправо}
+{\externalfigure [work:frontBrush:incline]}{Наклон в поперечном/продольном направлении}
+\stopcombination}
+\stop
+
+
+
+\stopsection
+
+
+%%% Änderungen Benedikt Sturny
+
+% S. 68
+\item Поставьте машину на стояночный тормоз и переведите рычаг переключения передач в \aW{нейтральное} положение. (Это необходимо для разблокирования переключателя опрокидывания бункера.)
+
+
+% S. 93
+
+\subsection[niveau_hydrau]{Уровень наполнения}
+
+Прозрачное смотровое стекло\index{Уровень наполнения+Гидравлическая жидкость}\index{Техническое обслуживание+Гидравлическая система} позволяет визуально контролировать уровень гидравлического масла.
+Если уровень гидравлического масла понизился, необходимо определить причину, прежде чем снова доливать масло до нужного уровня. Проводите замену в указанные сроки (таблица вверху) и придерживайтесь спецификаций на гидравлическую жидкость (таблица \at{страница}[sec:liqquantities]).
+
+
+\subsubsection{Долив гидравлической жидкости}
+
+Залейте гидравлическую жидкость, чтобы среднее смотровое окошко было полностью закрыто.
+Запустите двигатель и долейте жидкость, если это необходимо, до нужного уровня.
