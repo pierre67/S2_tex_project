@@ -266,6 +266,50 @@ Det finns tillräckligt med vatten i renvattentanken; \sdeux\ befinner sig i \aW
 \stopSteps
 
 \stopsection
+
+\page [yes]
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Arbeta med den tredje kvasten (tillval)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Ta\index{Sopa} fordonet i drift så som beskrivs i \in{avsnitt}[sec:using:start] \atpage[sec:using:start] .
+\item Aktivera\index{Tredje kvast} \aW{arbetsläget}(knapp på utsidan av växelspaken).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Kontrollera att den tredje kvasten är aktiverad på Vpad-bildskärmen
+(se \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Tryck på knappen~\textSymb{joy_key_frontbrush_act} för att aktivera den tredje kvastens hydraulsystem.
+\item Tryck på knappen ~\textSymb{joy_key_frontbrush_left} eller~\textSymb{joy_key_frontbrush_right} för att den tredje kvasten ska rotera i önskad riktning.
+
+\item Reglera rotationshastigheten med hjälp av knapparna~\textSymb{joy_key_frontbrush_increase} och ~\textSymb{joy_key_frontbrush_decrease} på multifunktionskonsolen.
+
+\item Positionera kvastarna så som visas på figurerna nedan med hjälp av spakarna.
+
+\stopSteps
+
+{\md Observera:} {\lt För att du ska kunna positionera sidokvastarna måste du aktivera den tredje kvastens hydraulsystem med hjälp av knappen ~\textSymb{joy_key_frontbrush_act}.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Positionera den tredje kvasten}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Uppåt/nedåt; åt vänster/höger}
+{\externalfigure [work:frontBrush:incline]}{Tvär-/längslutning}
+\stopcombination}
+\stop
+
+\stopsection
+
 \stopregister[index][chap:using]
 
 \stopchapter

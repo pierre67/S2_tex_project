@@ -82,14 +82,22 @@ På menyraden längst ned visas de tillgängliga menyerna: Tryck på mitten av p
 
 \page [yes]
 
-\start % local group for temporary redefinition of \textDescrHead [TF]
-\define[1]\textDescrHead{{\bf#1\fourperemspace}}
-\startcolumns
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},
+							after={\nobreak\hrule\blank [2*medium]\page[preference]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+
+\subsection{Kontrollindikeringar på Vpad-bildskärmen}
+
+
+% \start % local group for temporary redefinition of \textDescrHead [TF]
+% \define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
 \SymVpad
-\textDescrHead{Motoroljetryck}(röd) Motoroljetryck för lågt. Stäng genast av motorn.
+\textDescrHead{Motoroljetryck} (röd) Motoroljetryck för lågt. Stäng genast av motorn.
 
 +\:Fehlermeldung \# 604
 \stopSymVpad
@@ -97,27 +105,39 @@ På menyraden längst ned visas de tillgängliga menyerna: Tryck på mitten av p
 \startSymVpad
 \externalfigure[vpadWarningBattery][height=1.7\lH]
 \SymVpad
-\textDescrHead{Batteriladdning}(röd) Batteriets laddström för låg. Kontakta en verkstad.
+\textDescrHead{Batteriladdning} (röd) Batteriets laddström för låg. Kontakta en verkstad.
 \stopSymVpad
 
 \startSymVpad
 \externalfigure[vpadWarningEngine1][height=1.7\lH]
 \SymVpad
-\textDescrHead{Motordiagnos}(gul) Fel i motorstyrningen. Kontakta en verkstad.
+\textDescrHead{Motordiagnos} (gul) Fel i motorstyrningen. Kontakta en verkstad.
 \stopSymVpad
 
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Kontakta verkstad}(gul) Normalt underhåll av fordonet måste genomföras eller så har det uppstått ett fel på motorn. Om motorfelet är sporadiskt slocknar lampan efter 5 motorstarter.
+\textDescrHead{Kontakta en verkstad} (gul) Dags för normalt fordonsunderhåll
+(se \about [sec:schedule] \atpage [sec:schedule])
+eller ett motorfel har registrerats (kontakta en fackverkstad).
 
 +\:Fehlermeldungen \# 650 till \# 653, eller \# 703
 \stopSymVpad
 
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Partikelfilter} (gul) Regenerering av partikelfiltret startar när driftvillkoren är lämpliga.
+
+{\md Observera:} {\lt Stäng om möjligt {\em inte} av motorn när denna indikering lyser!}
+\stopSymVpad
+
+
 \startSymVpad
 \externalfigure[vpadTBrakeError][height=1.7\lH]
 \SymVpad
-\textDescrHead{Bromssystem}(röd) Fel i bromssystemet. Kontakta en verkstad.
+\textDescrHead{Bromssystem} (röd) Fel i bromssystemet. Kontakta en verkstad.
 
 +\:Fehlermeldung \# 902
 \stopSymVpad
@@ -126,7 +146,7 @@ På menyraden längst ned visas de tillgängliga menyerna: Tryck på mitten av p
 \startSymVpad
 \externalfigure[vpadTBrakePark][height=1.7\lH]
 \SymVpad
-\textDescrHead{Handbroms}(röd) Fordonets handbroms är åtdragen.
+\textDescrHead{Handbroms} (röd) Fordonets handbroms är åtdragen.
 
 +\:Fehlermeldung \# 905
 \stopSymVpad
@@ -134,35 +154,34 @@ På menyraden längst ned visas de tillgängliga menyerna: Tryck på mitten av p
 \startSymVpad
 \externalfigure[vpadTEngineHeating][height=1.7\lH]
 \SymVpad
-\textDescrHead{Förglödningssystem}(gul) Motorns förglödningssystem är igång.
+\textDescrHead{Förglödningssystem} (gul) Motorns förglödningssystem är igång.
 
 En blinkade lampa visar att felet har registrerats i felminnet.
 \stopSymVpad
 
-\columnbreak
 
 \startSymVpad
 \externalfigure[vpadTFuelReserve][height=1.7\lH]
 \SymVpad
-\textDescrHead{Bränslenivå}(gul) Bränslenivån är mycket låg (reserv).
+\textDescrHead{Bränslenivå} (gul) Bränslenivån är mycket låg (reserv).
 \stopSymVpad
 
 \startSymVpad
 \externalfigure[vpadTBlink][height=1.7\lH]
 \SymVpad
-\textDescrHead{Varningsblinkers}(grön) Varningsblinkersen är aktiverade.
+\textDescrHead{Varningsblinkers} (grön) Varningsblinkersen är aktiverade.
 \stopSymVpad
 
 \startSymVpad
 \externalfigure[vpadTLowBeam][height=1.7\lH]
 \SymVpad
-\textDescrHead{Positionsljus}(grön) Positionsljuset är påslaget.
+\textDescrHead{Positionsljus} (grön) Positionsljuset är påslaget.
 \stopSymVpad
 
 \startSymVpad
 \HL\NC \externalfigure[vpadSyWaterTemp][height=1.7\lH]
 \SymVpad
-\textDescrHead{Temperatur}(röd) Motorns eller hydraulvätskans temperatur är för hög. Kontakta en verkstad.
+\textDescrHead{Temperatur} (röd) Motorns eller hydraulvätskans temperatur är för hög. Kontakta en verkstad.
 
 +\:Fehlermeldung \# 700 eller \# 610
 \stopSymVpad
@@ -170,7 +189,7 @@ En blinkade lampa visar att felet har registrerats i felminnet.
 \startSymVpad
 \externalfigure[vpadWarningFilter][height=1.7\lH]
 \SymVpad
-\textDescrHead{Filter tilltäppt}(röd) Det kombinerade hydraulfiltret eller luftfiltret är tilltäppt.
+\textDescrHead{Filter tilltäppt} (röd) Det kombinerade hydraulfiltret eller luftfiltret är tilltäppt.
 
 +\:Fehlermeldung \# 702 eller \# 851
 \stopSymVpad
@@ -178,7 +197,7 @@ En blinkade lampa visar att felet har registrerats i felminnet.
 \startSymVpad
 \externalfigure[vpadTSpray][height=1.7\lH]
 \SymVpad
-\textDescrHead{Vattenspruta}(gul) Vattensprutans högtryckspump är aktiverad.
+\textDescrHead{Vattenspruta} (gul) Vattensprutans högtryckspump är aktiverad.
 
 Kontakter \textSymb{temoin_buse} i takkonsolen.
 \stopSymVpad
@@ -186,18 +205,19 @@ Kontakter \textSymb{temoin_buse} i takkonsolen.
 \startSymVpad
 \externalfigure[vpadTClear][height=1.7\lH]
 \SymVpad
-\textDescrHead{Felmeddelande}(röd) Det finns ett felmeddelande i minnet på \Vpad. Tryck på knappen~\textSymb{vpadClear} för att visa alla sparade meddelanden. Kontakta en verkstad.
+\textDescrHead{Felmeddelande} (röd) Det finns ett felmeddelande i minnet på \Vpad. Tryck på knappen~\textSymb{vpadClear} för att visa alla sparade meddelanden. Kontakta en verkstad.
 \stopSymVpad
 
-\stopcolumns
-\stop % local group for temporary redefinition of \textDescrHead
+
+% \stop % local group for temporary redefinition of \textDescrHead
 
 \stopsection
 
 \page [yes]
 
 
-\section{Vpad-menyn}
+\startsection [title={Menyerna på Vpad},
+reference={vpad:menu}]
 
 \start
 
@@ -227,17 +247,24 @@ option=stretch,textwidth=\makeupwidth]
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Bekräfta \eTD\bTD Bekräfta ditt val\eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Pil upp/ned, Flytta markeringen upp eller ned eller öka/minska valt värde \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Backsignal \eTD\bTD Aktivera/avaktivera akustisk varningssignal vid backning\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Slå från bildskärmen \eTD\bTD Håll intryckt i ca 5 sek. för att slå från bildskärmen på Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Tredje kvast\index{Tredje kvast} (tillval) \eTD\bTD Aktivera den tredje kvasten.
+Den tredje kvasten kan nu aktiveras på det sätt som beskrivs på sidan \at[sec:using:frontBrush]. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
 
-\subsubsubject{Fler indikeringar på Vpad}
+\subsection{Fler symboler på Vpad-bildskärmen}
 
-\start % local group for temporary redefinition of \textDescrHead [TF]
-\define[1]\textDescrHead{{\bf#1\fourperemspace}}
 
-\startcolumns
+\subsubsubject{Renvatten- och återvinningsvattenreservoar}
+
+
+% \start % local group for temporary redefinition of \textDescrHead [TF]
+% \define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -248,7 +275,7 @@ option=stretch,textwidth=\makeupwidth]
 \startSymVpad
 \externalfigure[sym:vpad:rwater:yellow]
 \SymVpad
-\textDescrHead{Nivå återvinningsvatten}(gul) Återvinningsvattnets nivå ligger under värmeväxlaren. Hydraulvätskan kyls inte ned och befuktningssystemet i sugkanalen värms inte upp.
+\textDescrHead{Nivå återvinningsvatten} (gul) Återvinningsvattnets nivå ligger under värmeväxlaren. Hydraulvätskan kyls inte ned och befuktningssystemet i sugkanalen värms inte upp.
 \stopSymVpad
 
 \startSymVpad
@@ -257,8 +284,68 @@ option=stretch,textwidth=\makeupwidth]
 \textDescrHead{Nivå återvinningsvatten} (röd) Återvinningsvattnets nivå är för låg (max. 140\,l; under smutsbehållaren).
 \stopSymVpad
 
-\stopcolumns
-\stop % local group for temporary redefinition of \textDescrHead
+
+\subsubsubject{Sugsystem} % nouveau
+
+{\em Den här symbolen visas endast när kvastarna är avaktiverade.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Sugmunstycke} Sugsystem\index{Sugmunstycke} aktiverat:
+Sugmunstycket är nedsänkt och turbinen är aktiverad.
+\stopSymVpad
+
+
+\subsubsubject{Sidokvast} % nouveau
+
+{\em Den här symbolen visas endast när den tredje kvasten inte är aktiverad.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Sidokvast} Kvast\index{Sopning}\index{Sidokvast} aktiverad. Rotationshastigheten (i \% av den högsta rotationshastigheten [V\low{max}]) visas under symbolen, den aktuella avlastningen för respektive kvast visas ovanför symbolen (\type{ } = flytande läge, 14 = högsta avlastning).
+
+{\md Avlastning:} {\lt Ju lägre avlastning desto högre är kvastarnas tryck mot marken.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Flytande läge}(grön i nederkanten)
+För att slå från avlastningen ska du trycka spaken framåt i ca 2 sekunder. Kvasten ligger nu mot marken med hela sin egenvikt. Kvastarnas rotationshastighet ligger på 60\hairspace\% av V\low{max} (exempel).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Sidokvastar} Kvastarna är aktiverade. De står stilla och är i upplyft läge.
+\stopSymVpad
+
+
+\subsubsubject{Tredje kvast (tillval)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Tredje kvast} Den tredje kvasten\index{Tredje kvast} är aktiverad. Rotationshastigheten (i \% av den högsta rotationshastigheten [V\low{max}]) visas under symbolen.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Flytande läge}(grön i nederkanten)
+För att slå från avlastningen ska du trycka spaken framåt i ca 2 sekunder. Kvasten ligger nu mot marken med hela sin egenvikt. Kvastarnas rotationshastighet ligger på 70\hairspace\% av V\low{max} (exempel).
+
+{\md Rotationsriktning:} {\lt I ovankanten visas rotationsriktningen (svart pil på gul bakgrund).}
+\stopSymVpad
+
+% \stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
 
 \page [yes]
 
