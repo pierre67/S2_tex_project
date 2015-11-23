@@ -1,18 +1,18 @@
 \enabledirectives [system.synctex]
 
-\startproduct prd_ba_s2_120-de
+\startproduct prd_ba_s2_130-sl
 
 \enablemode[%
-        screen,
-% 		print,
-        myriadpro,
-        ]
+		% screen,
+		print,
+		myriadpro,
+		]
 
 
 \project prj_ba_s2
 
 \version [final]
-\setups [GERMAN,VpGERMAN]
+\setups [SLOVENIAN,VpSLOVENIAN]
 
 %===============================================================================
 %===============================================================================
@@ -48,10 +48,10 @@
    openaction={firstpage,UseOutlines},
    menu=on,
    display=TwoColumn,
-    title={Betriebsanleitung S2},
-   author={Pierre Bovet (Technische Redaktion Boschung, Matran)},
-   subtitle={mit Wartungsplan},
-   keyword={S2, Betriebsanleitung, Wartungsplan, Handbuch, Manual}
+    title={Navodila za uporabo S2},
+   author={Pierre Bovet (Tehnična redakcija Boschung, Matran)},
+   subtitle={z vzdrževalnim načrtom},
+   keyword={S2, navodila za uporabo, vzdrževalni načrt, priročnik, navodila}
  ]
 \stopmode
 \startmode[print]
@@ -72,9 +72,9 @@
    menu=on,
    display=TwoColumn,
    title={Manuel d’utilisation S2},
-   author={Pierre Bovet (Technische Redaktion Boschung, Matran)},
-   subtitle={mit Wartungsplan},
-   keyword={S2, Betriebsanleitung, Wartungsplan, Handbuch, Manual}
+   author={Pierre Bovet (Tehnična redakcija Boschung, Matran)},
+   subtitle={z vzdrževalnim načrtom},
+   keyword={S2, navodila za uporabo, vzdrževalni načrt, priročnik, navodila}
   ]
 \stopmode
 \setupinteractionscreen [option=bookmark]
@@ -86,8 +86,8 @@
 
 \startfrontmatter
 	% \setuppagenumbering	[conversion=romannumerals]
-	\component c_00_front_s2_120-de
-	\marking[header]{Inhalt}
+	\component c_00_front_s2_130-sl
+	\marking[header]{Vsebina}
 		\completecontent
 
 \stopfrontmatter
@@ -95,43 +95,43 @@
 \startbodymatter
 \define\LASTchapter{10}
 % \showframe
-\component c_10_safety_s2_120-de
-\component c_20_prescriptions_s2_120-de
-\component c_30_overview_s2_120-de
-\component c_40_control_s2_120-de
-\component c_45_vpad_s2_120-de
-\component c_60_work_s2_120-de
-\component c_80_maintenance_s2_120-de
-\component c_90_serviceplan_s2_120-de
+\component c_10_safety_s2_130-sl
+\component c_20_prescriptions_s2_130-sl
+\component c_30_overview_s2_130-sl
+\component c_40_control_s2_130-sl
+\component c_45_vpad_s2_130-sl
+\component c_60_work_s2_130-sl
+\component c_80_maintenance_s2_130-sl
+\component c_90_serviceplan_s2_130-sl
 
 % \page[yes,empty,right]
 \stopbodymatter
 
 \startbackmatter
 		\definelayer [bg:toc] [state=stop]
-		\marking[header]{Stichwortverzeichnis}
-			\IndexHead{Stichwortverzeichnis}
+		\marking[header]{Kazalo gesel}
+			\IndexHead{Kazalo gesel}
 			{\switchtobodyfont[small]\placeindex [n=3]}
 		\page[yes,blank,right]
-			\marking[header]{Abbildungsverzeichnis}
+			\marking[header]{Kazalo slik}
 			\startcolumns[n=3]
 				\setupselector[caption][n=2]
-				\IndexHead{Abbildungsverzeichnis}
+				\IndexHead{Kazalo slik}
 				\placelist[fig]
 			\stopcolumns
 		\page[yes]
 
 		\setuppagenumbering[state=stop]
-	\component c_99_back_s2_120-de
+	\component c_99_back_s2_130-sl
 \stopbackmatter
 
-\seeindex{Service}{Wartung}
-\seeindex{Instandhaltung}{Wartung}
-\seeindex{Geschwindigkeitsregler}{Tempomat}
-\seeindex{Hauptschalter}{Batterietrennschalter}
-\seeindex{Chassis}{Fahrgestell}
-\seeindex{Fahrgestell}{Chassis}
-\seeindex{Bodenschalter}{Fußschalter}
+\seeindex{Servis}{Vzdrževanje}
+\seeindex{Servisiranje}{Vzdrževanje}
+\seeindex{Regulator hitrosti}{Tempomat}
+\seeindex{Glavno stikalo}{Ločilno stikalo baterije}
+\seeindex{Šasija}{Podvozje}
+\seeindex{Podvozje}{Šasija}
+\seeindex{Talno stikalo}{Nožno stikalo}
 
 \pagebreak[yes,blank,right]
 % \showlayout

@@ -316,14 +316,14 @@ Attention: au-delà de 60\hairspace\%\ d’antigel dans l’eau, la capacité de
   \bTD	4,3\,l\eTD
   \eTR
  \bTR \bTD	Circuit hydraulique \eTD
-  \bTD Huile ATF \eTD
-  \bTD \liqC{dexron~iii} \eTD
+  \bTD Fluide Hydraulique \eTD
+  \bTD \liqC{ISO VG 46} \eTD
   \bTD  Total Equiviz ZS 46 (réservoir env. 40\,l) \eTD
   \bTD env. 50\,l\eTD
   \eTR
  \bTR \bTD Circuit hydraulique (option biologique)\eTD
-  \bTD Huile ATF \eTD
-  \bTD \liqC{dexron~iii} \eTD
+  \bTD Fluide Hydraulique \eTD
+  \bTD \liqC{ISO VG 46} \eTD
   \bTD  Total Biohydran TMP SE 46\eTD
   \bTD env. 50\,l\eTD
   \eTR
@@ -1468,182 +1468,6 @@ du véhicule, en particulier le système de direction articulé et les essieux.
 							reference={main:graissageCentral}]
 
 
-\subsection{Description du module de commande}
-
-La \sdeux\ peut être équipée~— en option~— d’un dispositif de graissage\index{graissage centralisé}
-centralisé\index{maintenance+graissage centralisé} qui alimente périodiquement chaque point de graissage du véhicule.
-
-\startfigtext [left] [vogel_affichage] {Module d’affichage}
-{\externalfigure[vogel_base2][W50]}
-\blank
-\startLeg
-\item Afficheur à sept segments: valeurs et état de service
-\item \LED, système en pause
-\item \LED, pompe en fonctionnement
-\item \LED, contrôle du système par commutateur de cycle
-\item \LED, contrôle du système par manocontacteur
-\item \LED, message d’erreur
-\item Touches de défilement:
-\startLeg [R]
-\item activer l’afficheur
-\item visualiser les valeurs
-\item modifier les valeurs
-\stopLeg
-\item Touche de changement de mode, validation des valeurs
-\item Déclenchement d’un cycle de graissage intermédiaire
-\stopLeg
-\stopfigtext
-
-Le dispositif comprend une pompe, le réservoir de graisse transparent~— fixé sur le côté gauche du châssis~— et le module de commande, placé dans la centrale électrique.
-\blank
-
-\page [yes]
-
-
-\subsubsubject {Affichage et touches du module de commande}
-
-\start
-
-\setupTABLE	[frame=off,style={\ssx\setupinterlinespace[line=.93\lH]},background=color,
-			option=stretch,
-			split=repeat]
-
-\setupTABLE	[r]	[each]	[topframe=on,
-						framecolor=white,
-						% rulethickness=.8pt
-						]
-
-\setupTABLE	[c]	[odd]	[backgroundcolor=TableMiddle]
-\setupTABLE	[c]	[even]	[backgroundcolor=TableLight]
-\setupTABLE	[c]	[1]		[width=9mm,style={\bfx\setupinterlinespace[line=.93\lH]}]
-\setupTABLE	[r] [first]	[topframe=off,style={\bfx\setupinterlinespace[line=.93\lH]},
-						]
-\setupTABLE	[r]	[2]		[style={\bfx\setupinterlinespace[line=.93\lH]}]
-
-
-\bTABLE
-
-\bTABLEhead
-% \bTR [backgroundcolor=TableDark] \bTD [nc=4] Affichage et touches du module de commande \eTD\eTR
-\bTR\bTD Pos. \eTD\bTD \LED \eTD\bTD Mode affichage \eTD\bTD Mode programmation \eTD\eTR
-\eTABLEhead
-
-\bTABLEbody
-\bTR\bTD 2 \eTD\bTD État de service {\em pause} \eTD\bTD L’installation est en pause \eTD\bTD Le temps de pause peut être modifié \eTD\eTR
-\bTR\bTD 3 \eTD\bTD État de service {\em contact} \eTD\bTD La pompe travaille \eTD\bTD Le temps de travail peut être modifié \eTD\eTR
-\bTR\bTD 4 \eTD\bTD Système contrôle {\em CS} \eTD\bTD Par commutateur de cycle externe \eTD\bTD Le mode de contrôle peut être désactivé ou modifié \eTD\eTR
-\bTR\bTD 5 \eTD\bTD Système contrôle {\em PS} \eTD\bTD Par manocontacteur externe \eTD\bTD Le mode de contrôle peut être désactivé ou modifié \eTD\eTR
-\bTR\bTD 6 \eTD\bTD Dérangement {\em Fault} \eTD\bTD [nc=2] L’appareil est en dérangement. La cause peut être affichée sous forme de code d’erreur une fois que la touche \textSymb{vogel_DK} a été pressée. L’exécution des fonctions est arrêtée. \eTD\eTR
-\bTR\bTD 7 \eTD\bTD Touches fléchées \textSymb{vogelTop} \textSymb{vogelBottom} \eTD\bTD [nc=2] \items[symbol=R]{Activation de l’écran d’affichage,Appel du paramètre suivant (mode affichage),Augmenter ou diminuer la valeur affichée de 1 (mode programmation)} \eTD\eTR
-\bTR\bTD 8 \eTD\bTD Touche \textSymb{vogelSet} \eTD\bTD [nc=2] Commutation entre les modes d’affichage et de programmation, ou validation des valeurs saisies. \eTD\eTR
-\bTR\bTD 9 \eTD\bTD Touche \textSymb{vogel_DK} \eTD\bTD [nc=2] Une pression lorsque l’appareil est à l’état \quote{pause} déclenche un cycle intermédiaire de graissage. Les messages d’erreur sont confirmés et effacés. \eTD\eTR
-\eTABLEbody
-\eTABLE
-\stop
-\vfill
-
-\startfigtext [left] [vogel_touches]{Module d’affichage}
-{\externalfigure[vogel_base][width=50mm]}
-\textDescrHead{Mode affichage} Pressez brièvement l’une des touches fléchées \textSymb{vogelTop} ou \textSymb{vogelBottom} pour activer l’écran d’affichage à sept segments \textSymb{led_huit}. Une nouvelle pression sur la touche \textSymb{vogelTop} permet de faire défiler les différents paramètres et leur valeur. En mode {\em affichage}, les \LED sont allumées en continu (\in{pos. 2 à 6, fig.}[vogel_affichage]).
-\blank [medium]
-\textDescrHead{Mode programmation} Pour modifier les valeurs, appuyez environ 2\,s sur la touche \textSymb{vogelSet} pour passer en mode {\em programmation}: les \LED clignotent. Pressez brièvement la touche \textSymb{vogelSet} pour changer l’affichage, puis modifiez\index{graissage centralisé+programmation} la valeur souhaitée avec les touches \textSymb{vogelTop} et \textSymb{vogelBottom}. Validez\index{graissage centralisé+affichage} avec la touche \textSymb{vogelSet}.
-\stopfigtext
-
-
-\subsection{Sous||menus en mode {\em affichage}}
-
-\vskip -9pt
-
-\adaptlayout [height=+5mm]
-
-\startcolumns[balance=no]\stdfontsemicn
-\startSymVogel
-\externalfigure[vogel_tpa][width=26mm]
-\SymVogel
-\textDescrHead{Temps de pause [h]} Pressez sur \textSymb{vogelTop} pour faire défiler toutes les valeurs programmées.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_068][width=26mm]
-\SymVogel
-\textDescrHead{Temps de pause restant [h]} Affichage du temps restant avant le prochain cycle de graissage.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_090][width=26mm]
-\SymVogel
-\textDescrHead{Temps de pause global [h]} Affichage du temps de pause total entre deux cycles de graissage.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_tco][width=26mm]
-\SymVogel
-\textDescrHead{Temps de graissage [mn]} Pressez sur \textSymb{vogelTop} pour faire défiler les valeurs programmées.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_tirets][width=26mm]
-\SymVogel
-\textDescrHead{Appareil en pause} Affichage impossible, l’appareil est en pause.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_026][width=26mm]
-\SymVogel
-\textDescrHead{Temps de graissage [mn]} Affichage du temps de fonctionnement de la pompe de graissage.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_cop][width=26mm]
-\SymVogel
-\textDescrHead{Contrôle système} Pressez sur \textSymb{vogelTop} pour faire défiler les valeurs programmées.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_off][width=26mm]
-\SymVogel
-\textDescrHead{Valeur contrôle système} PS\:= manocontacteur, CS\:= commutateur de cycle, OFF\:= désactivé.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_0h][width=26mm]
-\SymVogel
-\textDescrHead{Heures de service} Pressez sur la touche \textSymb{vogelTop} pour afficher
-la valeur en deux temps (voir ci-dessous).
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_005][width=26mm]
-\SymVogel
-\textDescrHead{Première partie: 005} Le temps de service s’affiche en deux parties, affichez la suite avec \textSymb{vogelTop}.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_338][width=26mm]
-\SymVogel
-\textDescrHead{Deuxième partie: 33.8} La suite du nombre est 33.8. L’assemblage du nombre d’heures donne 533.8\,h.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_fh][width=26mm]
-\SymVogel
-\textDescrHead{Heures de dysfonctionnement} Pressez sur la touche \textSymb{vogelTop} pour afficher
-la valeur en deux temps (voir ci-dessous).
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_000][width=26mm]
-\SymVogel
-\textDescrHead{Première partie: 000} Le temps de dysfonctionnement s’affiche en deux parties, affichez la suite avec \textSymb{vogelTop}.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_338][width=26mm]
-\SymVogel
-\textDescrHead{Deuxième partie: 33.8} La suite du nombre est 33.8. L’assemblage du nombre donne le temps 33.8\,h.
-\stopSymVogel
-
-\stopcolumns
 
 \stopsection
 

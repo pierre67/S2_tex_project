@@ -1,0 +1,1399 @@
+\startenvironment env_vpad_s2
+
+\definefontsynonym [Myriad] [name:MyriadHebrew-Regular]
+\definefontsynonym [MyriadCondensed] [name:MyriadHebrew-Regular] % -Cond
+\definefontsynonym [MyriadSemiBold] [name:MyriadHebrew-Bold]
+\definefontsynonym [ArialUnicode] [name:ArialUnicodeMS]
+\definefontsynonym [DejaVu] [name:DejaVuSansMono]
+% \definefont [Vpadfont] [ArialUnicode at 5.8pt]
+% \definefont [VpadHeadfont] [ArialUnicode at 8pt]
+\definefont [Vpadfont] [MyriadCondensed at 6.2pt]
+\definefont [VpadHeadfont] [MyriadSemiBold at 8pt]
+\definefont [Joystickfont] [DejaVu at 9.5pt]
+\definefont [JoyTextfont] [DejaVu sa 1]
+\definefont [JoystickTarget] [DejaVu at 13.3pt]
+
+\definesynonyms[JoyPlow][JoyPlows][\JoyP]
+\definesynonyms[JoyBroom][JoyBrooms][\JoyB]
+
+\definesynonyms[VpadOperating][VpadOperatings][\VpadOp]
+\definesynonyms[VpadConfig][VpadConfigs][\VpadCf]
+\definesynonyms[VpadError][VpadErrors][\VpadEr]
+
+\setupsynonyms[VpadError,VpadConfig,VpadOperating,JoyPlow,JoyBroom][
+					next=\autoinsertnextspace,
+					]
+
+\startsetups [VpHEBREW]
+
+%% New:
+\VpadOperating{001} {Alle Antriebe werden ausgeschaltet!}
+\VpadOperating{002} {Kennwort eingeben}
+\VpadOperating{012} {Gültige Daten}
+\VpadOperating{013} {Ungültige Daten}
+\VpadOperating{014} {Kalibrieren}
+\VpadOperating{015} {Warten}
+\VpadOperating{026} {Bitte warten, Auftrag wird bearbeitet.}
+\VpadOperating{027} {Achtung, Fahren nur mit Fahrtrichtungsschalter möglich.}
+\VpadOperating{030} {Zugriff verweigert}
+\VpadOperating{031} {Daten erfolgreich gesichert}
+\VpadOperating{032} {Daten erfolgreich wiederhergestellt}
+\VpadOperating{033} {Kopiervorgang fehlgeschlagen}
+\VpadOperating{034} {Alle Zähler gelöscht}
+\VpadOperating{035} {Löschvorgang fehlgeschlagen}
+\VpadOperating{036} {Achtung, Zähler werden ersetzt!}
+\VpadOperating{037} {Achtung, alle Zähler werden gelöscht!}
+\VpadOperating{038} {Achtung, Konfiguration wird ersetzt!}
+\VpadOperating{039} {Achtung, Standard-Konfig. wird geladen!}
+\VpadOperating{040} {Wartungsspeicher löschen}
+\VpadOperating{041} {Achtung, Reset Hydraulik-Service!}
+\VpadOperating{042} {Achtung, Reset Fahrzeug-Inspektion!}
+\VpadOperating{043} {Achtung, Reset Motor-Kundendienst!}
+\VpadOperating{044} {Achtung, Seitenbesen werden beim Motorstart automatisch angehoben.}
+\VpadOperating{045} {Achtung, Saugmund wird beim Motorstart automatisch angehoben.}
+\VpadOperating{050} {Nicht genügend Speicherplatz}
+\VpadOperating{051} {Verzeichnis ist leer}
+\VpadOperating{052} {Datei nicht gefunden}
+\VpadOperating{053} {Vorgang abgebrochen}
+\VpadOperating{110} {GPS-Position}
+\VpadOperating{111} {Empfänger-Status}
+\VpadOperating{112} {Längengrad}
+\VpadOperating{113} {Breitengrad}
+\VpadOperating{114} {Geoid-Höhe}
+\VpadOperating{115} {Anzahl der Satelliten}
+\VpadOperating{116} {Datum/Zeit [UTC]}
+\VpadOperating{120} {Tageszähler}
+\VpadOperating{121} {Saisonzähler}
+\VpadOperating{122} {Gesamtzähler}
+\VpadOperating{123} {Motor-Betriebszeit}
+\VpadOperating{124} {Fahrstrecke}
+\VpadOperating{125} {Kehrzeit}
+\VpadOperating{126} {Kehrstrecke}
+\VpadOperating{127} {Durchschnittsverbrauch}
+\VpadOperating{135} {Achtung, Tageszähler werden gelöscht.}
+\VpadOperating{136} {Achtung, Saisonzähler werden gelöscht.}
+\VpadOperating{137} {Bestätigen mit »Löschen«-Taste.}
+\VpadOperating{160} {Vpad-Einstellungen}
+\VpadOperating{161} {Kontrast}
+\VpadOperating{162} {Helligkeit}
+\VpadOperating{163} {Tasten-Aktivierungsbeleuchtung}
+\VpadOperating{164} {Tasten-Hintergrundbeleuchtung}
+\VpadOperating{165} {Lautstärke}
+\VpadOperating{190} {Wartung}
+\VpadOperating{191} {Hydraulik}
+\VpadOperating{192} {Inspektion}
+\VpadOperating{193} {Kundendienst}
+\VpadOperating{194} {Fällig seit}
+\VpadOperating{195} {Spätestens}
+\VpadOperating{1000} {Service-Einstellungen}
+\VpadOperating{1001} {Allg. Einstellungen}
+\VpadOperating{1005} {Temperaturabgleich}
+\VpadOperating{1006} {Uhr stellen}
+\VpadOperating{1007} {Diagnose}
+\VpadOperating{1008} {Software}
+\VpadOperating{1020} {PT1000 intern (-30,5°C)}
+\VpadOperating{1021} {PT1000 intern (+40,5°C)}
+\VpadOperating{1030} {Hardware}
+\VpadOperating{1031} {CAN && I2C}
+\VpadOperating{1032} {Digital-Ausgänge}
+\VpadOperating{1034} {Digital-Eingänge}
+\VpadOperating{1035} {Analog-Eingänge}
+\VpadOperating{1036} {PWM-Ausgänge}
+\VpadOperating{1040} {Vpad}
+\VpadOperating{1041} {Tastatur}
+\VpadOperating{1042} {Frontbesen}
+\VpadOperating{1043} {Betriebssystem}
+\VpadOperating{1044} {Blackbox}
+\VpadOperating{1060} {Hardware-Version}
+\VpadOperating{1061} {System-ID}
+\VpadOperating{1070} {Vpad -> Tastatur}
+\VpadOperating{1071} {Tastatur -> Vpad}
+\VpadOperating{1072} {Vpad -> Steuerung}
+\VpadOperating{1073} {Steuerung -> Vpad}
+\VpadOperating{1080} {Interne Temperatur}
+\VpadOperating{1090} {IO-Stecker}
+\VpadOperating{1091} {Ventil}
+\VpadOperating{1092} {Ventil Y11 (Seitenbesen ab)}
+\VpadOperating{1093} {Ventil Y12 (Saugmund ab)}
+\VpadOperating{1094} {Freigabe Frontbesen}
+\VpadOperating{1095} {Hydr. Wasserpumpe}
+\VpadOperating{1096} {Elektr. Wasserpumpe}
+\VpadOperating{1097} {Rundumkennleuchte}
+\VpadOperating{1110} {Fabrik-Nummer}
+\VpadOperating{1111} {Datensicherung}
+\VpadOperating{1112} {Konfiguration laden}
+\VpadOperating{1113} {Zähler setzen}
+\VpadOperating{1114} {Programm-Update}
+\VpadOperating{1115} {Sprachen installieren}
+\VpadOperating{1116} {Std.-Konfiguration laden}
+\VpadOperating{1117} {Touchscreen kalibrieren}
+\VpadOperating{1118} {Konfiguration drucken}
+\VpadOperating{1119} {Programm beenden}
+\VpadOperating{1131} {Internes Konfig.-Backup laden}
+\VpadOperating{1132} {Konfiguration importieren}
+\VpadOperating{1133} {Zähler importieren}
+\VpadOperating{1134} {Alle Zähler löschen}
+\VpadOperating{1135} {Werkseinstellungen laden}
+\VpadOperating{1136} {Reset Hydraulik-Service}
+\VpadOperating{1137} {Reset Fahrzeug-Inspektion}
+\VpadOperating{1138} {Reset Motor-Kundendienst}
+\VpadOperating{1140} {Internes Konfig.-Backup erstellen}
+\VpadOperating{1143} {Werkseinstellungen sichern}
+\VpadOperating{1145} {Systemsicherung auf CF-Karte}
+\VpadOperating{1150} {Jahres-Code}
+\VpadOperating{1151} {Nummer}
+\VpadOperating{1160} {Tag}
+\VpadOperating{1161} {Monat}
+\VpadOperating{1162} {Jahr}
+\VpadOperating{1163} {Stunde}
+\VpadOperating{1164} {Minute}
+\VpadOperating{1165} {Sekunde}
+\VpadOperating{1170} {in Datei}
+\VpadOperating{1180} {Steuergeräte werden konfiguriert}
+\VpadOperating{1181} {Konfiguration wird in Steuergeräten gespeichert}
+\VpadOperating{5011} {Achtung: CF-Karte ist voll!}
+
+%% New:
+\VpadConfig{001} {Allgemeine Einstellungen}
+\VpadConfig{010} {Bediengerät}
+\VpadConfig{011} {Grundeinstellungen}
+\VpadConfig{012} {Sprache}
+\VpadConfig{013} {Rückstellzeit Funktionstasten [s]}
+\VpadConfig{014} {Verzögerung [ms]}
+\VpadConfig{015} {Wiederholrate [ms]}
+\VpadConfig{016} {Tasten-Wiederholung}
+\VpadConfig{017} {Nachlaufzeit [min]}
+\VpadConfig{020} {Konfig. RS232}
+\VpadConfig{021} {COM 1}
+\VpadConfig{022} {COM 2}
+\VpadConfig{023} {Baudrate}
+\VpadConfig{024} {Datenbits}
+\VpadConfig{025} {Parität}
+\VpadConfig{026} {Stoppbits}
+\VpadConfig{027} {RTS-Kontrolle}
+\VpadConfig{030} {GPS-Empfänger}
+\VpadConfig{031} {Aktivierung}
+\VpadConfig{032} {UTC-Zeitabstand [h]}
+\VpadConfig{033} {Sommer-/Winterzeit}
+\VpadConfig{034} {GPS-Empfänger}
+\VpadConfig{040} {Sprachrückmeldung}
+\VpadConfig{041} {Ausgabe unterbrechen}
+\VpadConfig{070} {IO-Belegung}
+\VpadConfig{072} {Lufttemperatur}
+\VpadConfig{073} {Signal Rückwärtsgang}
+\VpadConfig{100} {Steuerung}
+\VpadConfig{200} {Dieselmotor}
+\VpadConfig{201} {Startdrehzahl [1/min]}
+\VpadConfig{204} {Schrittweite Drehzahl [1/min]}
+\VpadConfig{205} {Min.-Drehzahl [1/min]}
+\VpadConfig{206} {Max.-Drehzahl [1/min]}
+\VpadConfig{220} {Service-Intervalle}
+\VpadConfig{221} {Großer Kundendienst [h]}
+\VpadConfig{222} {Ölservice [h]}
+\VpadConfig{223} {Jährlich}
+\VpadConfig{224} {Betriebsstunden}
+\VpadConfig{300} {Arbeitshydraulik}
+\VpadConfig{310} {Überwachung}
+\VpadConfig{311} {Temperatur-Warnung [°C]}
+\VpadConfig{320} {Einschaltverzögerung [ms]}
+\VpadConfig{330} {Stromwerte YP7 [mA]}
+\VpadConfig{331} {Stromwerte YP8-YP9 [mA]}
+\VpadConfig{340} {Fahrmodus}
+\VpadConfig{350} {Min.}
+\VpadConfig{351} {Max.}
+\VpadConfig{360} {Fronthydraulik}
+\VpadConfig{370} {Stromwerte YP22 [mA]}
+\VpadConfig{371} {Stromregler YP22}
+\VpadConfig{380} {KP}
+\VpadConfig{381} {KI}
+\VpadConfig{403} {Entlastungsstufe der Besen beim Start}
+\VpadConfig{404} {Anlaufzeit 1 [ms]}
+\VpadConfig{405} {Joystick-Timer [ms]}
+\VpadConfig{500} {Besenregelung}
+\VpadConfig{501} {Drehzahlen}
+\VpadConfig{502} {Seitenbesen}
+\VpadConfig{503} {Frontbesen}
+\VpadConfig{510} {Startdrehzahl [\%]}
+\VpadConfig{511} {Schrittweite [\%]}
+\VpadConfig{512} {Min.-Drehzahl [\%]}
+\VpadConfig{513} {Max.-Drehzahl [\%]}
+\VpadConfig{520} {Max. Entlastungsstufe}
+\VpadConfig{521} {Entlastungs-Startwert: Heben}
+\VpadConfig{522} {Entlastungs-Startwert: Senken}
+\VpadConfig{530} {Angebaut}
+\VpadConfig{531} {Schwimmstellung [ms]}
+\VpadConfig{532} {Drehrichtungsumkehr [ms]}
+\VpadConfig{600} {Radhalbmesser}
+\VpadConfig{610} {Statisch [mm]}
+\VpadConfig{611} {Dynamisch [mm]}
+\VpadConfig{700} {Schmutzbehälter}
+\VpadConfig{800} {Extras}
+\VpadConfig{801} {Hochdruck-Wasserpumpe}
+\VpadConfig{900} {Dieseltank}
+\VpadConfig{901} {Widerstand: voll}
+\VpadConfig{902} {Widerstand: 3/4 gefüllt}
+\VpadConfig{903} {Widerstand: 1/2 gefüllt}
+\VpadConfig{904} {Widerstand: 1/4 gefüllt}
+\VpadConfig{905} {Widerstand: leer}
+\VpadConfig{906} {Reserve [\%]}
+\VpadConfig{1250} {Keine}
+\VpadConfig{1251} {Gerade}
+\VpadConfig{1252} {Ungerade}
+\VpadConfig{1253} {Markierung}
+\VpadConfig{1254} {Leerzeichen}
+\VpadConfig{1450} {Nein}
+\VpadConfig{1451} {Tastatur}
+\VpadConfig{1452} {Steuergerät}
+\VpadConfig{1499} {Wiederherstellen}
+\VpadConfig{1500} {Entlastungsstufe 0}
+\VpadConfig{1501} {Entlastungsstufe 1}
+\VpadConfig{1502} {Entlastungsstufe 2}
+\VpadConfig{1503} {Entlastungsstufe 3}
+\VpadConfig{1504} {Entlastungsstufe 4}
+\VpadConfig{1505} {Entlastungsstufe 5}
+\VpadConfig{1506} {Entlastungsstufe 6}
+\VpadConfig{1507} {Entlastungsstufe 7}
+\VpadConfig{1508} {Entlastungsstufe 8}
+\VpadConfig{1509} {Entlastungsstufe 9}
+\VpadConfig{1510} {Entlastungsstufe 10}
+\VpadConfig{1511} {Entlastungsstufe 11}
+\VpadConfig{1512} {Entlastungsstufe 12}
+\VpadConfig{1513} {Entlastungsstufe 13}
+\VpadConfig{1514} {Entlastungsstufe 14}
+\VpadConfig{1515} {Entlastungsstufe 15}
+\VpadConfig{10000} {Ja}
+\VpadConfig{10001} {Nein}
+\VpadConfig{10003} {Text nicht gefunden}
+
+
+%% New:
+\VpadError{851a} {851 Luftfilter}
+
+\VpadError{000} {Systemfehler}
+\VpadError{100} {\#\,100 CAN 1: Kommunikation IO Front}
+\VpadError{101} {\#\,101 CAN 1: Kommunikation Blackbox}
+\VpadError{102} {\#\,102 CAN 1: Kommunikation Tastatur}
+\VpadError{104} {\#\,104 CAN 2: Kommunikation RC Fahrt}
+\VpadError{105} {\#\,105 CAN 2: Kommunikation RC Arbeit}
+\VpadError{106} {\#\,106 CAN 2: Kommunikation Diesel}
+\VpadError{130} {\#\,130 Tastatur-CAN-Kommunikation}
+\VpadError{150} {\#\,150 Frontbesen: Inkompatible Steuereinheit}
+\VpadError{151} {\#\,151 Frontbesen: Konfiguration}
+\VpadError{200} {\#\,200 RC-A: Kurzschluss Masse YP7}
+\VpadError{201} {\#\,201 RC-A: Kurzschluss Masse YP8}
+\VpadError{202} {\#\,202 RC-A: Kurzschluss Masse YP9}
+\VpadError{203} {\#\,203 RC-A: Kurzschluss Masse 3. Besen}
+\VpadError{205} {\#\,205 RC-A: Kurzschluss Masse RKL}
+\VpadError{206} {\#\,206 RC-A: Kurzschluss Masse Y10}
+\VpadError{207} {\#\,207 RC-A: Kurzschluss Masse Y11}
+\VpadError{208} {\#\,208 RC-A: Kurzschluss Masse Y12}
+\VpadError{209} {\#\,209 RC-A: Kurzschluss Masse Y13}
+\VpadError{210} {\#\,210 RC-A: Kurzschluss Masse Y14}
+\VpadError{211} {\#\,211 RC-A: Kurzschluss Masse Y15}
+\VpadError{212} {\#\,212 RC-A: Kurzschluss Masse Y16}
+\VpadError{213} {\#\,213 RC-A: Kurzschluss Masse Y17}
+\VpadError{214} {\#\,214 RC-A: Kurzschluss Masse Y18}
+\VpadError{215} {\#\,215 RC-A: Kurzschluss Masse elektr. W-Pumpe}
+\VpadError{220} {\#\,220 RC-A: Kurzschluss U+ YP7}
+\VpadError{221} {\#\,221 RC-A: Kurzschluss U+ YP8}
+\VpadError{222} {\#\,222 RC-A: Kurzschluss U+ YP9}
+\VpadError{223} {\#\,223 RC-A: Kurzschluss U+ 3. Besen}
+\VpadError{225} {\#\,225 RC-A: Kurzschluss U+ RKL}
+\VpadError{226} {\#\,226 RC-A: Kurzschluss U+ Y10}
+\VpadError{227} {\#\,227 RC-A: Kurzschluss U+ Y11}
+\VpadError{228} {\#\,228 RC-A: Kurzschluss U+ Y12}
+\VpadError{229} {\#\,229 RC-A: Kurzschluss U+ Y13}
+\VpadError{230} {\#\,230 RC-A: Kurzschluss U+ Y14}
+\VpadError{231} {\#\,231 RC-A: Kurzschluss U+ Y15}
+\VpadError{232} {\#\,232 RC-A: Kurzschluss U+ Y16}
+\VpadError{233} {\#\,233 RC-A: Kurzschluss U+ Y17}
+\VpadError{234} {\#\,234 RC-A: Kurzschluss U+ Y18}
+\VpadError{235} {\#\,235 RC-A: Kurzschluss U+ elektr. W-Pumpe}
+\VpadError{240} {\#\,240 RC-A: Kabelbruch YP7}
+\VpadError{241} {\#\,241 RC-A: Kabelbruch YP8}
+\VpadError{242} {\#\,242 RC-A: Kabelbruch YP9}
+\VpadError{243} {\#\,243 RC-A: Kabelbruch 3. Besen}
+\VpadError{245} {\#\,245 RC-A: Kabelbruch RKL}
+\VpadError{246} {\#\,246 RC-A: Kabelbruch Y10}
+\VpadError{247} {\#\,247 RC-A: Kabelbruch Y11}
+\VpadError{248} {\#\,248 RC-A: Kabelbruch Y12}
+\VpadError{249} {\#\,249 RC-A: Kabelbruch Y13}
+\VpadError{250} {\#\,250 RC-A: Kabelbruch Y14}
+\VpadError{251} {\#\,251 RC-A: Kabelbruch Y15}
+\VpadError{252} {\#\,252 RC-A: Kabelbruch Y16}
+\VpadError{253} {\#\,253 RC-A: Kabelbruch Y17}
+\VpadError{254} {\#\,254 RC-A: Kabelbruch Y18}
+\VpadError{255} {\#\,255 RC-A: Kabelbruch elektr. W-Pumpe}
+\VpadError{300} {\#\,300 RC-A: Startb. Versorgung VB low}
+\VpadError{301} {\#\,301 RC-A: Startb. Versorgung VSS}
+\VpadError{302} {\#\,302 RC-A: Startb. HW Monitor 1}
+\VpadError{303} {\#\,303 RC-A: Startbedingung 1}
+\VpadError{304} {\#\,304 RC-A: Startb. Dieseldrehzahl}
+\VpadError{305} {\#\,305 RC-A: Startb. HW Monitor 2}
+\VpadError{306} {\#\,306 RC-A: Startbedingung 2}
+\VpadError{307} {\#\,307 RC-A: Startb. Safeout Kabelbruch}
+\VpadError{308} {\#\,308 RC-A: Startb. Safeout Kurzschluss}
+\VpadError{309} {\#\,309 RC-A: Startb. Leistungsschalter 1}
+\VpadError{310} {\#\,310 RC-A: Startb. Leistungsversorgung}
+\VpadError{311} {\#\,311 RC-A: Startb. Leistungsschalter 2}
+\VpadError{312} {\#\,312 RC-A: Startb. Rückspannung}
+\VpadError{313} {\#\,313 RC-A: Startb. Notstopp}
+\VpadError{314} {\#\,314 RC-A: Interne Spannung VSS1}
+\VpadError{315} {\#\,315 RC-A: Interne Spannung VSS2}
+\VpadError{316} {\#\,316 RC-A: Überspannung}
+\VpadError{317} {\#\,317 RC-A: Unterspannung}
+\VpadError{318} {\#\,318 RC-A: Temperatur RC zu hoch}
+\VpadError{319} {\#\,319 RC-A: Notstopp betätigt}
+\VpadError{320} {\#\,320 RC-A: CAN 1}
+\VpadError{321} {\#\,321 RC-A: CAN 2}
+\VpadError{322} {\#\,322 RC-A: CAN 3}
+\VpadError{323} {\#\,323 RC-A: CAN Timeout Vpad}
+\VpadError{324} {\#\,324 RC-A: Steuerung Arbeit 10V}
+\VpadError{325} {\#\,325 RC-A: Steuerung Arbeit GND}
+\VpadError{370} {\#\,370 RC-A: Modusumschalter}
+\VpadError{371} {\#\,371 RC-A: Fahrmodus: Schalter Gang 1}
+\VpadError{372} {\#\,372 RC-A: Fahrmodus: Schalter Gang 2}
+\VpadError{373} {\#\,373 RC-A: Speicherladedruckschalter Fußbr.}
+\VpadError{374} {\#\,374 RC-A: Frischwasser-WP 1. Stufe}
+\VpadError{375} {\#\,375 RC-A: Frischwasser-WP 2. Stufe}
+\VpadError{376} {\#\,376 RC-A: Sitzkontaktschalter}
+\VpadError{377} {\#\,377 RC-A: Turbine Handsaugschlauch}
+\VpadError{378} {\#\,378 RC-A: Behälter heben}
+\VpadError{379} {\#\,379 RC-A: Behälter senken}
+\VpadError{380} {\#\,380 RC-A: Hochdruck-WP}
+\VpadError{381} {\#\,381 RC-A: Standlicht}
+\VpadError{382} {\#\,382 RC-A: Fernlicht}
+\VpadError{383} {\#\,383 RC-A: Blinker}
+\VpadError{384} {\#\,384 RC-A: Handbremse}
+\VpadError{385} {\#\,385 RC-A: Frischwasser leer}
+\VpadError{386} {\#\,386 RC-A: Besendruckschalter}
+\VpadError{387} {\#\,387 RC-A: Fußbremse Drucksensor}
+\VpadError{388} {\#\,388 RC-A: CAN 1 Timeout RC Fahrantr.}
+\VpadError{389} {\#\,389 RC-A: CAN 2 Timeout RC Fahrantr.}
+\VpadError{400} {\#\,400 RC-F: Kurzschluss Masse Vorwärts}
+\VpadError{401} {\#\,401 RC-F: Kurzschluss Masse Rückwärts}
+\VpadError{402} {\#\,402 RC-F: Kurzschluss Masse Hydromotor}
+\VpadError{403} {\#\,403 RC-F: Kurzschluss Masse Neutral}
+\VpadError{404} {\#\,404 RC-F: Kurzschluss Masse Lüfter}
+\VpadError{405} {\#\,405 RC-F: Kurzschluss Masse Stopplicht}
+\VpadError{406} {\#\,406 RC-F: Kurzschluss Masse Y1}
+\VpadError{407} {\#\,407 RC-F: Kurzschluss Masse Y2}
+\VpadError{408} {\#\,408 RC-F: Kurzschluss Masse Y3}
+\VpadError{409} {\#\,409 RC-F: Kurzschluss Masse Y4}
+\VpadError{410} {\#\,410 RC-F: Kurzschluss Masse Y5}
+\VpadError{411} {\#\,411 RC-F: Kurzschluss Masse Y6}
+\VpadError{413} {\#\,413 RC-F: Kurzschluss Masse hydr. W-Pumpe}
+\VpadError{414} {\#\,414 RC-F: Kurzschluss Masse Summer}
+\VpadError{415} {\#\,415 RC-F: Kurzschluss Masse Rückfahrlampe}
+\VpadError{420} {\#\,420 RC-F: Kurzschluss U+ Vorwärts}
+\VpadError{421} {\#\,421 RC-F: Kurzschluss U+ Rückwärts}
+\VpadError{422} {\#\,422 RC-F: Kurzschluss U+ Hydromotor}
+\VpadError{423} {\#\,423 RC-F: Kurzschluss U+ Neutral}
+\VpadError{424} {\#\,424 RC-F: Kurzschluss U+ Lüfter}
+\VpadError{425} {\#\,425 RC-F: Kurzschluss U+ Stopplicht}
+\VpadError{426} {\#\,426 RC-F: Kurzschluss U+ Y1}
+\VpadError{427} {\#\,427 RC-F: Kurzschluss U+ Y2}
+\VpadError{428} {\#\,428 RC-F: Kurzschluss U+ Y3}
+\VpadError{429} {\#\,429 RC-F: Kurzschluss U+ Y4}
+\VpadError{430} {\#\,430 RC-F: Kurzschluss U+ Y5}
+\VpadError{431} {\#\,431 RC-F: Kurzschluss U+ Y6}
+\VpadError{433} {\#\,433 RC-F: Kurzschluss U+ hydr. W-Pumpe}
+\VpadError{434} {\#\,434 RC-F: Kurzschluss U+ Summer}
+\VpadError{435} {\#\,435 RC-F: Kurzschluss U+ Rückfahrlampe}
+\VpadError{440} {\#\,440 RC-F: Kabelbruch Vorwärts}
+\VpadError{441} {\#\,441 RC-F: Kabelbruch Rückwärts}
+\VpadError{442} {\#\,442 RC-F: Kabelbruch Hydromotor}
+\VpadError{443} {\#\,443 RC-F: Kabelbruch Neutral}
+\VpadError{444} {\#\,444 RC-F: Kabelbruch Lüfter}
+\VpadError{445} {\#\,445 RC-F: Kabelbruch Stopplicht}
+\VpadError{446} {\#\,446 RC-F: Kabelbruch Y1}
+\VpadError{447} {\#\,447 RC-F: Kabelbruch Y2}
+\VpadError{448} {\#\,448 RC-F: Kabelbruch Y3}
+\VpadError{449} {\#\,449 RC-F: Kabelbruch Y4}
+\VpadError{450} {\#\,450 RC-F: Kabelbruch Y5}
+\VpadError{451} {\#\,451 RC-F: Kabelbruch Y6}
+\VpadError{453} {\#\,453 RC-F: Kabelbruch hydr. W-Pumpe}
+\VpadError{454} {\#\,454 RC-F: Kabelbruch Summer}
+\VpadError{455} {\#\,455 RC-F: Kabelbruch Rückfahrlampe}
+\VpadError{500} {\#\,500 RC-F: Startb. Versorgung VB low}
+\VpadError{501} {\#\,501 RC-F: Startb. Versorgung VSS}
+\VpadError{502} {\#\,502 RC-F: Startb. HW Monitor 1}
+\VpadError{503} {\#\,503 RC-F: Startbedingung 1}
+\VpadError{504} {\#\,504 RC-F: Startb. Dieseldrehzahl}
+\VpadError{505} {\#\,505 RC-F: Startb. HW Monitor 2}
+\VpadError{506} {\#\,506 RC-F: Startbedingung 2}
+\VpadError{507} {\#\,507 RC-F: Startb. Safeout Kabelbruch}
+\VpadError{508} {\#\,508 RC-F: Startb. Safeout Kurzschluss}
+\VpadError{509} {\#\,509 RC-F: Startb. Leistungsschalter 1}
+\VpadError{510} {\#\,510 RC-F: Startb. Leistungsversorgung}
+\VpadError{511} {\#\,511 RC-F: Startb. Leistungsschalter 2}
+\VpadError{512} {\#\,512 RC-F: Startb. Rückspannung}
+\VpadError{513} {\#\,513 RC-F: Startb. Notstopp}
+\VpadError{514} {\#\,514 RC-F: Interne Spannung VSS1}
+\VpadError{515} {\#\,515 RC-F: Interne Spannung VSS2}
+\VpadError{516} {\#\,516 RC-F: Überspannung}
+\VpadError{517} {\#\,517 RC-F: Unterspannung}
+\VpadError{518} {\#\,518 RC-F: Temperatur RC zu hoch}
+\VpadError{519} {\#\,519 RC-F: Notstopp betätigt}
+\VpadError{520} {\#\,520 RC-F: CAN 1}
+\VpadError{521} {\#\,521 RC-F: CAN 2}
+\VpadError{522} {\#\,522 RC-F: CAN 3}
+\VpadError{523} {\#\,523 RC-F: CAN Timeout VPAD}
+\VpadError{524} {\#\,524 RC-F: Steuerung Arbeit 10V}
+\VpadError{525} {\#\,525 RC-F: Steuerung Arbeit GND}
+\VpadError{530} {\#\,530 RC-F: Fahrpumpe Vorwärts}
+\VpadError{531} {\#\,531 RC-F: Fahrpumpe Rückwärts}
+\VpadError{532} {\#\,532 RC-F: Lüfterausgang}
+\VpadError{533} {\#\,533 RC-F: Hydromotorausgang}
+\VpadError{534} {\#\,534 RC-F: Neutralschaltung Fahrantrieb}
+\VpadError{535} {\#\,535 RC-F: Stopplicht}
+\VpadError{536} {\#\,536 RC-F: Rückfahrlicht}
+\VpadError{537} {\#\,537 RC-F: Summer}
+\VpadError{538} {\#\,538 RC-F: Schalter Fahrrichtung}
+\VpadError{539} {\#\,539 RC-F: Fahrpedal}
+\VpadError{540} {\#\,540 RC-F: Hydromotor-Drehzahlsignal}
+\VpadError{541} {\#\,541 RC-F: Bremsdrucksensor}
+\VpadError{542} {\#\,542 RC-F: Hydrauliktemperatur}
+\VpadError{543} {\#\,543 RC-F: Gangwahlschalter}
+\VpadError{544} {\#\,544 RC-F: Behältersensoren}
+\VpadError{545} {\#\,545 RC-F: Hydrofilter}
+\VpadError{546} {\#\,546 RC-F: Recyclingwasser leer}
+\VpadError{547} {\#\,547 RC-F: Recyclingwasser Höhe Kühler}
+\VpadError{548} {\#\,548 RC-F: Diesel Öldruck}
+\VpadError{549} {\#\,549 RC-F: Luftfilter}
+\VpadError{550} {\#\,550 RC-F: Steuerung Fahrantrieb 10V}
+\VpadError{551} {\#\,551 RC-F: Steuerung Fahrantrieb GND}
+\VpadError{552} {\#\,552 RC-F: Dieselstand}
+\VpadError{553} {\#\,553 RC-F: Temperatursensor Hydr.-Öl}
+\VpadError{554} {\#\,554 RC-F: CAN Dieselmotor}
+\VpadError{555} {\#\,555 RC-F: CAN 1 Timeout RC Arbeit}
+\VpadError{556} {\#\,556 RC-F: CAN 2 Timeout RC Arbeit}
+\VpadError{557} {\#\,557 RC-F: Stromkalibration}
+\VpadError{558} {\#\,558 RC-F: SF4 Maximal-Geschwindigkeit}
+\VpadError{559} {\#\,559 RC-F: Behälter Sensor links}
+\VpadError{560} {\#\,560 RC-F: Behälter Sensor rechts}
+\VpadError{604} {\#\,604 Motor-Öldruck niedrig}
+\VpadError{609} {\#\,609 Motor-Wassertemp. hoch}
+\VpadError{610} {\#\,610 Motor-Wassertemp. zu hoch}
+\VpadError{650} {\#\,650 Werkstatt aufsuchen}
+\VpadError{651} {\#\,651 Motor-Notlauf}
+\VpadError{652} {\#\,652 Fahrzeug-Inspektion}
+\VpadError{653} {\#\,653 Motor-Kundendienst}
+\VpadError{700} {\#\,700 Hydrauliköltemperatur}
+\VpadError{702} {\#\,702 Hydraulikölfilter}
+\VpadError{703} {\#\,703 Hydraulikölwechsel}
+\VpadError{800} {\#\,800 Notausschalter aktiviert}
+\VpadError{801} {\#\,801 Behälter angehoben}
+\VpadError{850} {\#\,850 Niedriger Dieselfüllstand}
+\VpadError{851} {\#\,851 Luftfilter}
+\VpadError{902} {\#\,902 Bremsdruck}
+\VpadError{904} {\#\,904 Fahrtrichtungsschalter}
+\VpadError{905} {\#\,905 Feststellbremse aktiviert}
+\VpadError{906} {\#\,906 Feststellbremse aktivieren}
+\VpadError{950} {\#\,950 Fehler beim Senden der Konfiguration}
+\VpadError{951} {\#\,951 Fehler beim Speichern der Konfiguration}
+
+\stopsetups
+
+
+
+\definelayerpreset	[vpadHead]	[corner={left,top}, location={right,bottom}]
+
+\definelayerpreset	[numbering]	[corner={left,top}, location={right,bottom}]
+
+\definelayer  [figure][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[figure][{\directsetup{figure}\tightlayer[figure]}]
+
+
+\definelayerpreset	[joystickHead]	[corner={left,top}, location={right,bottom}]
+
+\definelayer  [figureJ][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[figureJ][{\directsetup{figureJ}\tightlayer[figureJ]}]
+
+
+\definelayerpreset	[vpadProg]	[corner={left,top}, location={right,bottom}]
+
+\definelayer  [figurePrg][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[figurePrg][{\directsetup{figurePrg}\tightlayer[figurePrg]}]
+
+\definelayer  [figurePlow][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[figurePlow][{\directsetup{figurePlow}\tightlayer[figurePlow]}]
+
+
+%%%%%%% Combinations numbered %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definelayer  [backgroundOne][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[backgroundOne][{\directsetup{backgroundOne}\tightlayer[backgroundOne]}]
+
+\definelayer  [backgroundTwo][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[backgroundTwo][{\directsetup{backgroundTwo}\tightlayer[backgroundTwo]}]
+
+\definelayer  [figureOne][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[figureOne][{\directsetup{figureOne}\tightlayer[figureOne]}]
+
+\definelayer  [figureTwo][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[figureTwo][{\directsetup{figureTwo}\tightlayer[figureTwo]}]
+
+\definelayer  [figureThree][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[figureThree][{\directsetup{figureThree}\tightlayer[figureThree]}]
+
+\definelayer  [GOne][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GOne][{\directsetup{GOne}\tightlayer[GOne]}]
+
+\definelayer  [GTwo][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GTwo][{\directsetup{GTwo}\tightlayer[GTwo]}]
+
+\definelayer  [GThree][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GThree][{\directsetup{GThree}\tightlayer[GThree]}]
+
+\definelayer  [GFour][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GFour][{\directsetup{GFour}\tightlayer[GFour]}]
+
+\definelayer  [GFive][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GFive][{\directsetup{GFive}\tightlayer[GFive]}]
+
+\definelayer  [GSix][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GSix][{\directsetup{GSix}\tightlayer[GSix]}]
+
+\definelayer  [GSeven][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GSeven][{\directsetup{GSeven}\tightlayer[GSeven]}]
+
+\definelayer  [GEight][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GEight][{\directsetup{GHeight}\tightlayer[GHeight]}]
+
+\definelayer  [GNine][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GNine][{\directsetup{GNine}\tightlayer[GNine]}]
+
+\definelayer  [GThen][width=\overlaywidth,height=\overlayheight]
+\defineoverlay[GThen][{\directsetup{GThen}\tightlayer[GThen]}]
+
+
+
+
+
+
+\define [1] \VpadHeader{%
+\framed[frame=off,offset=none,width=45mm]{\framed[width=46mm,height=12pt,frame=off,align=middle,offset=.5mm,toffset=-1.0mm]{\VpadHeadfont #1}\crlf
+\VpadBlackrule}%
+}
+\define [1] \VpadHeaderK{%
+\framed[width=45mm,height=12pt,frame=off,background=color,backgroundcolor=black,align=middle,offset=.5mm,toffset=-1.0mm]{\white\VpadHeadfont #1}%
+}
+
+\define [4] \VpadPictures{%
+\framed[width=11.25mm,height=8mm,frame=off,background=color,align=middle]{\externalfigure[#1][width=7mm,height=7mm]}%
+\framed[width=11.25mm,height=8mm,frame=off,background=color,align=middle]{\externalfigure[#2][width=7mm,height=7mm]}%
+\framed[width=11.25mm,height=8mm,frame=off,background=color,align=middle]{\externalfigure[#3][width=7mm,height=7mm]}%
+\framed[width=11.25mm,height=8mm,frame=off,background=color,align=middle]{\externalfigure[#4][width=7mm,height=7mm]}%
+}
+
+
+
+\define\DefaultVpadPictures {%
+\VpadPictures {vpadReturn}{vpadUp}{vpadDown}{vpadSelect}%
+}
+\define\MiddleEmptyVpadPictures {%
+\VpadPictures {vpadReturn}{vpadNull}{vpadNull}{vpadSelect}%
+}
+
+
+
+\def\VpadHead{\dosingleempty\doVpadHead}%
+\long\def\doVpadHead[#1]#2{%
+	\iffirstargument
+	\setlayer
+		[figure]
+		[
+		preset=vpadHead,
+		x=0mm,
+		y=0mm,
+		]
+		{\VpadHeaderK{#2}}%
+	\else
+	\setlayer
+		[figure]
+		[
+		preset=vpadHead,
+		x=0mm,
+		y=0mm,
+		]
+		{\VpadHeader{#2}}%
+	\fi
+	}
+\def\VpadFoot #1{%
+	\setlayer
+		[figure]
+		[
+		preset=vpadHead,
+		x=0mm,
+		y=24mm,
+		]
+		{#1}%
+	}
+\def\VpadProg #1{%
+	\setlayer
+		[figurePrg]
+		[
+		preset=vpadHead,
+		x=0mm,
+		y=0mm,
+		]
+		{\externalfigure[#1][width=45mm,height=32mm]}%
+	}
+
+\def\VpadScreenShoot #1{%
+\startsetups figure%
+#1%
+\stopsetups
+
+\externalfigure[vpadscreen.pdf][background={foreground,figure},width=45mm,height=32mm,frame=on,framecolor=darkgray]
+\blank[small]
+}
+\def\VpadScreenConfig #1{%
+\startsetups figure%
+#1%
+\stopsetups
+}
+
+\define\VpadScreenFig {%
+\externalfigure[vpadscreen.pdf][background={foreground,figure},width=45mm,height=32mm,frame=on,framecolor=darkgray]
+\blank[small]
+}
+
+\startsetups [VpadFramedFigure]
+\setupframed [%
+			framecolor=darkgray,
+			background={screen,figure},
+			backgroundscreen=1,
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=43mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[bottomframe=on,align=middle,style={\VpadHeadfont\setupinterlinespace},boffset=2pt,after={\vskip 3pt}]%
+\stopsetups
+
+\startsetups [VpadFramedFigureK]
+\setupframed [%
+			framecolor=darkgray,
+			background={screen,figure},
+			backgroundscreen=1,
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureFree]
+\setupframed [%
+			frame=off,
+			background={screen,figure},
+			backgroundscreen=1,
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=43mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\stopsetups
+
+\startsetups [VpadFramedFigureEng]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadEngineDataE3b][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureHome]
+\setlayer
+			[figurePrg]
+			[%
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpads2Home][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureWork]
+\setlayer
+			[figurePrg]
+			[%
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpads2Work][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureTrans1]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3Trans1][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureTrans2]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3Trans2][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureTrans3]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3Trans3][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedTempomat]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3Tempomat][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureJoy1]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadscreenP3-1][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right},roffset=.75mm,loffset=.75mm]%
+\setupTABLE	[r]	[1]		[toffset=12mm]%
+% \setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureJoy2]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadscreenP3-2][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right},roffset=.75mm,loffset=.75mm]%
+\setupTABLE	[r]	[1]		[toffset=12mm]%
+% \setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureJoy3]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadscreenP3-3][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right},roffset=.75mm,loffset=.75mm]%
+\setupTABLE	[r]	[1]		[toffset=12mm]%
+% \setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureSusp1]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3_Suspension1][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureSusp2]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3_Suspension2][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureSusp3]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3_Suspension3][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureSusp4]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3_Suspension4][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureSte1]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3SteInt][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureSte2]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3SteEHU][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureSte3]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadP3SteCrab][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureEngUs]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadEngineDataUs][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigureHydr]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadHydraulicData][width=45mm,height=32mm]}% Surveillance moteur
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedFigurePrg:1]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadscreenPh1][width=45mm,height=32mm]}% Programme hivernal 1
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+\startsetups [VpadFramedFigurePrg:2]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]
+			{\externalfigure[vpadscreenPh2][width=45mm,height=32mm]}% Programme hivernal 2
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+\startsetups [VpadFramedFigurePrg:3]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]%
+			{\externalfigure[vpadscreenPh3][width=45mm,height=32mm]}% Programme hivernal 3
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+\startsetups [VpadFramedFigurePrg:4]
+\setlayer
+			[figurePrg]
+			[
+			preset=vpadProg,
+			x=0mm,
+			y=0mm,
+			]%
+			{\externalfigure[vpadscreenPe1][width=45mm,height=32mm]}% Programme hivernal 3
+\setupframed [%
+			framecolor=darkgray,
+			background={figure,figurePrg},
+			width=45mm,height=32mm,offset=none,
+			align={high,center},
+			]%
+\setupTABLE	[%
+			frame=off,option=stretch,
+			textwidth=44.5mm,
+			style=\Vpadfont\setupinterlinespace,align=lohi,
+			offset=none,toffset=1.2pt,boffset=1.0pt,
+			background=color,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right}]%
+\setupTABLE	[r]	[1]		[backgroundcolor=black,align=middle,style={\VpadHeadfont\setupinterlinespace},color=white,boffset=2pt,after={\vskip 3pt}]%
+\setupTABLE	[r]	[2,3,4,5,6,7]	[roffset=.75mm,loffset=.75mm]%
+\stopsetups
+
+\startsetups [VpadFramedMessage]
+\setupframed [%
+			framecolor=darkgray,
+			% background=figure,
+			width=45mm,height=32mm,offset=none,
+			align=,
+			]
+\setupTABLE	[%
+			frame=on,option=stretch,
+			textwidth=35mm,
+			style=\VpadHeadfont\setupinterlinespace,align=lohi,
+			offset=2mm,
+			background=screen,backgroundscreen=.85,
+			rulethickness=2pt,
+			]%
+\setupTABLE	[r]	[each]	[align={high,right},height=28mm]%
+\stopsetups
+
+\define [1] \VpadMessage{%
+\setups[VpadFramedMessage] % VpadFramedFigureK
+\framed{\bTABLE
+\bTR\bTD #1 \eTD\eTR
+\eTABLE}}
+
+%%% Table vpad error messages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\startsetups [table:vpadmessage]
+\setupbodyfont[sans,8pt]
+\setupTABLE [frame=off, style=sans, spleet=yes, background=screen]
+
+\setupTABLE [r] [each] [bottomframe=on, framecolor=white, rulethickness=1pt]
+\setupTABLE [r] [1] [bottomframe=on, framecolor=white, rulethickness=1.5pt]
+\setupTABLE [1] [1] [style=\it]
+\setupTABLE [2] [1] [style=\bf]
+%\setupTABLE [2] [2] [style=\ssbi]
+\setupTABLE [r]	[first]	[backgroundscreen=.68]
+\setupTABLE [1] [2,3,4,5,6,7,8,9,10,11]  [backgroundscreen=.8]
+\setupTABLE [2] [2,3,4,5,6,7,8,9,10,11]  [backgroundscreen=.9]
+\setupTABLE [row] [last] [bottomframe=off, after={\blank[big]}]
+\setupTABLE [c] [1] [width=8em]
+\setupTABLE [c] [2] [width=\dimexpr(\makeupwidth - 8em)]
+
+\stopsetups
+
+\defineregister [alphalist][alphalists]
+\setupregister [alphalist]
+	[n=1,
+	compress=no,
+	indicator=no,
+	style=\tf,
+	pagestyle=slanted,
+	alternative=,
+	interaction=all,
+	before=,
+	align=right,
+	textcommand=\RegPageNoRight, ]
+
+\def\Alphalist#1{\alphalist{#1}#1}
+
+
+
+\stopenvironment

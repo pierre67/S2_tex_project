@@ -1,0 +1,87 @@
+\startcomponent c_00_front_s2_130-sl
+\product prd_ba_s2_130-sl
+
+%\setups [FRENCH,pagestyle:frontmatter]
+
+\startboschungmakeup
+\setups[pagestyle:title]
+\startalignment[middle]
+
+\midaligned{\externalfigure[innentitel]}
+\blank[1*big]
+
+\definefont[AffiliationFont][Sans sa .55]
+\defineornament
+[SomeAffiliation]
+[rotation=,corner={right,bottom},location={left,bottom},
+voffset=-3pt,alternative=b,frame=off]
+[style=AffiliationFont,offset=6pt]
+
+{\bkd Navodila za uporabo\godown [9pt]}
+
+\placefigure[none]{}
+{\SomeAffiliation
+{\BAversionSL; \BAdateSL}
+{\bfc\BosFull {Sdeux}}}
+
+\blank[2*big]
+
+{\tfx\BosFull{Boschung}|/|PBV; Technische Redaktion, Matran, CH}
+
+\stopalignment
+
+\stopboschungmakeup
+%
+\startboschungmakeup
+
+\setupwhitespace [medium]
+
+\setups[pagestyle:marginless]
+
+{\sla Kolofon}
+\blank [medium]
+
+Ta navodila za uporabo opisujejo pravilno uporabo naprave \sdeux. Pozorno preberite
+ta navodila za uporabo, preden začnete uporabljati \sdeux\,
+da se seznanite z upravljalnimi elementi in njihovimi 
+funkcijami. Vozilo je dovoljeno uporabljati samo za namene, za
+katere je zasnovano (pravilna uporaba).
+Vsak drugačna uporaba velja kot nepravilna. Za škodo, 
+nastalo zaradi nepravilne uporabe, podjetje \Boschung\
+ne prevzema nobene odgovornosti. Vso odgovornost v tem primeru nosi uporabnik. K
+pravilno uporabi sodi tudi upoštevanje
+varnostnih napotkov in intervalov. \par
+
+Ta dokument je prevod originalnih ||navodil za uporabo.
+Slike se lahko v posameznih primerih razlikujejo od vaše različice vozila.
+\blank [medium]
+
+
+\starttextbackground[CB]
+Za vsa vprašanja glede teh navodil za uporabo vam je na voljo
+tehnična redakcija na naslovu:
+
+\md
+{\Caps Marcel Boschung AG}\crlf
+Rédaction technique\crlf
+Route des Muëses 2\crlf
+CH-1753 Matran
+
+{\tt doc.mechanical@boschung.com}
+\stoptextbackground
+\blank[medium]
+
+\copyright\ \CopyrightyearSL\ Marcel Boschung AG Matran, \BAversionSL
+
+Izvorna jezika pričujočih navodil za uporabo sta fr (francoščina) in de
+(nemščina). Vse ostale jezikovne različice teh navodil za uporabo so
+prevodi originalne različice.
+
+Vse pravice pridržane.  Ponatis, prevajanje in razmnoževanje, tudi
+v delih, brez pisnega dovoljenja podjetja \BosFull{Boschung} niso
+dovoljeni.
+
+
+\stopboschungmakeup
+% \setups{pagestyle:normal}
+\stopcomponent

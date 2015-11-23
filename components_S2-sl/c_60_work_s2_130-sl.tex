@@ -1,0 +1,320 @@
+\startcomponent c_60_work_s2_130-sl
+\product prd_ba_s2_130-sl
+
+
+\startchapter [title={S2 v vsakdanu},
+							reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Zagon}
+
+\startsection [title={Zagon},
+							reference={sec:using:start}]
+
+
+\startSteps
+\item Zagotovite, da so bili redni pregledi in vzdrževanja izvedene po predpisih.
+\item S ključem za vžig zaženite motor: vključite vžig, nato ključ obrnite naprej v desno in ga zadržite, dokler se motor ne zažene (mogoče samo, če je izbirna ročica za stopnjo vožnje na nevtralnem položaju).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Izbirna ročica za stopnjo vožnje}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Izbirna ročica na položaju {\em vožnja naprej}}
+{\externalfigure [work:select:rDrive]}{Izbirna ročica na položaju {\em vzvratna vožnja}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Obrnite stikalo izbirne ročice za stopnjo vožnje, da v načinu {\em vožnje} prestavite v stopnjo vožnje:
+\startitemize [R]
+\item prva stopnja
+\item druga stopnja (samodejno obratovanje; samodejni zagon po prvi stopnji)
+\stopitemize
+
+ali pa pritisnite gumb na zunanji strani ročice, da vključite|/|izključite {\em delovni} način.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+V delovnem načinu je na voljo samo prva stopnja vožnje, motor pa se vrti s 1300\,min\high{\textminus 1}.
+
+S tipkama~\textSymb{joy_key_engine_increase} in~\textSymb{joy_key_engine_decrease} na večfunkcijski konzoli lahko upravljate število vrtljajev motorja.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Potisnite izbirno ročico za stopnjo vožnje navzgor in naprej (vožnja naprej) oz. navzgor in nazaj (vzvratna vožnja). Glejte zgornje slike.
+\item Preden pospešite, sprostite ročno zavoro.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Ročno zavoro je treba povsem sprostiti!} Položaj ročice za ročno zavoro nadzira elektronsko tipalo: če ročna zavora ni povsem sproščena, je hitrost vožnje omejena na 5\,km/h.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Počasi pritisnite na stopalko za vožnjo, da speljete vozilo.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Loputa sesalnega kanala}
+
+Sesalni sistem proizvaja zračni rok ali od sesalnega ustja ali ročne sesalne gibke cevi (dodatna možnost) do posode za umazanijo.
+
+Loputa, ki jo je treba prestaviti ročno(\inF[fig:suctionClap], \atpage[fig:suctionClap]), omogoča preklop zračnega toka med sesalnim ustjem in ročno sesalno gibko cevjo.
+
+\placefig [here] [fig:suctionClap] {Loputa sesalnega kanala}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Odprt sesalni kanal}
+{\externalfigure [work:suctionClap:closed]}{Zaprt sesalni kanal}
+\stopcombination}
+
+V normalnem obratovanju~– dela s sesalnim ustjem~– mora biti sesalni kanal odprt (preklopna ročica kaže navzgor).
+
+Da lahko uporabite ročno sesalno gibko cev, mora biti sesalni kanal zaprt (preklopna ročica kaže navzdol). Na ta način je zračni tok usmerjen skozi ročno sesalno gibko cev.
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Izklop},
+							reference={sec:using:stop}]
+
+\index{Izklop}
+
+\startSteps
+\item Aktivirajte ročno zavoro (ročica med sedežema) in izbirno ročico za stopnjo vožnje postavite na {\em nevtralni} položaj.
+\item Izvedite potrebna kontrolna dela,~ dnevne in morebitne tedenske kontrole~, kot je opisano na \atpage[table:scheduledaily].
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+
+\startsection [title={Pometanje in sesanje},
+							reference={sec:using:work}]
+
+\startSteps
+\item Zagon\index{pometanje} vozila izvedite, kot je opisano v  \in{§}[sec:using:start], \atpage[sec:using:start].
+\item Aktivirajte\index{sesanje} {\em delovni }način (gumb na zunanji strani izbirne ročice za stopnjo vožnje).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Pritisnite tipko~\textSymb{joy_key_suction_brush}, da vključite turbino in metle.
+
+{\md Različica:} {\lt Pritisnite tipko~\textSymb{joy_key_suction}, če želite delati samo s sesalnim ustjem.}
+
+\item S pomočjo tipk~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} večfunkcijske konzole nastavite hitrost vrtljajev metel.
+
+\item S pomočjo ustrezne krmilne ročice metle postavite na položaj za optimalno delovno širino.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Postavitev metel}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Metla navzven|/|navznoter}
+{\externalfigure [work:brush:left:raise]}{Metla gor|/|dol}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Vlaženje metel in sesalnega kanala}
+
+Pritisnite\index{pometanje+vlaženje} stikalo~\textSymb{temoin_busebalais} med sedežema:
+
+{\md Položaj 1:} vodna črpalka deluje samodejno, dokler je metla aktivirana.
+
+{\md Položaj 2:} vodna črpalka stalno deluje. (Uporabno \eG\ za nastavitvena dela.)
+
+
+\subsubsubject{Groba umazanija}
+
+\startSteps [continue]
+\item Če obstaja nevarnost, da bi večji kosi smeti (\eG\ PET||plastenke) zamašili sesalno ustje, s pomočjo stranskih tipk na večfunkcijski konzoli  odprite\index{loputa za grobo umazanijo} loputo za grobo umazanijo,~ če pa to ne zadošča~, pa začasno dvignite\index{sesalno ustje+groba umazanija} sesalno ustje.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Ravnanje z grobo umazanijo}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Odpiranje lopute za grobo umazanijo}
+{\externalfigure [work:suction:raise]}{Začasno dviganje sesalnega ustja}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Praznjenje posode za umazanijo},
+							reference={sec:using:container}]
+
+\startSteps
+\item Zapeljite\index{posoda za umazanijo+praznjenje} vozilo na primeren prostor, kjer lahko izpraznite posodo. Pri tem morate upoštevati veljavna določila za varnost okolja.
+\item Aktivirajte ročno zavoro in izbirno ročico za stopnjo vožnje postavite na {\em nevtralni} položaj. (Potrebno za sprostitev stikala za nagibanje ||posode.)
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Sprostite in odprite zaporno loputo posode za umazanijo.
+\item Pritisnite stikalo~\textSymb{temoin_kipp2} (sredinska konzola med sedežema), da nagnete posodo za umazanijo.
+\item Ko je posoda prazna, sperite njeno notranjost z vodnim curkom. Pri tem lahko uporabite integrirano vodno pištolo (dodatna oprema).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Ravnanje s posodo za umazanijo}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Zaklepanje zaporne lopute }
+{\externalfigure [container:safety:unlocked]}{Varnostna prečka}
+{\externalfigure [container:safety:locked]}{Varnostna prečka je zapahnjena}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Preverite|/|očistite tesnila in naležne površine tesnil posode, sistema za recikliranje in sesalnega kanala.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Pritisnite stikalo~\textSymb{temoin_kipp2}, da spustite posodo za umazanijo. (Po potrebi pred tem odstranite varnostne prečke s hidravličnih valjev.)
+\item Zaklenite zaporno loputo posode za umazanijo.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Ročna sesalna gibka cev},
+							reference={sec:using:suction:hose}]
+
+Vozilo \sdeux\ je lahko dodatno opremljeno \index{ročna sesalna gibka cev} z ročno sesalno gibko cevjo. Ta je pritrjena na zaporno loputo posode za umazanijo in je enostavna za uporabo.
+
+{\sla Pogoji:}
+
+Posoda za umazanijo je povsem spuščena; vozilo \sdeux\ je v {\em delovnem} načinu. (Glejte \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Ročna sesalna gibka cev}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Pritisnite tipko~\textSymb{temoin_aspiration_manuelle} na stropni konzoli, da vključite sesalni sistem.
+\item Zategnite ročno zavoro, preden zapustite voznikovo kabino.
+\item Zaprite sesalni kanal z loputo sesalnega kanala. (Glejte \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Povlecite ročno sesalno gibko cev na ustju iz držala in začnite z delom.
+\item Po koncu dela ponovno pritisnite tipko~\textSymb{temoin_aspiration_manuelle}, da izključite sesalni sistem.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Visokotlačna vodna pištola},
+							reference={sec:using:water:spray}]
+
+Vozilo \sdeux\ je lahko dodatno\index{vodna pištola} opremljeno z visokotlačno vodno pištolo. Vodna pištola je pritrjena v zadnjih desnih vzdrževalnih vratih in povezana z 10-metrskim||cevnim navijalnikom~ na nasprotni strani vozila~.
+
+Pri uporabi vodne pištole postopajte kot sledi:
+
+{\sla Pogoji:}
+
+V rezervoarju za svežo vodo je dovolj vode; \sdeux\ je v {\em delovnem} načinu. (Glejte \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Visokotlačna vodna pištola}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Pritisnite tipko~\textSymb{temoin_buse} na stropni konzoli, da vključite visokotlačno vodno pištolo.
+\item Zategnite ročno zavoro, preden zapustite voznikovo kabino.
+\item Odprite zadnja desna vzdrževalna vrata in ven vzemite vodno pištolo.
+\item Odvijte toliko gibke cevi, kot je potrebno, in začnite z delom.
+\item Po koncu dela ponovno pritisnite tipko~\textSymb{temoin_buse}, da izključite visokotlačno vodno črpalko.
+\item Na kratko povlecite za gibko cev, da sprostite blokade in navijete gibko cev.
+\item Vodno pištolo znova pritrdite v njeno držalo in zaprite vzdrževalna vrata.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Delo s tretjo metlo (dodatna možnost)},
+							reference={sec:using:frontBrush},
+							]
+
+\startSteps
+\item Zaženite\index{pometanje} vozilo, kot je opisano v \in{odseku}[sec:using:start] \atpage[sec:using:start].
+\item Aktivirajte\index{3.\,metla} {\em delovni} način (gumb na zunanji strani izbirne ročice za stopnjo vožnje).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Preverite, ali je tretja metla aktivirana na zaslonu enote Vpad
+(\textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Pritisnite tipko~\textSymb{joy_key_frontbrush_act}, da aktivirate hidravliko tretje metle.
+\item Pritisnite tipko~\textSymb{joy_key_frontbrush_left} ali~\textSymb{joy_key_frontbrush_right}, da tretjo metlo začnete vrteti v želeno smer.
+
+\item S pomočjo tipk~\textSymb{joy_key_frontbrush_increase} in~\textSymb{joy_key_frontbrush_decrease} na večfunkcijski konzoli nastavite hitrost vrtenja.
+
+\item S krmilno ročico postavite metle, kot je prikazano na spodnjih slikah.
+
+\stopSteps
+
+{\md Napotek:} {\lt Da lahko postavite stranske metle, je treba s tipko~\textSymb{joy_key_frontbrush_act} izključiti hidravliko tretje metle.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Postavitev tretje metle}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Navzgor|/|navzdol; v levo|/|desno}
+{\externalfigure [work:frontBrush:incline]}{Prečno|/|vzdolžno nagibanje}
+\stopcombination}
+\stop
+
+
+
+\stopsection
+
+
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent

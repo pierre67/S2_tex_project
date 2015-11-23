@@ -1,18 +1,17 @@
 \enabledirectives [system.synctex]
 
-\startproduct prd_ba_s2_120-de
+\startproduct prd_ba_s2_130-he
 
 \enablemode[%
-        screen,
-% 		print,
-        myriadpro,
+%         screen,
+		print,
         ]
 
 
-\project prj_ba_s2
+\project prj_ba_s2_he
 
 \version [final]
-\setups [GERMAN,VpGERMAN]
+\setups [HEBREW,VpHEBREW]
 
 %===============================================================================
 %===============================================================================
@@ -86,52 +85,53 @@
 
 \startfrontmatter
 	% \setuppagenumbering	[conversion=romannumerals]
-	\component c_00_front_s2_120-de
-	\marking[header]{Inhalt}
-		\completecontent
+	\component c_00_front_s2_130-he
+	\marking[header]{תוֹכֶן הָעִניָנִים}
+	\IndexHead{ָתוֹכֶן הָעִניָנִים}
+		\placecontent
 
 \stopfrontmatter
 
 \startbodymatter
 \define\LASTchapter{10}
 % \showframe
-\component c_10_safety_s2_120-de
-\component c_20_prescriptions_s2_120-de
-\component c_30_overview_s2_120-de
-\component c_40_control_s2_120-de
-\component c_45_vpad_s2_120-de
-\component c_60_work_s2_120-de
-\component c_80_maintenance_s2_120-de
-\component c_90_serviceplan_s2_120-de
-
+\component c_10_safety_s2_130-he
+% \component c_20_prescriptions_s2_130-he
+% \component c_30_overview_s2_130-he
+% \component c_40_control_s2_130-he
+% \component c_45_vpad_s2_130-he
+% \component c_60_work_s2_130-he
+% \component c_80_maintenance_s2_130-he
+% \component c_90_serviceplan_s2_130-he
+%
 % \page[yes,empty,right]
 \stopbodymatter
 
 \startbackmatter
 		\definelayer [bg:toc] [state=stop]
-		\marking[header]{Stichwortverzeichnis}
-			\IndexHead{Stichwortverzeichnis}
+		\marking[header]{מפתח מונחים}
+			\IndexHead{מפתח מונחים}
 			{\switchtobodyfont[small]\placeindex [n=3]}
-		\page[empty]
-			\marking[header]{Abbildungsverzeichnis}
-			\startcolumns[n=3]
-				\setupselector[caption][n=2]
-				\IndexHead{Abbildungsverzeichnis}
-				\placelist[fig]
-			\stopcolumns
-		\page[yes]
-
-		\setuppagenumbering[state=stop]
-	\component c_99_back_s2_120-de
+% 		\page[yes,blank,right]
+% 			\marking[header]{Abbildungsverzeichnis}
+% 			\startcolumns[n=3]
+% 				\setupselector[caption][n=2]
+% 				\IndexHead{Abbildungsverzeichnis}
+% 				\placelist[fig]
+% 			\stopcolumns
+% 		\page[yes]
+%
+% 		\setuppagenumbering[state=stop]
+% 	\component c_99_back_s2_130-he
 \stopbackmatter
 
-\seeindex{Service}{Wartung}
-\seeindex{Instandhaltung}{Wartung}
-\seeindex{Geschwindigkeitsregler}{Tempomat}
-\seeindex{Hauptschalter}{Batterietrennschalter}
-\seeindex{Chassis}{Fahrgestell}
-\seeindex{Fahrgestell}{Chassis}
-\seeindex{Bodenschalter}{Fußschalter}
+% \seeindex{Service}{Wartung}
+% \seeindex{Instandhaltung}{Wartung}
+% \seeindex{Geschwindigkeitsregler}{Tempomat}
+% \seeindex{Hauptschalter}{Batterietrennschalter}
+% \seeindex{Chassis}{Fahrgestell}
+% \seeindex{Fahrgestell}{Chassis}
+% \seeindex{Bodenschalter}{Fußschalter}
 
 \pagebreak[yes,blank,right]
 % \showlayout

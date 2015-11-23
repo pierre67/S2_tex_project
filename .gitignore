@@ -13,7 +13,7 @@
 *.jpeg
 *.png
 *.eps
-.bmp
+*.bmp
 
 ### office
 *.doc
@@ -28,4 +28,4 @@
 *.7zip
 *.csv
 
-*.bmp
+*.fslckout

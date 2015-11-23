@@ -9,16 +9,17 @@
 \environment env_vpad_s2
 
 \product		prd_ba_s2_130-fr
-\product		prd_ba_s2_130-de
+\product		prd_ba_s2_131-de
 \product		prd_ba_s2_130-en
 \product		prd_ba_s2_130-nb
 \product		prd_ba_s2_130-da
 \product		prd_ba_s2_130-es
 \product		prd_ba_s2_130-ro
 \product		prd_ba_s2_130-sv
+\product		prd_ba_s2_130-sl
 
 % german
-\define\BAversionDE {1.3-de}
+\define\BAversionDE {1.32-de}
 % 1.1 ajout section: Réglage de la bouche d'aspiration + référence dans plan de maintenance
 % 1.2 ajout subsubject: description pneus larges + données techniques; indicateur de surcharge
 
@@ -27,23 +28,25 @@
 
 
 % french
-\define\BAversionFR {1.3-fr}
+\define\BAversionFR {1.32-fr}
 % 1.1 ajout section: Réglage de la bouche d'aspiration + référence dans plan de maintenance
+% 1.2 ajout subsubject: description pneus larges + données techniques; indicateur de surcharge
 
 \define\CopyrightyearFR {2014-\currentdate [year]}
 \define\BAdateFR {\currentdate [day,{~},month,{~},year]}
 
 
 % english
-\define\BAversionEN {1.3-en}
+\define\BAversionEN {1.32-en}
 % 1.1 ajout section: Réglage de la bouche d'aspiration + référence dans plan de maintenance
+% 1.2 ajout subsubject: description pneus larges + données techniques; indicateur de surcharge
 
 \define\CopyrightyearEN {2014-\currentdate [year]}
 \define\BAdateEN {\currentdate}
 
 
 % norwegian
-\define\BAversionNB {1.1-nb}
+\define\BAversionNB {1.21-nb}
 % 1.1 ajout section: Réglage de la bouche d'aspiration + référence dans plan de maintenance
 
 \define\CopyrightyearNB {2014-\currentdate [year]}
@@ -51,7 +54,7 @@
 
 
 % dutch
-\define\BAversionNL {1.2-nl}
+\define\BAversionNL {1.21-nl}
 % 1.2 Start
 
 \define\CopyrightyearNL {2014-\currentdate [year]}
@@ -59,23 +62,25 @@
 
 
 % danish
-\define\BAversionDA {1.1-da}
+\define\BAversionDA {1.21-da}
 % 1.1 Start
+% 1.2 ajout subsubject: description pneus larges
 
 \define\CopyrightyearDA {2014-\currentdate [year]}
 \define\BAdateDA {\currentdate}
 
 
 % spanish
-\define\BAversionES {1.1-es}
+\define\BAversionES {1.21-es}
 % 1.1 Start
+% 1.2 ajout subsubject: description pneus larges
 
 \define\CopyrightyearES {2014-\currentdate [year]}
 \define\BAdateES {\currentdate}
 
 
 % italian
-\define\BAversionIT {1.1-it}
+\define\BAversionIT {1.21-it}
 % 1.2 Start
 
 \define\CopyrightyearIT {2014-\currentdate [year]}
@@ -83,25 +88,33 @@
 
 
 % swedish
-\define\BAversionSV {1.3-sv}
+\define\BAversionSV {1.21-sv}
 % 1.2 Start
 
 \define\CopyrightyearSV {2014-\currentdate [year]}
 \define\BAdateSV {\currentdate}
 
 % ROMANIAN
-\define\BAversionRO {1.3-ro}
+\define\BAversionRO {1.32-ro}
 % 1.3 Start
 
 \define\CopyrightyearRO {2014-\currentdate [year]}
 \define\BAdateRO {\currentdate}
 
 % russian
-\define\BAversionRU {1.3-ru}
+\define\BAversionRU {1.32-ru}
 % 1.2 Start
 
 \define\CopyrightyearRU {2014-\currentdate [year]}
 \define\BAdateRU {\currentdate}
+
+% SLOVENIAN
+\define\BAversionSL {1.32-sl}
+% 1.3 Start
+
+\define\CopyrightyearSL {2014-\currentdate [year]}
+\define\BAdateSL {\currentdate}
+
 
 \defineexternalfigure [FUS][width=7.5mm,height=7.5mm,frame=on]
 \defineexternalfigure [TEM][height=\TemHeight]
@@ -193,6 +206,9 @@
 
 \useexternalfigure [overview:side:left:ro] 	  [s2_overview_left-ro]    		[T]
 \useexternalfigure [overview:side:right:ro]   [s2_overview_right-ro]    	[T]
+
+\useexternalfigure [overview:side:left:sl] 	  [s2_overview_left-sl]    		[T]
+\useexternalfigure [overview:side:right:sl]   [s2_overview_right-sl]    	[T]
 
 
 \useexternalfigure [overview:joy:large] 	  [s2_console_left]     	[W70]

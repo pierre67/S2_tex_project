@@ -1,5 +1,5 @@
 \startcomponent c_45_vpad_s2_120-de
-\product prd_ba_s2_120-de
+\product prd_ba_s2_130-he
 
 \startchapter[title={Bordcomputer (Vpad)},
 							reference={sec:vpad}]
@@ -100,9 +100,17 @@ Die Menüleiste am unteren Rand zeigt die verfügbaren Menüs an: Drücken Sie i
 
 \page [yes]
 
+
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},
+							after={\nobreak\hrule\blank [2*medium]\page[preference]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+
+\subsection{Kontrollanzeigen auf dem Vpad-Bildschirm} % nouveau
+
+
 \start % local group for temporary redefinition of \textDescrHead [TF]
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
-\startcolumns
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
@@ -119,21 +127,33 @@ unverzüglich ab.
 \textDescrHead{Batterieladung}(rot) Batterieladestrom zu gering. Verständigen Sie die Werkstatt.
 \stopSymVpad
 
+
 \startSymVpad
 \externalfigure[vpadWarningEngine1][height=1.7\lH]
 \SymVpad
 \textDescrHead{Motordiagnose}(gelb) Fehler in der Motorsteuerung. Verständigen Sie die Werkstatt.
 \stopSymVpad
 
+
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Werkstatt aufsuchen}(gelb) (gelb) Reguläre Fahrzeugwartung ist fällig
-oder es ist ein Motorfehler vorhanden. Falls es ein sporadischer Motorfehler ist,
-erlöscht die Lampe nach 5 Motorstarts.
+\textDescrHead{Werkstatt aufsuchen}(gelb) Reguläre Fahrzeugwartung fällig
+(siehe \about [sec:schedule] \atpage [sec:schedule])
+oder ein Motorfehler wurde registriert (Fachwerkstatt erforderlich).
 
 +\:Fehlermeldungen \# 650 bis \# 653, oder \# 703
 \stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Partikelfilter}(gelb) Regenerierung des Partikelfilters wird gestartet, sobald es der Betriebzustand erlaubt.
+
+{\md Hinweis:} {\lt Stellen Sie wenn möglich den Motor {\em nicht} ab, solange diese Anzeige aufleuchtet!}
+\stopSymVpad
+
 
 \startSymVpad
 \externalfigure[vpadTBrakeError][height=1.7\lH]
@@ -161,7 +181,6 @@ aktiviert.
 Eine blinkende Lampe zeigt an, dass ein Fehler im Ereignisspeicher registriert wurde.
 \stopSymVpad
 
-\columnbreak
 
 \startSymVpad
 \externalfigure[vpadTFuelReserve][height=1.7\lH]
@@ -212,7 +231,7 @@ Schalter \textSymb{temoin_buse} in der Deckenkonsole.
 \textDescrHead{Fehlermeldung}(rot) Eine Fehlermeldung befindet sich im Speicher des \Vpad. Drücken Sie die Taste~\textSymb{vpadClear}, um alle registrierten Nachrichten anzuzeigen. Verständigen Sie die Werkstatt.
 \stopSymVpad
 
-\stopcolumns
+
 \stop % local group for temporary redefinition of \textDescrHead
 
 \stopsection
@@ -220,7 +239,8 @@ Schalter \textSymb{temoin_buse} in der Deckenkonsole.
 \page [yes]
 
 
-\section{Vpad-Menüs}
+\startsection [title={Die Menüs des Vpad},
+				reference={vpad:menu}]
 
 \start
 
@@ -250,17 +270,23 @@ Schalter \textSymb{temoin_buse} in der Deckenkonsole.
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Bestätigung \eTD\bTD Bestätigen der Auswahl \eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Auf|/|Ab, \\Pfeile \eTD\bTD Markierung nach oben|/|unten verschieben oder ausgewählten Wert erhöhen|/|verringern \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Rückfahrwarnton \eTD\bTD Akustisches Rückfahrwarnsignal aktivieren|/|deaktivieren \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Bildschirm ausschalten \eTD\bTD Etwa 5\,s gedrückt halten, um den Bildschirm des Vpad auszuschalten. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Dritter Besen\index{3.\,Besen} (Option) \eTD\bTD Dritten Besen freischalten.
+Der dritte Besen kann nun aktiviert werden wie auf Seite~\at[sec:using:frontBrush] beschrieben. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
 
-\subsubsubject{Weitere Anzeigen auf dem Vpad}
+\subsection{Weitere Symbole auf dem Vpad-Bildschirm}
+
+
+\subsubsubject{Frischwasser- und Recyclingwasservorrat}
+
 
 \start % local group for temporary redefinition of \textDescrHead [TF]
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
-
-\startcolumns
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -280,10 +306,70 @@ Schalter \textSymb{temoin_buse} in der Deckenkonsole.
 \textDescrHead{Füllstand Recyclingwasser}(rot) Füllstand des Recyclingwassers nicht ausreichend (max. 140\,l; unter dem Schmutzbehälter).
 \stopSymVpad
 
-\stopcolumns
+
+\subsubsubject{Saugsystem} % nouveau
+
+{\em Dieses Symbol wird nur angezeigt, wenn die Besen deaktiviert sind.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Saugmund} Saugsystem\index{Saugmund} aktiviert:
+Saugmund ist abgesenkt und Turbine ist aktiviert.
+\stopSymVpad
+
+
+\subsubsubject{Seitenbesen} % nouveau
+
+{\em Dieses Symbol wird nur angezeigt, wenn der dritte Besen nicht aktiviert ist.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Seitenbesen} Besen\index{Kehren}\index{Seitenbesen} aktiviert. Die Rotationsgeschwindigkeit (in \% der max. Rotatationsgeschwindigkeit [V\low{max}]) wird unterhalb des Symbols angezeigt, die aktuelle Entlastung des jeweiligen Besens wird oberhalb  des Symbols angezeigt (\type{~}~= Schwimmstellung, 14~= Maximale Entlastung).
+
+{\md Entlastung:} {\lt Je niedriger die Entlastung, desto höher der Druck der Besen auf den Boden.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Schwimmstellung}(grün am unteren Rand)
+Um die Entlastung auszuschalten, halten Sie den Joystick für etwa 2\,s nach vorn gedrückt; der Besen liegt nun mit seinem ganzen Eigengewicht auf dem Boden auf. Die Rotationsgeschwindigkeit der Besen ist bei 60\hairspace\% der V\low{max} (Beispiel).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Seitenbesen} Die Besen sind aktiviert. Sie stehen still und sind angehoben.
+\stopSymVpad
+
+
+\subsubsubject{Dritter Besen (Option)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Dritter Besen} Der dritte Besen\index{3.\,Besen} ist aktiviert. Die Rotatationsgeschwindigkeit (in \% der max. Rotatationsgeschwindigkeit [V\low{max}]) wird unterhalb des Symbols angezeigt.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Schwimmstellung}(grün am unteren Rand)
+Um die Entlastung auszuschalten, halten Sie den Joystick für etwa 2\,s nach vorn gedrückt; der Besen liegt nun mit seinem ganzen Eigengewicht auf dem Boden auf. Die Rotationsgeschwindigkeit der Besen ist bei 70\hairspace\% der V\low{max} (Beispiel).
+
+{\md Rotationsrichtung:} {\lt Am oberen Rand wird die Rotationsrichtung angezeigt (schwarzer Pfeil auf gelbem Hintergrund).}
+\stopSymVpad
+
+\stopsection
+
 \stop % local group for temporary redefinition of \textDescrHead
 
 \page [yes]
+
 
 \startsection[title={Einstellen der Bildschirmhelligkeit},
               reference={sec:vpad:brightness}]

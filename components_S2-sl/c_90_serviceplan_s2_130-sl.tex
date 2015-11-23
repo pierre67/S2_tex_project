@@ -1,0 +1,373 @@
+\startcomponent c_90_serviceplan_s2_130-sl
+\product prd_ba_s2_130-sl
+
+
+\chapter[sec:schedule]{Vzdrževalni načrt}
+
+\startregister[index][wartplan]{Vzdrževalni načrt+vozilo}
+
+
+\section{Splošno}
+
+\placeNote[][service_picto]{}{%
+\noteF
+\starttextrule{\Pmtcheck \enskip Kvalifikacija {\definedfont[SansBoldItalic] Pregled} \enskip}
+Pregled, ki ga lahko\index{kvalifikacija+vzdrževalno osebje} lahko upravljalno osebje
+vozila opravi brez tuje pomoči. Vendar pa je pogoj
+osnovno poznavanje tehnike motornih vozil.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtpro \enskip Kvalifikacija {\definedfont[SansBoldItalic] Servisna dela} \enskip}
+Redna vzdrževalna dela, ki jih je treba izvesti v sklopu servisiranja. Vzdrževanje
+je treba izvesti v pooblaščeni delavnici, izvesti pa ga mora
+strokovnjak s potrebnim orodjem.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtspecial \enskip Kvalifikacija {\definedfont[SansBoldItalic] Posebno delo} \enskip}
+Posebna\index{posebno delo} vzdrževalna dela, ki jih lahko opravi samo
+oseba, ki je zaključila specifično izobraževanje, priznano s strani službe za stranke \BoschungNote||
+.
+\stoptextrule \blank[line]
+
+\starttextrule{\Pmtvisual \enskip Tip {\definedfont[SansBoldItalic] Vizualni pregled} \enskip}
+Kontrolna točka, ki jo je treba izvesti z \index{vizualni pregled} vizualnim pregledom.
+Ugotovljene motnje ali škode je treba sporočiti osebi,
+odgovorni za vzdrževanje.
+\stoptextrule
+}
+
+Pri vseh vzdrževalnih delih je treba razlikovati tri stopnje kvalifikacije (zahteve
+za osebje in opremo) in štiri vrste vzdrževanja (vrsta dela).
+
+\startTwoPar
+{\em Stopnje kvalifikacije:}	\par \blank [medium]
+\start \setupwhitespace	[none]
+\symDescr{\textSymb{maint:check}} Pregled \par
+\symDescr{\textSymb{maint:pro}} Servisno delo \par
+\symDescr{\textSymb{maint:special}} Posebno delo	\par
+\stop
+\TwoPar
+{\em Vrste vzdrževanj:}	\par \blank [medium]
+\start \setupwhitespace	[none]
+\symDescr{\textSymb{maint:visual}} Vizualni pregled	\par
+\symDescr{\textSymb{maint:function}} Preverjanje delovanja	\par
+\symDescr{\textSymb{maint:level}} Preverjanje nivoja polnosti \par
+\symDescr{\textSymb{maint:exchange}} Zamenjava obratovalnih snovi \par
+\symDescr{\textSymb{maint:generic}} Druge dejavnosti \par
+\stop
+\stopTwoPar
+
+\handItem{Glejte ustrezne razlage v obrobnih stolpcih.}
+
+
+\placeNote[][service_picto]{}{%
+ \noteF
+\starttextrule{\Pmtfunction \enskip Vrsta {\definedfont[SansBoldItalic] Kontrola delovanja} \enskip}
+Pregledi, ki\index{preverjanje+delovanje} presegajo vizualni pregled,
+\eG\ preverjanje delovanja zavore, stanja
+sestavnih delov in ročno preverjanje čvrste pritrditve.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtlevel \enskip Vrsta {\definedfont[SansBoldItalic] Preverjanje nivoja polnosti} \enskip}
+Preverjanje nivoja polnosti \index{preverjanje+nivo polnosti} obratovalnih snovi zajema
+preverjanje~, t. j. vizualno preverjanje ali z merilno palico~ ter morebitno
+dolivanje ustrezne obratovalne snovi. {\em Sem sodi tudi
+centralno mazanje} O tem preberite v odseku \about[sec:liqquantities],
+kjer boste našli informacije o kakovosti in količini obratovalnih snovi.
+\stoptextrule \blank[big]
+\starttextrule{\Pmtexchange \enskip Vrsta {\definedfont[SansBoldItalic] Zamenjava obratovalnih snovi} \enskip}
+Sem\index{obratovalne snovi+zamenjava} sodi zamenjava obratovalnih snovi
+ter sledeče preverjanje nivoja polnosti. Informacije o kakovosti in
+količini obratovalnih snovi najdete na \atpage[sec:liqquantities].
+\stoptextrule \blank[big]
+\starttextrule{\Pmtgeneric \enskip Vrsta {\definedfont[SansBoldItalic] Druge dejavnosti} \enskip}
+Različna vzdrževalna dela, ki jih je treba strokovno izvesti v skladu z navodili
+\stoptextrule
+}%
+
+\blank[big]
+%% TODO; en
+\starttextbackground[FC]
+\setupparagraphs [PictPar][1][width=6em,inner=\hfill]
+\startPictPar\PMgeneric~\Penvironment\PictPar
+Pri izvajanju kontrolnih in vzdrževalnih točk upoštevajte
+varnostna določila in določila za varstvo okolja. \BosFull{boschung}
+ne prevzema nobene odgovornosti za telesne poškodbe ali gmotno škodo, nastalo
+zaradi neupoštevanja teh določil.
+\stopPictPar
+\stoptextbackground
+\page
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Vzdrževalni načrt vozila}
+
+Vzdrževanje vozila \index{pregled, redni} je sestavljeno iz rednih vzdrževalnih
+del, rednih pregledov (kontrol) ter
+enkratnega servisa\footnote{Vse navedbe ur se razumejo kot
+obratovalne ure}:
+
+\starttextbackground[FC]
+\starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Vzdrževalna dela \NC 50\,h \NC Prvi servis po 50\,h \NC \NR
+\NC \NC 600\,h \NC Redno vzdrževanje vsakih 600\,h / 12 mesecev \NC \NR
+\NC \NC 1200\,h \NC Redno vzdrževanje vsakih 1200\,h / 2 leti \NC \NR
+\NC \NC 2400\,h \NC Redno vzdrževanje vsakih 2400\,h / 4 leta \NC \NR
+\NC \NC 4800\,h \NC Redno vzdrževanje vsakih 4800\,h / 8 let \NC \NR
+\NC \Pmtcheck\enskip Kontrolni seznam \NC Dnevno \NC Skozi celotno delovno sezono \NC \NR
+\NC \NC Tedensko \NC Skozi celotno delovno sezono \NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Naslednji vzdrževalni načrt se nanaša na osnovno vozilo. Upoštevajte tudi
+vzdrževalni načrt za agregate (\eG\ pometalni stroj, posoda za umazanijo) od
+\at{strani}[sec:schedaggr].
+
+Pri dvojni navedbi vzdrževalnega intervala (\eG\ \quotation{vsakih
+600\,h~/ 12~mesecev}) je treba upoštevati trenutek, ki nastopi prej.
+
+Dela posameznih vzdrževalnih načrtov~, razen enkratnega vzdrževanja po
+50~urah~, je treba izvajati zbirno: Vsakih 1200~obratovalnih ur je treba izvesti
+600-urno vzdrževanje {\em in} 1200-urno vzdrževanje; vsakih
+2400~ obratovalnih ur je treba izvesti 600-urno, 1200-urno {\em in}
+2400-urno vzdrževanje itd.
+
+\page [yes]
+
+\setup[pagestyle:marginless]
+
+\start
+\setup[tbl:schedule]
+
+\subsection[table:scheduledaily]{Dnevni pregled}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Dnevni pregled \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Očistite vozilo. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Preglejte vozilo glede morebitnih poškodb. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tvis \eTD \bTD Preverite tesnjenje. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo motornega olja dizelskega motorja (z merilno palico!). \eTD \bTD \Tcheck \eTD \bTD \inP[ssSec:vw:oilLevel] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo hladilne tekočine dizelskega motorja. \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo hidravlične tekočine (kontrolno okence na rezervoarju). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo goriva. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo tekočine za pranje oken. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite delovanje indikatorskih lučk in osvetlitve armaturne plošče in kontrolne plošče. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite delovanje ročne zavore. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite delovanje osvetljave in signalne opreme. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\testpage [8]
+\subsection[table:scheduleweekly]{Tedenski pregled}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Tedenski pregled \eTD \bTD \Tcheck \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tfun \eTD \bTD Preverite nivo tlaka v pnevmatikah (Tlak; glejte "Tipska ploščica pnevmatik v voznikovi kabini). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite in po potrebi očistite vložek zračnega filtra. \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Namažite vsa mazalne mesta (šasija, zgib). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection [sec:50h]{Vzdrževanje po 50\,h~– enkratno}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Vzdrževanje po 50\,h~– enkratno \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo hladilne tekočine dizelskega motorja. \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Očistite in po potrebi zamenjajte vložek zračnega filtra. \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:airFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zamenjajte filter za hidravlično olje/povratni in sesalni filter. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo hidravlične tekočine (kontrolno okence na rezervoarju). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Zentralschmieranlage (Option): Schmiermittelvorrat und -konsistenz überprüfen \eTD \bTD \Tpro \eTD \bTD \inP[main:graissageCentral] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Namažite vsa mazalne mesta (podvozje, zgib). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo tekočine za pranje oken. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liqquantities] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrditev voznikove kabine. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrdilne elemente motorja na šasijo. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrdilne elemente črpalke na motor. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrdilne elemente kombiniranega hladilnika. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrdilne elemente osi. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrditev koles\index{zatezni moment+kolesa} (zatezni moment: 180\,Nm) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite nivo tlaka v pnevmatikah (Tlak; glejte "Tipska ploščica pnevmatik v voznikovi kabini). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite/nastavite hod zavorne ročice ročne zavore. \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite stanje baterije; očistite pole|/|sponke. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite nastavitev žarometov skladno s cestnoprometnimi predpisi in jih po potrebi nastavite. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Z bakreno mastjo namažite jedra tuljav magnetnih ventilov. \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Odčitajte pomnilnik dogodkov (Vpad ali krmilna naprava motorja); po potrebi odpravite vzroke napak \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection {Vzdrževanje vsakih 600\,h / 12 mesecev}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Vzdrževanje vsakih 600\,h / 12 mesecev \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Zamenjajte olje dizelskega motorja. \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:oilDraining] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zamenjajte filter motornega olja. \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:oilFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zamenjajte filter za gorivo. \eTD \bTD \Tpro \eTD \bTD \inP[ssSec:vw:fuelFilter] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite tesnjenje motorja in komponent v prostoru za vgradnjo motorja. \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite tesnjenje in pritrditev izpušnega sistema. \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite stanje klinastega jermena dizelskega motorja in ga po potrebi zamenjajte. \eTD \bTD \Tpro \eTD \bTD \inP[sSec:vw:belt] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo hladilne tekočine dizelskega motorja. \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:cooling] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zamenjajte vložek zračnega filtra. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zamenjajte filter za hidravlično olje/povratni in sesalni filter. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo polnosti rezervoarja za hidravlično tekočino. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+% \bTR \bTD \Tlev \eTD \bTD Zentralschmieranlage (Option): Schmiermittelvorrat und -konsistenz überprüfen \eTD \bTD \Tpro \eTD \bTD \inP[main:graissageCentral] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Namažite vsa mazalne mesta (podvozje, zgib). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\bTR \bTD \Tlev \eTD \bTD Preverite nivo tekočine za pranje oken. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:liquids] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrditev voznikove kabine. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrdilne elemente motorja na šasijo. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrdilne elemente črpalke na motor. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrdilne elemente kombiniranega hladilnika. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrdilne elemente osi. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite/nastavite hod zavorne ročice ročne zavore. \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite|/|očistite zavorne bobne; očistite zavorni mehanizem. \eTD \bTD \Tpro \eTD \bTD \inP[sec:brake] \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite pritrditev koles\index{zatezni moment+kolesa} (zatezni moment: 180\,Nm) \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+\bTR \bTD \Tfun \eTD \bTD Preverite nivo tlaka v pnevmatikah (Tlak; glejte "Tipska ploščica pnevmatik v voznikovi kabini). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:pneumatiques] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite stanje baterije; očistite pole|/|sponke. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:battcheck] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Preverite nastavitev žarometov skladno s cestnoprometnimi predpisi in jih po potrebi nastavite. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:lighting] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Z bakreno mastjo namažite jedra tuljav magnetnih ventilov. \eTD \bTD \Tpro \eTD \bTD \inP[sec:solenoid] \eTD \eTR
+%%Note: Chapter has been removed
+%\bTR \bTD \Tgen \eTD \bTD Rostschutz prüfen, ggf. nachbessern|/|erneuern \eTD \bTD \Tspecial \eTD \bTD \inP[sec:anticorrosion] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Odčitajte pomnilnik dogodkov (Vpad ali krmilna naprava motorja); po potrebi odpravite vzroke napak \eTD \bTD \Tcheck \eTD \bTD \inP[sSec:vw:faultMemory], \inP[vpad:error] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Vzdrževanje vsakih 1200\,h / 2 leti}
+\bTABLE
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Vzdrževanje vsakih 1200\,h / 2 leti \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tchg \eTD \bTD Zamenjajte hidravlično olje (rezervoar). \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zamenjajte hladilno sredstvo (R134a) klimatske naprave. \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection {Vzdrževanje vsakih 2400\,h / 4 leta}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Vzdrževanje vsakih 2400\,h / 4 leta \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tgen \eTD \bTD Zamenjajte zobati jermen dizelskega motorja. \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection {Vzdrževanje vsakih 4800\,h / 8 let}
+\bTABLE
+
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Vzdrževanje vsakih 4800\,h / 8 let \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Preverite hidravliko|/|cevne napeljave in jih po potrebi zamenjajte. \eTD \bTD \Tpro \eTD \bTD \inP[sec:hydraulic] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Zamenjajte vodno črpalko (istočasno z zobatim jermenom). \eTD \bTD \Tspecial \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplan]
+
+\page [yes]
+
+
+\section[sec:schedaggr]{Vzdrževanje agregatov}
+
+Vzdrževanje\startregister[index][wartplanAgg]{vzdrževalni načrt+agregati}
+agregatov zajema redna vzdrževalna dela\index{redni
+pregledi} ter dnevne in tedenske preglede:
+
+\starttextbackground[FC]
+\starttabulate [|w(37mm)B|w(19mm)B|p({\dimexpr\textwidth-(56mm+2.5em)\relax})|]
+\NC \Pmtpro\enskip Vzdrževalna dela \NC 50\,h \NC Prvi servis po 50\,h \NC \NR
+\NC \NC 600\,h \NC Redno vzdrževanje vsakih 600\,h / 12 mesecev \NC \NR
+\NC \Pmtcheck\enskip Kontrolni seznam \NC Dnevno \NC Skozi celotno delovno sezono \NC \NR
+\NC \NC Tedensko \NC Skozi celotno delovno sezono \NC \NR
+\stoptabulate
+\stoptextbackground
+\blank [big]
+
+Naslednji vzdrževalni načrt se nanaša na standardne agregate, s katerimi je običajno
+\sdeux\ opremljeno vozilo. Za posebne agregate, ki niso
+opisani v navodilih za uporabo, je treba upoštevati
+vzdrževalni načrt vsakokratnega agregata.
+
+
+\subsection[table:scheduledaily]{Dnevni pregled}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Dnevni pregled \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+\bTR \bTD \Tgen \eTD \bTD Očistite posodo za umazanijo in reciklirno napravo. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\bTR \bTD \Tgen \eTD \bTD Očistite sesalno ustje in sesalni kanal. \eTD \bTD \Tcheck \eTD \bTD \inP[sec:cleaning] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\subsection[table:scheduledaily]{Tedenski pregled}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Tedenski pregled \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tgen \eTD \bTD Preverite obrabo stranskih metel in sprednje metle (dodatna možnost). \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Preverite loputo sesalnega ustja in gume sesalnega ustja. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Namažite vse mazalne točke (posoda za umazanijo, metle, sesalno ustje). \eTD \bTD \Tcheck \eTD \bTD \inP[sec:grasing:plan] \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Vzdrževanje po 50\,h~– enkratno}
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD
+Vrsta \eTD \bTD Vzdrževanje po 50\,h~– enkratno \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tfun \eTD \bTD Preverite pritrditev metel. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Nastavite loputo sesalnega ustja in gume sesalnega ustja. \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+
+\subsection {Vzdrževanje vsakih 600\,h|/|12 mesecev}
+
+
+\bTABLE
+\bTABLEhead
+\bTR \bTD Vrsta \eTD \bTD Vzdrževanje vsakih 600\,h|/|12 mesecev \eTD \bTD Q. \eTD \bTD Ref. \eTD \eTR
+\eTABLEhead
+\bTABLEbody
+	\bTR \bTD \Tfun \eTD \bTD Preverite pritrditev metel. \eTD \bTD \Tcheck \eTD \bTD \emptY \eTD \eTR
+	\bTR \bTD \Tgen \eTD \bTD Nastavite loputo sesalnega ustja in gume sesalnega ustja. \eTD \bTD \Tpro \eTD \bTD \inP[sec:main:suctionMouth] \eTD \eTR
+\bTR \bTD \Tchg \eTD \bTD Zamenjajte olje visokotlačne vodne črpalke za vodno pištolo (dodatna možnost). \eTD \bTD \Tpro \eTD \bTD \emptY \eTD \eTR
+\eTABLEbody
+\eTABLE
+
+\stopregister[index][wartplanAgg]
+\stop
+
+
+\stopcomponent
+% vim: fdm=indent

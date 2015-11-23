@@ -1,0 +1,303 @@
+% coding: utf-8
+\enableregime[utf]
+
+\startproject		prj_ba_s2_he
+
+\environment ENV_Hebrew_MyriadPro
+\environment ENV_BOS_GEN_Symb
+\environment BA_BOS_ENV_HEBR
+\environment env_vpad_s2_he
+
+\product		prd_ba_s2_130-he
+
+% hebrew
+\define\BAversionHE {1.3-he}
+% 1.1 ajout section: Réglage de la bouche d'aspiration + référence dans plan de maintenance
+% 1.2 ajout subsubject: description pneus larges + données techniques; indicateur de surcharge
+
+\define\CopyrightyearHE {2014-\currentdate [year]}
+\define\BAdateHE {\currentdate}
+
+
+
+\defineexternalfigure [FUS][width=7.5mm,height=7.5mm,frame=on]
+\defineexternalfigure [TEM][height=\TemHeight]
+\defineexternalfigure [JOY][height=\JoyHeight]
+%%% Figures settings overall %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defineexternalfigure [MBG] [width=\rightmarginwidth,background=color,backgroundcolor=CBcolor]
+\defineexternalfigure [MFR] [width=\rightmarginwidth,frame=on]
+\defineexternalfigure [M]   [width=\rightmarginwidth]
+\defineexternalfigure [T]   [width=\textwidth]
+\defineexternalfigure [2lh] [height=2\lineheight]
+\defineexternalfigure [TBG] [background=color,backgroundcolor=lightgray,width=\textwidth]
+
+%%% Figures settings JB9000/9000T Euro 3a/3b %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\defineexternalfigure [W15][width=15mm]
+\defineexternalfigure [W35][width=35mm]
+\defineexternalfigure [W40][width=40mm]
+\defineexternalfigure [W48][width=48mm]
+\defineexternalfigure [W50][width=50mm]
+\defineexternalfigure [W70][width=70mm]
+\defineexternalfigure [W74][width=74mm]
+\defineexternalfigure [W100][width=100mm]
+\defineexternalfigure [W110][width=110mm]
+
+\defineexternalfigure [H40][height=40mm]
+\defineexternalfigure [H50][height=50mm]
+
+%%% Figures S2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\useexternalfigure [innentitel][logo_s2][width=120mm]
+
+%%% 020:prescriptions %%%
+
+\useexternalfigure [prescription:safety:belt]    [safety_belt]  [Pict]
+
+
+%%% console S2
+\defineexternalfigure [VpadBt] [width=2.8em]
+
+\useexternalfigure [vp:cs:sl:tr]  [vpad_sideButtonsLeft_tr]  [VpadBt] % vpad, cs, side left, top rear
+\useexternalfigure [vp:cs:sl:tf]  [vpad_sideButtonsLeft_tf]  [VpadBt]
+\useexternalfigure [vp:cs:sl:bf]  [vpad_sideButtonsLeft_bf]  [VpadBt]
+\useexternalfigure [vp:cs:sl:br]  [vpad_sideButtonsLeft_br]  [VpadBt]
+
+\useexternalfigure [vp:cs:sr:tr]  [vpad_sideButtonsRight_tr] [VpadBt] % vpad, cs, side right, top rear
+\useexternalfigure [vp:cs:sr:tf]  [vpad_sideButtonsRight_tf] [VpadBt]
+\useexternalfigure [vp:cs:sr:bf]  [vpad_sideButtonsRight_bf] [VpadBt]
+\useexternalfigure [vp:cs:sr:br]  [vpad_sideButtonsRight_br] [VpadBt]
+
+\define\VPcltr	{\externalfigure[vp:cs:sl:tr]}
+\define\VPcltf	{\externalfigure[vp:cs:sl:tf]}
+\define\VPclbf	{\externalfigure[vp:cs:sl:bf]}
+\define\VPclbr	{\externalfigure[vp:cs:sl:br]}
+
+\define\VPcrtr	{\externalfigure[vp:cs:sr:tr]}
+\define\VPcrtf	{\externalfigure[vp:cs:sr:tf]}
+\define\VPcrbf	{\externalfigure[vp:cs:sr:bf]}
+\define\VPcrbr	{\externalfigure[vp:cs:sr:br]}
+
+
+%%% 030:overview %%%
+\useexternalfigure [overview:side:left] 	  [s2_overview_left]    		[T]
+\useexternalfigure [overview:side:right] 	  [s2_overview_right]    		[T]
+
+\useexternalfigure [overview:side:left:da] 	  [s2_overview_left-da]    		[T]
+\useexternalfigure [overview:side:right:da]   [s2_overview_right-da]    	[T]
+
+\useexternalfigure [overview:side:left:de] 	  [s2_overview_left-de]    		[T]
+\useexternalfigure [overview:side:right:de]   [s2_overview_right-de]    	[T]
+
+\useexternalfigure [overview:side:left:en] 	  [s2_overview_left-en]    		[T]
+\useexternalfigure [overview:side:right:en]   [s2_overview_right-en]    	[T]
+
+\useexternalfigure [overview:side:left:nb] 	  [s2_overview_left-nb]    		[T]
+\useexternalfigure [overview:side:right:nb]   [s2_overview_right-nb]    	[T]
+
+\useexternalfigure [overview:side:left:sv] 	  [s2_overview_left-sv]    		[T]
+\useexternalfigure [overview:side:right:sv]   [s2_overview_right-sv]    	[T]
+
+\useexternalfigure [overview:side:left:es] 	  [s2_overview_left-es]    		[T]
+\useexternalfigure [overview:side:right:es]   [s2_overview_right-es]    	[T]
+
+\useexternalfigure [overview:side:left:nl] 	  [s2_overview_left-nl]    		[T]
+\useexternalfigure [overview:side:right:nl]   [s2_overview_right-nl]    	[T]
+
+\useexternalfigure [overview:side:left:ru] 	  [s2_overview_left-ru]    		[T]
+\useexternalfigure [overview:side:right:ru]   [s2_overview_right-ru]    	[T]
+
+\useexternalfigure [overview:side:left:ro] 	  [s2_overview_left-ro]    		[T]
+\useexternalfigure [overview:side:right:ro]   [s2_overview_right-ro]    	[T]
+
+
+\useexternalfigure [overview:joy:large] 	  [s2_console_left]     	[W70]
+\useexternalfigure [overview:joy:top] 		  [s2_console]     		      [W35]
+\useexternalfigure [overview:joy:sideview]    [console_sideview]          [W35]
+\useexternalfigure [overview:cab:frontview]   [cabin_frontview]           [M]
+\useexternalfigure [overview:vhc:01]          [s2_overview_01]            [M]
+\useexternalfigure [overview:vhc:02]          [s2_overview_02]            [M]
+\useexternalfigure [overview:vhc:03]          [s2_overview_03]            [M]
+\useexternalfigure [overview:vhc:rearleft]    [vhc_rear_left]             [M]
+\useexternalfigure [overview:vhc:frontleft]   [vhc_front_left]            [M]
+\useexternalfigure [overview:vhc:rearright]   [vhc_rear_right]            [M]
+\useexternalfigure [overview:vhc:frontright]  [vhc_front_right]           [M]
+\useexternalfigure [overview:cab:twoleft]     [s2_overview_twoeft]        [M]
+\useexternalfigure [overview:vhc:frontleft]   [vhc_front_left]            [M]
+\useexternalfigure [overview:vhc:left]        [overview_vhc_left]         [M]
+\useexternalfigure [overview:joystick]        [overview_joystick]         [M]
+\useexternalfigure [overview:driver:place]    [s2_driver_place]           [M]
+\useexternalfigure [overview:steeringwheel]   [overview_steeringwheel]    [M]
+\useexternalfigure [system:brush]             [s2_brushes_third]          [W50]
+\useexternalfigure [s2:measurement]           [S2_dimensions]             [T]
+\useexternalfigure [s2:measurement:02]        [S2_dimensions_02]          [T]
+
+\useexternalfigure [s2:id:plaque]             [S2_Typenschild]            [M]
+\useexternalfigure [engine:id:code]           [VW_Motor_Code]             [M]
+\useexternalfigure [engine:id:number]         [VW_Motor_Number]           [M]
+\useexternalfigure [identity:tires]           [s2_id_tires]            [M]
+\useexternalfigure [identity:location]        [s2_id_location]            [M]
+\useexternalfigure [steerin_sweeping:radius]  [steerin_sweeping_radius]   [T]
+
+
+%%% Control %%%
+
+\useexternalfigure [ctrl:cab:front]           [s2_ctrl_cab_front]                 [T]
+
+\useexternalfigure [ctrl:column:left]         [s2_column_left]                    [M]
+\useexternalfigure [ctrl:column:right]        [s2_column_right]                   [M]
+\useexternalfigure [ctrl:console:aux]         [s2_console_aux]                    [M]
+\useexternalfigure [ctrl:console:climat]      [s2_switch_climat]                  [M]
+\useexternalfigure [ctrl:console:central]     [s2_switch_central]                 [M]
+
+
+%%% 040:vpad %%%
+
+\useexternalfigure [vpad:inside:view]         [s2_vpad_overview]                   [W50]
+\useexternalfigure [console:topview]          [S2_console]                         [W40]
+
+\useexternalfigure [joy:eng:minus]            [joy_key_engine_decrease]            [2lh]
+\useexternalfigure [joy:eng:plus]             [joy_key_engine_increase]            [2lh]
+\useexternalfigure [joy:ftbrs:act]            [joy_key_frontbrush_act]             [2lh]
+\useexternalfigure [joy:ftbrs:left]           [joy_key_frontbrush_left]            [2lh]
+\useexternalfigure [joy:ftbrs:right]          [joy_key_frontbrush_right]           [2lh]
+\useexternalfigure [joy:ftbrs:plus]           [joy_key_frontbrush_increase]        [2lh]
+\useexternalfigure [joy:ftbrs:minus]          [joy_key_frontbrush_decrease]        [2lh]
+\useexternalfigure [joy:sucbrs]               [joy_key_suction_brush]              [2lh]
+\useexternalfigure [joy:suc]                  [joy_key_suction]                    [2lh]
+\useexternalfigure [joy:tempomat]             [joy_key_tempomat]                   [2lh]
+\useexternalfigure [joy:stop]                 [joy_key_stop]                       [2lh]
+
+\useexternalfigure [vpad:eng:minus]           [joy_sym_engine_decrease]            [2lh]
+\useexternalfigure [vpad:eng:plus]            [joy_sym_engine_increase]            [2lh]
+\useexternalfigure [vpad:ftbrs:act]           [joy_sym_frontbrush_act]             [2lh]
+\useexternalfigure [vpad:ftbrs:left]          [joy_sym_frontbrush_left]            [2lh]
+\useexternalfigure [vpad:ftbrs:right]         [joy_sym_frontbrush_right]           [2lh]
+\useexternalfigure [vpad:ftbrs:plus]          [joy_sym_frontbrush_increase]        [2lh]
+\useexternalfigure [vpad:ftbrs:minus]         [joy_sym_frontbrush_decrease]        [2lh]
+\useexternalfigure [vpad:sucbrs]              [joy_sym_suction_brush]              [2lh]
+\useexternalfigure [vpad:suc]                 [joy_sym_suction]                    [2lh]
+\useexternalfigure [vpad:tempomat]            [joy_sym_tempomat]                   [2lh]
+
+\useexternalfigure [info:mano]				[info_mano]					[TEM]
+\define\PImano		{\externalfigure[info:mano]}
+
+\useexternalfigure [v:symbole:sun]				[vpadSun]					[height=2\lineheight]
+\useexternalfigure [v:symbole:snow]				[vpadSnow]					[height=2\lineheight]
+\useexternalfigure [v:symbole:clear]			[vpadClear]					[height=2\lineheight]
+\useexternalfigure [v:symbole:files]			[vpadFiles]					[height=2\lineheight]
+\useexternalfigure [v:symbole:waves]			[vpadWaves]					[height=2\lineheight]
+\useexternalfigure [v:symbole:driver]			[vpadDriver]				[height=2\lineheight]
+\useexternalfigure [v:symbole:beacon]			[vpadBeacon]				[height=2\lineheight]
+\useexternalfigure [v:symbole:beacon:black]		[vpadBeaconK]				[height=2\lineheight]
+\useexternalfigure [v:symbole:beam]				[vpadBeam]					[height=2\lineheight]
+\useexternalfigure [v:symbole:beam:black]		[vpadBeamK]					[height=2\lineheight]
+\useexternalfigure [v:symbole:JoyTop]			[vpadJoyTop]				[height=2\lineheight]
+\useexternalfigure [v:symbole:JoyTop:black]		[vpadJoyTopK]				[height=2\lineheight]
+\useexternalfigure [v:symbole:JoyLeft]			[vpadJoyLeft]				[height=2\lineheight]
+\useexternalfigure [v:symbole:JoyLeft:black]	[vpadJoyLeftK]				[height=2\lineheight]
+\useexternalfigure [v:symbole:JoyRight]			[vpadJoyRight]				[height=2\lineheight]
+\useexternalfigure [v:symbole:JoyRight:black]	[vpadJoyRightK]				[height=2\lineheight]
+\useexternalfigure [v:symbole:valve]			[vpadValve]					[height=2\lineheight]
+\useexternalfigure [v:symbole:valve:black]		[vpadValveK]				[height=2\lineheight]
+\useexternalfigure [v:symbole:engine]			[vpadEngine]				[height=2\lineheight]
+\useexternalfigure [v:symbole:hydraulic]		[vpadHydraulic]				[height=2\lineheight]
+\useexternalfigure [v:symbole:suspension]		[vpadSuspension]			[height=2\lineheight]
+\useexternalfigure [v:symbole:level]			[vpadSuspensionLevel]	[height=2\lineheight]
+\useexternalfigure [v:symbole:serviceInfo]		[vpadServiceInfo]			[height=2\lineheight]
+\useexternalfigure [v:symbole:oneTwoThree]		[vpadOneTwoThree]			[height=2\lineheight]
+\useexternalfigure [v:symbole:tachygraph]		[vpadTachygraph]			[height=2\lineheight]
+\useexternalfigure [v:symbole:equilibre]		[vpadEquilibre]				[height=2\lineheight]
+\useexternalfigure [v:symbole:sunglasses]		[vpadSunglasses]			[height=2\lineheight]
+\useexternalfigure [v:symbole:color]			[vpadColor]					[height=2\lineheight]
+\useexternalfigure [v:symbole:oneUp]			[vpadOneUp]					[height=2\lineheight]
+\useexternalfigure [v:symbole:oneDown]			[vpadOneDown]				[height=2\lineheight]
+\useexternalfigure [v:symbole:select]			[vpadSelect]				[height=2\lineheight]
+\useexternalfigure [v:symbole:return]			[vpadReturn]				[height=2\lineheight]
+\useexternalfigure [v:symbole:up]				[vpadUp]					[height=2\lineheight]
+\useexternalfigure [v:symbole:down]				[vpadDown]					[height=2\lineheight]
+\useexternalfigure [v:symbole:trash]			[vpadTrash]					[height=2\lineheight]
+\useexternalfigure [v:symbole:GPS]				[vpadGps]					[height=2\lineheight]
+\useexternalfigure [v:symbole:rSignal]			[vpadSignal]				[height=2\lineheight]
+\useexternalfigure [v:symbole:power]			[vpadPower]					[height=2\lineheight]
+\useexternalfigure [v:symbole:frontBrush]		[vpadfrontBrush]					[height=2\lineheight]
+\useexternalfigure [v:symbole:frontBrush:black]	[vpadfrontBrushK]					[height=2\lineheight]
+
+\useexternalfigure [sym:vpad:rwater]			[vpad_rwater]				[height=2\lineheight]
+\useexternalfigure [sym:vpad:rwater:yellow]		[vpad_rwater_orange]		[height=2\lineheight]
+\useexternalfigure [sym:vpad:water]				[vpad_water]				[height=2\lineheight]
+
+\useexternalfigure [sym:vpad:sucker]			[vpad_sucker]				[width=4em]
+
+\useexternalfigure [sym:vpad:sideBrush]			[vpad_sideBrush]			[width=4em]
+\useexternalfigure [sym:vpad:sideBrush:float]	[vpad_sideBrush_float]		[width=4em]
+\useexternalfigure [sym:vpad:sideBrush:float:60][vpad_sideBrush_float_60]	[width=4em]
+\useexternalfigure [sym:vpad:sideBrush:six:60]	[vpad_sideBrush_six_60]		[width=4em]
+\useexternalfigure [sym:vpad:sideBrush:83]		[vpad_sideBrush_83_60]		[width=4em]
+
+\useexternalfigure [sym:vpad:frontBrush]		[vpad_frontBrush]				[width=4em]
+\useexternalfigure [sym:vpad:frontBrush:float]	[vpad_frontBrush_float]			[width=4em]
+\useexternalfigure [sym:vpad:frontBrush:left]	[vpad_frontBrush_float_left]	[width=4em]
+\useexternalfigure [sym:vpad:frontBrush:left]	[vpad_frontBrush_float_left]	[width=4em]
+\useexternalfigure [sym:vpad:frontBrush:right]	[vpad_frontBrush_float_right]	[width=4em]
+
+%%% 060:work %%%
+
+\useexternalfigure [work:ignition:key]            [s2_ignition_key]                    [M]
+\useexternalfigure [work:select:fDrive]           [s2_select_fDrive]                   [width=.45\textwidth]
+\useexternalfigure [work:select:rDrive]           [s2_select_rDrive]                   [width=.45\textwidth]
+\useexternalfigure [work:brushes:enlarge]         [s2_brushes_enlarge]                 [width=.45\textwidth]
+\useexternalfigure [work:brush:left:raise]        [s2_brush_left_raise]                [width=.45\textwidth]
+\useexternalfigure [work:suctionClap:open]        [s2_suctionClap_open]                [width=.45\textwidth]
+\useexternalfigure [work:suctionClap:closed]      [s2_suctionClap_closed]              [width=.45\textwidth]
+\useexternalfigure [work:suction:open]            [s2_suction_open]                    [width=.45\textwidth]
+\useexternalfigure [work:suction:raise]           [s2_suction_raise]                   [width=.45\textwidth]
+\useexternalfigure [work:container:raised]        [s2_container_tilting]               [M]
+\useexternalfigure [container:cover:unlock]       [s2_container_cover_unlock]          [width=.32\textwidth]
+\useexternalfigure [container:safety:locked]      [s2_container_safety_locked]         [width=.32\textwidth]
+\useexternalfigure [container:safety:unlocked]    [s2_container_safety_unlocked]       [width=.32\textwidth]
+\useexternalfigure [work:suction:hose]            [s2_suction_hose]  					[W50]
+\useexternalfigure [work:water:spray]             [s2_water_spray]  					[M]
+\useexternalfigure [work:foot:switch]             [s2_foot_switch]                     [M]
+\useexternalfigure [work:frontBrush:move]         [s2_frontBrush_move]                 [width=.45\textwidth]
+\useexternalfigure [work:frontBrush:incline]      [s2_frontBrush_incline]              [width=.45\textwidth]
+
+%%% 080:maintenance %%%
+
+\useexternalfigure [main:hy:level_temp]       [s2_hydraulic_gauge]                 [M]
+\useexternalfigure [main:container:high]      [main_container_high]                [M]
+\useexternalfigure [main:vw:gauge]            [VW_Oil_Gauge]                       [M]
+\useexternalfigure [fuelfilter:detach]        [s2_fuelFilter_detach]               [M]
+\useexternalfigure [fuelfilter:explosion]     [s2_fuelFilter_explosion]            [M]
+\useexternalfigure [coolant:level]            [s2_coolantLevel]                    [M]
+\useexternalfigure [hydraulic:level]          [s2_hydraulic_level]                 [M]
+\useexternalfigure [hydraulic:returnFilter]   [s2_hydr_returnFilter]               [M]
+\useexternalfigure [hydraulic:fluidDrain]     [s2_hydraulic_fluidDrainer]          [M]
+\useexternalfigure [coolant:antifreeze]       [antifreeze_refractometer_g12]       [M]
+\useexternalfigure [coolant:refractometer]    [antifreeze_refractometer_t10007]    [M]
+\useexternalfigure [vw:air:filter]            [s2_air_filter]                      [M]
+\useexternalfigure [vw:belt:tool]             [vw_tool_t10060A]                    [M]
+\useexternalfigure [vw:belt:overview]         [vw_belt_tens]                       [M]
+\useexternalfigure [vw:belt:tens]             [vw_belt_tens_holes]                 [M]
+\useexternalfigure [vw:belt:tens:change]      [vw_belt_tens_change]                [M]
+\useexternalfigure [batt:compartment]         [s2_battery_location]                [M]
+\useexternalfigure [electric:power:rear]      [s2_rearElectricBox_location]        [M]
+\useexternalfigure [electric:power:front]     [s2_fuseBox_cabin]                   [T]
+\useexternalfigure [electric:power:cabin]     [s2_fuses_cabin]                     [width=.75\textwidth]
+\useexternalfigure [vhc:electric:lighting]    [s2_lighting_complete]               [T]
+\useexternalfigure [vhc:lighting:adjustment]  [lighting_adjustment]                [M]
+\useexternalfigure [brake:wheelHub]           [S2_Rear_WheelHub]                   [M]
+\useexternalfigure [brake:drum]               [S2_Rear_Brake]                      [M]
+\useexternalfigure [frontAxle:fixing]         [s2_frontAxle_fixing]                [W50]
+\useexternalfigure [frame:axles:greasing]     [s2_axles_greasing]                  [width=.32\textwidth]
+\useexternalfigure [frame:steering:greasing]  [s2_steering_greasing]               [width=.32\textwidth]
+\useexternalfigure [frame:sucMouth:greasing]  [s2_sucMouth_greasing]               [width=.32\textwidth]
+\useexternalfigure [container:mechanisme]     [s2_container_greasing]              [T]
+\useexternalfigure [suctionMouth:adjust]      [suctionMouth_adjust]                [M]
+
+\defineoverlay[watermark]
+              [{\framed[frame=off,foregroundcolor=gray]
+               {\scale[sx=12,sy=12]
+               {\rotate[rotation=35.0]{Provisoire}}}}]
+\stopproject

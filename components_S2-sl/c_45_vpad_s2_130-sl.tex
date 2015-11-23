@@ -1,0 +1,727 @@
+\startcomponent c_45_vpad_s2_130-sl
+\product prd_ba_s2_130-sl
+
+\startchapter[title={Računalnik v kabini (Vpad)},
+							reference={sec:vpad}]
+
+\setups[pagestyle:marginless]
+
+
+\startsection[title={Opis Vpada},
+							reference={vpad:description}]
+
+\startfigtext [left] {Vpad SN v voznikovi kabini}
+{\externalfigure[vpad:inside:view]}
+\textDescrHead{Inovativen, inteligenten … } \Vpad\ je bil zasnovan za krmiljenje
+agregatov na komunalnem področju, katerih tehnologija postaja vedno
+bolj zahtevna in ki nudijo najrazličnejše
+funkcije.
+Z enoto \Vpad\ je upravljavcu na voljo sistem, ki ni omejen
+samo na prikaz informacij~– vizualno ali zvočno~– o vseh
+delovnih postopkih in postopkih stroja.
+Kaj predvsem odlikuje enoto \Vpad\ in kje postavlja nova merila so
+intuitivno vodenje uporabnika, upravljalna ergonomija in logika ukazov.
+
+Zahvaljujoč svojim raznolikim funkcijam je mogoče \Vpad\ uporabljati izredno prilagodljivo,
+zaradi česar je veliko več kot zgolj elektronska krmilna enota.
+\stopfigtext
+
+\textDescrHead{… univerzalno} Združljivost in prilagodljivost sta bila pri
+razvoju enote \Vpad\ v ospredju:
+kot modularno krmilno enoto jo je mogoče prilagoditi individualnim lokalnim danostim in
+različicam opreme, zaradi njenih številnih elektronskih
+vmesnikov in poti za prenos podatkov~– vse do WLAN-a~–, pa so odprte
+vse možnosti.
+Enota \Vpad\ deluje z najsodobnejšo elektroniko z 32-bitno tehnologijo in
+operacijskim sistemom v resničnem času.
+\vfill
+
+
+\startfigtext[left]{Večfunkcijska konzola}
+{\externalfigure[console:topview]}
+\textDescrHead{… in modularno} Zradi modularnosti ima enota \Vpad\
+izjemno prednost:
+tako je mogoče različico~, ki se uporablja serijsko v \sdeux, postopoma
+kadar koli razširiti z nadaljnjimi komponentami, kot sta npr. modem ali konzola (glejte
+sliko).
+Modularnost ni omejena samo na strojno opremo, saj je mogoče sistem tudi
+programsko zelo razširiti ter prilagoditi spreminjajočim se potrebam.
+
+Večfunkcijska konzola enote \sdeux\ je visoko razviti vmesnik med
+upravljavcem in strojem. Celotni pometalni|/|sesalni sistem je mogoče krmiliti prek te konzole.
+\stopfigtext
+
+\page [yes]
+
+
+\subsection[vpad:home]{Glavni zaslon}
+
+%% Note: outcommented by PB
+% \placefig[left][fig:vpad:engineData]{Accueil mode transport}
+% {\scale[sx=1.5,sy=1.5]
+% {\setups[VpadFramedFigureHome]
+% \VpadScreenConfig{
+% \VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}
+% \framed{\null}}
+% }
+
+
+\start
+
+\setupcombinations[width=\textwidth]
+
+\placefig [here][fig:vpad:engineData]{Glavni zaslon}
+{\startcombination [2*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Način }za vožnjo}
+{\setups[VpadFramedFigureWork]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Delovni }način}
+\stopcombination}
+
+\stop
+
+\blank [1*big]
+
+Glavni zaslon enote \Vpad\ zajema vse
+potrebne elemente za nadzor vseh funkcij vozila \sdeux.
+
+Na zgornjem območju so kontrolni prikazi.
+
+Sredinsko območje v resničnem času med\, drugim prikazuje naslednje podatke:
+hitrost, število vrtljajev in temperatura motorja, nivo polnosti goriva, nivo polnosti vode za recikliranje itd.
+
+Način \aW{Vožnja} je prikazan z zajčkom~\textSymb{transport_mode}, način \aW{Delo} pa z želvo~\textSymb{working_mode}.
+
+Menijska vrstica v spodnjem robu prikazuje razpoložljive menije: S pritiskom na sredino zaslona na dotik se prikažejo dodatni meniji.
+
+\page [yes]
+
+
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},
+							after={\nobreak\hrule\blank [2*medium]\page[preference]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+
+\subsection{Kontrolni prikaz na zaslonu Vpad} % nouveau
+
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+\startSymVpad
+\externalfigure[vpadTEnginOilPressure][height=1.7\lH]
+\SymVpad
+\textDescrHead{Tlak motornega olja}(rdeča) Prenizek tlak motornega olja. Nemudoma zaustavite
+motor.
+
++\:Sporočilo o napaki \# 604
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningBattery][height=1.7\lH]
+\SymVpad
+\textDescrHead{Napolnjenost baterije}(rdeča) Prenizek polnilni tok baterije. Obvestite delavnico.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadWarningEngine1][height=1.7\lH]
+\SymVpad
+\textDescrHead{Diagnoza motorja}(rumena) Napaka v krmiljenju motorja. Obvestite delavnico.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Obiščite delavnico}(rumena) Potrebno je redno vzdrževanje vozila.
+(glejte \about [sec:schedule] \atpage [sec:schedule])
+ali pa je prišlo do napake motorja (potrebna delavnica).
+
++\:Sporočila o napakah \# 650 do \# 653 ali \# 703
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filter za drobne delce}(rumena) Regeneracija filtra za drobne delce se začne takoj, ko obratovalno stanje to omogoča.
+
+{\md Napotek:} {\lt Po možnosti motorja {\em ne} izključite, dokler prikaz sveti!}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakeError][height=1.7\lH]
+\SymVpad
+\textDescrHead{Zavorni sistem}(rdeča) Napaka v zavornem sistemu. Obvestite delavnico.
+
++\:Sporočilo o napaki \# 902
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakePark][height=1.7\lH]
+\SymVpad
+\textDescrHead{Ročna zavora}(rdeča) Aktivirana je ročna zavora
+vozila.
+
++\:Sporočilo o napaki \# 905
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTEngineHeating][height=1.7\lH]
+\SymVpad
+\textDescrHead{Sistem za razžarevanje}(rumena) Poteka razžarevanje motorja.
+
+Utripajoča lučka prikazuje, da je v pomnilniku dogodkov bila registrirana napaka.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTFuelReserve][height=1.7\lH]
+\SymVpad
+\textDescrHead{Nivo polnosti goriva}(rumena) Nivo polnosti goriva je zelo nizek
+(rezerva).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBlink][height=1.7\lH]
+\SymVpad
+\textDescrHead{Opozorilne utripalke}(zelena) Aktivirane so opozorilne utripalke.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTLowBeam][height=1.7\lH]
+\SymVpad
+\textDescrHead{Pozicijska luč}(zelena) Vključena je pozicijska luč.
+\stopSymVpad
+
+\startSymVpad
+\HL\NC \externalfigure[vpadSyWaterTemp][height=1.7\lH]
+\SymVpad
+\textDescrHead{Temperatura}(rdeča) Previsoka temperatura hidravlične tekočine ali motorja. Obvestite delavnico.
+
++\:Sporočilo o napaki \# 700 ali \# 610
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningFilter][height=1.7\lH]
+\SymVpad
+\textDescrHead{Zamašen filter}(rdeča) Kombiniran hidravlični filter ali zračni filter je zamašen.
+
++\:Sporočilo o napaki \# 702 ali \# 851
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTSpray][height=1.7\lH]
+\SymVpad
+\textDescrHead{Vodna pištola}(rumena) Vključena je visokotlačna črpalka za vodno pištolo.
+
+Stikalo \textSymb{temoin_buse} na stropni konzoli.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTClear][height=1.7\lH]
+\SymVpad
+\textDescrHead{Sporočilo o napaki}(rdeča) V pomnilniku enote \Vpad je shranjeno sporočilo o napaki. Pritisnite tipko~\textSymb{vpadClear}, da prikažete vsa shranjena sporočila. Obvestite delavnico.
+\stopSymVpad
+
+
+\stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
+\page [yes]
+
+
+\startsection [title={Meniju enote Vpad},
+				reference={vpad:menu}]
+
+\start
+
+\setupTABLE [background=color,
+			frame=off,
+			option=stretch,textwidth=\makeupwidth]
+
+\setupTABLE [r] [each] [style=sans, background=color, bottomframe=on, framecolor=TableWhite, rulethickness=1.5pt]
+\setupTABLE [r] [first][backgroundcolor=TableDark, style=sansbold]
+\setupTABLE [r] [odd]  [backgroundcolor=TableMiddle]
+\setupTABLE [r] [even] [backgroundcolor=TableLight]
+\bTABLE [split=repeat]
+\bTABLEhead
+\bTR\bTD Meni \eTD\bTD Oznaka\index{Vpad+Prikaz} \eTD\bTD Funkcija \eTD\eTR
+\eTABLEhead
+
+\bTABLEbody
+\bTR\bTD \externalfigure [v:symbole:clear] \eTD\bTD Sporočila(o) o napaki \eTD\bTD Prikažite in potrdite sporočila o napakah, shranjena v enoti Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:beacon]\externalfigure [v:symbole:beacon:black]} \eTD\bTD Rotacijska luč \eTD\bTD Vklop|/|izklop rotacijske luči. \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:engine] \eTD\bTD Podatki v resničnem času \eTD\bTD Prikaži obratovalne podatke motorja in hidravlike v resničnem času.\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:oneTwoThree] \eTD\bTD Števec \eTD\bTD Prikaz števca obratovalnih ur: dnevni števec, sezonski števec, skupni števec\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:serviceInfo] \eTD\bTD Vzdrževalni interval \eTD\bTD Prikaže datum in preostale obratovalne ure do naslednjega vzdrževanja ali naslednjega velikega servisa. \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:trash] \eTD\bTD Števec \eTD\bTD Ponastavitev števca ali servisnega intervala \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:sunglasses] \eTD\bTD Način zaslona \eTD\bTD Preklapljanje osvetlitve zaslona med \aW{dnevno} in \aW{nočno osvetlitvijo.} \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:color] \eTD\bTD Svetlost|/|kontrast \eTD\bTD Nastavitve za svetlost in kontrast zaslona. \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:select] \eTD\bTD Izbor \eTD\bTD Izbor označenega vnosa ali potrditev sporočila o napaki. \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Potrditev \eTD\bTD Potrditev izbora. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Gor|/|dol, \\puščice \eTD\bTD Premik oznake navzgor|/|navzdol ali povečanje|/|zmanjšanje izbrane vrednosti. \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Opozorilni signal za vzvratno vožnjo \eTD\bTD Vklop|/|izklop opozorilnega signala za vzvratno vožnjo. \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Izklop zaslona \eTD\bTD Pridržite pribl. 5\,s, da izključite zaslon enote Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Tretja metla\index{3.\,metla} (dodatna možnost) \eTD\bTD Sprostitev tretje metle.
+Tretjo metlo je sedaj mogoče aktivirati, kot je opisano na strani~\at[sec:using:frontBrush]. \eTD\eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+
+\subsection{Ostali simboli na zaslonu Vpad}
+
+
+\subsubsubject{Zaloga sveže in reciklirane vode}
+
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+\startSymVpad
+\externalfigure[sym:vpad:water]
+\SymVpad
+\textDescrHead{Nivo polnosti sveže vode} Nivo polnosti sveže vode ne zadošča (najv. 190\,l; za voznikovo kabino).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater:yellow]
+\SymVpad
+\textDescrHead{Nivo polnosti reciklirane vode}(rumena) Nivo polnosti reciklirane vode je pod toplotnim izmenjevalnikom. Hidravlično tekočina se ne hladi in vlažilni sistem sesalnega kanala se ne segreva.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater]
+\SymVpad
+\textDescrHead{Nivo polnosti reciklirane vode}(rdeča) Nivo polnosti reciklirane vode ne zadošča (najv. 140\,l; pod posodo za umazanijo).
+\stopSymVpad
+
+
+\subsubsubject{Sesalni sistem} % nouveau
+
+{\em Ta simbol je prikazan samo, če so metle izključene.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Sesalno ustje} Sesalno ustje\index{sesalno ustje} je aktivirano:
+sesalno ustje je spuščeno in turbina je aktivirana.
+\stopSymVpad
+
+
+\subsubsubject{Stranska metla} % nouveau
+
+{\em Ta simbol je prikazan samo, če tretja metla ni aktivirana.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Stranska metla} metla\index{pometanje}\index{stranska metla} je aktivirana. Hitrost vrtenja (v \% najv. hitrosti vrtenja [V\low{max}]) je prikazana pod simbolom, trenutna razbremenitev vsakokratne metle pa je prikazana nad simbolom (\type{~}~= lebdeči položaj, 14~= največja razbremenitev).
+
+{\md Razbremenitev:} {\lt Nižja, kot je razbremenitev, višji je pritisk metle ob tla.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Lebdeči položaj}(zeleno na spodnjem robu)
+Za izklop razbremenitve krmilno ročico za pribl. 2\,s pritisnite naprej; metla se bo sedaj s celotno lastno težo odložila na tla. Hitrost vrtenja metle je pri 60\hairspace\% od V\low{max} (primer).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Stranski metli}Metli sta aktivirani. Metli mirujeta in sta dvignjeni.
+\stopSymVpad
+
+
+\subsubsubject{Tretja metla (dodatna možnost)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Tretja metla} Tretja metla\index{3.\,metla} je aktivirana. Hitrost vrtenja (v \% od največje hitrosti vrtenja [V\low{max}]) je prikazana pod simbolom.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Lebdeči položaj}(zeleno na spodnjem robu)
+Za izklop razbremenitve krmilno ročico za pribl. 2\,s pritisnite naprej; metla se bo sedaj s celotno lastno težo odložila na tla. Hitrost vrtenja metle je pri 70\hairspace\% od V\low{max} (primer).
+
+{\md Smer vrtenja:} {\lt Na zgornjem robu je prikazana smer vrtenja (črna puščica na rumenem ozadju).}
+\stopSymVpad
+
+\stopsection
+
+\stop % local group for temporary redefinition of \textDescrHead
+
+\page [yes]
+
+
+\startsection[title={Nastavitev svetlosti zaslona},
+              reference={sec:vpad:brightness}]
+
+Zaslon enote \Vpad\ je mogoče uporabljati v dveh vnaprej konfiguriranih stopnjah
+svetlosti: način \aW{Dan}~– \textSymb{vpadSunglasses}, normalna
+svetlost~– in način \aW{Noč}~– \textSymb{vpadMoon}, zmanjšana svetlost.
+S tipko \textSymb{vpadColor} lahko dostopate do različnih
+parametrov.
+
+Če želite spremeniti vnaprej nastavljene stopnje svetlosti, postopajte kot sledi:
+
+\startSteps
+\item Pritisnite na sredino zaslona na dotik, da se lahko pomikate po menijski vrstici na spodnjem robu zaslona.
+\item Pritisnite na simbol \textSymb{vpadSunglasses} oz.
+\textSymb{vpadMoon}, da izberete način, ki ga želite spremeniti.
+\item Pritisnite \textSymb{vpadColor}, da prikažete parametre.
+\item S pomočjo
+puščičnih simbolov~\textSymb{vpadUp}\textSymb{vpadDown} označite parameter, ki ga želite
+spremeniti, in ga izberite z~\textSymb{vpadSelect}.
+\item Vrednost spremenite s pomočjo simbolov
+\textSymb{vpadMinus}\textSymb{vpadPlus}. Previdno, svetlosti ne zmanjšajte
+preveč (\VpadOp{162} -255), da ne bi bilo več mogoče na zaslonu
+prepoznati nič!
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadServiceInfo}{vpadSunglasses}{vpadColor}}}%
+\framed{\null}}{Pritisnite na sredino zaslona na dotik}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadOp{162}\hfill 15 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Izberite z \textSymb{vpadSelect}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadNull}}}%
+\framed[backgroundscreen=.9]{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD \VpadOp{162}\hfill -80 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Vrednost spremenite z \textSymb{vpadMinus}\textSymb{vpadPlus}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Vrednost potrdite s tipko \textSymb{vpadReturn}.
+\item Ponovno pritisnite na simbol \textSymb{vpadReturn}, da se
+vrnete nazaj na glavni zaslon.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Števec obratovalnih ur in kilometrov},
+							reference={vpad:compteurs}]
+
+Programska oprema enote \Vpad\ ima tri različna merilna obdobja: \aW{dan},
+\aW{sezono}, \aW{skupaj}, v katerih lahko delujejo različni števci, kot so npr.
+\aW{števec prevoženih kilometrov}, \aW{obratovalne ure} (motor ali krtača),
+\aW{delovni čas} (na voznika).
+
+Če želite odčitati števce ali jih ponastaviti, postopajte kot sledi:
+
+\startSteps
+\item Pritisnite na sredino zaslona na dotik, da se lahko
+pomikate po menijski vrstici.
+\item Pritisnite na simbol \textSymb{vpadOneTwoThree}, da prikažete
+dnevni števec.
+\item S simbolom nazaj|/|naprej||~\textSymb{vpadBW}\textSymb{vpadFW}
+lahko preklopite na skupni ali sezonski števec.
+\item Pritisnite tipko \textSymb{vpadTrash}, da ponastavite prikazani
+števec.
+\item V pogovornem oknu boste pozvani, da potrdite
+ponastavitev.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadServiceInfo}{vpadSunglasses}{vpadColor}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{120} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 87,4\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 62,0\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 240,2\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 901,9\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,1\,l/h \eTD\eTR
+\eTABLE}}{Pritisnite simbol~\textSymb{vpadOneTwoThree}, nato pa~\textSymb{vpadBW} oder~\textSymb{vpadFW}}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadBW}{vpadFW}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 522,0\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 662,8\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 1605,5\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 2608,4\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,0\,l/h \eTD\eTR
+\eTABLE}}{Ponastavite števec s tipko \textSymb{vpadTrash}.}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadTrash}{vpadNull}{vpadNull}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{136} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{137} \eTD\eTR
+\eTABLE}}{Potrdite s tipko \textSymb{vpadTrash}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Po potrebi vnesite geslo in nato potrdite ponastavitev s pomočjo simbola \textSymb{vpadTrash}.
+\item Pritisnite na simbol \textSymb{vpadReturn}, da se vrnete na glavni zaslon.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+\startsection[title={Vzdrževalni intervali},
+							reference={vpad:maintenance}]
+
+Vzdrževalni načrt vozila \sdeux\ pozna dve osnovni vrsti vzdrževanja: redno vzdrževanje in velik servis (s strani delavnice s pooblastilom službe za stranke \boschung).
+
+Če želite odčitati števce ali jih ponastaviti, postopajte kot sledi:
+\startSteps
+\item Pritisnite na sredino zaslona na dotik, da se lahko
+pomikate po menijski vrstici.
+\item Pritisnite na simbol \textSymb{vpadServiceInfo}, da se prikažejo
+vzdrževalni intervali.
+\item S pomočjo
+puščičnih simbolov~\textSymb{vpadUp}\textSymb{vpadDown} preklopite v želeni interval.
+\item Pritisnite na simbol~\textSymb{vpadTrash}, da ponastavite
+interval. S pomočjo
+~\textSymb{vpadPlus}\textSymb{vpadMinus} vnesite geslo in ga potrdite
+s tipko~\textSymb{vpadSelect}).
+\item V pogovornem oknu boste pozvani, da potrdite
+ponastavitev.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadNull}{vpadNull}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD[nc=2] \VpadOp{190} \eTD\eTR
+\bTR\bTD \VpadOp{191}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{192}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR
+\bTR\bTD \VpadOp{193}\eTD\bTD \VpadOp{195}\hfill 2400\,h \eTD\eTR
+\eTABLE}}{Pritisnite na simbol~\textSymb{vpadTrash}, da ponastavite
+interval.}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD \hfill 31.3.2014 \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{002}\hfill 0000 \eTD\eTR
+\eTABLE}}{Vnesite geslo (številčna koda)}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD[backgroundcolor=black,color=TableWhite] \VpadOp{041}\eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{042} \eTD\eTR
+\bTR\bTD \VpadOp{043} \eTD\eTR
+\eTABLE}}{Izberite in potrdite s tipko~\textSymb{vpadSelect}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Ponastavitev potrdite s pomočjo simbola~\textSymb{vpadSelect}.
+\item Pritisnite na simbol \textSymb{vpadReturn}, da se vrnete na glavni zaslon.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Upravljanje napak prek enote Vpad},
+							reference={vpad:error}]
+
+
+Enota \Vpad\ prikaže napako\index{Vpad+sporočila o napakah}, ki so jo diagnosticirali elektronski krmilni sistemi in poslala vodila CAN.
+Če je bila registrirana srednje težka napaka, zasveti simbol~\textSymb{VpadTClear} (rdeč).
+Če gre za napako višje prioritete, sveti simbol~\textSymb{VpadTClear}. Dodatno pa se oglaša alarmni zvok.
+Da odpravite alarm, je treba potrditi sporočilo
+o napaki (potrditi kot \aW{vzeto na znanje}).
+
+Da preberete in potrdite sporočila o napakah, postopajte kot sledi:
+
+\startSteps
+\item Pritisnite simbol~\textSymb{vpadClear} na zaslonu enote \Vpad.
+\item Pritisnite simbol~\textSymb{vpadClear}, da potrdite izbrano sporočilo.
+\item Poleg potrjenega sporočila se sedaj prikaže simbol \aW{\#}, ki
+sporočilo označi kot \aW{vzeto na znanje}, oznaka pa preskoči
+na naslednje sporočilo (če obstaja).
+\item Ko potrdite vsa sporočila, se prikaz vrne na
+glavni zaslon.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851a} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Prikaz sporočil}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Potrdite s tipko~\textSymb{vpadClear}}
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadBeam}{vpadEngine}}}%
+\framed{\null}}{Nazaj na glavni zaslon}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Za ponovni prikaz sporočil, pritisnite na simbol~\textSymb{vpadClear}. Sporočila o napakah se izbrišejo z enote \Vpad\
+šele, ko odpravite vzrok težave.
+\stopSteps
+
+
+\subsection{Najpogostejša sporočila o napakah (z iskanjem napak)}
+
+\subsubsubject{\VpadEr{604}} % {\#\ 604	Pression huile moteur basse}
+
++ \textSymb{vpadTEnginOilPressure}~– Nemudoma izključite motor. Preverite nivo olja in obvestite delavnico.
+
+
+\subsubsubject{\VpadEr{609}} % {\#\ 609	Température eau refroidissement moteur haute}
+
++ \textSymb{vpadSyWaterTemp}~– Prekinite z delom. Motor pustite delovati brez obremenitve in opazujte razvoj temperature:
+
+če temperatura pade, preverite nivoje polnosti hladilne tekočine, motornega olja in hidravlične tekočine ter stanje hladilnika.
+Če so nivoji polnosti in hladilnik v redu, previdno nadaljujte z diagnozo napake v delavnici.
+
+\subsubsubject{\VpadEr{610}} % {\#\ 610	Température eau refroidissement moteur trop haute}
+
++ \textSymb{vpadSyWaterTemp}~– Prekinite z delom. Preverite nivoje polnosti hladilne tekočine in motornega olja in nemudoma obvestite delavnico.
+
+
+\subsubsubject{\VpadEr{650}} % {\#\ 650	Se rendre à un garage}
+
++ \textSymb{vpadWarningService}~– Nemudoma obvestite delavnico.
+% \VpadEr{651} % {\#\ 651	Moteur en mode urgence}
+
+
+\subsubsubject{\VpadEr{652}} % {\#\ 652	Inspection véhicule}
+% \VpadEr{653} % {\#\ 653	Grand service moteur}
+
++ \textSymb{vpadWarningService}~– Čas je za naslednje redno vzdrževanje. Poglejte v vzdrževalni načrt in z delavnico dogovorite termin.
+
+
+\subsubsubject{\VpadEr{700}} % {\#\ 700	Température d'huile hydraulique}
+
++ \textSymb{vpadSyWaterTemp}~– Prekinite z delom. Motor pustite delovati brez obremenitve in opazujte razvoj temperature:
+
+če temperatura pade, preverite nivoje polnosti hladilne tekočine, motornega olja in hidravlične tekočine ter stanje hladilnika.
+Če so nivoji polnosti in hladilnik v redu, previdno nadaljujte z diagnozo napake v delavnici.
+
+
+\subsubsubject{\VpadEr{702}} % {\#\ 702	Filtre d'huile hydraulique}
+
++ \textSymb{vpadWarningFilter}~– Hidravlični||povratni in|/|ali sesalni filter je zamašen. Nemudoma zamenjajte filtrski vložek.
+% \VpadEr{703} % {\#\ 703	Vidange d'huile hydraulique}
+
+
+\subsubsubject{\VpadEr{800}} % {\#\ 800	Interrupteur d'urgence actionné}
+
++ \textSymb{vpadTClear}~– Pritisnili ste stikalo za izklop v sili. Izključite vžig in znova zaženite motor, da izbrišete sporočilo.
+
+
+\subsubsubject{\VpadEr{801}} % {\#\ 905	Frein à main actionné}
+
+Posoda za umazanijo je dvignjena ali pa ni povsem spuščena. Hitrost vozila je omejena na 5\,km/h, dokler posode za umazanijo ne spustite.
+
+\subsubsubject{\VpadEr{851}} % {\#\ 851	Filtre à air}
+
++ \textSymb{vpadWarningFilter}~– Zračni filter je zamašen. Nemudoma zamenjajte filtrski vložek.
+
+
+\subsubsubject{\VpadEr{902}} % {\#\ 902	Pression de freinage}
+
++ \textSymb{vpadTBrakeError}~– Nezadosten zavorni tlak. Takoj prekinite z delom in nemudoma obvestite delavnico.
+% \VpadEr{904} % {\#\ 904	Interrupteur de direction d'avancement}
+
+
+\subsubsubject{\VpadEr{905}} % {\#\ 905	Frein à main actionné}
+
++ \textSymb{vpadTBrakePark}~– Ročna zavora ni povsem sproščena. Hitrost vozila je omejena na 5\,km/h, dokler ne sprostite ročne zavore.
+
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+
+
+

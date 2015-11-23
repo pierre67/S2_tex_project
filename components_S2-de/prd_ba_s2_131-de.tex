@@ -1,0 +1,139 @@
+\enabledirectives [system.synctex]
+
+\startproduct prd_ba_s2_120-de
+
+\enablemode[%
+	screen,
+	% print,
+        myriadpro,
+        ]
+
+
+\project prj_ba_s2
+
+\version [final]
+\setups [GERMAN,VpGERMAN]
+
+%===============================================================================
+%===============================================================================
+
+% Copy this block back into environment
+
+
+%% End environment block
+%===============================================================================
+%===============================================================================
+
+\definesynonyms	[ProductAbbreviation][ProductAbbreviations][\ProdFull]
+\setupsynonyms	[ProductAbbreviation][next=\autoinsertnextspace]
+
+\ProductAbbreviation	[ProductId]	{Urban||Sweeper~S2}	{Urban||Sweeper~S2}
+\ProductAbbreviation	[PRoductId]	{Urban||Sweeper~S2}	{Urban||Sweeper~S2}
+% The second one for the genitive form
+
+\startmode[screen]
+
+\setupexternalfigures[directory={%
+../../pictures/S2/img_localisation_co,
+../../pictures/S2/img_std_co,
+../../pictures/S2/img_vpad_co,
+../../pictures/pictographs_co,
+../../pictures/S2/fuses,
+}]
+
+\setupinteraction
+  [state=start,
+   style=,
+   color=LinkColor,
+   openaction={firstpage,UseOutlines},
+   menu=on,
+   display=TwoColumn,
+    title={Betriebsanleitung S2},
+   author={Pierre Bovet (Technische Redaktion Boschung, Matran)},
+   subtitle={mit Wartungsplan},
+   keyword={S2, Betriebsanleitung, Wartungsplan, Handbuch, Manual}
+ ]
+\stopmode
+\startmode[print]
+
+\setupexternalfigures[directory={%
+../../pictures/S2/img_localisation,
+../../pictures/S2/img_std,
+../../pictures/S2/img_vpad,
+../../pictures/pictographs,
+../../pictures/S2/fuses,
+}]
+
+\setupinteraction
+  [state=stop,
+   style=,
+   color=LinkColor,
+   openaction={firstpage,UseOutlines},
+   menu=on,
+   display=TwoColumn,
+   title={Manuel d’utilisation S2},
+   author={Pierre Bovet (Technische Redaktion Boschung, Matran)},
+   subtitle={mit Wartungsplan},
+   keyword={S2, Betriebsanleitung, Wartungsplan, Handbuch, Manual}
+  ]
+\stopmode
+\setupinteractionscreen [option=bookmark]
+\placebookmarks [part,chapter,section] [chapter,section]
+
+%%%%%%    mkiv settings    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\TextSymHeight {2.0ex}
+
+\startfrontmatter
+	% \setuppagenumbering	[conversion=romannumerals]
+	\component c_00_front_s2_120-de
+	\marking[header]{Inhalt}
+		\completecontent
+
+\stopfrontmatter
+
+\startbodymatter
+\define\LASTchapter{10}
+% \showframe
+\component c_10_safety_s2_120-de
+\component c_20_prescriptions_s2_120-de
+\component c_30_overview_s2_120-de
+\component c_40_control_s2_120-de
+\component c_45_vpad_s2_120-de
+\component c_60_work_s2_120-de
+\component c_80_maintenance_s2_120-de
+\component c_90_serviceplan_s2_131-de
+
+% \page[yes,empty,right]
+\stopbodymatter
+
+\startbackmatter
+		\definelayer [bg:toc] [state=stop]
+		\marking[header]{Stichwortverzeichnis}
+			\IndexHead{Stichwortverzeichnis}
+			{\switchtobodyfont[small]\placeindex [n=3]}
+		\page[yes,blank,right]
+			\marking[header]{Abbildungsverzeichnis}
+			\startcolumns[n=3]
+				\setupselector[caption][n=2]
+				\IndexHead{Abbildungsverzeichnis}
+				\placelist[fig]
+			\stopcolumns
+		\page[yes]
+
+		\setuppagenumbering[state=stop]
+	\component c_99_back_s2_120-de
+\stopbackmatter
+
+\seeindex{Service}{Wartung}
+\seeindex{Instandhaltung}{Wartung}
+\seeindex{Geschwindigkeitsregler}{Tempomat}
+\seeindex{Hauptschalter}{Batterietrennschalter}
+\seeindex{Chassis}{Fahrgestell}
+\seeindex{Fahrgestell}{Chassis}
+\seeindex{Bodenschalter}{Fußschalter}
+
+\pagebreak[yes,blank,right]
+% \showlayout
+\stopproduct
+

@@ -269,14 +269,14 @@ framecolor=TableWhite,
 \bTD 4,3\,l\eTD
 \eTR
 \bTR \bTD Circuito hidráulico \eTD
-\bTD Aceite ATF \eTD
-\bTD \liqC{dexron iii} \eTD
+\bTD Aceite hidráulico \eTD
+\bTD \liqC{ISO VG 46} \eTD
 \bTD Total Equiviz ZS 46 (depósito aprox. 40\,l) \eTD
 \bTD aprox. 50\,l\eTD
 \eTR
 \bTR \bTD Circuito hidráulico (opción \aW{Bio})\eTD
-\bTD Aceite ATF \eTD
-\bTD \liqC{dexron iii} \eTD
+\bTD Aceite hidráulico \eTD
+\bTD \liqC{ISO VG 46} \eTD
 \bTD Total Biohydran TMP SE 46\eTD
 \bTD aprox. 50\,l\eTD
 \eTR
@@ -1340,213 +1340,213 @@ framecolor=white,
 
 \stopsection
 
-\page [yes]
-
-
-\startsection[title={Engrase centralizado},
-reference={main:graissageCentral}]
-
-
-\subsection{Descripción del módulo de control}
-
-La \sdeux\ puede equiparse con\index{engrase centralizado} un engrase centralizado (opción). El engrase centralizado suministra lubricante a cada punto de lubricación del vehículo en periodos regulares.
-
-\startfigtext [left] [vogel_affichage] {Módulo de pantalla}
-{\externalfigure[vogel_base2][W50]}
-\blank
-\startLeg
-\item Pantalla de 7 dígitos: Valores y estado de servicio
-\item \LED: Sistema en pausa (modo standby)
-\item \LED: Bomba en servicio
-\item \LED: Control del sistema mediante interruptor de ciclos
-\item \LED: Control del sistema mediante interruptor de presión
-\item \LED: Mensaje de error
-\item Teclas de movimiento por imagen:
-\startLeg [R]
-\item Activar pantalla
-\item Mostrar valores
-\item Modificar valores
-\stopLeg
-\item Tecla para cambiar el modo de servicio; confirmación de los valores
-\item Activación de un ciclo de engrase intermedio
-\stopLeg
-\stopfigtext
-
-El engrase centralizado comprende la bomba de lubricante, el depósito de lubricante transparente en el lado izquierdo del chasis y el módulo de control en el sistema eléctrico central.
+% \page [yes]
+%
+%
+% \startsection[title={Engrase centralizado},
+% reference={main:graissageCentral}]
+%
+%
+% \subsection{Descripción del módulo de control}
+%
+% La \sdeux\ puede equiparse con\index{engrase centralizado} un engrase centralizado (opción). El engrase centralizado suministra lubricante a cada punto de lubricación del vehículo en periodos regulares.
+%
+% \startfigtext [left] [vogel_affichage] {Módulo de pantalla}
+% {\externalfigure[vogel_base2][W50]}
 % \blank
-\page [yes]
-
-
-\subsubsubject{Indicación y teclas del módulo de control}
-
-\start
-
-\setupTABLE [frame=off,style={\ssx\setupinterlinespace[line=.93\lH]},background=color,
-option=stretch,
-split=repeat]
-
-\setupTABLE [r] [each] [topframe=on,
-framecolor=white,
-% rulethickness=.8pt
-]
-
-\setupTABLE [c] [odd] [backgroundcolor=TableMiddle]
-\setupTABLE [c] [even] [backgroundcolor=TableLight]
-\setupTABLE [c] [1][width=9mm,style={\bfx\setupinterlinespace[line=.93\lH]}]
-\setupTABLE [r] [first] [topframe=off,style={\bfx\setupinterlinespace[line=.93\lH]},
-]
-% \setupTABLE [r] [2][style={\bfx\setupinterlinespace[line=.93\lH]}]
-
-
-\bTABLE
-\bTABLEhead
-% \bTR [backgroundcolor=TableDark]
-% \bTD [nc=4]Indicación y teclas del módulo de control \eTD\eTR
-\bTR\bTD Pos. \eTD
-\bTD \LED \eTD\bTD Modo de indicación \eTD
-\bTD Modo de programación \eTD\eTR
-\eTABLEhead
-
-\bTABLEbody
-\bTR\bTD 2 \eTD
-\bTD Estado de servicio {\em Pausa}\hskip.5em\null \eTD
-\bTD El equipo está en modo standby\hskip.5em\null \eTD %
-\bTD Pueden modificarse los tiempos de pausa \eTD\eTR
-\bTR\bTD 3 \eTD
-\bTD Modo de servicio {\em Contacto} \eTD
-\bTD La bomba trabaja \eTD
-\bTD Puede modificarse el tiempo de trabajo \eTD\eTR
-\bTR\bTD 4 \eTD
-\bTD Control del sistema {\em CS} \eTD
-\bTD Con el interruptor de ciclos externo \eTD
-\bTD Puede desactivarse o modificarse el modo de control \eTD\eTR
-\bTR\bTD 5 \eTD
-\bTD Control del sistema {\em PS} \eTD
-\bTD Con el interruptor de presión externo \eTD
-\bTD Puede desactivarse o modificarse el modo de control \eTD\eTR
-\bTR\bTD 6 \eTD
-\bTD Anomalía {\em Fallo} \eTD
-\bTD [nc=2] Se ha producido una anomalía en el funcionamiento. La causa puede mostrarse en forma de código de error una vez pulsada la tecla \textSymb{vogel_DK}. Se interrumpen las funciones. \eTD\eTR
-\bTR\bTD 7 \eTD
-\bTD Teclas de flecha \textSymb{vogelTop} \textSymb{vogelBottom} \eTD
-\bTD [nc=2] \items[symbol=R]{Activar la pantalla, Consultar los parámetros (modo de pantalla), Ajustar el valor mostrado (I) (modo de programación)}
-\eTD\eTR
-\bTR\bTD 8 \eTD
-\bTD Tecla \textSymb{vogelSet} \eTD
-\bTD [nc=2] Cambiar entre el modo de programación y el modo de indicación o confirmar los valores introducidos. \eTD\eTR
-\bTR\bTD 9 \eTD
-\bTD Tecla \textSymb{vogel_DK} \eTD
-\bTD [nc=2] Cuando el aparato está en el estado de {\em pausa} al accionar esta tecla se activa el ciclo de engrase intermedio. Se confirman y borran los mensajes de error. \eTD\eTR
-\eTABLEbody
-\eTABLE
-\stop
-\vfill
-
-\startfigtext [left] [vogel_touches]{Módulo de pantalla}
-{\externalfigure[vogel_base][width=50mm]}
-\textDescrHead{Modo de pantalla} Pulsar brevemente una de las teclas de flecha \textSymb{vogelTop} \textSymb{vogelBottom} para activar la pantalla de 7 dígitos \textSymb{led_huit}. Volviendo a pulsar la tecla \textSymb{vogelTop} pueden mostrarse los diferentes parámetros seguidos de su valor. El modo de {\em indicación} puede reconocerse por los \LED\char"2060s iluminado continuamente (\in{2 a 6, fig.}[vogel_affichage]).
-\blank [medium]
-\textDescrHead{Modo de programación} Para modificar los valores, pulse durante al menos 2 segundos la tecla \textSymb{vogelSet}
-\stopfigtext
-
-\page [yes]
-
-
-\subsection{Submenús en el modo {\em Indicación}}
-
-\vskip -9pt
-
-\adaptlayout [height=+5mm]
-
-\startcolumns[balance=no]\stdfontsemicn
-
-\startSymVogel
-\externalfigure[vogel_tpa][width=26mm]
-\SymVogel
-\textDescrHead{Tiempo de pausa [h]} Pulse la tecla \textSymb{vogelTop} para mostrar los valores programados.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_068][width=26mm]
-\SymVogel
-\textDescrHead{Tiempo de pausa restante [h]} Tiempo que queda hasta el siguiente ciclo de lubricación.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_090][width=26mm]
-\SymVogel
-\textDescrHead{Tiempo de pausa total [h]} Tiempo de pausa total entre dos ciclos.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_tco][width=26mm]
-\SymVogel
-\textDescrHead{Tiempo de lubricación [min]} Pulse \textSymb{vogelTop} para mostrar los valores programados.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_tirets][width=26mm]
-\SymVogel
-\textDescrHead{Aparato en standby} Indicación no posible ya que el aparato está en standby (pausa).
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_026][width=26mm]
-\SymVogel
-\textDescrHead{Tiempo de lubricación [min]} Duración de un proceso de lubricación.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_cop][width=26mm]
-\SymVogel
-\textDescrHead{Control del sistema} Pulse \textSymb{vogelTop} para mostrar los valores programados.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_off][width=26mm]
-\SymVogel
-\textDescrHead{Modo de control} \hfill PS: Interruptor de presión;\crlf
-CS: Interruptor de ciclos; OFF: desactivado.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_0h][width=26mm]
-\SymVogel
-\textDescrHead{Horas de servicio} Pulse \textSymb{vogelTop} para mostrar el valor en dos pasos.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_005][width=26mm]
-\SymVogel
-\textDescrHead{Parte 1: 005} El tiempo de servicio se muestra en dos partes; ir a la parte 2 con la tecla \textSymb{vogelTop}.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_338][width=26mm]
-\SymVogel
-\textDescrHead{Parte 2: 33,8} La segunda parte del número es 33,8; en total resultad en 533,8 h.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_fh][width=26mm]
-\SymVogel
-\textDescrHead{Tiempo de errores} Pulse \textSymb{vogelTop} para mostrar el valor en dos pasos.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_000][width=26mm]
-\SymVogel
-\textDescrHead{Parte 1: 000} El tiempo de error se muestra en dos partes;\crlf
-ir a la parte 2 con \textSymb{vogelTop}.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_338][width=26mm]
-\SymVogel
-\textDescrHead{Parte 2: 33,8} La segunda parte del número es 33,8; resulta en un tiempo de error total de 33,8 h.
-\stopSymVogel
-
-\stopcolumns
+% \startLeg
+% \item Pantalla de 7 dígitos: Valores y estado de servicio
+% \item \LED: Sistema en pausa (modo standby)
+% \item \LED: Bomba en servicio
+% \item \LED: Control del sistema mediante interruptor de ciclos
+% \item \LED: Control del sistema mediante interruptor de presión
+% \item \LED: Mensaje de error
+% \item Teclas de movimiento por imagen:
+% \startLeg [R]
+% \item Activar pantalla
+% \item Mostrar valores
+% \item Modificar valores
+% \stopLeg
+% \item Tecla para cambiar el modo de servicio; confirmación de los valores
+% \item Activación de un ciclo de engrase intermedio
+% \stopLeg
+% \stopfigtext
+%
+% El engrase centralizado comprende la bomba de lubricante, el depósito de lubricante transparente en el lado izquierdo del chasis y el módulo de control en el sistema eléctrico central.
+% % \blank
+% \page [yes]
+%
+%
+% \subsubsubject{Indicación y teclas del módulo de control}
+%
+% \start
+%
+% \setupTABLE [frame=off,style={\ssx\setupinterlinespace[line=.93\lH]},background=color,
+% option=stretch,
+% split=repeat]
+%
+% \setupTABLE [r] [each] [topframe=on,
+% framecolor=white,
+% % rulethickness=.8pt
+% ]
+%
+% \setupTABLE [c] [odd] [backgroundcolor=TableMiddle]
+% \setupTABLE [c] [even] [backgroundcolor=TableLight]
+% \setupTABLE [c] [1][width=9mm,style={\bfx\setupinterlinespace[line=.93\lH]}]
+% \setupTABLE [r] [first] [topframe=off,style={\bfx\setupinterlinespace[line=.93\lH]},
+% ]
+% % \setupTABLE [r] [2][style={\bfx\setupinterlinespace[line=.93\lH]}]
+%
+%
+% \bTABLE
+% \bTABLEhead
+% % \bTR [backgroundcolor=TableDark]
+% % \bTD [nc=4]Indicación y teclas del módulo de control \eTD\eTR
+% \bTR\bTD Pos. \eTD
+% \bTD \LED \eTD\bTD Modo de indicación \eTD
+% \bTD Modo de programación \eTD\eTR
+% \eTABLEhead
+%
+% \bTABLEbody
+% \bTR\bTD 2 \eTD
+% \bTD Estado de servicio {\em Pausa}\hskip.5em\null \eTD
+% \bTD El equipo está en modo standby\hskip.5em\null \eTD %
+% \bTD Pueden modificarse los tiempos de pausa \eTD\eTR
+% \bTR\bTD 3 \eTD
+% \bTD Modo de servicio {\em Contacto} \eTD
+% \bTD La bomba trabaja \eTD
+% \bTD Puede modificarse el tiempo de trabajo \eTD\eTR
+% \bTR\bTD 4 \eTD
+% \bTD Control del sistema {\em CS} \eTD
+% \bTD Con el interruptor de ciclos externo \eTD
+% \bTD Puede desactivarse o modificarse el modo de control \eTD\eTR
+% \bTR\bTD 5 \eTD
+% \bTD Control del sistema {\em PS} \eTD
+% \bTD Con el interruptor de presión externo \eTD
+% \bTD Puede desactivarse o modificarse el modo de control \eTD\eTR
+% \bTR\bTD 6 \eTD
+% \bTD Anomalía {\em Fallo} \eTD
+% \bTD [nc=2] Se ha producido una anomalía en el funcionamiento. La causa puede mostrarse en forma de código de error una vez pulsada la tecla \textSymb{vogel_DK}. Se interrumpen las funciones. \eTD\eTR
+% \bTR\bTD 7 \eTD
+% \bTD Teclas de flecha \textSymb{vogelTop} \textSymb{vogelBottom} \eTD
+% \bTD [nc=2] \items[symbol=R]{Activar la pantalla, Consultar los parámetros (modo de pantalla), Ajustar el valor mostrado (I) (modo de programación)}
+% \eTD\eTR
+% \bTR\bTD 8 \eTD
+% \bTD Tecla \textSymb{vogelSet} \eTD
+% \bTD [nc=2] Cambiar entre el modo de programación y el modo de indicación o confirmar los valores introducidos. \eTD\eTR
+% \bTR\bTD 9 \eTD
+% \bTD Tecla \textSymb{vogel_DK} \eTD
+% \bTD [nc=2] Cuando el aparato está en el estado de {\em pausa} al accionar esta tecla se activa el ciclo de engrase intermedio. Se confirman y borran los mensajes de error. \eTD\eTR
+% \eTABLEbody
+% \eTABLE
+% \stop
+% \vfill
+%
+% \startfigtext [left] [vogel_touches]{Módulo de pantalla}
+% {\externalfigure[vogel_base][width=50mm]}
+% \textDescrHead{Modo de pantalla} Pulsar brevemente una de las teclas de flecha \textSymb{vogelTop} \textSymb{vogelBottom} para activar la pantalla de 7 dígitos \textSymb{led_huit}. Volviendo a pulsar la tecla \textSymb{vogelTop} pueden mostrarse los diferentes parámetros seguidos de su valor. El modo de {\em indicación} puede reconocerse por los \LED\char"2060s iluminado continuamente (\in{2 a 6, fig.}[vogel_affichage]).
+% \blank [medium]
+% \textDescrHead{Modo de programación} Para modificar los valores, pulse durante al menos 2 segundos la tecla \textSymb{vogelSet}
+% \stopfigtext
+%
+% \page [yes]
+%
+%
+% \subsection{Submenús en el modo {\em Indicación}}
+%
+% \vskip -9pt
+%
+% \adaptlayout [height=+5mm]
+%
+% \startcolumns[balance=no]\stdfontsemicn
+%
+% \startSymVogel
+% \externalfigure[vogel_tpa][width=26mm]
+% \SymVogel
+% \textDescrHead{Tiempo de pausa [h]} Pulse la tecla \textSymb{vogelTop} para mostrar los valores programados.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_068][width=26mm]
+% \SymVogel
+% \textDescrHead{Tiempo de pausa restante [h]} Tiempo que queda hasta el siguiente ciclo de lubricación.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_090][width=26mm]
+% \SymVogel
+% \textDescrHead{Tiempo de pausa total [h]} Tiempo de pausa total entre dos ciclos.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_tco][width=26mm]
+% \SymVogel
+% \textDescrHead{Tiempo de lubricación [min]} Pulse \textSymb{vogelTop} para mostrar los valores programados.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_tirets][width=26mm]
+% \SymVogel
+% \textDescrHead{Aparato en standby} Indicación no posible ya que el aparato está en standby (pausa).
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_026][width=26mm]
+% \SymVogel
+% \textDescrHead{Tiempo de lubricación [min]} Duración de un proceso de lubricación.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_cop][width=26mm]
+% \SymVogel
+% \textDescrHead{Control del sistema} Pulse \textSymb{vogelTop} para mostrar los valores programados.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_off][width=26mm]
+% \SymVogel
+% \textDescrHead{Modo de control} \hfill PS: Interruptor de presión;\crlf
+% CS: Interruptor de ciclos; OFF: desactivado.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_0h][width=26mm]
+% \SymVogel
+% \textDescrHead{Horas de servicio} Pulse \textSymb{vogelTop} para mostrar el valor en dos pasos.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_005][width=26mm]
+% \SymVogel
+% \textDescrHead{Parte 1: 005} El tiempo de servicio se muestra en dos partes; ir a la parte 2 con la tecla \textSymb{vogelTop}.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_338][width=26mm]
+% \SymVogel
+% \textDescrHead{Parte 2: 33,8} La segunda parte del número es 33,8; en total resultad en 533,8 h.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_fh][width=26mm]
+% \SymVogel
+% \textDescrHead{Tiempo de errores} Pulse \textSymb{vogelTop} para mostrar el valor en dos pasos.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_000][width=26mm]
+% \SymVogel
+% \textDescrHead{Parte 1: 000} El tiempo de error se muestra en dos partes;\crlf
+% ir a la parte 2 con \textSymb{vogelTop}.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_338][width=26mm]
+% \SymVogel
+% \textDescrHead{Parte 2: 33,8} La segunda parte del número es 33,8; resulta en un tiempo de error total de 33,8 h.
+% \stopSymVogel
+%
+% \stopcolumns
 
 \page [yes]
 

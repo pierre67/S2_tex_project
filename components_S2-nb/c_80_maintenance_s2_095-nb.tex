@@ -274,14 +274,14 @@ framecolor=TableWhite,
 \bTD 4,3\,l\eTD
 \eTR
 \bTR \bTD Hydraulikkrets \eTD
-\bTD ATF-Öl \eTD
-\bTD \liqC{dexron iii} \eTD
+\bTD Hydraulikkolje \eTD
+\bTD \liqC{ISO VG 46} \eTD
 \bTD Total Equiviz ZS 46 (tank ca. 40 l) \eTD
 \bTD ca. 50\,l\eTD
 \eTR
 \bTR \bTD Hydraulikkrets (valgfritt \aW{Bio})\eTD
-\bTD ATF-Öl \eTD
-\bTD \liqC{dexron iii} \eTD
+\bTD Hydraulikkolje \eTD
+\bTD \liqC{ISO VG 46} \eTD
 \bTD Total Biohydran TMP SE 46\eTD
 \bTD ca. 50\,l\eTD
 \eTR
@@ -299,8 +299,8 @@ framecolor=TableWhite,
 \eTR
 \bTR \bTD Sentralsmøreanlegg \eTD
 \bTD Universal-lagerfett\eTD
-\bTD \liqC{nlgi} 000 eller 00 (Li-sidefett)\eTD
-\bTD Total Multis EP 00\eTD
+\bTD \liqC{nlgi}~2\eTD
+\bTD Total Multis EP~2\eTD
 \bTD n. B.\note[Bedarf] \eTD
 \eTR
 \bTR \bTD Kjølesystem \eTD
@@ -1337,213 +1337,213 @@ framecolor=white,
 
 \stopsection
 
-\page [yes]
-
-
-\startsection[title={Sentralsmøreanlegg},
-reference={main:graissageCentral}]
-
-
-\subsection{Beskrivelse av styremodulen}
-
-\sdeux\ kan utstyres med\index{Sentralsmøreanlegg} et sentralsmøreanlegg (valgfritt). Sentralsmøreanlegget forsyner hvert smørepunkt til kjøretøyet i regelmessige avstander med smøremiddel.
-
-\startfigtext [left] [vogel_affichage] {Displaymodul}
-{\externalfigure[vogel_base2][W50]}
-\blank
-\startLeg
-\item 7-sifret display: Verdier og driftstilstand
-\item \LED: System i pause (standby-drift)
-\item \LED: Pumpe i drift
-\item \LED: Styring av systemet med syklusbryter
-\item \LED: Overvåking av systemet med trykkbryter
-\item \LED: Feilmelding
-\item Rulleknapper:
-\startLeg [R]
-\item Aktiver displayet
-\item Vis verdier
-\item Endre verdier
-\stopLeg
-\item Tast til å veksle til driftsmåten, bekreftelse av verdiene
-\item Aktivere en dobbel smøresyklus
-\stopLeg
-\stopfigtext
-
-Sentralsmøreanlegget omfatter smøremiddelpumpen, den gjennomsiktige smøremiddelbeholderen på venstre side av chassisen og styremodulen i sentralelektronikken.
+% \page [yes]
+%
+%
+% \startsection[title={Sentralsmøreanlegg},
+% reference={main:graissageCentral}]
+%
+%
+% \subsection{Beskrivelse av styremodulen}
+%
+% \sdeux\ kan utstyres med\index{Sentralsmøreanlegg} et sentralsmøreanlegg (valgfritt). Sentralsmøreanlegget forsyner hvert smørepunkt til kjøretøyet i regelmessige avstander med smøremiddel.
+%
+% \startfigtext [left] [vogel_affichage] {Displaymodul}
+% {\externalfigure[vogel_base2][W50]}
 % \blank
-\page [yes]
-
-
-\subsubsubject{Display og taster til styremodulen}
-
-\start
-
-\setupTABLE [frame=off,style={\ssx\setupinterlinespace[line=.93\lH]},background=color,
-option=stretch,
-split=repeat]
-
-\setupTABLE [r] [each] [topframe=on,
-framecolor=white,
-% rulethickness=.8pt
-]
-
-\setupTABLE [c] [odd] [backgroundcolor=TableMiddle]
-\setupTABLE [c] [even] [backgroundcolor=TableLight]
-\setupTABLE [c] [1][width=9mm,style={\bfx\setupinterlinespace[line=.93\lH]}]
-\setupTABLE [r] [first] [topframe=off,style={\bfx\setupinterlinespace[line=.93\lH]},
-]
-% \setupTABLE [r] [2][style={\bfx\setupinterlinespace[line=.93\lH]}]
-
-
-\bTABLE
-\bTABLEhead
-% \bTR [backgroundcolor=TableDark]
-% \bTD [nc=4] Display og taster til styremodulen \eTD\eTR
-\bTR\bTD Pos. \eTD
-\bTD \LED \eTD\bTD Displaymodus \eTD
-\bTD Programmeringsmodus \eTD\eTR
-\eTABLEhead
-
-\bTABLEbody
-\bTR\bTD 2 \eTD
-\bTD Driftstilstand {\em pause}\hskip .5em\null \eTD
-\bTD Anlegget er i standby\hskip .5em\null \eTD % -drift
-\bTD Pausetiden kan endres \eTD\eTR
-\bTR\bTD 3 \eTD
-\bTD Driftstilstand {\em Contact} \eTD
-\bTD Pumpen arbeider \eTD
-\bTD Arbeidstiden kan endres \eTD\eTR
-\bTR\bTD 4 \eTD
-\bTD Systemkontroll {\em CS} \eTD
-\bTD Med den eksterne syklusbryteren \eTD
-\bTD Kontrollmodusen kan deaktiveres eller endres \eTD\eTR
-\bTR\bTD 5 \eTD
-\bTD Systemkontroll {\em PS} \eTD
-\bTD Med den eksterne trykkbryteren \eTD
-\bTD Kontrollmodusen kan deaktiveres eller endres \eTD\eTR
-\bTR\bTD 6 \eTD
-\bTD Feil {\em Fault} \eTD
-\bTD [nc=2] Det foreligger en funksjonsfeil. Årsaken vises i form av en feilkode, etter at tasten \textSymb{vogel_DK} trykkes. Utførelsen av funksjonene avbrytes. \eTD\eTR
-\bTR\bTD 7 \eTD
-\bTD Piltaster \textSymb{vogelTop} \textSymb{vogelBottom} \eTD
-\bTD [nc=2] \items[symbol=R]{Aktivering av displayet, spørring av parametere (displaymodus), innstilling av den viste (I) verdien (programmeringsmodus)}
-\eTD\eTR
-\bTR\bTD 8 \eTD
-\bTD Tast \textSymb{vogelSet} \eTD
-\bTD [nc=2] Koble om mellom display- og programmeringsmodus eller bekrefte inntastede verdier. \eTD\eTR
-\bTR\bTD 9 \eTD
-\bTD Tast \textSymb{vogel_DK} \eTD
-\bTD [nc=2] Hvis apparatet befinner seg i tilstanden {\em Pause}, utløses mellomsmøresyklusen ved betjening av tasten. Feilmeldinger bekreftes og slettes. \eTD\eTR
-\eTABLEbody
-\eTABLE
-\stop
-\vfill
-
-\startfigtext [left] [vogel_touches]{Displaymodul}
-{\externalfigure[vogel_base][width=50mm]}
-\textDescrHead{Displaymodus} Trykk kort på en av piltastene \textSymb{vogelTop} \textSymb{vogelBottom}, for å aktivere det 7-sifrede displayet \textSymb{led_huit}. Gjennom gjentatt trykk på tasten \textSymb{vogelTop} kan en vise forskjellige parametere fulgt av deres verdier. Modusen {\em Display} kan sees på de kontinuerlig lysende \LED\char"2060s (\in{2 til 6, fig.}[vogel_affichage]).
-\blank [medium]
-\textDescrHead{Programmeringsmodus} For å endre verdiene må du i minst 2 sekunder trykke tasten \textSymb{vogelSet}, for å skifte til modusen {\em Programmering}: \LED\char"2060s blinker. Trykk kort på tasten \textSymb{vogelSet}, for å endre\index{Sentralsmøreanlegg+programmering} visningen, deretter endres den ønskede verdien med tastene \textSymb{vogelTop} \textSymb{vogelBottom}. Bruk\index{Sentralsmøreanlegg+display} tasten \textSymb{vogelSet} til å bekrefte.
-\stopfigtext
-
-\page [yes]
-
-
-\subsection{Undermenyer i modusen {\em Display}}
-
-\vskip -9pt
-
-\adaptlayout [height=+5mm]
-
-\startcolumns[balance=no]\stdfontsemicn
-
-\startSymVogel
-\externalfigure[vogel_tpa][width=26mm]
-\SymVogel
-\textDescrHead{Pausetid [h]} Trykk på tasten \textSymb{vogelTop}, fpor å vise de programmerte verdiene.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_068][width=26mm]
-\SymVogel
-\textDescrHead{Gjenværende pausetid [h]} Gjenværende tid til neste smøresyklus.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_090][width=26mm]
-\SymVogel
-\textDescrHead{Total pausetid [h]} Total pausetid mellom to sykluser.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_tco][width=26mm]
-\SymVogel
-\textDescrHead{Smøretid [min]} Trykk på \textSymb{vogelTop}, for å vise de programmerte verdiene.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_tirets][width=26mm]
-\SymVogel
-\textDescrHead{Apparat i standby} Visning ikke mulig siden apparatet er i standby (pause).
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_026][width=26mm]
-\SymVogel
-\textDescrHead{Smøretid [min]} Varighet til en smøreprosess.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_cop][width=26mm]
-\SymVogel
-\textDescrHead{Systemkontroll} Trykk på \textSymb{vogelTop}, for å vise de programmerte verdiene.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_off][width=26mm]
-\SymVogel
-\textDescrHead{Kontrollmodus} \hfill PS: Trykkbryter;\crlf
-CS: Syklusbryter; OFF: deaktivert.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_0h][width=26mm]
-\SymVogel
-\textDescrHead{Driftstimer} Trykk på \textSymb{vogelTop}, for å vise verdien i to trinn.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_005][width=26mm]
-\SymVogel
-\textDescrHead{Del 1: 005} Driftstiden vises i to deler, gå til del 2 med tasten \textSymb{vogelTop}.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_338][width=26mm]
-\SymVogel
-\textDescrHead{Del 2: 33,8} Den 2. delen til tallet er 33,8; resulterer til sammen en driftstid på 533,8 h.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_fh][width=26mm]
-\SymVogel
-\textDescrHead{Feiltid} Trykk på \textSymb{vogelTop}, for å vise verdien i to trinn.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_000][width=26mm]
-\SymVogel
-\textDescrHead{Del 1: 000} Feiltiden vises i to deler;\crlf
-gå til del 2 med \textSymb{vogelTop}.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_338][width=26mm]
-\SymVogel
-\textDescrHead{Del 2: 33,8} Den 2. delen til tallet er 33,8; resulterer til sammen en feiltid på 33,8 h.
-\stopSymVogel
-
-\stopcolumns
+% \startLeg
+% \item 7-sifret display: Verdier og driftstilstand
+% \item \LED: System i pause (standby-drift)
+% \item \LED: Pumpe i drift
+% \item \LED: Styring av systemet med syklusbryter
+% \item \LED: Overvåking av systemet med trykkbryter
+% \item \LED: Feilmelding
+% \item Rulleknapper:
+% \startLeg [R]
+% \item Aktiver displayet
+% \item Vis verdier
+% \item Endre verdier
+% \stopLeg
+% \item Tast til å veksle til driftsmåten, bekreftelse av verdiene
+% \item Aktivere en dobbel smøresyklus
+% \stopLeg
+% \stopfigtext
+%
+% Sentralsmøreanlegget omfatter smøremiddelpumpen, den gjennomsiktige smøremiddelbeholderen på venstre side av chassisen og styremodulen i sentralelektronikken.
+% % \blank
+% \page [yes]
+%
+%
+% \subsubsubject{Display og taster til styremodulen}
+%
+% \start
+%
+% \setupTABLE [frame=off,style={\ssx\setupinterlinespace[line=.93\lH]},background=color,
+% option=stretch,
+% split=repeat]
+%
+% \setupTABLE [r] [each] [topframe=on,
+% framecolor=white,
+% % rulethickness=.8pt
+% ]
+%
+% \setupTABLE [c] [odd] [backgroundcolor=TableMiddle]
+% \setupTABLE [c] [even] [backgroundcolor=TableLight]
+% \setupTABLE [c] [1][width=9mm,style={\bfx\setupinterlinespace[line=.93\lH]}]
+% \setupTABLE [r] [first] [topframe=off,style={\bfx\setupinterlinespace[line=.93\lH]},
+% ]
+% % \setupTABLE [r] [2][style={\bfx\setupinterlinespace[line=.93\lH]}]
+%
+%
+% \bTABLE
+% \bTABLEhead
+% % \bTR [backgroundcolor=TableDark]
+% % \bTD [nc=4] Display og taster til styremodulen \eTD\eTR
+% \bTR\bTD Pos. \eTD
+% \bTD \LED \eTD\bTD Displaymodus \eTD
+% \bTD Programmeringsmodus \eTD\eTR
+% \eTABLEhead
+%
+% \bTABLEbody
+% \bTR\bTD 2 \eTD
+% \bTD Driftstilstand {\em pause}\hskip .5em\null \eTD
+% \bTD Anlegget er i standby\hskip .5em\null \eTD % -drift
+% \bTD Pausetiden kan endres \eTD\eTR
+% \bTR\bTD 3 \eTD
+% \bTD Driftstilstand {\em Contact} \eTD
+% \bTD Pumpen arbeider \eTD
+% \bTD Arbeidstiden kan endres \eTD\eTR
+% \bTR\bTD 4 \eTD
+% \bTD Systemkontroll {\em CS} \eTD
+% \bTD Med den eksterne syklusbryteren \eTD
+% \bTD Kontrollmodusen kan deaktiveres eller endres \eTD\eTR
+% \bTR\bTD 5 \eTD
+% \bTD Systemkontroll {\em PS} \eTD
+% \bTD Med den eksterne trykkbryteren \eTD
+% \bTD Kontrollmodusen kan deaktiveres eller endres \eTD\eTR
+% \bTR\bTD 6 \eTD
+% \bTD Feil {\em Fault} \eTD
+% \bTD [nc=2] Det foreligger en funksjonsfeil. Årsaken vises i form av en feilkode, etter at tasten \textSymb{vogel_DK} trykkes. Utførelsen av funksjonene avbrytes. \eTD\eTR
+% \bTR\bTD 7 \eTD
+% \bTD Piltaster \textSymb{vogelTop} \textSymb{vogelBottom} \eTD
+% \bTD [nc=2] \items[symbol=R]{Aktivering av displayet, spørring av parametere (displaymodus), innstilling av den viste (I) verdien (programmeringsmodus)}
+% \eTD\eTR
+% \bTR\bTD 8 \eTD
+% \bTD Tast \textSymb{vogelSet} \eTD
+% \bTD [nc=2] Koble om mellom display- og programmeringsmodus eller bekrefte inntastede verdier. \eTD\eTR
+% \bTR\bTD 9 \eTD
+% \bTD Tast \textSymb{vogel_DK} \eTD
+% \bTD [nc=2] Hvis apparatet befinner seg i tilstanden {\em Pause}, utløses mellomsmøresyklusen ved betjening av tasten. Feilmeldinger bekreftes og slettes. \eTD\eTR
+% \eTABLEbody
+% \eTABLE
+% \stop
+% \vfill
+%
+% \startfigtext [left] [vogel_touches]{Displaymodul}
+% {\externalfigure[vogel_base][width=50mm]}
+% \textDescrHead{Displaymodus} Trykk kort på en av piltastene \textSymb{vogelTop} \textSymb{vogelBottom}, for å aktivere det 7-sifrede displayet \textSymb{led_huit}. Gjennom gjentatt trykk på tasten \textSymb{vogelTop} kan en vise forskjellige parametere fulgt av deres verdier. Modusen {\em Display} kan sees på de kontinuerlig lysende \LED\char"2060s (\in{2 til 6, fig.}[vogel_affichage]).
+% \blank [medium]
+% \textDescrHead{Programmeringsmodus} For å endre verdiene må du i minst 2 sekunder trykke tasten \textSymb{vogelSet}, for å skifte til modusen {\em Programmering}: \LED\char"2060s blinker. Trykk kort på tasten \textSymb{vogelSet}, for å endre\index{Sentralsmøreanlegg+programmering} visningen, deretter endres den ønskede verdien med tastene \textSymb{vogelTop} \textSymb{vogelBottom}. Bruk\index{Sentralsmøreanlegg+display} tasten \textSymb{vogelSet} til å bekrefte.
+% \stopfigtext
+%
+% \page [yes]
+%
+%
+% \subsection{Undermenyer i modusen {\em Display}}
+%
+% \vskip -9pt
+%
+% \adaptlayout [height=+5mm]
+%
+% \startcolumns[balance=no]\stdfontsemicn
+%
+% \startSymVogel
+% \externalfigure[vogel_tpa][width=26mm]
+% \SymVogel
+% \textDescrHead{Pausetid [h]} Trykk på tasten \textSymb{vogelTop}, fpor å vise de programmerte verdiene.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_068][width=26mm]
+% \SymVogel
+% \textDescrHead{Gjenværende pausetid [h]} Gjenværende tid til neste smøresyklus.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_090][width=26mm]
+% \SymVogel
+% \textDescrHead{Total pausetid [h]} Total pausetid mellom to sykluser.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_tco][width=26mm]
+% \SymVogel
+% \textDescrHead{Smøretid [min]} Trykk på \textSymb{vogelTop}, for å vise de programmerte verdiene.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_tirets][width=26mm]
+% \SymVogel
+% \textDescrHead{Apparat i standby} Visning ikke mulig siden apparatet er i standby (pause).
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_026][width=26mm]
+% \SymVogel
+% \textDescrHead{Smøretid [min]} Varighet til en smøreprosess.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_cop][width=26mm]
+% \SymVogel
+% \textDescrHead{Systemkontroll} Trykk på \textSymb{vogelTop}, for å vise de programmerte verdiene.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_off][width=26mm]
+% \SymVogel
+% \textDescrHead{Kontrollmodus} \hfill PS: Trykkbryter;\crlf
+% CS: Syklusbryter; OFF: deaktivert.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_0h][width=26mm]
+% \SymVogel
+% \textDescrHead{Driftstimer} Trykk på \textSymb{vogelTop}, for å vise verdien i to trinn.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_005][width=26mm]
+% \SymVogel
+% \textDescrHead{Del 1: 005} Driftstiden vises i to deler, gå til del 2 med tasten \textSymb{vogelTop}.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_338][width=26mm]
+% \SymVogel
+% \textDescrHead{Del 2: 33,8} Den 2. delen til tallet er 33,8; resulterer til sammen en driftstid på 533,8 h.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_fh][width=26mm]
+% \SymVogel
+% \textDescrHead{Feiltid} Trykk på \textSymb{vogelTop}, for å vise verdien i to trinn.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_000][width=26mm]
+% \SymVogel
+% \textDescrHead{Del 1: 000} Feiltiden vises i to deler;\crlf
+% gå til del 2 med \textSymb{vogelTop}.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_338][width=26mm]
+% \SymVogel
+% \textDescrHead{Del 2: 33,8} Den 2. delen til tallet er 33,8; resulterer til sammen en feiltid på 33,8 h.
+% \stopSymVogel
+%
+% \stopcolumns
 
 \page [yes]
 

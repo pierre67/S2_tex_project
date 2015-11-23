@@ -266,14 +266,14 @@ framecolor=TableWhite,
 \bTD 4,3\,l\eTD
 \eTR
 \bTR \bTD Hydraulikkreds \eTD
-\bTD ATF-olie \eTD
-\bTD \liqC{dexron iii} \eTD
+\bTD Hydraulikolie \eTD
+\bTD \liqC{ISO VG 46} \eTD
 \bTD Total Equiviz ZS 46 (tank ca. 40\,l) \eTD
 \bTD ca. 50\,l\eTD
 \eTR
 \bTR \bTD Hydraulikkreds (valmulighed \aW{Bio})\eTD
-\bTD ATF-olie \eTD
-\bTD \liqC{dexron iii} \eTD
+\bTD Hydraulikolie \eTD
+\bTD \liqC{ISO VG 46} \eTD
 \bTD Total Biohydran TMP SE 46\eTD
 \bTD ca. 50\,l\eTD
 \eTR
@@ -1339,214 +1339,214 @@ framecolor=white,
 
 \stopsection
 
-\page [yes]
-
-
-\startsection[title={Centralsmøring},
-reference={main:graissageCentral}]
-
-
-\subsection{Beskrivelse af styremodulet}
-
-\sdeux\ kan udstyres med\index{Centralsmøring} en centralsmøring (ekstraudstyr). Centralsmøringen forsyner med regelmæssige mellemrum alle køretøjets smøresteder med smøremiddel.
-
-\startfigtext [left] [vogel_affichage] {Displaymodul}
-{\externalfigure[vogel_base2][W50]}
-\blank
-\startLeg
-\item 7-cifret display: Værdier og driftsmæssig tilstand
-\item \LED: System på pause (standbyposition)
-\item \LED: Pumpe i brug
-\item \LED: Styring af systemet med cyklusafbryder
-\item \LED: Overvågning af systemet med trykafbryder
-\item \LED: Fejlmelding
-\item Piletaster:
-\startLeg [R]
-\item Aktiver display
-\item Vis værdier
-\item Rediger værdier
-\stopLeg
-\item Tast til skift af driftstype. Bekræftelse af værdier
-\item Udløsning af en mellemsmørecyklus
-\stopLeg
-\stopfigtext
-
-Centralsmøringen omfatter smøremiddelpumpen, den gennemsigtige smøremiddelbeholder på venstre side af chassiset og styremodulet i det centrale elektriske anlæg.
+% \page [yes]
+%
+%
+% \startsection[title={Centralsmøring},
+% reference={main:graissageCentral}]
+%
+%
+% \subsection{Beskrivelse af styremodulet}
+%
+% \sdeux\ kan udstyres med\index{Centralsmøring} en centralsmøring (ekstraudstyr). Centralsmøringen forsyner med regelmæssige mellemrum alle køretøjets smøresteder med smøremiddel.
+%
+% \startfigtext [left] [vogel_affichage] {Displaymodul}
+% {\externalfigure[vogel_base2][W50]}
 % \blank
-\page [yes]
-
-
-\subsubsubject{Styremodulets display og taster}
-
-\start
-
-\setupTABLE [frame=off,style={\ssx\setupinterlinespace[line=.93\lH]},background=color,
-option=stretch,
-split=repeat]
-
-\setupTABLE [r] [each] [topframe=on,
-framecolor=white,
-% rulethickness=.8pt
-]
-
-\setupTABLE [c] [odd] [backgroundcolor=TableMiddle]
-\setupTABLE [c] [even] [backgroundcolor=TableLight]
-\setupTABLE [c] [1][width=9mm,style={\bfx\setupinterlinespace[line=.93\lH]}]
-\setupTABLE [r] [first] [topframe=off,style={\bfx\setupinterlinespace[line=.93\lH]},
-]
-% \setupTABLE [r] [2][style={\bfx\setupinterlinespace[line=.93\lH]}]
-
-
-\bTABLE
-\bTABLEhead
-% \bTR [backgroundcolor=TableDark]
-% \bTD [nc=4] Anzeige und Tasten des Steuermoduls \eTD\eTR
-\bTR\bTD Pos. \eTD
-\bTD \LED \eTD\bTD Displaymodus \eTD
-\bTD Programmeringsmodus \eTD\eTR
-\eTABLEhead
-
-\bTABLEbody
-\bTR\bTD 2 \eTD
-\bTD Driftstilstand {\em Pause}\hskip.5em\null \eTD
-\bTD Anlægget er på standby\hskip.5em\null \eTD % -tilstand
-\bTD Pausetiden kan ændres \eTD\eTR
-\bTR\bTD 3 \eTD
-\bTD Driftstilstand {\em Contact} \eTD
-\bTD Pumpen arbejder \eTD
-\bTD Arbejdstiden kan ændres \eTD\eTR
-\bTR\bTD 4 \eTD
-\bTD Systemkontrol {\em CS} \eTD
-\bTD Med den eksterne cyklusafbryder \eTD
-\bTD Kontrolmodus kan deaktiveres eller ændres \eTD\eTR
-\bTR\bTD 5 \eTD
-\bTD Systemkontrol {\em PS} \eTD
-\bTD Med den eksterne trykafbryder \eTD
-\bTD Kontrolmodus kan deaktiveres eller ændres \eTD\eTR
-\bTR\bTD 6 \eTD
-\bTD Fejl {\em Fault} \eTD
-\bTD [nc=2] Der er opstået en funktionsfejl. Årsagen vises i form af en fejlkode, efter der er trykket på tasten \textSymb{vogel_DK}. Funktionernes udførelse afbrydes. \eTD\eTR
-\bTR\bTD 7 \eTD
-\bTD Piletaster \textSymb{vogelTop} \textSymb{vogelBottom} \eTD
-\bTD [nc=2] \items[symbol=R]{Aktivering af displayet, søgning efter parametre (displaymodus), indstilling af den viste (I) værdi (programmeringsmodus)}
-\eTD\eTR
-\bTR\bTD 8 \eTD
-\bTD Tasten \textSymb{vogelSet} \eTD
-\bTD [nc=2] Skift mellem display- og programmeringsmodus, eller bekræftelse af de indtastede værdier. \eTD\eTR
-\bTR\bTD 9 \eTD
-\bTD Tasten \textSymb{vogel_DK} \eTD
-\bTD [nc=2] Hvis apparatet er på {\em Pause}, udløser en bekræftelse med tasten mellemsmørecyklussen. Fejlmeldingerne bekræftes og slettes. \eTD\eTR
-\eTABLEbody
-\eTABLE
-\stop
-\vfill
-
-\startfigtext [left] [vogel_touches]{Displaymodul}
-{\externalfigure[vogel_base][width=50mm]}
-\textDescrHead{Displaymodus} Tryk kort på en af piletasterne \textSymb{vogelTop} \textSymb{vogelBottom} for at aktivere det 7-cifrede display \textSymb{led_huit}. Ved at trykke på tasten \textSymb{vogelTop} igen, kan de forskellige parametre efterfulgt af deres værdi, vises. Modus {\em Display} kendes på de konstant lysende \LED\char"2060er (\in{2 til 6, fig.}[vogel_affichage]).
-\blank [medium]
-\textDescrHead{Programmeringsmodus} Tryk i mindst 2 sekunder på tasten \textSymb{vogelSet}for at skifte til modus {\em Programmering}: \LED\char"2060erne blinker. Tryk kort på tasten \textSymb{vogelSet} for at ændre\index{Centralsmøring+Programmering} visningen. Derefter kan den ønskede værdi ændres med tasterne \textSymb{vogelTop} \textSymb{vogelBottom}. Bekræft\index{Centralsmøring+Display} med tasten \textSymb{vogelSet}.
-\stopfigtext
-
-\page [yes]
-
-
-\subsection{Undermenuer i {\em displayet}}-modus
-
-\vskip -9pt
-
-\adaptlayout [height=+5mm]
-
-\startcolumns[balance=no]\stdfontsemicn
-
-\startSymVogel
-\externalfigure[vogel_tpa][width=26mm]
-\SymVogel
-\textDescrHead{Pausetid [h]} Tryk på tasten \textSymb{vogelTop} for at få vist de programmerede værdier.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_068][width=26mm]
-\SymVogel
-\textDescrHead{Resterende pausetid [h]} Resterende tid til næste smørecyklus.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_090][width=26mm]
-\SymVogel
-\textDescrHead{Total pausetid [h]} Total pausetid mellem to cyklusser.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_tco][width=26mm]
-\SymVogel
-\textDescrHead{Smøretid [min]} Tryk på \textSymb{vogelTop} for at få vist de programmerede værdier.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_tirets][width=26mm]
-\SymVogel
-\textDescrHead{Apparat på standby} Visning er ikke mulig, fordi apparatet er på standby (pause).
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_026][width=26mm]
-\SymVogel
-\textDescrHead{Smøretid [min]} En smørings varighed.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_cop][width=26mm]
-\SymVogel
-\textDescrHead{Systemkontrol} Tryk på \textSymb{vogelTop} for at få vist de programmerede værdier.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_off][width=26mm]
-\SymVogel
-\textDescrHead{Kontrolmodus} \hfill PS: Trykafbryder;\crlf
-CS: Cyklusafbryder; OFF: deaktiveret.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_0h][width=26mm]
-\SymVogel
-\textDescrHead{Driftstimer} Tryk på \textSymb{vogelTop} for at få vist værdien i to trin.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_005][width=26mm]
-\SymVogel
-\textDescrHead{Del 1: 005} Driftstiden vises i to dele; til del 2 med tasten \textSymb{vogelTop}.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_338][width=26mm]
-\SymVogel
-\textDescrHead{Del 2: 33,8} Den 2. del af tallet er 33,8; giver i alt en driftstid på 533,8 h.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_fh][width=26mm]
-\SymVogel
-\textDescrHead{Fejltid} Tryk på\textSymb{vogelTop} for at få vist værdien i to trin.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_000][width=26mm]
-\SymVogel
-\textDescrHead{Del 1: 000} Fejltiden vises i to dele;\crlf til del 2 med \textSymb{vogelTop}.
-\stopSymVogel
-
-\startSymVogel
-\externalfigure[vogel_338][width=26mm]
-\SymVogel
-\textDescrHead{Del 2: 33,8} Den 2. del af tallet er 33,8; giver i alt en fejltid på 33,8 h.
-\stopSymVogel
-
-\stopcolumns
-
-\stopsection
+% \startLeg
+% \item 7-cifret display: Værdier og driftsmæssig tilstand
+% \item \LED: System på pause (standbyposition)
+% \item \LED: Pumpe i brug
+% \item \LED: Styring af systemet med cyklusafbryder
+% \item \LED: Overvågning af systemet med trykafbryder
+% \item \LED: Fejlmelding
+% \item Piletaster:
+% \startLeg [R]
+% \item Aktiver display
+% \item Vis værdier
+% \item Rediger værdier
+% \stopLeg
+% \item Tast til skift af driftstype. Bekræftelse af værdier
+% \item Udløsning af en mellemsmørecyklus
+% \stopLeg
+% \stopfigtext
+%
+% Centralsmøringen omfatter smøremiddelpumpen, den gennemsigtige smøremiddelbeholder på venstre side af chassiset og styremodulet i det centrale elektriske anlæg.
+% % \blank
+% \page [yes]
+%
+%
+% \subsubsubject{Styremodulets display og taster}
+%
+% \start
+%
+% \setupTABLE [frame=off,style={\ssx\setupinterlinespace[line=.93\lH]},background=color,
+% option=stretch,
+% split=repeat]
+%
+% \setupTABLE [r] [each] [topframe=on,
+% framecolor=white,
+% % rulethickness=.8pt
+% ]
+%
+% \setupTABLE [c] [odd] [backgroundcolor=TableMiddle]
+% \setupTABLE [c] [even] [backgroundcolor=TableLight]
+% \setupTABLE [c] [1][width=9mm,style={\bfx\setupinterlinespace[line=.93\lH]}]
+% \setupTABLE [r] [first] [topframe=off,style={\bfx\setupinterlinespace[line=.93\lH]},
+% ]
+% % \setupTABLE [r] [2][style={\bfx\setupinterlinespace[line=.93\lH]}]
+%
+%
+% \bTABLE
+% \bTABLEhead
+% % \bTR [backgroundcolor=TableDark]
+% % \bTD [nc=4] Anzeige und Tasten des Steuermoduls \eTD\eTR
+% \bTR\bTD Pos. \eTD
+% \bTD \LED \eTD\bTD Displaymodus \eTD
+% \bTD Programmeringsmodus \eTD\eTR
+% \eTABLEhead
+%
+% \bTABLEbody
+% \bTR\bTD 2 \eTD
+% \bTD Driftstilstand {\em Pause}\hskip.5em\null \eTD
+% \bTD Anlægget er på standby\hskip.5em\null \eTD % -tilstand
+% \bTD Pausetiden kan ændres \eTD\eTR
+% \bTR\bTD 3 \eTD
+% \bTD Driftstilstand {\em Contact} \eTD
+% \bTD Pumpen arbejder \eTD
+% \bTD Arbejdstiden kan ændres \eTD\eTR
+% \bTR\bTD 4 \eTD
+% \bTD Systemkontrol {\em CS} \eTD
+% \bTD Med den eksterne cyklusafbryder \eTD
+% \bTD Kontrolmodus kan deaktiveres eller ændres \eTD\eTR
+% \bTR\bTD 5 \eTD
+% \bTD Systemkontrol {\em PS} \eTD
+% \bTD Med den eksterne trykafbryder \eTD
+% \bTD Kontrolmodus kan deaktiveres eller ændres \eTD\eTR
+% \bTR\bTD 6 \eTD
+% \bTD Fejl {\em Fault} \eTD
+% \bTD [nc=2] Der er opstået en funktionsfejl. Årsagen vises i form af en fejlkode, efter der er trykket på tasten \textSymb{vogel_DK}. Funktionernes udførelse afbrydes. \eTD\eTR
+% \bTR\bTD 7 \eTD
+% \bTD Piletaster \textSymb{vogelTop} \textSymb{vogelBottom} \eTD
+% \bTD [nc=2] \items[symbol=R]{Aktivering af displayet, søgning efter parametre (displaymodus), indstilling af den viste (I) værdi (programmeringsmodus)}
+% \eTD\eTR
+% \bTR\bTD 8 \eTD
+% \bTD Tasten \textSymb{vogelSet} \eTD
+% \bTD [nc=2] Skift mellem display- og programmeringsmodus, eller bekræftelse af de indtastede værdier. \eTD\eTR
+% \bTR\bTD 9 \eTD
+% \bTD Tasten \textSymb{vogel_DK} \eTD
+% \bTD [nc=2] Hvis apparatet er på {\em Pause}, udløser en bekræftelse med tasten mellemsmørecyklussen. Fejlmeldingerne bekræftes og slettes. \eTD\eTR
+% \eTABLEbody
+% \eTABLE
+% \stop
+% \vfill
+%
+% \startfigtext [left] [vogel_touches]{Displaymodul}
+% {\externalfigure[vogel_base][width=50mm]}
+% \textDescrHead{Displaymodus} Tryk kort på en af piletasterne \textSymb{vogelTop} \textSymb{vogelBottom} for at aktivere det 7-cifrede display \textSymb{led_huit}. Ved at trykke på tasten \textSymb{vogelTop} igen, kan de forskellige parametre efterfulgt af deres værdi, vises. Modus {\em Display} kendes på de konstant lysende \LED\char"2060er (\in{2 til 6, fig.}[vogel_affichage]).
+% \blank [medium]
+% \textDescrHead{Programmeringsmodus} Tryk i mindst 2 sekunder på tasten \textSymb{vogelSet}for at skifte til modus {\em Programmering}: \LED\char"2060erne blinker. Tryk kort på tasten \textSymb{vogelSet} for at ændre\index{Centralsmøring+Programmering} visningen. Derefter kan den ønskede værdi ændres med tasterne \textSymb{vogelTop} \textSymb{vogelBottom}. Bekræft\index{Centralsmøring+Display} med tasten \textSymb{vogelSet}.
+% \stopfigtext
+%
+% \page [yes]
+%
+%
+% \subsection{Undermenuer i {\em displayet}}-modus
+%
+% \vskip -9pt
+%
+% \adaptlayout [height=+5mm]
+%
+% \startcolumns[balance=no]\stdfontsemicn
+%
+% \startSymVogel
+% \externalfigure[vogel_tpa][width=26mm]
+% \SymVogel
+% \textDescrHead{Pausetid [h]} Tryk på tasten \textSymb{vogelTop} for at få vist de programmerede værdier.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_068][width=26mm]
+% \SymVogel
+% \textDescrHead{Resterende pausetid [h]} Resterende tid til næste smørecyklus.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_090][width=26mm]
+% \SymVogel
+% \textDescrHead{Total pausetid [h]} Total pausetid mellem to cyklusser.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_tco][width=26mm]
+% \SymVogel
+% \textDescrHead{Smøretid [min]} Tryk på \textSymb{vogelTop} for at få vist de programmerede værdier.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_tirets][width=26mm]
+% \SymVogel
+% \textDescrHead{Apparat på standby} Visning er ikke mulig, fordi apparatet er på standby (pause).
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_026][width=26mm]
+% \SymVogel
+% \textDescrHead{Smøretid [min]} En smørings varighed.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_cop][width=26mm]
+% \SymVogel
+% \textDescrHead{Systemkontrol} Tryk på \textSymb{vogelTop} for at få vist de programmerede værdier.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_off][width=26mm]
+% \SymVogel
+% \textDescrHead{Kontrolmodus} \hfill PS: Trykafbryder;\crlf
+% CS: Cyklusafbryder; OFF: deaktiveret.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_0h][width=26mm]
+% \SymVogel
+% \textDescrHead{Driftstimer} Tryk på \textSymb{vogelTop} for at få vist værdien i to trin.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_005][width=26mm]
+% \SymVogel
+% \textDescrHead{Del 1: 005} Driftstiden vises i to dele; til del 2 med tasten \textSymb{vogelTop}.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_338][width=26mm]
+% \SymVogel
+% \textDescrHead{Del 2: 33,8} Den 2. del af tallet er 33,8; giver i alt en driftstid på 533,8 h.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_fh][width=26mm]
+% \SymVogel
+% \textDescrHead{Fejltid} Tryk på\textSymb{vogelTop} for at få vist værdien i to trin.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_000][width=26mm]
+% \SymVogel
+% \textDescrHead{Del 1: 000} Fejltiden vises i to dele;\crlf til del 2 med \textSymb{vogelTop}.
+% \stopSymVogel
+%
+% \startSymVogel
+% \externalfigure[vogel_338][width=26mm]
+% \SymVogel
+% \textDescrHead{Del 2: 33,8} Den 2. del af tallet er 33,8; giver i alt en fejltid på 33,8 h.
+% \stopSymVogel
+%
+% \stopcolumns
+%
+% \stopsection
 
 
 \page [yes]
