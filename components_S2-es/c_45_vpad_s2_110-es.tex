@@ -82,9 +82,15 @@ La barra de menús en la parte inferior muestra los menús disponibles: Pulse en
 
 \page [yes]
 
+
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+
+\subsection{Indicaciones de control en la pantalla Vpad} % nouveau
+
 \start % local group for temporary redefinition of \textDescrHead [TF]
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
-\startcolumns
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
@@ -109,9 +115,18 @@ La barra de menús en la parte inferior muestra los menús disponibles: Pulse en
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Ir al taller}(amarillo) Es necesario un mantenimiento regular del vehículo. Consulte el plan de mantenimiento.
+\textDescrHead{Acudir al taller}(amarillo) Mantenimiento regular del vehículo (véase \about [sec:schedule] \atpage [sec:schedule])
+o se ha registrado un error en el motor (necesario un taller técnico especializado).
 
-+\:Mensajes de error \# 650 hasta \# 653, o \# 703
++\:Mensajes de error \# 650 a \# 653, o \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filtro de partículas}(amarillo) Se iniciará la regeneración del filtro de partículas cuando el estado de servicio lo permita.
+
+{\md Aviso:} {\lt ¡{\em No} apague el motor mientras sea posible y esté encendida esta indicación!}
 \stopSymVpad
 
 \startSymVpad
@@ -121,7 +136,6 @@ La barra de menús en la parte inferior muestra los menús disponibles: Pulse en
 
 +\:Mensaje de error \# 902
 \stopSymVpad
-
 
 \startSymVpad
 \externalfigure[vpadTBrakePark][height=1.7\lH]
@@ -138,8 +152,6 @@ La barra de menús en la parte inferior muestra los menús disponibles: Pulse en
 
 Una luz intermitente indica que se ha registrado un error en la memoria de eventos.
 \stopSymVpad
-
-\columnbreak
 
 \startSymVpad
 \externalfigure[vpadTFuelReserve][height=1.7\lH]
@@ -189,7 +201,6 @@ Interruptor \textSymb{temoin_buse} en la consola del techo.
 \textDescrHead{Mensaje de error}(rojo) Hay un mensaje de error en la memoria del \Vpad. Pulse la tecla~\textSymb{vpadClear} para mostrar todos los mensajes registrados. Avise al taller.
 \stopSymVpad
 
-\stopcolumns
 \stop % local group for temporary redefinition of \textDescrHead
 
 \stopsection
@@ -197,7 +208,7 @@ Interruptor \textSymb{temoin_buse} en la consola del techo.
 \page [yes]
 
 
-\section{Menús del Vpad}
+\startsection [title={Los menús del Vpad}, reference={vpad:menu}]
 
 \start
 
@@ -227,17 +238,24 @@ option=stretch,textwidth=\makeupwidth]
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Confirmación \eTD\bTD Confirmar la selección \eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Arriba/Abajo, \\Pfeile \eTD\bTD Mover la marca hacia arriba/abajo o aumentar/reducir el valor seleccionado \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Señal de aviso de marcha atrás \eTD\bTD Activar/desactivar la señal de aviso acústica de marcha atrás \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Desconectar pantalla \eTD\bTD Mantener pulsada unos 5 s para desconectar la pantalla del Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Tercer cepillo\index{3er cepillo} (opción) \eTD\bTD Activar el tercer cepillo.
+Ahora puede activarse el tercer cepillo como se describe en la página \at[sec:using:frontBrush]. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
 
-\subsubsubject{Otras indicaciones en el Vpad}
+\subsection{Otros símbolos en la pantalla Vpad}
+
 
 \start % local group for temporary redefinition of \textDescrHead [TF]
+
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
 
-\startcolumns
+
+\subsubsubject{Depósito de agua limpia y agua reciclada}
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -257,8 +275,66 @@ option=stretch,textwidth=\makeupwidth]
 \textDescrHead{Nivel de llenado del agua reciclada}(rojo) El nivel de llenado del agua reciclada no es suficiente (máx. 140\,l; debajo del depósito de material barrido).
 \stopSymVpad
 
-\stopcolumns
+\subsubsubject{Sistema de aspiración} % nouveau
+
+{\em Este símbolo se muestra solo cuando los cepillos están desactivados.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Boca de aspiración} Sistema de aspiración\index{boca de aspiración} activada:
+La boca de aspiración está bajada y la turbina está activada.
+\stopSymVpad
+
+
+\subsubsubject{Cepillo lateral} % nouveau
+
+{\em Este símbolo se muestra solo cuando el tercer cepillo está desactivado.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Cepillo lateral} Cepillo\index{barrer}\index{cepillo lateral} activado. La velocidad de rotación (en \% respecto a la velocidad de rotación máx. [V\low{max}]) se muestra debajo del símbolo. La descarga actual del cepillo correspondiente se muestra encima del símbolo (\type{ } = posición de flotación, 14 = descarga máxima).
+
+{\md Descarga:} {\lt Cuanto menor sea la descarga, mayor será la presión de los cepillos sobre el suelo.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Posición de flotación}(verde en el borde inferior)
+Para desconectar la descarga mantenga pulsado el joystick durante unos 2 s hacia delante; el cepillo reposa ahora con todo su peso sobre el suelo. La velocidad de rotación de los cepillos está a 60\hairspace\% del V\low{max} (ejemplo).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Cepillos laterales} Los cepillos están activados. Están parados y elevados.
+\stopSymVpad
+
+
+\subsubsubject{Tercer cepillo (opción)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Tercer cepillo} El tercer cepillo\index{3er cepillo} está activado. La velocidad de rotación (en \% respecto a la velocidad de rotación máx. [V\low{max}]) se muestra debajo del símbolo.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Posición de flotación}(verde en el borde inferior)
+Para desconectar la descarga mantenga pulsado el joystick durante unos 2 s hacia delante; el cepillo reposa ahora con todo su peso sobre el suelo. La velocidad de rotación de los cepillos está a 70\hairspace\% del V\low{max} (ejemplo).
+
+{\md Sentido de rotación:} {\lt En el borde superior se muestra el sentido de rotación (flecha negra sobre fondo amarillo).}
+\stopSymVpad
+
 \stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
 
 \page [yes]
 

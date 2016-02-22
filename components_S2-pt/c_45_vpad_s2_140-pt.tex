@@ -1,0 +1,692 @@
+﻿\startcomponent c_45_vpad_s2_140-pt
+\product prd_ba_s2_140-pt
+
+\startchapter[title={Computador de bordo (Vpad)},
+							reference={sec:vpad}]
+
+\setups[pagestyle:marginless]
+
+
+\startsection[title={Descrição do Vpad},
+							reference={vpad:description}]
+
+\startfigtext [left] {O Vpad SN no posto do operador}
+{\externalfigure[vpad:inside:view]}
+\textDescrHead{Inovador, inteligente … } O \Vpad\ foi concebido para o comando de agregados cuja tecnologia se tem vindo a tornar cada vez mais complexa, e que oferece diversas
+funções.
+Com o \Vpad, o operador está na posse de um sistema que transmite informações~– visualmente ou acusticamente~– em tempo real, sobre os diversos processos de trabalho e da máquina. Mas o \Vpad\  não se limita a isso.
+Aquilo que distingue o \Vpad\  e lhe permite estabelecer novos critérios é, sobretudo, o facto de este proporcionar ao operador uma utilização intuitiva, ergonómica e lógica.
+
+Graças à sua variedade de funções, o \Vpad\ pode ser utilizado de forma bastante flexível, tornando-se, assim, em muito mais do que uma simples unidade de comando eletrónica. 
+\stopfigtext
+
+\textDescrHead{… universal} Durante o desenvolvimento do \Vpad\ focamo-nos em dois pontos - compatibilidade e flexibilidade:
+sendo uma unidade de comando modular, o \Vpad\  adapta-se perfeitamente às características individuais e locais e aos diversos equipamentos; graças às suas várias interfaces eletrónicas e vias de transmissão de dados~– até ao WLAN~–, todas as possibilidades estão em aberto.
+O \Vpad\ trabalha com o mais recente sistema eletrónico, com tecnologia de 32 bit e sistema operativo de tempo real.
+\vfill
+
+
+\startfigtext[left]{Consola multifunções}
+{\externalfigure[console:topview]}
+\textDescrHead{… e modular} Graças à sua modularidade, o \Vpad\ apresenta uma enorme vantagem:
+assim, a versão~SN que é utilizada de série na \sdeux\, pode ser sempre expandida com outros componentes, p.~ex., um modem ou uma consola (ver
+figura).
+A modularidade não se limita ao hardware; também a nível de software, o sistema pode ser amplamente expandido e adaptado às necessidades.
+
+A consola multifunções da \sdeux\ é uma avançada interface entre o operador e a máquina. Através desta consola é possível operar todo o sistema de varredura|/|aspiração.
+\stopfigtext
+
+\page [yes]
+
+
+\subsection[vpad:home]{Ecrã principal}
+
+%% Note: outcommented by PB
+% \placefig[left][fig:vpad:engineData]{Accueil mode transport}
+% {\scale[sx=1.5,sy=1.5]
+% {\setups[VpadFramedFigureHome]
+% \VpadScreenConfig{
+% \VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}
+% \framed{\null}}
+% }
+
+
+\start
+
+\setupcombinations[width=\textwidth]
+
+\placefig [here][fig:vpad:engineData]{Ecrã principal}
+{\startcombination [2*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Modo Marcha}}
+{\setups[VpadFramedFigureWork]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadEngine}{vpadSignal}}}%
+\scale[sx=1.5,sy=1.5]{\framed{\null}}}{\aW{Modo Trabalho}}
+\stopcombination}
+
+\stop
+
+\blank [1*big]
+
+No ecrã principal do \Vpad\ estão presentes todos
+os elementos necessários para a monitorização de todas as funções da \sdeux.
+
+Na parte superior são exibidas as indicações de controlo.
+
+Na parte central são exibidos, em tempo real, os seguintes dados:
+velocidade, velocidade de rotação e temperatura do motor, nível de enchimento do combustível, nível de enchimento da água de reciclagem, etc.
+
+O modo \aW{Marcha} é simbolizado por um coelho~\textSymb{transport_mode}; o modo \aW{Trabalho} é simbolizado por uma tartaruga~\textSymb{working_mode}.
+
+Na barra de menu, na margem inferior, são exibidos os menus disponíveis: premir o centro do ecrã tátil para visualizar os menus adicionais.
+
+\page [yes]
+
+
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},
+	after={\nobreak\hrule\blank [2*medium]\page[preference]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+
+\subsection{Indicações de controlo no ecrã Vpad} % nouveau
+
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+\startSymVpad
+\externalfigure[vpadTEnginOilPressure][height=1.7\lH]
+\SymVpad
+\textDescrHead{Pressão do óleo do motor}(vermelho) Pressão do óleo do motor demasiado baixa. Desligar imediatamente
+o motor.
+
++\:Mensagem de erro \# 604
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningBattery][height=1.7\lH]
+\SymVpad
+\textDescrHead{Carga da bateria}(vermelho) Corrente de carga da bateria demasiado baixa. Informar a oficina.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadWarningEngine1][height=1.7\lH]
+\SymVpad
+\textDescrHead{Diagnóstico do motor}(amarelo) Erro no comando do motor. Informar a oficina.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadWarningService][height=1.7\lH]
+\SymVpad
+\textDescrHead{Procurar a oficina}(amarelo) Necessário realizar a manutenção regular do veículo
+(ver \about [sec:schedule] \atpage [sec:schedule])
+ou verificou-se um erro do motor (contactar a oficina especializada).
+
++\:Mensagens de erro \# 650 a \# 653, ou \# 703
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filtro de partículas}(amarelo) A regeneração do filtro de partículas é iniciada assim que o estado operacional o permitir.
+
+{\md Aviso:} {\lt se possível, {\em não} desligar o motor enquanto esta indicação for exibida!}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakeError][height=1.7\lH]
+\SymVpad
+\textDescrHead{Sistema de travagem}(vermelho) Erro no sistema de travagem. Informar a oficina.
+
++\:Mensagem de erro \# 902
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTBrakePark][height=1.7\lH]
+\SymVpad
+\textDescrHead{Travão de mão}(vermelho) O travão de mão do veículo está
+ativado.
+
++\:Mensagem de erro \# 905
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTEngineHeating][height=1.7\lH]
+\SymVpad
+\textDescrHead{Sistema de pré-incandescência}(amarelo) O motor é pré-incandescido.
+
+Uma luz intermitente indica que ocorreu um erro na memória de ocorrências.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[vpadTFuelReserve][height=1.7\lH]
+\SymVpad
+\textDescrHead{Nível de enchimento do combustível}(amarelo) O nível de enchimento do combustível está muito baixo
+(reserva).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTBlink][height=1.7\lH]
+\SymVpad
+\textDescrHead{Luzes avisadoras de perigo}(verde) As luzes avisadoras de perigo estão ativadas.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTLowBeam][height=1.7\lH]
+\SymVpad
+\textDescrHead{Luz de presença}(verde) A luz de presença está ligada.
+\stopSymVpad
+
+\startSymVpad
+\HL\NC \externalfigure[vpadSyWaterTemp][height=1.7\lH]
+\SymVpad
+\textDescrHead{Temperatura}(vermelho) A temperatura do fluido hidráulico ou do motor está demasiado elevada. Informar a oficina.
+
++\:Mensagem de erro \# 700 ou \# 610
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadWarningFilter][height=1.7\lH]
+\SymVpad
+\textDescrHead{Filtro danificado}(vermelho) O filtro hidráulico combinado ou o filtro de ar está danificado.
+
++\:Mensagem de erro \# 702 ou \# 851
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTSpray][height=1.7\lH]
+\SymVpad
+\textDescrHead{Pistola de água}(amarelo) A bomba de água de alta pressão para a pistola de água está ativada.
+
+Interruptor \textSymb{temoin_buse} na consola do tejadilho.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTClear][height=1.7\lH]
+\SymVpad
+\textDescrHead{Mensagem de erro}(vermelho) Existe uma mensagem de erro na memória do \Vpad. Premir o botão~\textSymb{vpadClear} para que todas as mensagens registadas sejam exibidas. Informar a oficina.
+\stopSymVpad
+
+
+\stop % local group for temporary redefinition of \textDescrHead
+
+\stopsection
+
+\page [yes]
+
+
+\startsection [title={Os menus do Vpad},
+				reference={vpad:menu}]
+
+\start
+
+\setupTABLE [background=color,
+			frame=off,
+			option=stretch,textwidth=\makeupwidth]
+
+\setupTABLE [r] [each] [style=sans, background=color, bottomframe=on, framecolor=TableWhite, rulethickness=1.5pt]
+\setupTABLE [r] [first][backgroundcolor=TableDark, style=sansbold]
+\setupTABLE [r] [odd]  [backgroundcolor=TableMiddle]
+\setupTABLE [r] [even] [backgroundcolor=TableLight]
+\bTABLE [split=repeat]
+\bTABLEhead
+\bTR\bTD Menu \eTD\bTD Designação\index{Vpad+Indicação} \eTD\bTD Função \eTD\eTR
+\eTABLEhead
+
+\bTABLEbody
+\bTR\bTD \externalfigure [v:symbole:clear] \eTD\bTD Mensagem(ns) de erro \eTD\bTD Exibir e confirmar as mensagens de erro registadas no Vpad \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:beacon]\externalfigure [v:symbole:beacon:black]} \eTD\bTD Farolim rotativo \eTD\bTD Ligar|/|desligar o farolim rotativo \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:engine] \eTD\bTD Dados em tempo real \eTD\bTD Exibir os dados em tempo real do motor e do sistema hidráulico\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:oneTwoThree] \eTD\bTD Contador \eTD\bTD Exibição do contador de horas de serviço: contador diário, contador sazonal, contador total\eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:serviceInfo] \eTD\bTD Intervalo de manutenção \eTD\bTD Exibe a data e as horas de serviço restantes até à próxima manutenção ou até ao próximo serviço \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:trash] \eTD\bTD Contador \eTD\bTD Repor o contador ou o intervalo de serviço \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:sunglasses] \eTD\bTD Modo de ecrã \eTD\bTD Comutar a iluminação do ecrã entre os modos \aW{Dia} e \aW{Noite} \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:color] \eTD\bTD Luminosidade|/|contraste \eTD\bTD Ajustes de luminosidade e contraste do ecrã \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:select] \eTD\bTD Seleção \eTD\bTD Seleção da entrada assinalada ou confirmação de uma mensagem de erro \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Confirmação \eTD\bTD Confirmação da seleção \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Para cima|/|para baixo, \\setas \eTD\bTD Deslocar a marcação para cima|/|para baixo ou aumentar|/|reduzir o valor selecionado \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Sinal de aviso de marcha-atrás \eTD\bTD Ativar|/|desativar o sinal de aviso de marcha-atrás \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Desligar o ecrã \eTD\bTD Manter premido durante aprox. 5\,s para desligar o ecrã do Vpad \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Terceira escova\index{3.ª\,escova} (opção) \eTD\bTD Liberar a terceira escova.
+A terceira escova pode agora ser ativada, conforme descrito na página~\at[sec:using:frontBrush] \eTD\eTR
+\eTABLEbody
+\eTABLE
+\stop
+
+
+\subsection{Outros símbolos no ecrã Vpad}
+
+
+\subsubsubject{Reservatório de água limpa e água de reciclagem}
+
+
+\start % local group for temporary redefinition of \textDescrHead [TF]
+\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+
+\startSymVpad
+\externalfigure[sym:vpad:water]
+\SymVpad
+\textDescrHead{Nível de enchimento da água limpa} O nível de enchimento da água limpa não é suficiente (máx. 190\,l; atrás da cabina do operador).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater:yellow]
+\SymVpad
+\textDescrHead{Nível de enchimento da água de reciclagem}(amarelo) O nível de enchimento da água de reciclagem está abaixo do permutador de calor. Não ocorre a refrigeração do fluido hidráulico nem o aquecimento do sistema de humidificação do canal de aspiração.
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:rwater]
+\SymVpad
+\textDescrHead{Nível de enchimento da água de reciclagem}(vermelho) O nível de enchimento da água de reciclagem não é suficiente (máx. 140\,l; por baixo do recipiente de sujidade).
+\stopSymVpad
+
+
+\subsubsubject{Sistema de aspiração} % nouveau
+
+{\em Este símbolo apenas é exibido quando as escovas estão desativadas.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Bocal de aspiração} Sistema de aspiração\index{Bocal de aspiração} ativado:
+o bocal de aspiração está descido e a turbina está ativada.
+\stopSymVpad
+
+
+\subsubsubject{Escova lateral} % nouveau
+
+{\em Este símbolo apenas é exibido quando a terceira escova não está ativada.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Escova lateral} Escova\index{Varredura}\index{Escova lateral} ativada. A velocidade de rotação (em \% da velocidade de rotação máx. [V\low{máx}]) é exibida por baixo do símbolo; o alívio da carga atual da respetiva escova é exibido por cima do símbolo (\type{~}~= posição flutuante, 14~= alívio da carga máximo).
+
+{\md Alívio da carga:} {\lt quanto mais baixo for o alívio da carga, maior será a pressão das escovas sobre o solo.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Posição flutuante}(verde na margem inferior)
+Para desligar o alívio da carga, manter o Joystick pressionado para a frente durante aprox. 2\,s; a escova está assim colocada sobre o solo com todo o seu peso. A velocidade de rotação das escovas está a 60\hairspace\% da V\low{máx} (exemplo).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Escova lateral} As escovas estão ativadas. Estão paradas e levantadas.
+\stopSymVpad
+
+
+\subsubsubject{Terceira escova (opção)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Terceira escova} A terceira escova\index{3.ª\,escova} está ativada. A velocidade de rotação (em \% da velocidade de rotação máx. [V\low{máx}]) é exibida por baixo do símbolo.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Posição flutuante}(verde na margem inferior)
+Para desligar o alívio da carga, manter o Joystick pressionado para a frente durante aprox. 2\,s; a escova está assim colocada sobre o solo com todo o seu peso. A velocidade de rotação das escovas está a 70\hairspace\% da V\low{máx} (exemplo).
+
+{\md Sentido de rotação:} {\lt na margem superior é exibido o sentido de rotação (seta preta sobre fundo amarelo).}
+\stopSymVpad
+
+\stopsection
+
+\stop % local group for temporary redefinition of \textDescrHead
+
+\page [yes]
+
+
+\startsection[title={Ajuste da luminosidade do ecrã},
+              reference={sec:vpad:brightness}]
+
+O ecrã do \Vpad\ pode ser operado em dois níveis de luminosidade
+pré-configurados: modo \aW{Dia}~– \textSymb{vpadSunglasses}, luminosidade
+normal~– e modo \aW{Noite}~– \textSymb{vpadMoon}, luminosidade reduzida.
+Através do botão \textSymb{vpadColor} é possível aceder a diversos parâmetros.
+
+Para modificar os níveis de luminosidade pré-configurados, proceder do seguinte modo:
+
+\startSteps
+\item Premir o centro do ecrã tátil para navegar pela barra de menu na margem inferior do ecrã.
+\item Premir o símbolo \textSymb{vpadSunglasses} ou \textSymb{vpadMoon} para selecionar o modo que se pretende alterar.
+\item Premir \textSymb{vpadColor} para exibir os parâmetros.
+\item Através dos
+símbolos de seta~\textSymb{vpadUp}\textSymb{vpadDown}, assinalar o parâmetro que se pretende alterar e selecioná-lo premindo~\textSymb{vpadSelect}.
+\item Alterar os valores através dos símbolos
+\textSymb{vpadMinus}\textSymb{vpadPlus}. Cuidado! Não reduzir a luminosidade de modo a que não se consiga ver mais nada no ecrã (\VpadOp{162} -255)!
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadServiceInfo}{vpadSunglasses}{vpadColor}}}%
+\framed{\null}}{Premir o centro do ecrã tátil}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadOp{162}\hfill 15 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Selecionar com \textSymb{vpadSelect}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadNull}}}%
+\framed[backgroundscreen=.9]{\bTABLE
+\bTR\bTD \VpadOp{160} \eTD\eTR
+\bTR\bTD \VpadOp{162}\hfill -80 \eTD\eTR
+\bTR\bTD \VpadOp{163}\hfill 180 \eTD\eTR
+\bTR\bTD \VpadOp{164}\hfill 55 \eTD\eTR
+\bTR\bTD \VpadOp{165}\hfill 3 \eTD\eTR
+\eTABLE}}{Alterar o valor com \textSymb{vpadMinus}\textSymb{vpadPlus}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Confirmar o valor com \textSymb{vpadReturn}.
+\item Premir novamente o símbolo \textSymb{vpadReturn} para regressar ao ecrã principal.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Contador de horas de serviço e quilómetros},
+							reference={vpad:compteurs}]
+
+O software do \Vpad\ possui três diferentes períodos de medição~– \aW{diário},
+\aW{sazonal}, \aW{total}~–, durante os quais podem trabalhar diferentes contadores, como \aW{trajeto percorrido}, \aW{horas de serviço} (motor ou escova),
+\aW{horas de trabalho} (por operador).
+
+Para consultar ou repor os contadores, proceder do seguinte modo:
+
+\startSteps
+\item Premir o centro do ecrã tátil para
+navegar pela barra de menu.
+\item Premir o símbolo \textSymb{vpadOneTwoThree} para exibir o contador diário.
+\item Através dos símbolos "Retroceder/Avançar"~\textSymb{vpadBW}\textSymb{vpadFW}
+pode-se comutar para o contador total ou para o contador sazonal.
+\item Premir \textSymb{vpadTrash} para repor o contador exibido.
+\item Numa janela de diálogo é solicitada a confirmação da reposição.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadOneTwoThree}{vpadServiceInfo}{vpadSunglasses}{vpadColor}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{120} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 87,4\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 62,0\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 240,2\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 901,9\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,1\,l/h \eTD\eTR
+\eTABLE}}{Premir o símbolo~\textSymb{vpadOneTwoThree}, seguidamente~\textSymb{vpadBW} ou~\textSymb{vpadFW}}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadBW}{vpadFW}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \VpadOp{123}\hfill 522,0\,h \eTD\eTR
+\bTR\bTD \VpadOp{125}\hfill 662,8\,h \eTD\eTR
+\bTR\bTD \VpadOp{126}\hfill 1605,5\,km \eTD\eTR
+\bTR\bTD \VpadOp{124}\hfill 2608,4\,km \eTD\eTR
+\bTR\bTD \VpadOp{127}\hfill 2,0\,l/h \eTD\eTR
+\eTABLE}}{Repor o contador, pressionando \textSymb{vpadTrash}}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadTrash}{vpadNull}{vpadNull}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{121} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{136} \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{137} \eTD\eTR
+\eTABLE}}{Confirmar através de \textSymb{vpadTrash}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Se necessário, introduzir a palavra-passe e confirmar a reposição através do símbolo \textSymb{vpadTrash}.
+\item Premir o símbolo \textSymb{vpadReturn} para regressar ao ecrã principal.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+\startsection[title={Intervalos de manutenção},
+							reference={vpad:maintenance}]
+
+O plano de manutenção da \sdeux\ inclui dois tipos de manutenção: a manutenção regular e o serviço aprofundado (a realizar por uma oficina especializada homologada pelo serviço de assistência ao cliente da \boschung).
+
+Para consultar ou repor os contadores, proceder do seguinte modo:
+\startSteps
+\item Premir o centro do ecrã tátil para navegar pela barra de menu.
+\item Premir o símbolo \textSymb{vpadServiceInfo} para exibir os intervalos de manutenção.
+\item Através dos
+símbolos de seta~\textSymb{vpadUp}\textSymb{vpadDown}, comutar para o intervalo pretendido.
+\item Premir o símbolo~\textSymb{vpadTrash} para repor um intervalo. Através dos símbolos
+~\textSymb{vpadPlus}\textSymb{vpadMinus}, introduzir a palavra-passe e confirmar através de~\textSymb{vpadSelect}).
+\item Numa janela de diálogo é solicitada a confirmação da reposição.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadNull}{vpadNull}{vpadTrash}}}%
+\framed{\bTABLE
+\bTR\bTD[nc=2] \VpadOp{190} \eTD\eTR
+\bTR\bTD \VpadOp{191}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{192}\eTD\bTD \VpadOp{195}\hfill 600\,h \eTD\eTR
+\bTR\bTD \VpadOp{193}\eTD\bTD \VpadOp{195}\hfill 2400\,h \eTD\eTR
+\eTABLE}}{Premir o símbolo~\textSymb{vpadTrash} para repor
+um intervalo}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadMinus}{vpadPlus}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD \hfill 2014-03-31 \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \null \eTD\eTR
+\bTR\bTD \VpadOp{002}\hfill 0000 \eTD\eTR
+\eTABLE}}{Introduzir a palavra-passe (código numérico)}
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadOp{190} \eTD\eTR
+\bTR\bTD[backgroundcolor=black,color=TableWhite] \VpadOp{041}\eTD\eTR % [backgroundcolor=black,color=TableWhite]
+\bTR\bTD \VpadOp{042} \eTD\eTR
+\bTR\bTD \VpadOp{043} \eTD\eTR
+\eTABLE}}{Selecionar e confirmar através de~\textSymb{vpadSelect}}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Confirmar a reposição através do símbolo~\textSymb{vpadSelect}.
+\item Premir o símbolo \textSymb{vpadReturn} para regressar ao ecrã principal.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\startsection[title={Gestão de erros através do Vpad},
+							reference={vpad:error}]
+
+
+O \Vpad\ exibe os erros\index{Vpad+Mensagens de erro} que foram diagnosticados pelos sistemas de comando eletrónicos e transmitidos pelo CAN||Bus.
+Se for registado um erro de menor gravidade, o símbolo~\textSymb{VpadTClear} acende (vermelho).
+Se for registado um erro muito grave, o símbolo~\textSymb{VpadTClear} acende e, adicionalmente, soa um alarme sonoro.
+Para terminar o alarme, confirmar a mensagem de erro (confirmar como \aW{lida}).
+
+Para ler e confirmar as mensagens de erro, proceder da seguinte forma:
+
+\startSteps
+\item Premir o símbolo~\textSymb{vpadClear} no ecrã do \Vpad.
+\item Premir o símbolo~\textSymb{vpadClear} para confirmar a mensagem selecionada.
+\item Ao lado da mensagem confirmada é então exibido um símbolo de \aW{\#}, que assinala que a mensagem foi \aW{lida}, e a marcação avança para a mensagem seguinte (se existente).
+\item Assim que todas as mensagens tiverem sido confirmadas, a indicação regressa ao ecrã principal.
+\stopSteps
+\blank [1*big]
+
+\start
+\setupcombinations[width=\textwidth]
+\startcombination [3*1]
+{\setups[VpadFramedFigure]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851a} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Exibição das mensagens}
+{\setups[VpadFramedFigure]
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadReturn}{vpadUp}{vpadDown}{vpadSelect}}}%
+\framed{\bTABLE
+\bTR\bTD \VpadEr{000} \eTD\eTR
+\bTR\bTD [backgroundcolor=black,color=TableWhite] \VpadEr{851} \eTD\eTR
+\bTR\bTD \VpadEr{902} \eTD\eTR
+\eTABLE}}{Confirmar através de~\textSymb{vpadClear}}
+{\setups[VpadFramedFigureHome]% \VpadFramedFigureK pour bande noire
+\VpadScreenConfig{
+\VpadFoot{\VpadPictures{vpadClear}{vpadBeacon}{vpadBeam}{vpadEngine}}}%
+\framed{\null}}{Regresso ao ecrã principal}
+\stopcombination
+\stop
+\blank [1*big]
+
+\startSteps [continue]
+\item Para exibir novamente as mensagens, premir o símbolo~\textSymb{vpadClear}. As mensagens de erro apenas são apagadas do \Vpad\ quando a causa do problema tiver sido eliminada.
+\stopSteps
+
+
+\subsection{As mensagens de erro mais frequentes (com localização de falhas)}
+
+\subsubsubject{\VpadEr{604}} % {\#\ 604	Pression huile moteur basse}
+
++ \textSymb{vpadTEnginOilPressure}~– Desligar imediatamente o motor. Verificar o nível do óleo e informar a oficina.
+
+
+\subsubsubject{\VpadEr{609}} % {\#\ 609	Température eau refroidissement moteur haute}
+
++ \textSymb{vpadSyWaterTemp}~– Interromper os trabalhos. Deixar o motor trabalhar sem carga e observar a temperatura:
+
+Se a temperatura descer, verificar o nível de enchimento do líquido de refrigeração, do óleo do motor e do fluido hidráulico, assim como o estado do radiador.
+Se os níveis de enchimento estiverem corretos e o radiador estiver em bom estado, deslocar-se cuidadosamente até à oficina, para um diagnóstico de erros.
+
+\subsubsubject{\VpadEr{610}} % {\#\ 610	Température eau refroidissement moteur trop haute}
+
++ \textSymb{vpadSyWaterTemp}~– Interromper os trabalhos. Verificar os níveis de enchimento do líquido de refrigeração e do óleo do motor e contactar imediatamente a oficina.
+
+
+\subsubsubject{\VpadEr{650}} % {\#\ 650	Se rendre à un garage}
+
++ \textSymb{vpadWarningService}~– Contactar imediatamente a oficina.
+% \VpadEr{651} % {\#\ 651	Moteur en mode urgence}
+
+
+\subsubsubject{\VpadEr{652}} % {\#\ 652	Inspection véhicule}
+% \VpadEr{653} % {\#\ 653	Grand service moteur}
+
++ \textSymb{vpadWarningService}~– É necessário realizar a manutenção regular do veículo. Consultar o plano de manutenção e combinar uma data com a oficina.
+
+
+\subsubsubject{\VpadEr{700}} % {\#\ 700	Température d'huile hydraulique}
+
++ \textSymb{vpadSyWaterTemp}~– Interromper os trabalhos. Deixar o motor trabalhar sem carga e observar a temperatura:
+
+Se a temperatura descer, verificar o nível de enchimento do líquido de refrigeração, do óleo do motor e do fluido hidráulico, assim como o estado do radiador.
+Se os níveis de enchimento estiverem corretos e o radiador estiver em bom estado, deslocar-se cuidadosamente até à oficina, para um diagnóstico de erros.
+
+
+\subsubsubject{\VpadEr{702}} % {\#\ 702	Filtre d'huile hydraulique}
+
++ \textSymb{vpadWarningFilter}~– O filtro de retorno hidráulico e|/|ou o filtro de aspiração está danificado. Substituir imediatamente o elemento filtrante.
+% \VpadEr{703} % {\#\ 703	Vidange d'huile hydraulique}
+
+
+\subsubsubject{\VpadEr{800}} % {\#\ 800	Interrupteur d'urgence actionné}
+
++ \textSymb{vpadTClear}~– O comutador de Desativação de Emergência foi acionado. Desligar a ignição e ligar novamente o motor para apagar a mensagem.
+
+
+\subsubsubject{\VpadEr{801}} % {\#\ 905	Frein à main actionné}
+
+O recipiente de sujidade está levantado ou não está completamente descido. Enquanto o recipiente de sujidade não estiver descido, a velocidade do veículo está limitada em 5\,km/h.
+
+\subsubsubject{\VpadEr{851}} % {\#\ 851	Filtre à air}
+
++ \textSymb{vpadWarningFilter}~– O filtro de ar está danificado. Substituir imediatamente o elemento filtrante.
+
+
+\subsubsubject{\VpadEr{902}} % {\#\ 902	Pression de freinage}
+
++ \textSymb{vpadTBrakeError}~– A pressão de travagem não é suficiente. Interromper o trabalho e contactar imediatamente a oficina.
+% \VpadEr{904} % {\#\ 904	Interrupteur de direction d'avancement}
+
+
+\subsubsubject{\VpadEr{905}} % {\#\ 905	Frein à main actionné}
+
++ \textSymb{vpadTBrakePark}~– O travão de mão não está totalmente desengatado. Enquanto o travão de mão não estiver desengatado, a velocidade do veículo está limitada em 5\,km/h.
+
+
+\stopsection
+
+\stopchapter
+
+\stopcomponent
+
+
+
+
+
+
+
+
+
+
+
+
+

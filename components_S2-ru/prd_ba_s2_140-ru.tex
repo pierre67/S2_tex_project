@@ -1,4 +1,3 @@
-\enabledirectives [system.synctex]
 
 \startproduct prd_ba_s2_110-ru
 
@@ -14,6 +13,8 @@ font:scaled:95,
 
 \version [final]
 \setups [RUSSIAN,VpRUSSIAN]
+
+% \setuptolerance[verytolerant]
 
 %===============================================================================
 %===============================================================================
@@ -50,7 +51,7 @@ openaction={firstpage,UseOutlines},
 menu=on,
 display=TwoColumn,
 title={инструкция по эксплуатации S2},
-author={Пьер Бова(Техническая редакция Boschung Матран)},,
+author={Пьер Бова(Техническая редакция Boschung Матран)},
 subtitle={С планом техобслуживания},
 keyword={S2, инструкция по эксплуатации, План техобслуживания, Руководство, Инструкция}
  ]
@@ -113,14 +114,14 @@ keyword={S2, инструкция по эксплуатации, План тех
 \marking[header]{Указатель}
 \IndexHead{Указатель}
 {\switchtobodyfont[small]\placeindex [n=3]}
-\page[yes,left,empty]
+\page[yes,empty,right]
 \marking[header]{Перечень иллюстраций}
 \startcolumns[n=3]
 \setupselector[caption][n=2]
 \IndexHead{Перечень иллюстраций}
 \placelist[fig]
 \stopcolumns
-\page[yes]
+\page[yes,empty,right]
 
 \setuppagenumbering[state=stop]
  \component c_99_back_s2_110-ru

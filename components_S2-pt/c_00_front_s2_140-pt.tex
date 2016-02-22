@@ -1,0 +1,76 @@
+﻿\startcomponent c_00_front_s2_140-pt
+\product prd_ba_s2_140-pt
+
+%\setups [FRENCH,pagestyle:frontmatter]
+
+\startboschungmakeup
+\setups[pagestyle:title]
+\startalignment[middle]
+
+\midaligned{\externalfigure[innentitel]}
+\blank[1*big]
+
+\definefont[AffiliationFont][Sans sa .55]
+\defineornament
+[SomeAffiliation]
+[rotation=,corner={right,bottom},location={left,bottom},
+voffset=-3pt,alternative=b,frame=off]
+[style=AffiliationFont,offset=6pt]
+
+{\bkd Manual de instruções\godown [9pt]}
+
+\placefigure[none]{}
+{\SomeAffiliation
+{\BAversionPT; \BAdatePT}
+{\bfc\BosFull {Sdeux}}}
+
+\blank[2*big]
+
+{\tfx\BosFull{Boschung}|/|PBV; Redação técnica: Matran, CH}
+
+\stopalignment
+
+\stopboschungmakeup
+%
+\startboschungmakeup
+
+\setupwhitespace [medium]
+
+\setups[pagestyle:marginless]
+
+{\sla Pé-de-imprensa}
+\blank [medium]
+
+Este manual de instruções contém informações que visam assegurar a operação correta da \sdeux. Leia atentamente este manual de instruções, antes de colocar a \sdeux\
+em funcionamento pela primeira vez; assim, estará familiarizado com os elementos de comando e as respetivas funções. O veículo apenas pode ser utilizado para os fins para os quais foi concebido (utilização adequada).
+Qualquer outro tipo de utilização é considerado inadequado. A \Boschung\ não assume qualquer responsabilidade por danos que sejam resultantes de uma utilização
+inadequada. Nesse caso, a responsabilidade é inteiramente da entidade operadora. A utilização adequada pressupõe igualmente o cumprimento dos avisos e intervalos de manutenção. \par
+
+Este documento é o manual de instruções original.
+As figuras podem divergir da versão do seu veículo.
+\blank [medium]
+
+
+\starttextbackground[CB]
+Para dúvidas ou informações relativas a este manual de instruções, contacte a equipa da redação técnica para o seguinte endereço:
+
+\md
+{\Caps Marcel Boschung AG}\crlf
+Rédaction technique\crlf
+Route des Muëses 2\crlf
+CH-1753 Matran
+
+{\tt doc.mechanical@boschung.com}
+\stoptextbackground
+\blank[medium]
+
+\copyright\ \CopyrightyearPT\ Marcel Boschung AG Matran, \BAversionPT
+
+Idioma original do presente manual de instruções: FR (francês) e DE (alemão). Todos os restantes idiomas são uma tradução da versão original.
+
+Todos os direitos reservados.  A impressão, tradução e cópia, mesmo que parcial, sem autorização por escrito da \BosFull{Boschung} é proibida.
+
+
+\stopboschungmakeup
+% \setups{pagestyle:normal}
+\stopcomponent

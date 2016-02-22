@@ -82,9 +82,13 @@ De menubalk aan de onderste rand toont de beschikbare menu´s: Druk in het midde
 
 \page [yes]
 
-\start % local group for temporary redefinition of \textDescrHead [TF]
-\define[1]\textDescrHead{{\bf#1\fourperemspace}}
-\startcolumns
+
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+
+\subsection{Controleweergaven op het Vpad-scherm} % nouveau
+
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
@@ -109,10 +113,17 @@ De menubalk aan de onderste rand toont de beschikbare menu´s: Druk in het midde
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Garage opzoeken}(geel) Regulier voertuigonderhoud is noodzakelijk,
-of is een fout in de motorbesturing (Garage opzoeken). % Zie na in het onderhoudsschema.
+\textDescrHead{Naar garage }(geel) Normaal voertuigonderhoud vereist (zie \about [sec:schedule] \atpage [sec:schedule]) of er werd een motorfout geregistreerd (gespecialiseerde garage vereist).
 
-+\:Foutmeldingen \# 650 tot \# 653, of \# 703
++\:Foutmeldingen\#650 tot \#653, of \#703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Partikelfilter}(geel) Regeneratie van de partikelfilter wordt gestart van zodra de bedrijfstoestand dat toelaat.
+
+{\md Opmerking:} {\lt Schakel indien mogelijk de motor {\em niet} uit zolang deze weergave brandt!}
 \stopSymVpad
 
 \startSymVpad
@@ -122,7 +133,6 @@ of is een fout in de motorbesturing (Garage opzoeken). % Zie na in het onderhoud
 
 +\:Foutmelding \# 902
 \stopSymVpad
-
 
 \startSymVpad
 \externalfigure[vpadTBrakePark][height=1.7\lH]
@@ -139,8 +149,6 @@ of is een fout in de motorbesturing (Garage opzoeken). % Zie na in het onderhoud
 
 Een knipperende lamp geeft aan dat er een fout werd geregistreerd in het gebeurtenissengeheugen.
 \stopSymVpad
-
-\columnbreak
 
 \startSymVpad
 \externalfigure[vpadTFuelReserve][height=1.7\lH]
@@ -190,15 +198,12 @@ Schakelaar \textSymb{temoin_buse} in de plafondconsole.
 \textDescrHead{Foutmelding}(rood) Er bevindt zich een foutmelding in het geheugen van de \Vpad. Druk op de toets~\textSymb{vpadClear} om alle geregistreerde berichten te tonen. Breng de garage op de hoogte.
 \stopSymVpad
 
-\stopcolumns
-\stop % local group for temporary redefinition of \textDescrHead
-
 \stopsection
 
 \page [yes]
 
 
-\section{Vpad menu´s}
+\startsection [title={De menu's van de Vpad}, reference={vpad:menu}]
 
 \start
 
@@ -228,17 +233,18 @@ option=stretch,textwidth=\makeupwidth]
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Bevestiging \eTD\bTD Bevestigen van de selectie \eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Omhoog/Omlaag, \\pijlen \eTD\bTD Markering naar boven/beneden verschuiven of geselecteerde waarde verhogen/verlagen \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Waarschuwingstoon bij achteruitrijden \eTD\bTD Akoestisch signaal bij achteruitrijden activeren/deactiveren \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Scherm uitschakelen \eTD\bTD Ca. 5 sec ingedrukt houden om het scherm van de Vpad uit te schakelen. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Derde borstel \index{3e borstel} (optie) \eTD\bTD Derde borstel vrijschakelen.
+De derde borstel kan nu geactiveerd worden, zoals beschreven op pagina \at[sec:using:frontBrush]. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
 
-\subsubsubject{Verdere indicaties op de Vpad}
+\subsection{Meer symbolen op het scherm van de Vpad}
 
-\start % local group for temporary redefinition of \textDescrHead [TF]
-\define[1]\textDescrHead{{\bf#1\fourperemspace}}
-
-\startcolumns
+\subsubsubject{Voorraad vers en gerecycleerd water}
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -258,8 +264,66 @@ option=stretch,textwidth=\makeupwidth]
 \textDescrHead{Vulstand recyclingwater}(rood) Vulstand van het recyclingwater niet voldoende (max. 140\,l; onder de vuilcontainer).
 \stopSymVpad
 
-\stopcolumns
-\stop % local group for temporary redefinition of \textDescrHead
+
+\subsubsubject{Zuigsysteem} % nouveau
+
+{\em Dit symbool wordt enkel weergegeven als de borstels gedeactiveerd zijn.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Zuigmond } zuigsysteem\index{zuigmond} geactiveerd:
+Zuigmond is neergelaten en turbine is geactiveerd.
+\stopSymVpad
+
+
+\subsubsubject{Zijborstel} % nouveau
+
+{\em Dit symbool wordt enkel weergegeven als de derde borstel niet geactiveerd is.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Zijborstel} borstel\index{vegen}\index{zijborstel} geactiveerd. De draaisnelheid (in \% van de max. draaisnelheid [V\low{max}]) wordt onder het symbool weergegeven, de huidige ontlasting van de desbetreffende borstel wordt boven het symbool weergegeven (\type{ } = zweefstand, 14 = maximale ontlasting).
+
+{\md Ontlasting:} {\lt Hoe lager de ontlasting is, des te hoger is de druk van de borstel op de grond.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Zweefstand }(groen aan de onderste rand)
+Om de ontlasting uit te schakelen, houdt u de joystick ca. 2 sec naar voren gedrukt; de borstel ligt nu met zijn volledige eigen gewicht op de grond. De draaisnelheid van de borstel is 60\hairspace\% van de V\low{max} (voorbeeld).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Zijborstel} De borstels zijn geactiveerd. Ze staan stil en zijn opgetild.
+\stopSymVpad
+
+
+\subsubsubject{Derde borstel (optie)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Derde borstel} De derde borstel \index{3e borstel} is geactiveerd. De draaisnelheid (in \% van de max. draaisnelheid [V\low{max}]) wordt onder het symbool weergegeven.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Zweefstand }(groen aan de onderste rand)
+Om de ontlasting uit te schakelen, houdt u de joystick ca. 2 sec naar voren gedrukt; de borstel ligt nu met zijn volledige eigen gewicht op de grond. De draaisnelheid van de borstel is 70\hairspace\% van de V\low{max} (voorbeeld).
+
+{\md Draairichting:} {\lt Aan de bovenste rand wordt de draairichting weergegeven (zwarte pijl met gele achtergrond).}
+\stopSymVpad
+
+\stopsection
+
 
 \page [yes]
 

@@ -179,7 +179,7 @@ reference={sec:using:container}]
 
 \startSteps
 \item Mueva\index{depósito de material barrido+vaciar} el vehículo a un lugar adecuado para el vaciado. Cumpla las disposiciones medioambientales vigentes.
-\item Ponga el freno de estacionamiento. (Necesario para activar el interruptor de volcado del depósito.)
+\item Active el freno de estacionamiento y coloque la palanca de marchas en la posición \aW{neutra}. (Necesario para activar el interruptor de volcado del depósito.)
 \stopSteps
 
 \getbuffer [prescription:container:gravity]
@@ -266,6 +266,50 @@ En el depósito de agua limpia hay suficiente agua; la \sdeux\ está en el modo 
 \stopSteps
 
 \stopsection
+
+\page [yes]
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Trabajar con el tercer cepillo (opción)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Ponga\index{barrer} el vehículo en funcionamiento como se describe en el \in{apartado}[sec:using:start] \atpage[sec:using:start].
+\item Active\index{3er cepillo} el modo de \aW{trabajo} (botón exterior en la palanca de marchas).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Asegúrese de que el tercer cepillo en la pantalla Vpad está activado (véase \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Pulse la tecla~\textSymb{joy_key_frontbrush_act} para accionar el sistema hidráulico del tercer cepillo.
+\item Pulse la tecla~\textSymb{joy_key_frontbrush_left} o~\textSymb{joy_key_frontbrush_right}, para que el tercer cepillo rote en el sentido deseado.
+
+\item Ajuste la velocidad de rotación mediante las teclas~\textSymb{joy_key_frontbrush_increase} y~\textSymb{joy_key_frontbrush_decrease} de la consola multifuncional.
+
+\item Posicione el cepillo mediante el joystick como se muestra en las figuras.
+
+\stopSteps
+
+{\md Aviso:} {\lt Para poder posicionar los cepillos laterales deberá desactivarse el sistema hidráulico del tercer cepillo mediante la tecla~\textSymb{joy_key_frontbrush_act}.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Posicionar el tercer cepillo}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Hacia arriba/abajo, a derecha/izquierda}
+{\externalfigure [work:frontBrush:incline]}{Inclinación transversal/longitudinal}
+\stopcombination}
+\stop
+
+\stopsection
+
 \stopregister[index][chap:using]
 
 \stopchapter

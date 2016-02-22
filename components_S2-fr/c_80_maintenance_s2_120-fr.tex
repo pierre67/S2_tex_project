@@ -1464,8 +1464,76 @@ du véhicule, en particulier le système de direction articulé et les essieux.
 
 \startmode [main:centralLubrication]
 
-\startsection[title={Graissage centralisé},
-							reference={main:graissageCentral}]
+\startsection[title={Graissage centralisé},reference={main:graissageCentral}]
+
+\subsection [sec:lincoln:led] {Affichage des témoins lumineux}
+
+L'état de service et les défauts de fonctionnement de la pompe de graissage sont signalés par différents codes au moyen
+des LEDs rouge \itemblacksquare\ et verte \itemgraydisk\ sur la platine. Le code est transmis en boucle par un cycle de 6~secondes.
+\blank[2*medium]
+
+{\bf Pas d'erreur:} la LED verte reste allumée.
+\blank[medium]
+
+\externalfigure [lincoln:led:ok]
+\blank[2*medium]
+\testpage[6]
+
+{\bf Erreur F1:} la LED verte reste allumée alors que la LED rouge s'allume 0,25 secondes toutes les 2 secondes.
+
+(Pas de signal)
+\blank[medium]
+
+\externalfigure [lincoln:led:f1]
+\blank[2*medium]
+\testpage[6]
+
+{\bf Erreur F2:} la LED verte reste allumée alors que la LED rouge s'allume 0,25 secondes les 2 premières secondes.
+
+(Bouton rotatif sur la platine positionné sur \quote{0})
+\blank[medium]
+
+\externalfigure [lincoln:led:f2]
+\blank[2*medium]
+\testpage[6]
+
+{\bf Erreur F3:} la LED verte reste allumée alors que la LED rouge s'allume 0,25 secondes les 3 premières secondes.
+
+(Touche Z~ graissage additionnel)
+\blank[medium]
+
+\externalfigure [lincoln:led:f3]
+\blank[2*medium]
+\testpage[6]
+
+{\bf Erreur F4:} la LED verte et la LED rouge s'allument ensemble 1 seconde toutes les secondes.
+
+(Tension trop faible)
+\blank[medium]
+
+\externalfigure [lincoln:led:f4]
+
+
+\subsection {Réglage du temps de pause et de graissage}
+
+Les boutons rotatifs ne doivent jamais être positionnés sur \quote{0} (erreur F2, voir \in[sec:lincoln:led]).
+
+\startfigtext [left] [fig:lincoln:pumpunit] {Unité de graissage central}
+{\externalfigure [lincoln:pumpunit]}
+
+\startSteps
+\item Retirez le cache de fermeture et le joint d'étanchéité.
+\item Réglez le temps de pause avec le bouton rotatif bleu \Lone.
+
+Position 1 = 1\,h, position F = 15\,h. Réglage de base = position 6 (6\,h).
+\item Réglez le temps de graissage avec le bouton rotatif rouge \Ltwo.
+
+Position 1 = 2\,min, position F = 30\,min. Réglage de base = position 3 (6\,min).
+\item Pressez >\:2\,s la touche \Lthree pour lancer un cycle de graissage.
+\item Essai: pressez la touche \Lthree\ > 2\,s pour lancer un cycle de graissage.
+\item Remontez le cache de fermeture avec le joint d'étanchéité.
+\stopSteps
+\stopfigtext
 
 
 
@@ -1478,8 +1546,7 @@ du véhicule, en particulier le système de direction articulé et les essieux.
 \setups [pagestyle:marginless]
 
 
-\startsection	[title={Plan de graissage manuel},
-				 reference={sec:grasing:plan}]
+\startsection	[title={Plan de graissage manuel},reference={sec:grasing:plan}]
 
 \starttextbackground [FC]
 \startPictPar

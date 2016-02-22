@@ -1,0 +1,319 @@
+﻿\startcomponent c_60_work_s2_140-pt
+\product prd_ba_s2_140-pt
+
+
+\startchapter [title={A S2 no dia a dia},
+							reference={chap:using}]
+
+\setups [pagestyle:marginless]
+
+
+% \placefig[margin][fig:ignition:key]{Clé de contact}
+% {\externalfigure [work:ignition:key]}
+\startregister[index][chap:using]{Colocação em funcionamento}
+
+\startsection [title={Colocação em funcionamento},
+							reference={sec:using:start}]
+
+
+\startSteps
+\item Assegurar que os controlos e manutenções regulares foram executados de acordo com as normas.
+\item Ligar o motor através da chave de ignição: ligar a ignição, continuar a rodar a chave no sentido horário e manter até o motor ligar (apenas possível se a alavanca de seleção da velocidade de marcha estiver na posição "Neutro").
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:select:drive]{Alavanca de seleção da velocidade de marcha}
+{\startcombination [2*1]
+{\externalfigure [work:select:fDrive]}{Alavanca de seleção na posição {\em Marcha em frente}}
+{\externalfigure [work:select:rDrive]}{Alavanca de seleção na posição {\em Marcha-atrás}}
+\stopcombination}
+\stop
+
+
+\startSteps [continue]
+\item Rodar o interruptor da alavanca de seleção da velocidade de marcha para engatar uma velocidade de marcha no modo {\em Marcha}:
+\startitemize [R]
+\item Primeira velocidade
+\item Segunda velocidade (operação automática; liga automaticamente na primeira velocidade)
+\stopitemize
+
+ou pressionar o botão na parte exterior da alavanca, para ativar|/|desativar o modo {\em Trabalho}.
+\stopSteps
+
+\startbuffer [work:config]
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+No modo Trabalho apenas está disponível a primeira velocidade e o motor trabalha a 1300\,min\high{\textminus 1}.
+
+Controlar a velocidade de rotação do motor através dos botões~\textSymb{joy_key_engine_increase} e~\textSymb{joy_key_engine_decrease} da consola multifunções.
+\stopPictPar
+\stoptextbackground
+\stopbuffer
+
+\getbuffer [work:config]
+
+\startSteps [continue]
+\item Acionar a alavanca de seleção da velocidade de marcha para cima e para a frente (marcha em frente) ou para cima e para trás (marcha-atrás). Ver figura em cima.
+\item Antes de acelerar, desengatar o travão de mão.
+\stopSteps
+
+\starttextbackground [FC]
+\startPictPar
+\PMrtfm
+\PictPar
+{\md Desengatar completamente o travão de mão!} A posição da alavanca do travão de mão é monitorizada por um sensor eletrónico: se o travão de mão não estiver completamente desengatado, a velocidade de marcha está limitada em 5\,km/h.
+\stopPictPar
+\stoptextbackground
+
+\startSteps [continue]
+\item Acionar lentamente o pedal do acelerador para colocar o veículo em movimento.
+\stopSteps
+
+
+%% NOTE: New text [2014-04-29]:
+\subsection [sSec:suctionClap] {Tampa do canal de aspiração}
+
+O sistema de aspiração gera uma corrente de ar, a partir do bocal de aspiração ou a partir da mangueira de aspiração manual (opção), para o recipiente de sujidade.
+
+Através de uma tampa de acionamento manual (\inF[fig:suctionClap], \atpage[fig:suctionClap]) é possível comutar a corrente de ar entre o bocal de aspiração e a mangueira de aspiração manual.
+
+\placefig [here] [fig:suctionClap] {Tampa do canal de aspiração}
+{\startcombination [2*1]
+{\externalfigure [work:suctionClap:open]}{Canal de aspiração aberto}
+{\externalfigure [work:suctionClap:closed]}{Canal de aspiração fechado}
+\stopcombination}
+
+Na operação normal~– trabalhar com bocal de aspiração~– o canal de aspiração deve estar aberto (alavanca de comutação aponta para cima).
+
+Para que a mangueira de aspiração manual possa ser utilizada, o canal de aspiração deve estar fechado (alavanca de comutação aponta para baixo). Deste modo, a corrente de ar é transportada através da mangueira de aspiração manual.
+%% End new text
+
+\stopsection
+
+
+\startsection [title={Colocação fora de funcionamento},
+							reference={sec:using:stop}]
+
+\index{Colocação fora de funcionamento}
+
+\startSteps
+\item Acionar o travão de mão (alavanca entre os bancos) e ajustar a alavanca de seleção da velocidade de marcha na posição {\em Neutro}.
+\item Executar os trabalhos de controlo necessários~– controlos diários e event. semanais~– conforme indicado na \atpage[table:scheduledaily].
+\stopSteps
+
+\getbuffer [prescription:handbrake]
+
+\stopsection
+
+
+\startsection [title={Varrer e aspirar},
+							reference={sec:using:work}]
+
+\startSteps
+\item Executar a\index{Varredura} colocação em funcionamento do veículo conforme indicado na \in{§}[sec:using:start], \atpage[sec:using:start].
+\item Ativar\index{Aspiração} o modo {\em Trabalho} (botão na parte exterior da alavanca de seleção da velocidade de marcha).
+\stopSteps
+
+% \getbuffer [work:config]
+%% NOTE: outcommented by PB
+
+\startSteps [continue]
+\item Premir o botão~\textSymb{joy_key_suction_brush} para ligar a turbina e a escova.
+
+{\md Variante:} {\lt premir o botão~\textSymb{joy_key_suction} para trabalhar apenas com o bocal de aspiração.}
+
+\item Ajustar a velocidade de rotação das escovas através dos botões~\textSymb{joy_key_frontbrush_increase}\textSymb{joy_key_frontbrush_decrease} da consola multifunções.
+
+\item Através do respetivo Joystick, colocar as escovas numa posição em que consigam alcançar a largura de trabalho ideal.
+\stopSteps
+
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Posicionamento das escovas}
+{\startcombination [2*1]
+{\externalfigure [work:brushes:enlarge]}{Escovas para fora|/|para dentro}
+{\externalfigure [work:brush:left:raise]}{Escovas para cima|/|para baixo}
+\stopcombination}
+\stop
+
+\page [yes]
+
+
+\subsubsubject{Humidificação das escovas e do canal de aspiração}
+
+Acionar\index{Varredura+Humidificação} o interruptor~\textSymb{temoin_busebalais} entre os bancos:
+
+{\md Posição 1:} a bomba de água trabalha automaticamente enquanto as escovas estiverem ativas.
+
+{\md Posição 2:} a bomba de água trabalha permanentemente. (Útil \eG\ para trabalhos de ajuste.)
+
+
+\subsubsubject{Sujidade grossa}
+
+\startSteps [continue]
+\item Caso exista o risco de sujidades maiores (\eG\ garrafas de plástico PET) bloquearem o bocal de aspiração, abrir\index{Tampa de sujidade grossa} a tampa de sujidade grossa através dos botões laterais da consola multifunções, ou~– se isso não for suficiente~– levantar temporariamente\index{Bocal de aspiração+Sujidade grossa} o bocal de aspiração.
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:suctionMouth:clap]{Procedimento em caso de sujidade grossa}
+{\startcombination [2*1]
+{\externalfigure [work:suction:open]}{Abrir a tampa de sujidade grossa}
+{\externalfigure [work:suction:raise]}{Levantar temporariamente o bocal de aspiração}
+\stopcombination}
+\stop
+
+\stopsection
+
+
+\startsection [title={Esvaziar o recipiente de sujidade},
+							reference={sec:using:container}]
+
+\startSteps
+\item Deslocar\index{Recipiente de sujidade+Esvaziar} o veículo até um local adequado para o esvaziamento. Prestar atenção para que as normas relativas à proteção do meio ambiente em vigor sejam cumpridas.
+\item Acionar o travão de mão e ajustar a alavanca de seleção da velocidade de marcha na posição {\em Neutro}. (Necessário para liberar o interruptor de esvaziamento do recipiente).
+\stopSteps
+
+\getbuffer [prescription:container:gravity]
+
+\startSteps [continue]
+\item Desbloquear e abrir a tampa de fecho do recipiente de sujidade.
+\item Acionar o interruptor~\textSymb{temoin_kipp2} (consola central, entre os bancos) para abrir o recipiente de sujidade.
+\item Quando o recipiente estiver vazio, lavar o interior com um jato de água. Para tal, pode-se utilizar a pistola de água integrada (equipamento opcional).
+\stopSteps
+
+\start
+\setupcombinations [width=\textwidth]
+\placefig[here][fig:brush:adjust]{Manuseio do recipiente de sujidade}
+{\startcombination [3*1]
+{\externalfigure [container:cover:unlock]}{Bloqueio da tampa de fecho}
+{\externalfigure [container:safety:unlocked]}{Barra de segurança}
+{\externalfigure [container:safety:locked]}{Barra de segurança bloqueada}
+\stopcombination}
+\stop
+
+\startSteps [continue]
+\item Verificar|/|limpar os vedantes e as superfícies de contacto dos vedantes do recipiente, do sistema de reciclagem e do canal de aspiração.
+\stopSteps
+
+\getbuffer [prescription:container:tilt]
+
+\startSteps [continue]
+\item Acionar o interruptor~\textSymb{temoin_kipp2} para descer o recipiente de sujidade. (Event. remover previamente as barras de segurança dos cilindros hidráulicos.)
+\item Bloquear a tampa de fecho do recipiente de sujidade.
+\stopSteps
+
+\stopsection
+
+
+\startsection [title={Mangueira de aspiração manual},
+							reference={sec:using:suction:hose}]
+
+A \sdeux\ pode ser opcionalmente\index{Mangueira de aspiração manual} equipada com uma mangueira de aspiração manual. Esta está fixada na tampa de fecho do recipiente de sujidade; a sua operação é simples.
+
+{\sla Requisitos:}
+
+O recipiente de sujidade está completamente descido; a \sdeux\ encontra-se no modo {\em Trabalho}. (Ver \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\startfigtext[left][fig:using:suction:hose]{Mangueira de aspiração manual}
+{\externalfigure[work:suction:hose]}
+\startSteps
+\item Premir o botão~\textSymb{temoin_aspiration_manuelle} da consola do tejadilho para ativar o sistema de aspiração.
+\item Antes de abandonar a cabina do operador, acionar bem o travão de mão.
+\item Fechar o canal de aspiração através da tampa do canal de aspiração. (Ver \in{§}[sSec:suctionClap], \atpage[sSec:suctionClap].)
+\item Retirar a mangueira de aspiração manual do seu suporte, puxando o adaptador bucal, e iniciar os trabalhos.
+\item Após a conclusão dos trabalhos, acionar novamente o botão~\textSymb{temoin_aspiration_manuelle} para desligar o sistema de aspiração.
+\stopSteps
+\stopfigtext
+
+\stopsection
+
+\page [yes]
+
+\setups[pagestyle:normal]
+
+
+\startsection [title={Pistola de água de alta pressão},
+							reference={sec:using:water:spray}]
+
+A \sdeux\ pode ser opcionalmente\index{Pistola de água} equipada com uma pistola de água de alta pressão. A pistola de água está fixada na porta de manutenção direita traseira e conectada com um enrolador de mangueira de 10 metros~– no lado oposto do veículo.
+
+Para montar a pistola de água, proceder do seguinte modo:
+
+{\sla Requisitos:}
+
+O depósito de água limpa contém água suficiente; a \sdeux\ está no modo {\em Trabalho}. (Ver \in{§}[sec:using:start], \atpage[sec:using:start].)
+
+\placefig[margin][fig:using:water:spray]{Pistola de água de alta pressão}
+{\externalfigure[work:water:spray]}
+
+\startSteps
+\item Premir o botão~\textSymb{temoin_buse} da consola do tejadilho para ativar a bomba de água de alta pressão.
+\item Antes de abandonar a cabina do operador, acionar bem o travão de mão.
+\item Abrir a porta de manutenção direita traseira e retirar a pistola de água.
+\item Desenrolar a mangueira até ao comprimento necessário e iniciar os trabalhos.
+\item Após a conclusão dos trabalhos, acionar novamente o botão~\textSymb{temoin_buse} para desligar a bomba de água de alta pressão.
+\item Puxar ligeiramente a mangueira para soltar o bloqueio e enrolar a mangueira.
+\item Fixar a pistola de água novamente no seu suporte e fechar a porta de manutenção.
+\stopSteps
+
+\stopsection
+
+\page [yes]
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Trabalhar com a terceira escova (opção)},
+		reference={sec:using:frontBrush},
+		]
+
+\startSteps
+\item Colocar\index{Varredura} o veículo em funcionamento, conforme indicado na \in{secção}[sec:using:start] \atpage[sec:using:start].
+\item Ativar\index{3.ª\,escova} o modo{\em Trabalho} (botão na parte exterior da alavanca de seleção da velocidade de marcha).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Certificar que a terceira escova está ativada no ecrã do Vpad
+(ver \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Premir o botão~\textSymb{joy_key_frontbrush_act} para acionar o sistema hidráulico da terceira escova.
+\item Premir o botão~\textSymb{joy_key_frontbrush_left} ou~\textSymb{joy_key_frontbrush_right} para que a terceira escova gire na direção pretendida.
+
+\item Ajustar a velocidade de rotação através dos botões~\textSymb{joy_key_frontbrush_increase} e~\textSymb{joy_key_frontbrush_decrease} da consola multifunções.
+
+\item Posicionar a escova através dos Joysticks, conforme indicado na figura em baixo.
+
+\stopSteps
+
+{\md Aviso:} {\lt para que seja possível posicionar as escovas laterais, é necessário desativar o sistema hidráulico da terceira escova, através do botão~\textSymb{joy_key_frontbrush_act}.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Posicionamento da terceira escova}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Para cima|/|para baixo; para a esquerda|/|direita}
+{\externalfigure [work:frontBrush:incline]}{Inclinação transversal e longitudinal}
+\stopcombination}
+\stop
+
+
+
+\stopsection
+
+\stopregister[index][chap:using]
+
+\stopchapter
+\stopcomponent

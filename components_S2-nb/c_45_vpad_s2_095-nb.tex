@@ -83,9 +83,13 @@ Menylinjen ved nedre kanten viser menyene som er tilgjengelige: Trykk på midten
 
 \page [yes]
 
-\start % local group for temporary redefinition of \textDescrHead [TF]
-\define[1]\textDescrHead{{\bf#1\fourperemspace}}
-\startcolumns
+
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+% \startcolumns
+
+\subsection{Kontrollvisninger på Vpad-skjermen} % nouveau
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
@@ -110,9 +114,17 @@ Menylinjen ved nedre kanten viser menyene som er tilgjengelige: Trykk på midten
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Verksted må oppsøkes}(gul) Standard kjøretøyvedlikehold har forfalt. Se til vedlikeholdsplanen.
+\textDescrHead{Verksted må oppsøkes}(gul) Standard kjøretøyvedlikehold har forfalt (se \about [sec:schedule] \atpage [sec:schedule]) eller en motorfeil er blitt registrert (fagverksted nødvendig).
 
 +\:Feilmeldinger \# 650 til \# 653, eller \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Partikkelfilter}(gul) Regenerering av partikkelfilteret startes, så snart driftstilstanden tillater det.
+
+{\md Merknad:} {\lt Om mulig, {\em ikke} slå av motoren så lenge denne visningen lyser opp!}
 \stopSymVpad
 
 \startSymVpad
@@ -139,8 +151,6 @@ Menylinjen ved nedre kanten viser menyene som er tilgjengelige: Trykk på midten
 
 En blinkende lampe indikerer, at det er registrert en feil i hendelsesminnet.
 \stopSymVpad
-
-\columnbreak
 
 \startSymVpad
 \externalfigure[vpadTFuelReserve][height=1.7\lH]
@@ -190,15 +200,12 @@ Bryter \textSymb{temoin_buse} i takpanelet.
 \textDescrHead{Feilmelding}(rød) En feilmelding foreligger i minnet til \Vpad. Trykk på tasten~\textSymb{vpadClear}, for å vise alle registrerte meldinger. Ta kontakt med verkstedet.
 \stopSymVpad
 
-\stopcolumns
-\stop % local group for temporary redefinition of \textDescrHead
-
 \stopsection
 
 \page [yes]
 
 
-\section{Vpad-menyer}
+\startsection [title={Menyene til Vpad}, reference={vpad:menu}]
 
 \start
 
@@ -228,17 +235,19 @@ option=stretch,textwidth=\makeupwidth]
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Bekreftelse \eTD\bTD Bekreftelse av valget \eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Opp/ned, \\Pfeile \eTD\bTD Forskyve markering oppover/nedover eller øke/redusere valgt verdi \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Varseltone for rygging \eTD\bTD Aktivere/deaktivere varselsignal for rygging \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Slå av skjermen \eTD\bTD Trykk og hold inne i omtrent 5 sek, for å slå av skjermen til Vpad. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Tredje kost\index{3. Kost} (valgfritt) \eTD\bTD Frikoble tredje kost.
+Den tredje kosten kan kun aktiveres som beskrevet på side \at[sec:using:frontBrush]. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
 
-\subsubsubject{Øvrige visninger på Vpad}
+\subsection{Ytterligere symboler på Vpad-skjermen}
 
-\start % local group for temporary redefinition of \textDescrHead [TF]
-\define[1]\textDescrHead{{\bf#1\fourperemspace}}
+\subsubsubject{Ferskvanns- og resirkuleringsvannbeholdning}
 
-\startcolumns
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -258,8 +267,64 @@ option=stretch,textwidth=\makeupwidth]
 \textDescrHead{Fyllenivå resirkuleringsvann}(rød) Fyllenivået til resirkuleringsvannet er ikke tilstrekkelig (maks. 140\,l; under smussbeholderen).
 \stopSymVpad
 
-\stopcolumns
-\stop % local group for temporary redefinition of \textDescrHead
+\subsubsubject{Sugesystem} % nouveau
+
+{\em Dette symbolet vises kun, når kostene er deaktivert.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Sugeenhet} Sugesystem\index{Sugeenhet} aktivert:
+Sugeenhet er senket og turbin er aktivert.
+\stopSymVpad
+
+
+\subsubsubject{Sidekost} % nouveau
+
+{\em Dette symbolet vises kun, når den tredje kosten ikke er aktivert.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Sidekost} Kost\index{Feie}\index{Sidekost} aktivert. Rotasjonshastighet (i \% av maks. rotasjonshastighet [V\low{maks}]) vises nedenfor symbolet, den aktuelle avlastningen til den gjeldende kosten vises ovenfor symbolet (\type{ } = flytestilling, 14 = maksimal avlastning).
+
+{\md Avlastning:} {\lt Jo lavere avlastning, jo større trykk til kostene på bakken.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Flytestilling}(grønn på nedre kanten)
+For å slå av avlastningen, hold joysticken trykt forover i omtrent 2 sek; kosten ligger nå an mot bakken med hele dens egenvekten. Rotasjonshastigheten til kostene er ved 60\hairspace\% av V\low{maks} (eksempel).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Sidekoster} Kostene er aktivert. De står stille og er hevet.
+\stopSymVpad
+
+
+\subsubsubject{Tredje kost (valgfritt)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Tredje kost} Den tredje kosten\index{3. kost} er aktivert. Rotasjonshastigheten (i \% av maks. rotasjonshastighet [V\low{maks}]) vises nedenfor symbolet.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Flytestilling}(grønn på nedre kanten)
+For å slå av avlastningen, hold joysticken trykt forover i omtrent 2 sek; kosten ligger nå an mot bakken med hele dens egenvekten. Rotasjonshastigheten til kostene er ved 70\hairspace\% av V\low{maks} (eksempel).
+
+{\md Rotasjonsretning:} {\lt På den øvre kanten vises rotasjonshastigheten (svart pil på gul bakgrunn).}
+\stopSymVpad
+
+\stopsection
 
 \page [yes]
 

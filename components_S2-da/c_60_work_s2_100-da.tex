@@ -78,16 +78,16 @@ Sugesystemet genererer en luftstrøm, enten fra sugemunden eller fra håndsugesl
 
 En lem, der skal åbnes og lukkes med hånden (\inF[fig:suctionClap], \atpage[fig:suctionClap]) giver mulighed for at skifte luftstrømmen mellem sugemunden og håndsugeslangen.
 
+I normal drift~– arbejde med sugemunden~– skal sugekanalen være åbnet (skiftestangen peger opad).
+
+For at kunne anvende håndsugeslangen, skal sugekanalen være lukket (skiftestangen peger nedad). På denne måde ledes luftstrømmen gennem håndsugeslangen.
+%% End new text
+
 \placefig [here] [fig:suctionClap] {Sugekanallem}
 {\startcombination [2*1]
 {\externalfigure [work:suctionClap:open]}{Sugekanal åbnet}
 {\externalfigure [work:suctionClap:closed]}{Sugekanal lukket}
 \stopcombination}
-
-I normal drift~– arbejde med sugemunden~– skal sugekanalen være åbnet (skiftestangen peger opad).
-
-For at kunne anvende håndsugeslangen, skal sugekanalen være lukket (skiftestangen peger nedad). På denne måde ledes luftstrømmen gennem håndsugeslangen.
-%% End new text
 
 \stopsection
 
@@ -98,7 +98,7 @@ reference={sec:using:stop}]
 \index{Udtagning af drift}
 
 \startSteps
-\item Træk håndbremsen (stangen mellem sæderne) og sæt gearvælgeren på \aW{Neutral}.
+\item Aktiver håndbremsen og sæt gearvælgeren på \aW{Neutral}.
 \item Udfør det påkrævede kontrolarbejde~– daglige og evt. ugentlige kontroller~– som beskrevet på \atpage[table:scheduledaily].
 \stopSteps
 
@@ -177,7 +177,7 @@ reference={sec:using:container}]
 
 \startSteps
 \item Kør\index{Smudsbeholder+Tømning} køretøjet til en egnet plads for at tømme det. Sørg for, at de gældende regler om miljøbeskyttelse overholdes.
-\item Træk håndbremsen. (Nødvendigt til aktivering af kontakten til at tippe beholderen).
+\item Aktiver håndbremsen og sæt gearvælgeren på \aW{Neutral} (Nødvendigt til aktivering af kontakten til at tippe beholderen).
 \stopSteps
 
 \getbuffer [prescription:container:gravity]
@@ -264,6 +264,53 @@ Der er nok vand i ferskvandstanken; \sdeux\ er i \aW{Arbejds}modus. (Se \in{§}[
 \stopSteps
 
 \stopsection
+
+\page [yes]
+
+
+\setups [pagestyle:marginless]
+
+
+\startsection [title={Arbejde med tredje kost (ekstraudstyr)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Sæt\index{Fejning} køretøjet i drift, som beskrevet i \in{afsnit}[sec:using:start] \atpage[sec:using:start].
+\item Aktiver\index{3. kost} \aW{Arbejds}modus (knap uden på gearvælgeren).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Kontroller, at den tredje kost er aktiveret på Vpad-skærmen (se \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Tryk på tasten~\textSymb{joy_key_frontbrush_act} for at aktivere tredje kosts hydraulik.
+\item Tryk på tasten~\textSymb{joy_key_frontbrush_left} eller~\textSymb{joy_key_frontbrush_right} for at lade tredje kost rotere i den ønskede retning.
+
+\item Indstil rotationshastigheden med tasterne~\textSymb{joy_key_frontbrush_increase} og~\textSymb{joy_key_frontbrush_decrease} på multifunktionskonsollen.
+
+\item Positioner kosten med joysticket, som vist i illustrationerne nedenfor.
+
+\stopSteps
+
+{\md Bemærk:} {\lt For at kunne positionere sidekostene, skal tredje kosts hydraulik deaktiveres med tasten~\textSymb{joy_key_frontbrush_act}.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Positionering af tredje kost}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Opad/nedad; mod venstre/højre}
+{\externalfigure [work:frontBrush:incline]}{Hældning på tværs/langs}
+\stopcombination}
+\stop
+
+
+
+\stopsection
+
+
 \stopregister[index][chap:using]
 
 \stopchapter

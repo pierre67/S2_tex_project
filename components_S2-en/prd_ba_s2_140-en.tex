@@ -1,10 +1,10 @@
 \enabledirectives [system.synctex]
-\startproduct   prd_ba_s2_110-en
+\startproduct   prd_ba_s2_140-en
 
 % \enablemode[screen]
 \enablemode[%
-	screen,
-	% print,
+	% screen,
+	print,
         myriadpro,
         ]
 
@@ -96,7 +96,7 @@
 \component c_80_maintenance_s2_110-en
 \component c_90_serviceplan_s2_110-en
 
-%\page[yes,empty,right]
+\page[yes,empty,right]
 \stopbodymatter
 
 \startbackmatter
@@ -104,14 +104,14 @@
 		\marking[header]{Index}
 			\IndexHead{Index}
 			{\switchtobodyfont[small]\placeindex [n=3]}
-		\page[yes,blank,right]
+		\page[yes,empty,right]
 			\marking[header]{List of Figures}
 			\startcolumns[n=3]
 				\setupselector[caption][n=2]
 				\IndexHead{List of Figures}
 				\placelist[fig]
 			\stopcolumns
-		\page[yes]
+		\page[yes,empty,right]
 
 		\setuppagenumbering[state=stop]
 	\component c_99_back_s2_110-en

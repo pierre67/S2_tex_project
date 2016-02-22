@@ -82,9 +82,13 @@ Menulinjen nederst viser de tilgængelige menuer: Tryk i midten af den berøring
 
 \page [yes]
 
+\defineparagraphs[SymVpad][n=2,distance=4mm,rule=off,before={\page[preference]},after={\nobreak\hrule\blank [2*medium]}]
+\setupparagraphs [SymVpad][1][width=4em,inner=\hfill]
+
+\subsection{Kontrolvisninger på Vpad-skærmen} % nouveau
+
 \start % local group for temporary redefinition of \textDescrHead [TF]
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
-\startcolumns
 
 \startSymVpad
 \externalfigure[vpadTEnginOilPressure][height=1.7\lH]
@@ -109,10 +113,17 @@ Menulinjen nederst viser de tilgængelige menuer: Tryk i midten af den berøring
 \startSymVpad
 \externalfigure[vpadWarningService][height=1.7\lH]
 \SymVpad
-\textDescrHead{Køretøjet skal på værksted}(gul) Køretøjet skal til regelmæssigt serviceeftersyn.
-Se efter i vedligeholdelsesplanen.
+\textDescrHead{Køretøjet skal på værksted}(gul) Køretøjet skal til regelmæssigt serviceeftersyn (se \about [sec:schedule] \atpage [sec:schedule]) eller der er registreret en motorfejl (specialværksted nødvendigt).
 
 +\:Fejlmeldinger \# 650 til \# 653, eller \# 703
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[vpadTDPF][height=1.7\lH]
+\SymVpad
+\textDescrHead{Partikelfilter}(gul) Regenerering af partikelfilteret startes, så snart driftstilstanden tillader det.
+
+{\md Bemærk:} {\lt Sluk {\em ikke} motoren, hvis muligt, så længe denne visning lyser!}
 \stopSymVpad
 
 \startSymVpad
@@ -139,8 +150,6 @@ Se efter i vedligeholdelsesplanen.
 
 En blinkende lampe viser, at der er registreret en fejl i hændelsesloggen.
 \stopSymVpad
-
-\columnbreak
 
 \startSymVpad
 \externalfigure[vpadTFuelReserve][height=1.7\lH]
@@ -190,7 +199,6 @@ Kontakter \textSymb{temoin_buse} i loftskonsollen.
 \textDescrHead{Fejlmelding}(rød) Der er en fejlmelding i loggen i \Vpad. Tryk på tasten~\textSymb{vpadClear} for at få vist alle registrerede beskeder. Underret værkstedet.
 \stopSymVpad
 
-\stopcolumns
 \stop % local group for temporary redefinition of \textDescrHead
 
 \stopsection
@@ -198,7 +206,7 @@ Kontakter \textSymb{temoin_buse} i loftskonsollen.
 \page [yes]
 
 
-\section{Vpad-menuer}
+\startsection [title={Menuer i Vpad}, reference={vpad:menu}]
 
 \start
 
@@ -228,17 +236,21 @@ option=stretch,textwidth=\makeupwidth]
 \bTR\bTD \externalfigure [v:symbole:return] \eTD\bTD Bekræftelse \eTD\bTD Bekræftelse af valget \eTD\eTR
 \bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:up]\externalfigure [v:symbole:down]} \eTD\bTD Op/ned, \\Pile \eTD\bTD Flyt markeringen op/ned, eller øg/reducer den valgte værdi \eTD\eTR
 \bTR\bTD \externalfigure [v:symbole:rSignal] \eTD\bTD Bakalarm \eTD\bTD Aktiver/deaktiver akustisk bakalarm \eTD\eTR
+\bTR\bTD \externalfigure [v:symbole:power] \eTD\bTD Sluk skærmen \eTD\bTD Hold den inde ca. 5 s for at slukke Vpad-skærmen. \eTD\eTR
+\bTR\bTD \framed[frame=off]{\externalfigure [v:symbole:frontBrush]\externalfigure [v:symbole:frontBrush:black]}
+\eTD\bTD Tredje kost\index{3. kost} (ekstraudstyr) \eTD\bTD Aktiver tredje kost.
+Den tredje kost kan nu aktiveres, som beskrevet på side \at[sec:using:frontBrush]. \eTD\eTR
 \eTABLEbody
 \eTABLE
 \stop
 
 
-\subsubsubject{Andre visninger på Vpad}
+\subsection{Andre visninger på Vpad}
+
+\subsubsubject{Ferskvands- og genbrugsvandbeholdning}
 
 \start % local group for temporary redefinition of \textDescrHead [TF]
 \define[1]\textDescrHead{{\bf#1\fourperemspace}}
-
-\startcolumns
 
 \startSymVpad
 \externalfigure[sym:vpad:water]
@@ -258,10 +270,72 @@ option=stretch,textwidth=\makeupwidth]
 \textDescrHead{Vandstand genbrugsvand}(rød) Genbrugsvandets vandstand er for lav (maks. 140\,l; under smudsbeholderen).
 \stopSymVpad
 
-\stopcolumns
+
+
+\subsubsubject{Sugesystem} % nouveau
+
+{\em Dette symbol vises kun, hvis kostene er deaktiveret.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sucker]
+\SymVpad
+\textDescrHead{Sugemund} Sugesystem\index{Sugemund} aktiveret:
+Sugemunden er sænket og turbinen er aktiveret.
+\stopSymVpad
+
+
+\subsubsubject{Sidekoste} % nouveau
+
+{\em Dette symbol vises kun, hvis tredje kost ikke er aktiveret.}
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:83]
+\SymVpad
+\textDescrHead{Sidekoste} Koste\index{Fejning}\index{Sidekoste} aktiveret. Rotationshastigheden (i \% af maks. rotationshastighed [V\low{max}]) vises under symbolet, den aktuelle aflastning af den pågældende kost vises oven over symbolet (\type{ } = Flydeposition, 14 = Maksimal aflastning).
+
+{\md Aflastning:} {\lt Jo lavere aflastning, desto mere trykker kostene mod jorden.}
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush:float:60]
+\SymVpad
+\textDescrHead{Flydeposition}(grøn kant nederst)
+For at deaktivere aflastningen skal joysticket trykkes fremad i ca. 2 s; kosten ligger nu på jorden med hele sin egenvægt. Kostenes rotationshastighed er på 60\hairspace\% af V\low{max} (eksempel).
+\stopSymVpad
+
+\startSymVpad
+\externalfigure[sym:vpad:sideBrush]
+\SymVpad
+\textDescrHead{Sidekoste} Kostene er aktiveret. De står stille og er løftet.
+\stopSymVpad
+
+
+\subsubsubject{Tredje kost (ekstraudstyr)} % nouveau
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush]
+\SymVpad
+\textDescrHead{Tredje kost} Den tredje kost\index{3. kost} er aktiveret. Rotationshastigheden (i \% af maks. rotationshastighed [V\low{max}]) vises under symbolet.
+\stopSymVpad
+
+
+\startSymVpad
+\externalfigure[sym:vpad:frontBrush:left]
+\SymVpad
+\textDescrHead{Flydeposition}(grøn kant nederst)
+For at deaktivere aflastningen skal joysticket trykkes fremad i ca. 2 s; kosten ligger nu på jorden med hele sin egenvægt. Kostenes rotationshastighed er på 70\hairspace\% af V\low{max} (eksempel).
+
+{\md Rotationsretning:} {\lt I øverste kant vises rotationsretningen (sort pil på gul baggrund).}
+\stopSymVpad
+
 \stop % local group for temporary redefinition of \textDescrHead
 
+\stopsection
+
 \page [yes]
+
+
 
 \startsection[title={Indstilling af skærmens lysstyrke},
 reference={sec:vpad:brightness}]

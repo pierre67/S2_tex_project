@@ -1,18 +1,20 @@
-\enabledirectives [system.synctex]
+﻿\enabledirectives [system.synctex]
 
-\startproduct prd_ba_s2_120-de
+\startproduct prd_ba_s2_140-pt
 
 \enablemode[%
-	screen,
-	% print,
-        myriadpro,
+	% screen,
+	print,
+	myriadpro,
+	font:scaled:95,
         ]
 
 
 \project prj_ba_s2
 
+
 \version [final]
-\setups [GERMAN,VpGERMAN]
+\setups [PORTUGUESE,VpPORTUGUESE]
 
 %===============================================================================
 %===============================================================================
@@ -48,10 +50,10 @@
    openaction={firstpage,UseOutlines},
    menu=on,
    display=TwoColumn,
-    title={Betriebsanleitung S2},
-   author={Pierre Bovet (Technische Redaktion Boschung, Matran)},
-   subtitle={mit Wartungsplan},
-   keyword={S2, Betriebsanleitung, Wartungsplan, Handbuch, Manual}
+    title={Manual de instruções S2},
+   author={Pierre Bovet (redação técnica da Boschung, Matran)},
+   subtitle={com plano de manutenção},
+   keyword={S2, manual de instruções, plano de manutenção, manual de operação, manual}
  ]
 \stopmode
 \startmode[print]
@@ -72,9 +74,9 @@
    menu=on,
    display=TwoColumn,
    title={Manuel d’utilisation S2},
-   author={Pierre Bovet (Technische Redaktion Boschung, Matran)},
-   subtitle={mit Wartungsplan},
-   keyword={S2, Betriebsanleitung, Wartungsplan, Handbuch, Manual}
+   author={Pierre Bovet (redação técnica da Boschung, Matran)},
+   subtitle={com plano de manutenção},
+   keyword={S2, manual de instruções, plano de manutenção, manual de operação, manual}
   ]
 \stopmode
 \setupinteractionscreen [option=bookmark]
@@ -86,8 +88,8 @@
 
 \startfrontmatter
 	% \setuppagenumbering	[conversion=romannumerals]
-	\component c_00_front_s2_120-de
-	\marking[header]{Inhalt}
+	\component c_00_front_s2_140-pt
+	\marking[header]{Conteúdo}
 		\completecontent
 
 \stopfrontmatter
@@ -95,43 +97,43 @@
 \startbodymatter
 \define\LASTchapter{10}
 % \showframe
-\component c_10_safety_s2_120-de
-\component c_20_prescriptions_s2_120-de
-\component c_30_overview_s2_120-de
-\component c_40_control_s2_120-de
-\component c_45_vpad_s2_120-de
-\component c_60_work_s2_120-de
-\component c_80_maintenance_s2_120-de
-\component c_90_serviceplan_s2_131-de
+\component c_10_safety_s2_140-pt
+\component c_20_prescriptions_s2_140-pt
+\component c_30_overview_s2_140-pt
+\component c_40_control_s2_140-pt
+\component c_45_vpad_s2_140-pt
+\component c_60_work_s2_140-pt
+\component c_80_maintenance_s2_140-pt
+\component c_90_serviceplan_s2_140-pt
 
 % \page[yes,empty,right]
 \stopbodymatter
 
 \startbackmatter
 		\definelayer [bg:toc] [state=stop]
-		\marking[header]{Stichwortverzeichnis}
-			\IndexHead{Stichwortverzeichnis}
+		\marking[header]{Índice remissivo}
+			\IndexHead{Índice remissivo}
 			{\switchtobodyfont[small]\placeindex [n=3]}
-		\page[yes,blank,right]
-			\marking[header]{Abbildungsverzeichnis}
+		\page[yes,empty,right]
+			\marking[header]{Índice de figuras}
 			\startcolumns[n=3]
 				\setupselector[caption][n=2]
-				\IndexHead{Abbildungsverzeichnis}
+				\IndexHead{Índice de figuras}
 				\placelist[fig]
 			\stopcolumns
-		\page[yes]
+		\page[yes,empty,right]
 
 		\setuppagenumbering[state=stop]
-	\component c_99_back_s2_120-de
+	\component c_99_back_s2_140-pt
 \stopbackmatter
 
-\seeindex{Service}{Wartung}
-\seeindex{Instandhaltung}{Wartung}
-\seeindex{Geschwindigkeitsregler}{Tempomat}
-\seeindex{Hauptschalter}{Batterietrennschalter}
-\seeindex{Chassis}{Fahrgestell}
-\seeindex{Fahrgestell}{Chassis}
-\seeindex{Bodenschalter}{Fußschalter}
+\seeindex{Serviço}{Manutenção}
+\seeindex{Conservação}{Manutenção}
+\seeindex{Regulador de velocidade}{Cruise Control}
+\seeindex{Interruptor principal}{Interruptor seccionador da bateria}
+\seeindex{Chassis}{Quadro}
+\seeindex{Quadro}{Chassis}
+\seeindex{Interruptor de chão}{Interruptor de pedal}
 
 \pagebreak[yes,blank,right]
 % \showlayout

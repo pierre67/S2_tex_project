@@ -179,7 +179,7 @@ reference={sec:using:container}]
 
 \startSteps
 \item Kjør\index{Smussbeholder+tømme} kjøretøyet til et sted som egner seg for tømming. Pass på at de gjeldende miljøvernbestemmelsene overholdes.
-\item Aktiver parkeringsbremsen. (Nødvendig for frigivelse av vippe-beholder-bryteren).
+\item Aktiver parkeringsbremsen og sett kjøretrinnvalgspaken på \aW{nøytral}. (Nødvendig for frigivelse av vippe-beholder-bryteren).
 \stopSteps
 
 \getbuffer [prescription:container:gravity]
@@ -266,6 +266,50 @@ Det er tilstrekkelig vann i ferskvannstanken; \sdeux\ befinner seg i \aW{arbeids
 \stopSteps
 
 \stopsection
+
+
+\page [yes]
+
+
+\setups [pagestyle:marginless]
+
+\startsection [title={Arbeide med den tredje kosten (valgfritt)},
+reference={sec:using:frontBrush},
+]
+
+\startSteps
+\item Sett\index{Koste} kjøretøyet i drift, som beskrevet i \in{avsnitt}[sec:using:start] \atpage[sec:using:start].
+\item Aktiver\index{3. kost} \aW{arbeids}modusen (knapp på utsiden av kjøretrinnvalgspaken).
+\stopSteps
+
+% \getbuffer [work:config]
+
+\startSteps [continue]
+\item Forsikre deg om, at den tredje kosten er aktivert på Vpad-skjermen (se \textSymb{vpadFrontBrush} \textSymb{vpadFrontBrushK}, \atpage[vpad:menu]).
+\item Trykk på tasten~\textSymb{joy_key_frontbrush_act}, for å betjene hydraulikken til den tredje kosten.
+\item Trykk på tasten~\textSymb{joy_key_frontbrush_left} eller~\textSymb{joy_key_frontbrush_right}, for å la den tredje kosten rotere i ønsket retning.
+
+\item Still inn rotasjonshastigheten ved hjelp av tasten~\textSymb{joy_key_frontbrush_increase} og~\textSymb{joy_key_frontbrush_decrease} multifunksjonspanelet.
+
+\item Bruk joysticken til å posisjonere kosten, som vist i bildet nedenfor.
+
+\stopSteps
+
+{\md Merknad:} {\lt For å kunne posisjonere sidekostene, må hydraulikken til den tredje kosten deaktiveres med tasten~\textSymb{joy_key_frontbrush_act}.}
+\vfill
+
+\start
+\setupcombinations [width=\textwidth]
+
+\placefig[here][fig:brush:position]{Posisjonering av den tredje kosten}
+{\startcombination [2*1]
+{\externalfigure [work:frontBrush:move]}{Oppover/nedover; til venstre/høyre}
+{\externalfigure [work:frontBrush:incline]}{Tverr-/langsgående helling}
+\stopcombination}
+\stop
+
+\stopsection
+
 \stopregister[index][chap:using]
 
 \stopchapter
